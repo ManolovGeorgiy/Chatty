@@ -11,6 +11,9 @@ public class EditUserForm extends BasePage{
         super(driver);
     }
 
+    @FindBy(xpath = "//*[@data-test='post-header__plus']")
+    WebElement editButton;
+
 
     @FindBy(xpath = "//*[@name='name']")
     WebElement nameInput;
@@ -40,6 +43,7 @@ public class EditUserForm extends BasePage{
     public void waitForLoading() {
         try {
 
+            getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
             getWait().forVisibility(surnameInput);
             getWait().forVisibility(genderMale);
@@ -53,12 +57,15 @@ public class EditUserForm extends BasePage{
         }
     }
 
-    public void setProfileForm(String name, String surname, String gender, String date, String phone){
+    public void setProfileForm(String name, String surname, String gender, String phone){
         nameInput.sendKeys(name);
         surnameInput.sendKeys(surname);
         genderMale.sendKeys(gender);
-        birthDateForm.sendKeys(date);
+        birthDateForm.sendKeys();
         phoneInput.sendKeys(phone);
         saveButton.click();
+    }
+    public void clickEditButton(){
+        editButton.click();
     }
 }

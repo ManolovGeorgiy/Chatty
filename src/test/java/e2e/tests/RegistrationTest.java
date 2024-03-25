@@ -13,7 +13,7 @@ RegistrationPage registrationPage;
     @Test
     public void UserCanRegistration(){
 
-        String email = "registrationUser@gmail.com";
+        String email = "registrationUser1@gmail.com";
         String password = "User3333";
         String confirmPassword = "User3333";
 
