@@ -1,6 +1,8 @@
 package e2e.pages;
 
+import e2e.enums.SideBarInfo;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +13,7 @@ public class HomeBlogPage extends BasePage {
     public HomeBlogPage(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(xpath = "//*[@class='header']")
     WebElement headerElement;
 
@@ -32,32 +35,33 @@ public class HomeBlogPage extends BasePage {
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement createAPostClick;
 
-
-
-        @Step("Wait for loading HomeBlog page")
-        public void waitForLoading() {
-            try {
-                getWait().forVisibility(headerElement);
-                getWait().forVisibility(headerMenu);
-                getWait().forVisibility(headerList);
-                getWait().forVisibility(homeButton);
-                getWait().forVisibility(contactButton);
-                getWait().forClickable(dropdownMenu);
-                getWait().forVisibility(createAPostClick);
-            } catch (StaleElementReferenceException e) {
-            }
-
+    @Step("Wait for loading HomeBlog page")
+    public void waitForLoading() {
+        try {
+            getWait().forVisibility(headerElement);
+            getWait().forVisibility(headerMenu);
+            getWait().forVisibility(headerList);
+            getWait().forVisibility(homeButton);
+            getWait().forVisibility(contactButton);
+            getWait().forClickable(dropdownMenu);
+            getWait().forVisibility(createAPostClick);
+        } catch (StaleElementReferenceException e) {
         }
-        public void clickHomeButton() {
-            homeButton.click();
-        }
+
+    }
+    public void clickHomeButton() {
+        homeButton.click();
+    }
     public void clickContactButton() {
         contactButton.click();
     }
-    public void tabDropdownMenu(){
+    public void tabDropdownMenu() {
         dropdownMenu.click();
     }
-    public  void createAPostButton(){
+    public void openTab(SideBarInfo tab) {
+        driver.findElement(By.xpath("//a[@href='" + tab.value + "']")).click();
+    }
+    public void createAPostButton() {
         createAPostClick.click();
     }
 }

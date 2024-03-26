@@ -12,7 +12,7 @@ public class AdminPanelTest extends TestBase {
     HomeBlogPage homeBlogPage;
     AdminPanelPage adminPanelPage;
     EditUserForm editUserForm;
-    SideBar sideBar;
+
 
     @Test
     public void deleteAccount(){
@@ -27,7 +27,7 @@ public class AdminPanelTest extends TestBase {
         String gender = "MALE";
         String phone = "+4915731078";
 
-        String email = "registrationUser111111@gmail.com";
+        String email = "registrationUser11@gmail.com";
         String password = "User3333";
         String confirmPassword = "User3333";
 
@@ -41,10 +41,9 @@ public class AdminPanelTest extends TestBase {
 
 
         homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.tabDropdownMenu();
         homeBlogPage.waitForLoading();
-        sideBar = new SideBar(app.driver);
-        sideBar.goToSideBarOption(SideBarInfo.LOGIN);
+        homeBlogPage.tabDropdownMenu();
+        //homeBlogPage.waitForLoading();
 
 
 
