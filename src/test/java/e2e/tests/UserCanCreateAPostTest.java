@@ -12,6 +12,7 @@ public class UserCanCreateAPostTest extends TestBase {
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
+    ContactUsPage contactUsPage;
 
     @Test
     public void userCanCreateAPost() {
@@ -39,11 +40,13 @@ public class UserCanCreateAPostTest extends TestBase {
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
         createAPostForm.clickSubmitButton();
-        createAPostForm.waitForLoading();
+        //createAPostForm.waitForLoading();
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.clickContactButton();
-        homeBlogPage.waitForLoading();
+
+
+
 
     }
 }

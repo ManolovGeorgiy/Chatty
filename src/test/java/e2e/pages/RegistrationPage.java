@@ -50,6 +50,8 @@ public class RegistrationPage extends BasePage {
         adminOption.click();
     }
 
+
+
     @Step("Login as user: {email}, {password}")
     public void registration(String email, String password, String confirmPassword) {
         emailInput.sendKeys(email);
