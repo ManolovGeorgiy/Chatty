@@ -31,9 +31,7 @@ public class EditProfileTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
-        homeBlogPage.tabDropdownMenu();
-
-        homeBlogPage.openTab(SideBarInfo.USERPROFILE);
+        homeBlogPage.openPage(SideBarInfo.USERPROFILE);
 
 
 

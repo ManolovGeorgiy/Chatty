@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum SideBarInfo {
-    USERPROFILE("Your Profile"),
-    DRAFT("my draft"),
+    USERPROFILE("/userprofile"),
+    DRAFT("/draft"),
     USERS("admin panel"),
     LOGIN("logout");
     public final String value;

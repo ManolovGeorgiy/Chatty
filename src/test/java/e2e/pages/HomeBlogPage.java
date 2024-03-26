@@ -58,8 +58,11 @@ public class HomeBlogPage extends BasePage {
     public void tabDropdownMenu() {
         dropdownMenu.click();
     }
-    public void openTab(SideBarInfo tab) {
-        driver.findElement(By.xpath("//a[@href='" + tab.value + "']")).click();
+    public void openPage(SideBarInfo tab) {
+        WebElement option = driver.findElement(By.xpath("//a[@href='" + tab.value + "']"));
+        dropdownMenu.click();
+        getWait().forVisibility(option);
+        option.click();
     }
     public void createAPostButton() {
         createAPostClick.click();
