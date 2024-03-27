@@ -36,6 +36,10 @@ public class AdminPanelTest extends TestBase {
         String date = "03.01.1984";
         String phone = "4915777888";
 
+        String oldPassword = "User3333";
+        String newPassword = "User3333";
+        String confirmNewPassword = "User3333";
+
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();
@@ -67,6 +71,7 @@ public class AdminPanelTest extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
+        //editUserForm.changeUserPassword(oldPassword,newPassword,confirmNewPassword);
 
 
         header = new Header(app.driver);
@@ -76,7 +81,6 @@ public class AdminPanelTest extends TestBase {
         adminPanelPage.waitForLoading();
         adminPanelPage.searchAccount(emailAccount);
         adminPanelPage.waitForLoading();
-
         adminPanelPage.clickDeleteAccount();
 
         header = new Header(app.driver);

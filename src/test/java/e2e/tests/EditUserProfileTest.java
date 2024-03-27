@@ -3,10 +3,11 @@ package e2e.tests;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
-import e2e.pages.profile.EditUserForm;
+
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
+import e2e.pages.profile.EditUserForm;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -27,8 +28,6 @@ public class EditUserProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
-
-
     @Test
     public void userCanEditProfile() {
 
@@ -45,7 +44,6 @@ public class EditUserProfileTest extends TestBase {
         String editDate = "03.01.1985";
         String editPhone = "4915777777";
 
-
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
 
@@ -54,7 +52,6 @@ public class EditUserProfileTest extends TestBase {
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
-
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();

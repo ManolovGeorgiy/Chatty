@@ -64,7 +64,6 @@ public class EditUserForm extends BasePage {
     public void clickEditUserForm() {
         editButton.click();
     }
-
     public String getName() {
         return nameInput.getText();
     }
