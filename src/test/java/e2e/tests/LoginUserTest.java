@@ -1,7 +1,7 @@
 package e2e.tests;
 
 import e2e.TestBase;
-import e2e.pages.LoginPage;
+import e2e.pages.login.LoginPage;
 import e2e.utils.DataProviders;
 import org.testng.annotations.Test;
 

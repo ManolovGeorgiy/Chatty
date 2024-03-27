@@ -2,10 +2,10 @@ package e2e.tests;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
-import e2e.pages.ContactUsPage;
-import e2e.pages.HomeBlogPage;
-import e2e.pages.LoginPage;
-import io.restassured.http.Header;
+import e2e.pages.contactUs.ContactUsPage;
+import e2e.pages.Header;
+import e2e.pages.homeBlog.HomeBlogPage;
+import e2e.pages.login.LoginPage;
 import org.testng.annotations.Test;
 
 public class ContactUsTest extends TestBase {
@@ -13,8 +13,8 @@ public class ContactUsTest extends TestBase {
     Faker faker = new Faker();
 
     LoginPage loginPage;
-    HomeBlogPage homeBlogPage;
     Header header;
+    HomeBlogPage homeBlogPage;
     ContactUsPage contactUsPage;
 
     @Test
@@ -32,19 +32,14 @@ public class ContactUsTest extends TestBase {
         loginPage.waitForLoading();
         loginPage.login(email,password);
 
-
-
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
-        homeBlogPage.clickContactButton();
+        header = new Header(app.driver);
+        header.clickContactButton();
+
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name,emailContact,text,newText);
-
-
-
-
-
     }
 }
