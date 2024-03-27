@@ -2,10 +2,10 @@ package e2e.tests;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
-import e2e.pages.ContactUsPage;
+import e2e.pages.contactUs.ContactUsPage;
 import e2e.pages.Header;
-import e2e.pages.HomeBlogPage;
-import e2e.pages.LoginPage;
+import e2e.pages.homeBlog.HomeBlogPage;
+import e2e.pages.login.LoginPage;
 import org.testng.annotations.Test;
 
 public class ContactUsTest extends TestBase {

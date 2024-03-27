@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change afterPath="$PROJECT_DIR$/reference/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/CreateAPostForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/EditUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/EditUserForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/HomeBlogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/HomeBlogPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/AdminPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/AdminPanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/ContactUsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/EditUserProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/EditUserProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/FullTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/FullTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/LoginAdminTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +74,14 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Chatty\reference" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginAdminTest.adminCanLogin">
+  <component name="RunManager" selected="TestNG.EditUserProfileTest.userCanEditProfile">
     <configuration name="AdminPanelTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -93,41 +94,6 @@
       <option name="MAIN_CLASS_NAME" value="e2e.tests.AdminPanelTest" />
       <option name="METHOD_NAME" value="deleteAccount" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactUsTest.userCanSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.ContactUsTest" />
-      <option name="METHOD_NAME" value="userCanSendMessage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EditUserProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.EditUserProfileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -170,13 +136,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserCanCreateAPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.UserCanCreateAPostTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.UserCanCreateAPostTest" />
+      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.EditUserProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
+        <item itemvalue="TestNG.UserCanCreateAPostTest" />
         <item itemvalue="TestNG.LoginAdminTest.adminCanLogin" />
         <item itemvalue="TestNG.AdminPanelTest.deleteAccount" />
-        <item itemvalue="TestNG.EditUserProfileTest" />
-        <item itemvalue="TestNG.EditUserProfileTest.userCanEditProfile" />
-        <item itemvalue="TestNG.ContactUsTest.userCanSendMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711528350961</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711535105707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711535105707</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -363,83 +372,68 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>23</line>
+          <line>24</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>25</line>
+          <line>26</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>24</line>
+          <line>25</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
           <line>28</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>29</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>30</line>
+          <line>29</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>32</line>
+          <line>31</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>34</line>
+          <line>33</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>38</line>
+          <line>35</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>39</line>
+          <line>36</line>
           <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/EditUserProfileTest.java</url>
@@ -507,7 +501,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/UserCanCreateAPostTest.java</url>
-          <line>16</line>
+          <line>17</line>
           <properties class="e2e.tests.UserCanCreateAPostTest" method="userCanCreateAPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

@@ -1,12 +1,16 @@
-package e2e.pages;
+package e2e.pages.post;
 
+import e2e.pages.BasePage;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CreateAPostForm extends BasePage{
+public class CreateAPostForm extends BasePage {
+
+    private By imageInputLocator = By.id("image");
     public CreateAPostForm(WebDriver driver) {
         super(driver);
     }
@@ -21,7 +25,7 @@ public class CreateAPostForm extends BasePage{
     WebElement contentInput;
 
     @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
-    WebElement imageLoading;
+    WebElement imageInput;
 
     @FindBy(xpath = "//*[@id='publishDate']")
     WebElement publishData;
@@ -38,7 +42,7 @@ public class CreateAPostForm extends BasePage{
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
-            getWait().forVisibility(imageLoading);
+            getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
             getWait().forVisibility(draftTumblerSwitch);
             getWait().forVisibility(submitButton);
@@ -51,9 +55,14 @@ public class CreateAPostForm extends BasePage{
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
-        //imageLoading.sendKeys(imagePath);
+        imageInput.click();
+
+
         //publishData.sendKeys(date);
 
+    }
+    public void imageLoading(String image){
+        imageInput.sendKeys(image);
     }
 
 

@@ -1,6 +1,7 @@
-package e2e.pages;
+package e2e.pages.profile;
 
 import e2e.enums.GenderInfo;
+import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -51,8 +52,21 @@ public class EditUserForm extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
-    public void clickEditButton() {
+    public void clickEditUserForm() {
         editButton.click();
+    }
+
+    public String getName() {
+        return nameInput.getText();
+    }
+    public String getSurname() {
+        return surnameInput.getText();
+    }
+    public String getDate() {
+        return birthDateForm.getText();
+    }
+    public String getPhone() {
+        return phoneInput.getText();
     }
     public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         nameInput.clear();

@@ -3,6 +3,11 @@ package e2e.tests;
 import e2e.TestBase;
 import e2e.enums.SideBarInfo;
 import e2e.pages.*;
+import e2e.pages.adminPanel.AdminPanelPage;
+import e2e.pages.homeBlog.HomeBlogPage;
+import e2e.pages.login.LoginPage;
+import e2e.pages.profile.EditUserForm;
+import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
 
 public class AdminPanelTest extends TestBase {

@@ -1,6 +1,7 @@
-package e2e.pages;
+package e2e.pages.homeBlog;
 
 
+import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;

@@ -2,7 +2,10 @@ package e2e.tests;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
-import e2e.pages.*;
+import e2e.pages.contactUs.ContactUsPage;
+import e2e.pages.homeBlog.HomeBlogPage;
+import e2e.pages.login.LoginPage;
+import e2e.pages.post.CreateAPostForm;
 import org.testng.annotations.Test;
 
 public class UserCanCreateAPostTest extends TestBase {
@@ -23,24 +26,20 @@ public class UserCanCreateAPostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(70);
-        //String imagePath = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg";
+        String image = "C:\\Users\\PC\\Pictures\\Screenshots\\Screenshot 2023-11-26 075141.png";
         //String date = "";
-
-
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email, password);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
-
-
         homeBlogPage.createAPostButton();
-
-
 
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.waitForLoading();
+        createAPostForm.imageLoading(image);
         createAPostForm.clickSubmitButton();
         //createAPostForm.waitForLoading();
 
