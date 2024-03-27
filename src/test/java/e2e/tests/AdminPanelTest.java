@@ -1,6 +1,7 @@
 package e2e.tests;
 
 import e2e.TestBase;
+import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
 import e2e.pages.*;
 import e2e.pages.adminPanel.AdminPanelPage;
@@ -30,6 +31,11 @@ public class AdminPanelTest extends TestBase {
         String password = "User3333";
         String confirmPassword = "User3333";
 
+        String name = "Daniel";
+        String surname = "Daniel";
+        String date = "03.01.1984";
+        String phone = "4915777888";
+
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();
@@ -51,17 +57,38 @@ public class AdminPanelTest extends TestBase {
         adminPanelPage.waitForLoading();
         adminPanelPage.searchAccount(emailAccount);
         adminPanelPage.waitForLoading();
+        adminPanelPage.clickEditAccount();
 
-        adminPanelPage.clickDeleteAccount();
-        adminPanelPage.waitForLoading();
+        editUserForm = new EditUserForm(app.driver);
+        editUserForm.waitForLoading();
+
+        editUserForm.clickEditUserForm();
+        editUserForm.setProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        editUserForm.waitForLoading();
+        editUserForm.saveButtonClick();
+        editUserForm.waitForLoading();
+
 
         header = new Header(app.driver);
-        header.clickLogo();
+        header.tabDropdownMenu(SideBarInfo.USERS);
+
+        adminPanelPage = new AdminPanelPage(app.driver);
+        adminPanelPage.waitForLoading();
+        adminPanelPage.searchAccount(emailAccount);
+        adminPanelPage.waitForLoading();
+
+        adminPanelPage.clickDeleteAccount();
+
+        header = new Header(app.driver);
+        header.clickHomeButton();
 
 
+        homeBlogPage = new HomeBlogPage(app.driver);
+        homeBlogPage.waitForLoading();
 
-
-
+        header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
+        loginPage = new LoginPage(app.driver);
     }
 }
 
