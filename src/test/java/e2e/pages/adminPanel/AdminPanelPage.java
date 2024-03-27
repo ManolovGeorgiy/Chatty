@@ -1,12 +1,13 @@
-package e2e.pages;
+package e2e.pages.adminPanel;
 
+import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AdminPanelPage extends BasePage{
+public class AdminPanelPage extends BasePage {
     public AdminPanelPage(WebDriver driver) {
         super(driver);
     }

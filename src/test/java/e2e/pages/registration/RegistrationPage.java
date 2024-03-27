@@ -1,5 +1,6 @@
-package e2e.pages;
+package e2e.pages.registration;
 
+import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -49,9 +50,6 @@ public class RegistrationPage extends BasePage {
     public void optionAdmin(){
         adminOption.click();
     }
-
-
-
     @Step("Login as user: {email}, {password}")
     public void registration(String email, String password, String confirmPassword) {
         emailInput.sendKeys(email);
