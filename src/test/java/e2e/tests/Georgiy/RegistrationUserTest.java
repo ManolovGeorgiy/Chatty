@@ -1,4 +1,4 @@
-package e2e.tests;
+package e2e.tests.Georgiy;
 
 import e2e.TestBase;
 
@@ -6,7 +6,7 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
 
-public class RegistrationTest extends TestBase {
+public class RegistrationUserTest extends TestBase {
 
 LoginPage loginPage;
 RegistrationPage registrationPage;
