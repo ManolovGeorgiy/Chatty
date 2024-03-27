@@ -33,6 +33,8 @@ public class UserCanCreateAPostTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
+
+
         homeBlogPage.createAPostButton();
 
 
@@ -43,7 +45,7 @@ public class UserCanCreateAPostTest extends TestBase {
         //createAPostForm.waitForLoading();
 
         homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.clickContactButton();
+
 
 
 

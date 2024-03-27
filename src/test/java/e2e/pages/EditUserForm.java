@@ -1,6 +1,9 @@
 package e2e.pages;
 
+import e2e.enums.GenderInfo;
+import e2e.enums.SideBarInfo;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,23 +24,23 @@ public class EditUserForm extends BasePage{
     @FindBy(xpath = "//*[@name='surname']")
     WebElement surnameInput;
 
-    @FindBy(xpath = "//select[@id='gender']/option[text()='MALE']")
-    WebElement genderMale;
 
-    @FindBy(xpath = "//select[@id='gender']/option[text()='FEMALE']")
-    WebElement genderFemale;
+    @FindBy(xpath = "//select[@id='gender']")
+    WebElement gender;
 
-    @FindBy(xpath = "//a[@id='birthDate']")
+    @FindBy(xpath = "//*[@id='birthDate']")
     WebElement birthDateForm;
 
-    @FindBy(xpath = "//a[@name='phone']")
+    @FindBy(xpath = "//*[@name='phone']")
     WebElement phoneInput;
 
-    @FindBy(xpath = "//a[@name='class='save__btn']")
+    @FindBy(xpath = "//*[@class='data-input pass__btn']")
+    WebElement changePasswordButton;
+
+    @FindBy(xpath = "//*[@data-test='profileSaveButton']")
     WebElement saveButton;
 
-    @FindBy(xpath = "//a[@class='data-input pass__btn']")
-    WebElement changePasswordButton;
+
 
     @Step("Wait for loading Edit profile page")
     public void waitForLoading() {
@@ -46,8 +49,7 @@ public class EditUserForm extends BasePage{
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
             getWait().forVisibility(surnameInput);
-            getWait().forVisibility(genderMale);
-            getWait().forVisibility(genderFemale);
+            getWait().forVisibility(gender);
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
             getWait().forVisibility(saveButton);
@@ -57,15 +59,26 @@ public class EditUserForm extends BasePage{
         }
     }
 
-    public void setProfileForm(String name, String surname, String gender, String phone){
-        nameInput.sendKeys(name);
-        surnameInput.sendKeys(surname);
-        genderMale.sendKeys(gender);
-        birthDateForm.sendKeys();
-        phoneInput.sendKeys(phone);
-        saveButton.click();
-    }
     public void clickEditButton(){
         editButton.click();
     }
+
+    public void setProfileForm(String name, String surname,GenderInfo tab, String phone){
+        nameInput.clear();
+        nameInput.sendKeys(name);
+        surnameInput.clear();
+        surnameInput.sendKeys(surname);
+        WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));
+        gender.click();
+            getWait().forVisibility(option);
+            option.click();
+
+        //birthDateForm.sendKeys();
+        phoneInput.clear();
+        phoneInput.sendKeys(phone);
+    }
+    public void saveButtonClick(){
+        saveButton.click();
+    }
+
 }

@@ -55,11 +55,12 @@ public class HomeBlogPage extends BasePage {
     public void clickContactButton() {
         contactButton.click();
     }
-    public void tabDropdownMenu() {
+
+    public void tabDropdownMenu(SideBarInfo tab) {
+        WebElement option = driver.findElement(By.xpath("//a[@href='" + tab.value + "']"));
         dropdownMenu.click();
-    }
-    public void openTab(SideBarInfo tab) {
-        driver.findElement(By.xpath("//a[@href='" + tab.value + "']")).click();
+        getWait().forVisibility(option);
+        option.click();
     }
     public void createAPostButton() {
         createAPostClick.click();

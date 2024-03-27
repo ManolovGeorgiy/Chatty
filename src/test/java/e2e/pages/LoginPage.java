@@ -49,13 +49,5 @@ public class LoginPage extends BasePage{
             driver.navigate().refresh();
             signUp();
         }
-
     }
-    public String getEmail(){
-        return emailInput.getText();
-    }
-    public String getPassword(){
-        return passwordInput.getText();
-    }
-
 }

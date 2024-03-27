@@ -1,17 +1,17 @@
 package e2e.tests;
 
 import e2e.TestBase;
+import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
 import e2e.pages.EditUserForm;
 import e2e.pages.HomeBlogPage;
 import e2e.pages.LoginPage;
 import org.testng.annotations.Test;
 
-public class EditProfileTest extends TestBase {
+public class EditUserProfileTest extends TestBase {
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
-
     EditUserForm editUserForm;
 
     @Test
@@ -20,28 +20,21 @@ public class EditProfileTest extends TestBase {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
 
-        String name = "Georgiy";
+        String name = "Gera";
         String surname = "Manolov";
-        String gender = "MALE";
-        String phone = "#4915777777";
+        String phone = "4915777777";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
-        loginPage.waitForLoading();
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
-        homeBlogPage.tabDropdownMenu();
-
-        homeBlogPage.openTab(SideBarInfo.USERPROFILE);
-
-
-
-
+        homeBlogPage.tabDropdownMenu(SideBarInfo.USERPROFILE);
 
         editUserForm = new EditUserForm(app.driver);
-        editUserForm.waitForLoading();
-        editUserForm.setProfileForm(name,surname,gender,phone);
+        editUserForm.clickEditButton();
+        editUserForm.setProfileForm(name,surname,GenderInfo.MALE, phone);
+        editUserForm.saveButtonClick();
 
     }
 }

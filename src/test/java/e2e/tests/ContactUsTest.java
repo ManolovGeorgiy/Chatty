@@ -14,7 +14,6 @@ public class ContactUsTest extends TestBase {
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
-    Header header;
     ContactUsPage contactUsPage;
 
     @Test
@@ -32,8 +31,6 @@ public class ContactUsTest extends TestBase {
         loginPage.waitForLoading();
         loginPage.login(email,password);
 
-
-
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
         homeBlogPage.clickContactButton();
@@ -41,10 +38,5 @@ public class ContactUsTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name,emailContact,text,newText);
-
-
-
-
-
     }
 }

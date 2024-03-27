@@ -4,14 +4,15 @@ import lombok.Getter;
 
 @Getter
 public enum SideBarInfo {
-    USERPROFILE("Your Profile"),
-    DRAFT("my draft"),
-    USERS("admin panel"),
-    LOGIN("logout");
+    USERPROFILE("/userprofile"),
+    DRAFT("/drift"),
+    USERS("/users"),
+    LOGIN("/login");
     public final String value;
-
 
     SideBarInfo(String value) {
         this.value = value;
     }
+
+
 }
