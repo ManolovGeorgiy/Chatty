@@ -10,6 +10,7 @@ public class FullTest extends TestBase {
     Faker faker = new Faker();
 
     LoginPage loginPage;
+    Header header;
     HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
     ContactUsPage contactUsPage;
@@ -44,8 +45,8 @@ public class FullTest extends TestBase {
         createAPostForm.userCanCreateAPost(title, description, content);
         createAPostForm.clickSubmitButton();
 
-        homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.clickContactButton();
+        header = new Header(app.driver);
+        header.clickContactButton();
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();

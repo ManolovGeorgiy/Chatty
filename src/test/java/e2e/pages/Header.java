@@ -1,5 +1,8 @@
 package e2e.pages;
 
+import e2e.enums.SideBarInfo;
+import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,42 +13,62 @@ public class Header extends BasePage {
         super(driver);
 
     }
-    @FindBy(xpath = "//*[@class='header-box']")
-    WebElement headerBox;
+    @FindBy(xpath = "//*[@class='header']")
+    WebElement headerElement;
 
-    @FindBy(xpath = "//*[@class='header__nav open']")
-    WebElement headerOpen;
+    @FindBy(xpath = "//*[@class='header__nav header__menu']")
+    WebElement headerMenu;
+
+    @FindBy(xpath = "//*[@class='header__nav-list']")
+    WebElement headerList;
 
     @FindBy(xpath = "//*[@class='header__logo']")
     WebElement logo;
 
-    @FindBy(xpath = "//*[@'Home']")
+    @FindBy(xpath = "//a[@href='/homeblog' and text()='Home']")
     WebElement homeButton;
 
     @FindBy(xpath = "//*[@'about']")
     WebElement aboutButton;
 
-    @FindBy(xpath = "//*[@class='header__nav open']//a[contains(@href,'contact')]")
+    @FindBy(xpath = "//a[@href='/contact' and text()='Contact']")
     WebElement contactButton;
 
-    @FindBy(xpath = "//*[@class='dropdown-menu']")
+    @FindBy(xpath = "//*[@class='header__user header__menu']")
     WebElement dropdownMenu;
 
-
-    public void waitForLoading(){
+    @Step("Wait for loading Header")
+    public void waitForLoading() {
         try {
-        getWait().forVisibility(headerBox);
-        getWait().forVisibility(headerOpen);
-        getWait().forVisibility(logo);
-        getWait().forVisibility(homeButton);
-        getWait().forVisibility(aboutButton);
-        getWait().forVisibility(contactButton);
-        getWait().forVisibility(dropdownMenu);
-    } catch (
-    StaleElementReferenceException e) {
+            getWait().forVisibility(headerElement);
+            getWait().forVisibility(headerMenu);
+            getWait().forVisibility(headerList);
+            getWait().forVisibility(logo);
+            getWait().forVisibility(homeButton);
+            getWait().forVisibility(aboutButton);
+            getWait().forVisibility(contactButton);
+            getWait().forClickable(dropdownMenu);
+        } catch (StaleElementReferenceException e) {
+        }
     }
+    public void clickLogo() {
+        logo.click();
     }
-    public void openContactPage(){
-        contactButton.click();}
+    public void clickHomeButton() {
+        homeButton.click();
+    }
+    public void clickAboutButton() {
+        aboutButton.click();
+    }
+    public void clickContactButton() {
+        contactButton.click();
+    }
+
+    public void tabDropdownMenu(SideBarInfo tab) {
+        WebElement option = driver.findElement(By.xpath("//a[@href='" + tab.value + "']"));
+        dropdownMenu.click();
+        getWait().forVisibility(option);
+        option.click();
+    }
 }
 
