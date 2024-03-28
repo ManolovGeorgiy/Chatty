@@ -43,14 +43,13 @@ public class RegistrationPage extends BasePage {
             e.printStackTrace();
         }
     }
-
     public void optionUser(){
         userOption.click();
     }
     public void optionAdmin(){
         adminOption.click();
     }
-    @Step("Login as user: {email}, {password}")
+    @Step("Registration as user: {email}, {password}, {confirmPassword}")
     public void registration(String email, String password, String confirmPassword) {
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
