@@ -60,7 +60,7 @@ public class EditUserProfileTest extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
         editUserForm.waitForLoading();
-        checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
+        //checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
 

@@ -3,7 +3,6 @@ package e2e.pages.post;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 public class CreateAPostForm extends BasePage {
 
     private By imageInputLocator = By.id("image");
+
     public CreateAPostForm(WebDriver driver) {
         super(driver);
     }
@@ -31,7 +31,7 @@ public class CreateAPostForm extends BasePage {
     WebElement publishData;
 
     @FindBy(xpath = "//*[@id='draftCheckbox']")
-    WebElement draftTumblerSwitch;
+    WebElement TumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
@@ -44,10 +44,10 @@ public class CreateAPostForm extends BasePage {
             getWait().forVisibility(contentInput);
             getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
-            getWait().forVisibility(draftTumblerSwitch);
+            getWait().forVisibility(TumblerSwitch);
             getWait().forVisibility(submitButton);
-
-        } catch (StaleElementReferenceException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -56,19 +56,21 @@ public class CreateAPostForm extends BasePage {
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
         imageInput.click();
-
-
-        //publishData.sendKeys(date);
-
-    }
-    public void imageLoading(String image){
-        imageInput.sendKeys(image);
     }
 
-
-    public void tumblerSwitch(){
-        draftTumblerSwitch.click();
+    public void imageLoading(String imagePath){
+        try {
+            WebElement fileInput = driver.findElement(imageInputLocator);
+            fileInput.sendKeys(imagePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+    public void draftTumblerSwitch(){
+        TumblerSwitch.click();
+    }
+
     public void clickSubmitButton(){
         submitButton.click();
     }

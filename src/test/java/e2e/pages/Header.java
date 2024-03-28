@@ -28,7 +28,7 @@ public class Header extends BasePage {
     @FindBy(xpath = "//a[@href='/homeblog' and text()='Home']")
     WebElement homeButton;
 
-    @FindBy(xpath = "//*[@'about']")
+    @FindBy(xpath = "//a[@href='/about' and text()='About']")
     WebElement aboutButton;
 
     @FindBy(xpath = "//a[@href='/contact' and text()='Contact']")
@@ -36,6 +36,15 @@ public class Header extends BasePage {
 
     @FindBy(xpath = "//*[@class='header__user header__menu']")
     WebElement dropdownMenu;
+
+    @FindBy(xpath = "//*[@class='post-header__left']")
+    WebElement myPostClickButton;
+
+    @FindBy(xpath = "//*[@data-test='post-header__plus']")
+    WebElement createAPostButton;
+
+
+
 
     @Step("Wait for loading Header")
     public void waitForLoading() {
@@ -48,19 +57,21 @@ public class Header extends BasePage {
             getWait().forVisibility(aboutButton);
             getWait().forVisibility(contactButton);
             getWait().forClickable(dropdownMenu);
+            getWait().forClickable(myPostClickButton);
+            getWait().forClickable(createAPostButton);
         } catch (StaleElementReferenceException e) {
         }
     }
     public void clickLogo() {
         logo.click();
     }
-    public void clickHomeButton() {
+    public void clickHome() {
         homeButton.click();
     }
-    public void clickAboutButton() {
+    public void clickAbout() {
         aboutButton.click();
     }
-    public void clickContactButton() {
+    public void clickContact() {
         contactButton.click();
     }
 
@@ -70,5 +81,13 @@ public class Header extends BasePage {
         getWait().forVisibility(option);
         option.click();
     }
+    public void myPostClick() {
+        myPostClickButton.click();
+    }
+
+    public void createAPostClick() {
+        createAPostButton.click();
+    }
+
 }
 
