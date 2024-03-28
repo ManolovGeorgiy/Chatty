@@ -1,4 +1,4 @@
-package integration;
+package integration.user;
 
 import integration.user.UserApi;
 import org.testng.annotations.Test;

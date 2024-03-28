@@ -1,4 +1,4 @@
-package integration;
+package integration.user;
 
 import config.Config;
 import io.restassured.RestAssured;
