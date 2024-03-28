@@ -1,29 +1,39 @@
-package e2e.tests;
+package e2e.tests.Georgiy;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.*;
+import e2e.pages.contactUs.ContactUsPage;
+import e2e.pages.homeBlog.HomeBlogPage;
+import e2e.pages.login.LoginPage;
+import e2e.pages.post.CreateAPostForm;
 import org.testng.annotations.Test;
 
-public class UserCanCreateAPostTest extends TestBase {
+public class FullTest extends TestBase {
 
     Faker faker = new Faker();
 
     LoginPage loginPage;
+    Header header;
     HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
     ContactUsPage contactUsPage;
 
     @Test
-    public void userCanCreateAPost() {
+    public void userCanCreateAPostAndFeedback() {
 
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
 
+        String name = "Georgiy";
+        String emailContact = "tatar@abv.bg";
+        String text = faker.lorem().sentence(100);
+        String newText = faker.lorem().sentence(10);
+
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(70);
-        //String imagePath = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg";
+        String image = "reference";
         //String date = "";
 
 
@@ -35,17 +45,16 @@ public class UserCanCreateAPostTest extends TestBase {
         homeBlogPage.waitForLoading();
         homeBlogPage.createAPostButton();
 
-
-
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
         createAPostForm.clickSubmitButton();
-        //createAPostForm.waitForLoading();
 
-        homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.clickContactButton();
+        header = new Header(app.driver);
+        header.clickContactButton();
 
-
+        contactUsPage = new ContactUsPage(app.driver);
+        contactUsPage.waitForLoading();
+        contactUsPage.feedback(name,emailContact,text,newText);
 
 
     }
