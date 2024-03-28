@@ -54,6 +54,7 @@ public class AdminPanelTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
+
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
 

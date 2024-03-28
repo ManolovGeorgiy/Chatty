@@ -43,7 +43,9 @@ public class FullTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
-        homeBlogPage.createAPostButton();
+
+        header = new Header(app.driver);
+        header.createAPostClick();
 
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
