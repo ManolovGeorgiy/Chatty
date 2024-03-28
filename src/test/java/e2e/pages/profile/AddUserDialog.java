@@ -9,11 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class EditUserFormT extends BasePage {
-    public EditUserFormT(WebDriver driver) {
+public class AddUserDialog extends BasePage {
+    public AddUserDialog(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
@@ -32,21 +31,6 @@ public class EditUserFormT extends BasePage {
     @FindBy(xpath = "//*[@name='phone']")
     WebElement phoneInput;
 
-    //@FindBy(xpath = "//*[@']")
-    //WebElement changePasswordButton;
-
-    @FindBy(xpath = "//*[@placeholder='Old password']")
-    WebElement oldPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='New password']")
-    WebElement newPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='Confirm new password']")
-    WebElement confirmNewPasswordInput;
-
-    //@FindBy(xpath = "//*[@class='']")
-    //WebElement saveChangePasswordButton;
-
     @FindBy(xpath = "//*[@data-test='profileSaveButton']")
     WebElement saveButton;
 
@@ -60,11 +44,6 @@ public class EditUserFormT extends BasePage {
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
             getWait().forVisibility(saveButton);
-            //getWait().forVisibility(changePasswordButton);
-            getWait().forVisibility(oldPasswordInput);
-            getWait().forVisibility(newPasswordInput);
-            getWait().forVisibility(confirmNewPasswordInput);
-            //getWait().forVisibility(saveChangePasswordButton);
         } catch (StaleElementReferenceException e) {
         }
     }
@@ -96,16 +75,9 @@ public class EditUserFormT extends BasePage {
         birthDateForm.sendKeys(date);
         phoneInput.clear();
         phoneInput.sendKeys(phone);
-
     }
-    //public void changeUserPassword(String oldPassword,String newPassword, String confirmPassword){
-        //changePasswordButton.click();
-        //oldPasswordInput.sendKeys(oldPassword);
-        //newPasswordInput.sendKeys(newPassword);
-        //confirmNewPasswordInput.sendKeys(confirmPassword);
-        //saveChangePasswordButton.click();
-    //}
     public void saveButtonClick() {
         saveButton.click();
     }
 }
+

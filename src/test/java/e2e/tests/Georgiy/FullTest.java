@@ -50,7 +50,7 @@ public class FullTest extends TestBase {
         createAPostForm.clickSubmitButton();
 
         header = new Header(app.driver);
-        header.clickContactButton();
+        header.clickContact();
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();

@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/About/AboutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AboutPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/addUserDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/registration/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/registration/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/ContactUsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/FullTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/FullTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +87,25 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginUserTest.userCanLogin">
+  <component name="RunManager" selected="TestNG.AboutPageTests.testAboutBoxText">
+    <configuration name="AboutPageTests.testAboutBoxText" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AboutPageTests" />
+      <option name="METHOD_NAME" value="testAboutBoxText" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdminPanelTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -92,25 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditUserProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.EditUserProfileTest" />
-      <option name="METHOD_NAME" value="userCanEditProfile" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginUserTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FullTest.userCanCreateAPostAndFeedback" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -119,8 +133,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.LoginUserTest" />
-      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.FullTest" />
+      <option name="METHOD_NAME" value="userCanCreateAPostAndFeedback" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -165,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
+        <item itemvalue="TestNG.AboutPageTests.testAboutBoxText" />
+        <item itemvalue="TestNG.FullTest.userCanCreateAPostAndFeedback" />
+        <item itemvalue="TestNG.AdminPanelTest.deleteAccount" />
         <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
         <item itemvalue="TestNG.UserCanCreateAPostTest" />
-        <item itemvalue="TestNG.EditUserProfileTest.userCanEditProfile" />
-        <item itemvalue="TestNG.AdminPanelTest.deleteAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -535,7 +549,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>
-          <line>22</line>
+          <line>26</line>
           <properties class="e2e.tests.Georgiy.AdminPanelTest" method="deleteAccount">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
