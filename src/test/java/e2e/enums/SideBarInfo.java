@@ -8,11 +8,10 @@ public enum SideBarInfo {
     DRAFT("/drift"),
     USERS("/users"),
     LOGIN("/login");
+
     public final String value;
 
     SideBarInfo(String value) {
         this.value = value;
     }
-
-
 }

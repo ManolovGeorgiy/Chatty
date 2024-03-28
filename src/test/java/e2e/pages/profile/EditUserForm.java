@@ -32,18 +32,6 @@ public class EditUserForm extends BasePage {
     @FindBy(xpath = "//*[@name='phone']")
     WebElement phoneInput;
 
-    @FindBy(xpath = "//*[@class='data-input pass__btn']")
-    WebElement changePasswordButton;
-
-    @FindBy(xpath = "//*[@placeholder='Old password']")
-    WebElement oldPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='New password']")
-    WebElement newPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='Confirm new password']")
-    WebElement confirmNewPasswordInput;
-
     @FindBy(xpath = "//*[@data-test='profileSaveButton']")
     WebElement saveButton;
 
@@ -57,7 +45,6 @@ public class EditUserForm extends BasePage {
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
             getWait().forVisibility(saveButton);
-            getWait().forVisibility(changePasswordButton);
         } catch (StaleElementReferenceException e) {
         }
     }
@@ -89,10 +76,6 @@ public class EditUserForm extends BasePage {
         birthDateForm.sendKeys(date);
         phoneInput.clear();
         phoneInput.sendKeys(phone);
-
-    }
-    public void changeUserPassword(){
-        changePasswordButton.click();
     }
     public void saveButtonClick() {
         saveButton.click();
