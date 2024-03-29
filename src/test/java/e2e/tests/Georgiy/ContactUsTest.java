@@ -37,7 +37,6 @@ public class ContactUsTest extends TestBase {
         header = new Header(app.driver);
         header.clickContact();
 
-
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name,emailContact,text,newText);
