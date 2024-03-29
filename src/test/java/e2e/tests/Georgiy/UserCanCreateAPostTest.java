@@ -17,6 +17,8 @@ public class UserCanCreateAPostTest extends TestBase {
     CreateAPostForm createAPostForm;
     Header header;
 
+
+
     @Test
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";
@@ -24,7 +26,7 @@ public class UserCanCreateAPostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(70);
-        String imagePath = "C:/Users/PC/Chatty/reference/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg";
+        String imagePath = "C:\\Users\\PC\\Chatty\\reference\\5204092180870848057_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -37,8 +39,8 @@ public class UserCanCreateAPostTest extends TestBase {
         header.createAPostClick();
 
         createAPostForm = new CreateAPostForm(app.driver);
+        //createAPostForm.waitForLoading();
         createAPostForm.userCanCreateAPost(title, description, content);
-        createAPostForm.waitForLoading();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
         createAPostForm.clickSubmitButton();

@@ -47,7 +47,7 @@ public class AddUserDialog extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
-    public void clickEditUserForm() {
+    public void clickAddUserForm() {
         editButton.click();
     }
     public String getName() {
@@ -62,10 +62,8 @@ public class AddUserDialog extends BasePage {
     public String getPhone() {
         return phoneInput.getText();
     }
-    public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
-        nameInput.clear();
+    public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         nameInput.sendKeys(name);
-        surnameInput.clear();
         surnameInput.sendKeys(surname);
         WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));
         gender.click();
@@ -73,7 +71,6 @@ public class AddUserDialog extends BasePage {
         option.click();
         birthDateForm.clear();
         birthDateForm.sendKeys(date);
-        phoneInput.clear();
         phoneInput.sendKeys(phone);
     }
     public void saveButtonClick() {

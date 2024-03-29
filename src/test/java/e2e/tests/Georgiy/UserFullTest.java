@@ -24,7 +24,7 @@ public class UserFullTest extends TestBase {
 
 
     @Test
-    public void deleteAccount() {
+    public void registrationAndAuthorisationUser() {
 
         String emailLogin = "tatara@abv.bg";
         String changePassword = "User3333";
@@ -57,16 +57,22 @@ public class UserFullTest extends TestBase {
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
 
         addUserDialog = new AddUserDialog(app.driver);
-        //addUserDialog.waitForLoading();
-        addUserDialog.setProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.clickAddUserForm();
+        addUserDialog.waitForLoading();
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
         addUserDialog.saveButtonClick();
 
         editPassword = new EditPassword(app.driver);
         editPassword.changePassword(oldPassword,newPassword,confirmNewPassword);
-        editPassword.waitForLoading();
+
+
+        homeBlogPage =new HomeBlogPage(app.driver);
+
 
         header = new Header(app.driver);
+        header.waitForLoading();
         header.tabDropdownMenu(SideBarInfo.LOGIN);
+        header.waitForLoading();
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(emailLogin,changePassword);

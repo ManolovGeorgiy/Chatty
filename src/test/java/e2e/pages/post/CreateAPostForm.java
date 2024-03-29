@@ -31,7 +31,7 @@ public class CreateAPostForm extends BasePage {
     WebElement publishData;
 
     @FindBy(xpath = "//*[@id='draftCheckbox']")
-    WebElement TumblerSwitch;
+    WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
@@ -44,34 +44,34 @@ public class CreateAPostForm extends BasePage {
             getWait().forVisibility(contentInput);
             getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
-            getWait().forVisibility(TumblerSwitch);
+            getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitButton);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void userCanCreateAPost(String title, String description, String content){
+    public void userCanCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
         imageInput.click();
     }
 
-    public void imageLoading(String imagePath){
+    public void imageLoading(String imagePath) {
         try {
-            WebElement fileInput = driver.findElement(imageInputLocator);
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(imagePath);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void draftTumblerSwitch(){
-        TumblerSwitch.click();
+    public void draftTumblerSwitch() {
+        tumblerSwitch.click();
     }
 
-    public void clickSubmitButton(){
+    public void clickSubmitButton() {
         submitButton.click();
     }
 }

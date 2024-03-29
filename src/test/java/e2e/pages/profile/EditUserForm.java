@@ -17,6 +17,9 @@ public class EditUserForm extends BasePage {
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
+    @FindBy(xpath = "//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']")
+    WebElement avatarImage;
+
     @FindBy(xpath = "//*[@name='name']")
     WebElement nameInput;
 
@@ -62,6 +65,15 @@ public class EditUserForm extends BasePage {
     }
     public String getPhone() {
         return phoneInput.getText();
+    }
+
+    public void imageAvatarLoading(String imagePath) {
+        try {
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(imagePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         nameInput.clear();

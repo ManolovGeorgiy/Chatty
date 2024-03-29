@@ -7,6 +7,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class Header extends BasePage {
     public Header(WebDriver driver) {
@@ -59,6 +60,7 @@ public class Header extends BasePage {
             getWait().forClickable(dropdownMenu);
             getWait().forClickable(myPostClickButton);
             getWait().forClickable(createAPostButton);
+
         } catch (StaleElementReferenceException e) {
         }
     }
@@ -84,7 +86,6 @@ public class Header extends BasePage {
     public void myPostClick() {
         myPostClickButton.click();
     }
-
     public void createAPostClick() {
         createAPostButton.click();
     }

@@ -10,16 +10,17 @@ public class RegistrationUserTest extends TestBase {
 
 LoginPage loginPage;
 RegistrationPage registrationPage;
-    @Test
+    @Test(description = "CHATTY-16")
     public void UserCanRegistration(){
 
-        String email = "registrationUser1@gmail.com";
+        String email = "registrationUser@gmail.com";
         String password = "User3333";
         String confirmPassword = "User3333";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();
+
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
@@ -28,7 +29,7 @@ RegistrationPage registrationPage;
 
     }
 
-    @Test
+    @Test(description = "CHATTY-04")
     public void AdminCanRegistration(){
 
         String email = "RegistrationAdmin@gmail.com";
@@ -38,11 +39,13 @@ RegistrationPage registrationPage;
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();
+
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionAdmin();
         registrationPage.registration(email,password,confirmPassword);
         registrationPage.waitForLoading();
+
 
     }
 }

@@ -34,15 +34,11 @@ public class EditUserProfileTest extends TestBase {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
 
-        String name = "Gera";
-        String surname = "Gerasim";
-        String date = "03.01.1984";
-        String phone = "4915777888";
-
         String editName = "Georgiy";
         String editSurname = "Manolov";
         String editDate = "03.01.1985";
         String editPhone = "4915777777";
+        String imageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5204092180870848055_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
@@ -58,6 +54,8 @@ public class EditUserProfileTest extends TestBase {
         //checkUserData(editUserForm, name, surname, date, phone);
 
         editUserForm.clickEditUserForm();
+        editUserForm.imageAvatarLoading(imageAvatar);
+        editUserForm.waitForLoading();
         editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
         editUserForm.waitForLoading();
         //checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
