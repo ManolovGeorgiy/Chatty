@@ -27,14 +27,11 @@ public class EditAPostForm extends BasePage {
     WebElement contentInput;
 
 
-    @FindBy(xpath = "//*[@class='close']")
-    WebElement closButton;
-
-    @FindBy(xpath = "//*[@id='draftCheckbox']")
-    WebElement tumblerSwitch;
-
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitEditButton;
+
+    //@FindBy(xpath = "//*[@id='draftCheckbox']")
+    //WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@class='close']")
     WebElement closeButton;
@@ -45,10 +42,9 @@ public class EditAPostForm extends BasePage {
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
-            getWait().forClickable(closButton);
-            getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitEditButton);
-            getWait().forVisibility(closButton);
+            //getWait().forVisibility(tumblerSwitch);
+            getWait().forVisibility(closeButton);
         } catch (StaleElementReferenceException ignored) {
         }
     }
@@ -69,7 +65,7 @@ public class EditAPostForm extends BasePage {
         }
     }
     public void draftTumblerSwitch() {
-        tumblerSwitch.click();
+        //tumblerSwitch.click();
     }
 
     public void clickEditSubmitButton() {
