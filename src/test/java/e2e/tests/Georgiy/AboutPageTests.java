@@ -13,8 +13,6 @@ public class AboutPageTests extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
     AboutPage aboutPage;
-
-
     @Test
     public void testAboutBoxText() {
 
@@ -23,22 +21,22 @@ public class AboutPageTests extends TestBase {
 
         String expectedText = "about Chatty" + "Chatty is a social network platform designed to connect people and facilitate communication in a friendly and interactive environment. Our mission is to bring people together, encourage meaningful conversations, and create a positive online community." + "Join Chatty today and become a part of our growing community. Share your thoughts, connect with friends, and experience the joy of online socializing.";
 
-
         // Логин
         loginPage = new LoginPage(app.driver);
         loginPage.login(email,password);
 
-
+        //Переход на страницу Домашнюю
         homeBlogPage = new HomeBlogPage(app.driver);
 
-        // Навигация к странице "about"
+        // В шапке выбираем через нажатие "о нас"
         header = new Header(app.driver);
         header.waitForLoading();
         header.clickAbout();
 
+        // Переход на страницу "о нас"
         aboutPage = new AboutPage(app.driver);
 
-        // Получение текста из элемента "about-box"
+        // Получение текста из элемента "aboutbox"
         String actualText = aboutPage.getAboutText();
 
         // Проверка текста

@@ -13,10 +13,10 @@ public class DataProviders {
 
         List<Object[]> list = new ArrayList<>();
 
-        list.add(new Object[]{"tatara@abv.bg", "Manowar33246"});
-        list.add(new Object[]{"tatar@abv.bg", "Manowar333246"});
-        list.add(new Object[]{"", ""});
-        list.add(new Object[]{"tatatata", "Redddd233"});
+        list.add(new Object[]{"tatara@abv.bg", "Manowar33246","invalid_email"});
+        list.add(new Object[]{"tatar@abv.bg", "Manowar333246", "invalid_password"});
+        list.add(new Object[]{"", "", "no_fields_filled_in"});
+        list.add(new Object[]{"tatatata", "Redddd233", "with_invalid_data"});
         return list.iterator();
     }
     @DataProvider
@@ -24,10 +24,10 @@ public class DataProviders {
 
         List<Object[]> list = new ArrayList<>();
 
-        list.add(new Object[]{"g.powergmail.com", "GPower3333"});
-        list.add(new Object[]{"g.power@gmail.com", "Gpower33"});
-        list.add(new Object[]{"", ""});
-        list.add(new Object[]{"g.powergmail.com", "Gpower33"});
+        list.add(new Object[]{"g.powergmail.com", "GPower3333","invalid_email"});
+        list.add(new Object[]{"g.power@gmail.com", "Gpower3334", "invalid_password"});
+        list.add(new Object[]{"", "", "no_fields_filled_in"});
+        list.add(new Object[]{"g.powergmail.com", "Gpower33", "with_invalid_data"});
         return list.iterator();
     }
 }

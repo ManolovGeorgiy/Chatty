@@ -36,6 +36,9 @@ public class LoginPage extends BasePage {
 
         }
     }
+    public void takeLoginPageScreenshot(String actualScreenshotName){
+        takeAndCompareScreenshot(actualScreenshotName,null);
+    }
     @Step("Login as user: {email}, {password}")
     public void login(String email, String password) {
         emailInput.sendKeys(email);

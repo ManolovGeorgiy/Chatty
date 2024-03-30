@@ -7,6 +7,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class Header extends BasePage {
     public Header(WebDriver driver) {
@@ -40,11 +41,11 @@ public class Header extends BasePage {
     @FindBy(xpath = "//*[@class='post-header__left']")
     WebElement myPostClickButton;
 
+    @FindBy(xpath = "//*[@class='post-content']")
+    WebElement myPostTab;
+
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement createAPostButton;
-
-
-
 
     @Step("Wait for loading Header")
     public void waitForLoading() {
@@ -58,7 +59,10 @@ public class Header extends BasePage {
             getWait().forVisibility(contactButton);
             getWait().forClickable(dropdownMenu);
             getWait().forClickable(myPostClickButton);
+            getWait().forVisibility(myPostTab);
             getWait().forClickable(createAPostButton);
+
+
         } catch (StaleElementReferenceException e) {
         }
     }
@@ -84,7 +88,9 @@ public class Header extends BasePage {
     public void myPostClick() {
         myPostClickButton.click();
     }
-
+    public void setMyPostTab() {
+        myPostTab.click();
+    }
     public void createAPostClick() {
         createAPostButton.click();
     }

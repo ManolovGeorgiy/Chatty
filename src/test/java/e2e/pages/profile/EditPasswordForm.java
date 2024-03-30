@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class EditPassword extends BasePage {
-    public EditPassword(WebDriver driver) {
+public class EditPasswordForm extends BasePage {
+    public EditPasswordForm(WebDriver driver) {
         super(driver);
     }
 
@@ -41,6 +41,9 @@ public class EditPassword extends BasePage {
         oldPasswordInput.sendKeys(oldPassword);
         newPasswordInput.sendKeys(newPassword);
         confirmNewPasswordInput.sendKeys(confirmNewPassword);
+    }
+    public void saveChangePasswordButton() {
         saveChangeButton.click();
+
     }
 }

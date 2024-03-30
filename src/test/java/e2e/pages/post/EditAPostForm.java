@@ -2,6 +2,7 @@ package e2e.pages.post;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,11 +13,7 @@ public class EditAPostForm extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@data-test='edit-button']")
-    WebElement editButton;
 
-    @FindBy(xpath = "//*[@class='close']")
-    WebElement closButton;
 
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
@@ -30,25 +27,56 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
     WebElement imageUpload;
 
+    @FindBy(xpath = "//*[@class='close']")
+    WebElement closButton;
+
     @FindBy(xpath = "//*[@id='draftCheckbox']")
-    WebElement draftCheckBox;
+    WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
 
+    @FindBy(xpath = "//*[@class='close']")
+    WebElement closeButton;
+
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {
-            getWait().forVisibility(editButton);
-            getWait().forVisibility(closButton);
+
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
             getWait().forVisibility(imageUpload);
-            getWait().forVisibility(draftCheckBox);
+            getWait().forClickable(closButton);
+            getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitButton);
+            getWait().forVisibility(closButton);
 
         } catch (StaleElementReferenceException e) {
         }
     }
+    public void editPost(String editTitle,String editDescription,String editContent){
+        titleInput.clear();
+        titleInput.sendKeys(editTitle);
+        descriptionInput.clear();
+        descriptionInput.sendKeys(editDescription);
+        contentInput.clear();
+        contentInput.sendKeys(editContent);
+    }
+    public void editImageLoading(String imagePath) {
+        try {
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(imagePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void draftTumblerSwitch() {
+        //tumblerSwitch.click();
+    }
+
+    public void clickSubmitButton() {
+        submitButton.click();
+    }
+
 }

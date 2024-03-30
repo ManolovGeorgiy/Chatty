@@ -15,7 +15,6 @@ public class Config {
             throw new RuntimeException("Failed to read config.properties", e);
         }
     }
-
     public String getProjectUrl() {
         return properties.getProperty("project.url");
     }

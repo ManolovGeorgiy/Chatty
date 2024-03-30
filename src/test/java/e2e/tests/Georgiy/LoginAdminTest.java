@@ -31,5 +31,6 @@ public class LoginAdminTest extends TestBase {
     public void userCannotLoginWithInvalidData(String email, String password) {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        loginPage.waitForLoading();
     }
 }

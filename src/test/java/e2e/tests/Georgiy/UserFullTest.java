@@ -4,12 +4,10 @@ import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
-import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.profile.AddUserDialog;
-import e2e.pages.profile.EditPassword;
-import e2e.pages.profile.EditUserForm;
+import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
 
@@ -20,13 +18,13 @@ public class UserFullTest extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
     AddUserDialog addUserDialog;
+    EditPasswordForm editPasswordForm;
 
 
     @Test
-    public void deleteAccount() {
+    public void registrationAndAuthorisationUser() {
 
         String emailLogin = "tatara@abv.bg";
-        String passwordLogin = "Tatara1234";
         String changePassword = "User3333";
 
         String email = "tatara@abv.bg";
@@ -55,5 +53,26 @@ public class UserFullTest extends TestBase {
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
+
+        addUserDialog = new AddUserDialog(app.driver);
+        addUserDialog.clickAddUserForm();
+        addUserDialog.waitForLoading();
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.saveButtonClick();
+        addUserDialog.waitForLoading();
+
+        //editPasswordForm = new EditPasswordForm(app.driver);
+        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        //editPasswordForm.saveChangePasswordButton();
+
+
+        header = new Header(app.driver);
+        header.waitForLoading();
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
+        //header.waitForLoading();
+
+        loginPage = new LoginPage(app.driver);
+        loginPage.login(emailLogin,changePassword);
+
     }
 }
