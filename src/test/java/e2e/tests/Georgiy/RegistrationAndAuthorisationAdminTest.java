@@ -7,6 +7,7 @@ import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class RegistrationAndAuthorisationAdminTest extends TestBase {
@@ -16,7 +17,11 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
     AdminPanelPage adminPanelPage;
-
+    @Epic(value = "Admin can registration and authorisation")
+    @Feature(value = "The administrator has registered and logged in")
+    @Description(value = "Admin can registration and authorisation")
+    @Severity(SeverityLevel.BLOCKER)
+    @AllureId("1")
     @Test(description = "CHATTY-04")
     public void AdminCanRegistration(){
 

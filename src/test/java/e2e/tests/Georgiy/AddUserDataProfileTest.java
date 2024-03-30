@@ -35,7 +35,7 @@ public class AddUserDataProfileTest extends TestBase {
     public void userCanEditProfile() {
 
         String email = "tatar@abv.bg";
-        String password = "Manowar33246";
+        String password = "Manowar333246";
 
         String name = "Georgiy";
         String surname = "Manolov";

@@ -53,7 +53,7 @@ public class CreateANewPost extends TestBase {
     @Test(description = "CHATTY-39")
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";
-        String password = "Manowar333246";
+        String password = "Manowar33246";
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(70);
