@@ -27,7 +27,7 @@ public class DataProviders {
         list.add(new Object[]{"g.powergmail.com", "GPower3333","invalid_email"});
         list.add(new Object[]{"g.power@gmail.com", "Gpower3334", "invalid_password"});
         list.add(new Object[]{"", "", "no_fields_filled_in"});
-        list.add(new Object[]{"g.powergmail.com", "Gpower33", "with_invalid_data"});
+        list.add(new Object[]{"g.powergmail.com", "Gpower3334", "with_invalid_data"});
         return list.iterator();
     }
 }
