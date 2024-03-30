@@ -58,6 +58,7 @@ public class Header extends BasePage {
             getWait().forClickable(myPostClickButton);
             getWait().forClickable(createAPostButton);
 
+
         } catch (StaleElementReferenceException e) {
         }
     }

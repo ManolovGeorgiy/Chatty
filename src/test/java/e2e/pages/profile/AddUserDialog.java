@@ -13,6 +13,9 @@ public class AddUserDialog extends BasePage {
     public AddUserDialog(WebDriver driver) {
         super(driver);
     }
+
+
+
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
@@ -34,9 +37,13 @@ public class AddUserDialog extends BasePage {
     @FindBy(xpath = "//*[@data-test='profileSaveButton']")
     WebElement saveButton;
 
+    @FindBy(xpath = "//*[@class='header']")
+    WebElement headerElement;
+
     @Step("Wait for loading Edit profile page")
     public void waitForLoading() {
         try {
+
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
             getWait().forVisibility(surnameInput);
@@ -44,6 +51,8 @@ public class AddUserDialog extends BasePage {
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
             getWait().forVisibility(saveButton);
+            getWait().forVisibility(headerElement);
+
         } catch (StaleElementReferenceException e) {
         }
     }

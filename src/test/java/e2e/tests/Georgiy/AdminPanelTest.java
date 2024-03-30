@@ -7,7 +7,7 @@ import e2e.pages.*;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
-import e2e.pages.profile.EditPassword;
+import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
@@ -20,7 +20,7 @@ public class AdminPanelTest extends TestBase {
     Header header;
     AdminPanelPage adminPanelPage;
     EditUserForm editUserForm;
-    EditPassword editPassword;
+    EditPasswordForm editPasswordForm;
 
 
     @Test
@@ -78,8 +78,8 @@ public class AdminPanelTest extends TestBase {
         editUserForm.waitForLoading();
 
         // there is a bug here
-        //editPassword = new EditPassword(app.driver);
-        //editPassword.changePassword(oldPassword,newPassword,confirmNewPassword);
+        //editPasswordForm = new EditPasswordForm(app.driver);
+        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERS);

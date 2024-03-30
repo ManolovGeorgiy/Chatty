@@ -1,5 +1,6 @@
 package e2e.tests.Georgiy;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
@@ -51,16 +52,15 @@ public class EditUserProfileTest extends TestBase {
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
-        //checkUserData(editUserForm, name, surname, date, phone);
 
         editUserForm.clickEditUserForm();
         editUserForm.imageAvatarLoading(imageAvatar);
-        editUserForm.waitForLoading();
         editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
         editUserForm.waitForLoading();
-        //checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
 
+        header = new Header(app.driver);
+        header.clickHome();
     }
 }

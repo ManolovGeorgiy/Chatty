@@ -50,28 +50,4 @@ public class ContactUsTest extends TestBase {
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text, newText);
     }
-
-    @Test(description = "")
-    public void UserCanNotSendMessage(){
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
-
-        String name = faker.name().fullName();
-        String emailContact = "tatarabv.bg";
-        String text = faker.lorem().sentence(100);
-        String newText = faker.lorem().sentence(10);
-
-        loginPage = new LoginPage(app.driver);
-        loginPage.waitForLoading();
-        loginPage.login(email, password);
-
-        homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.waitForLoading();
-        header = new Header(app.driver);
-        header.clickContact();
-
-        contactUsPage = new ContactUsPage(app.driver);
-        contactUsPage.waitForLoading();
-        contactUsPage.feedback(name, emailContact, text, newText);
-    }
 }

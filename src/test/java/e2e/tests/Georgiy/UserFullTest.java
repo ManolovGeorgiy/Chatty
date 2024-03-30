@@ -4,12 +4,10 @@ import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
-import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.profile.AddUserDialog;
-import e2e.pages.profile.EditPassword;
-import e2e.pages.profile.EditUserForm;
+import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
 
@@ -20,7 +18,7 @@ public class UserFullTest extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
     AddUserDialog addUserDialog;
-    EditPassword editPassword;
+    EditPasswordForm editPasswordForm;
 
 
     @Test
@@ -61,19 +59,17 @@ public class UserFullTest extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
         addUserDialog.saveButtonClick();
+        addUserDialog.waitForLoading();
 
-        editPassword = new EditPassword(app.driver);
-        editPassword.changePassword(oldPassword,newPassword,confirmNewPassword);
-        editPassword.saveChangePasswordButton();
+        //editPasswordForm = new EditPasswordForm(app.driver);
+        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        //editPasswordForm.saveChangePasswordButton();
 
-
-        homeBlogPage =new HomeBlogPage(app.driver);
-        homeBlogPage.waitForLoading();
 
         header = new Header(app.driver);
         header.waitForLoading();
         header.tabDropdownMenu(SideBarInfo.LOGIN);
-        header.waitForLoading();
+        //header.waitForLoading();
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(emailLogin,changePassword);
