@@ -41,6 +41,9 @@ public class EditPassword extends BasePage {
         oldPasswordInput.sendKeys(oldPassword);
         newPasswordInput.sendKeys(newPassword);
         confirmNewPasswordInput.sendKeys(confirmNewPassword);
+    }
+    public void saveChangePasswordButton() {
         saveChangeButton.click();
+
     }
 }

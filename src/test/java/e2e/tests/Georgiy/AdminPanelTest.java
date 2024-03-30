@@ -35,9 +35,9 @@ public class AdminPanelTest extends TestBase {
         String password = "User3333";
         String confirmPassword = "User3333";
 
-        String name = "Daniel";
-        String surname = "Daniel";
-        String date = "03.01.1984";
+        String name = "Georgiy";
+        String surname = "Manolov";
+        String date = "03.01.1985";
         String phone = "4915777888";
 
         String oldPassword = "User3333";

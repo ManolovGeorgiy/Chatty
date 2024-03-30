@@ -44,9 +44,6 @@ public class Header extends BasePage {
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement createAPostButton;
 
-
-
-
     @Step("Wait for loading Header")
     public void waitForLoading() {
         try {

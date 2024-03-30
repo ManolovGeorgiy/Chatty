@@ -64,10 +64,11 @@ public class UserFullTest extends TestBase {
 
         editPassword = new EditPassword(app.driver);
         editPassword.changePassword(oldPassword,newPassword,confirmNewPassword);
+        editPassword.saveChangePasswordButton();
 
 
         homeBlogPage =new HomeBlogPage(app.driver);
-
+        homeBlogPage.waitForLoading();
 
         header = new Header(app.driver);
         header.waitForLoading();
