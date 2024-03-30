@@ -1,0 +1,52 @@
+Index: src/test/java/e2e/tests/ContactUsTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e.tests;\r\n\r\nimport com.github.javafaker.Faker;\r\nimport e2e.TestBase;\r\nimport e2e.pages.contactUs.ContactUsPage;\r\nimport e2e.pages.Header;\r\nimport e2e.pages.homeBlog.HomeBlogPage;\r\nimport e2e.pages.login.LoginPage;\r\nimport org.testng.annotations.Test;\r\n\r\npublic class ContactUsTest extends TestBase {\r\n\r\n    Faker faker = new Faker();\r\n\r\n    LoginPage loginPage;\r\n    Header header;\r\n    HomeBlogPage homeBlogPage;\r\n    ContactUsPage contactUsPage;\r\n\r\n    @Test\r\n    public void userCanSendMessage(){\r\n\r\n        String email = \"tatar@abv.bg\";\r\n        String password = \"Manowar33246\";\r\n\r\n        String name = \"Georgiy\";\r\n        String emailContact = \"tatar@abv.bg\";\r\n        String text = faker.lorem().sentence(100);\r\n        String newText = faker.lorem().sentence(10);\r\n\r\n        loginPage = new LoginPage(app.driver);\r\n        loginPage.waitForLoading();\r\n        loginPage.login(email,password);\r\n\r\n        homeBlogPage = new HomeBlogPage(app.driver);\r\n        homeBlogPage.waitForLoading();\r\n        header = new Header(app.driver);\r\n        header.clickContactButton();\r\n\r\n\r\n        contactUsPage = new ContactUsPage(app.driver);\r\n        contactUsPage.waitForLoading();\r\n        contactUsPage.feedback(name,emailContact,text,newText);\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/e2e/tests/ContactUsTest.java b/src/test/java/e2e/tests/ContactUsTest.java
+--- a/src/test/java/e2e/tests/ContactUsTest.java	
++++ b/src/test/java/e2e/tests/ContactUsTest.java	
+@@ -2,10 +2,10 @@
+ 
+ import com.github.javafaker.Faker;
+ import e2e.TestBase;
+-import e2e.pages.contactUs.ContactUsPage;
+-import e2e.pages.Header;
+-import e2e.pages.homeBlog.HomeBlogPage;
+-import e2e.pages.login.LoginPage;
++import e2e.pages.ContactUsPage;
++import e2e.pages.HomeBlogPage;
++import e2e.pages.LoginPage;
++import io.restassured.http.Header;
+ import org.testng.annotations.Test;
+ 
+ public class ContactUsTest extends TestBase {
+@@ -13,8 +13,8 @@
+     Faker faker = new Faker();
+ 
+     LoginPage loginPage;
+-    Header header;
+     HomeBlogPage homeBlogPage;
++    Header header;
+     ContactUsPage contactUsPage;
+ 
+     @Test
+@@ -32,14 +32,15 @@
+         loginPage.waitForLoading();
+         loginPage.login(email,password);
+ 
++
++
+         homeBlogPage = new HomeBlogPage(app.driver);
+         homeBlogPage.waitForLoading();
+-        header = new Header(app.driver);
+-        header.clickContactButton();
+-
++        homeBlogPage.clickContactButton();
+ 
+         contactUsPage = new ContactUsPage(app.driver);
+         contactUsPage.waitForLoading();
+         contactUsPage.feedback(name,emailContact,text,newText);
++
+     }
+ }
