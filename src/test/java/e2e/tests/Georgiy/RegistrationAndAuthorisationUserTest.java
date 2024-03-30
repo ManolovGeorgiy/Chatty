@@ -8,6 +8,7 @@ import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class RegistrationAndAuthorisationUserTest extends TestBase {
@@ -16,6 +17,12 @@ LoginPage loginPage;
 RegistrationPage registrationPage;
 HomeBlogPage homeBlogPage;
 Header header;
+
+    @Epic(value = "User can registration and authorisation")
+    @Feature(value = "The user has registered and logged in")
+    @Description(value = "User can registration and authorisation")
+    @Severity(SeverityLevel.BLOCKER)
+    @AllureId("14")
     @Test(description = "CHATTY-16")
     public void UserCanRegistration(){
 
