@@ -91,8 +91,8 @@ public class BasePage {
 
     @Step("Take and compare screenshot name: {actualScreenshotName}")
     protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element){
-        String referenceImageFilePath = "reference/" + actualScreenshotName + ".png";
-        String tmpFilePath = "reference/tmp_" + actualScreenshotName + ".png";
+        String referenceImageFilePath = "reference/screenshot" + actualScreenshotName + ".png";
+        String tmpFilePath = "reference/screenshot/tmp_" + actualScreenshotName + ".png";
         File tmp = takeScreenshot(element);
         try {
             saveScreenshot(Files.readAllBytes(tmp.toPath()));

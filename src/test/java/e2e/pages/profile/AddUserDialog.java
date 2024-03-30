@@ -71,7 +71,17 @@ public class AddUserDialog extends BasePage {
     public String getPhone() {
         return phoneInput.getText();
     }
+
+    public void imageAvatarLoading(String imagePath) {
+        try {
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(imagePath);;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
+
         nameInput.sendKeys(name);
         surnameInput.sendKeys(surname);
         WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));

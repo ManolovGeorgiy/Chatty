@@ -24,7 +24,7 @@ public class ContactUsTest extends TestBase {
     @Feature(value = "User can sent a message")
     @Description(value = "positive test :user can send feedback")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("")
+    @AllureId("7")
     @Test(description = "CHATTY-23")
     public void userCanSendMessage() {
 
@@ -43,11 +43,16 @@ public class ContactUsTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
+
         header = new Header(app.driver);
         header.clickContact();
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text, newText);
+        contactUsPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.clickHome();
     }
 }

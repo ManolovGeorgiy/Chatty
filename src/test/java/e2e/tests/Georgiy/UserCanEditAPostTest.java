@@ -50,6 +50,6 @@ public class UserCanEditAPostTest extends TestBase {
         //editAPostForm.waitForLoading();
 
         editAPostForm.editPostButtonClick();
-        //editAPostForm.editPost();
+        editAPostForm.waitForLoading();
     }
 }

@@ -2,20 +2,26 @@ package e2e.tests.Georgiy;
 
 import e2e.TestBase;
 
+import e2e.enums.SideBarInfo;
+import e2e.pages.Header;
+import e2e.pages.adminPanel.AdminPanelPage;
+import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
 
-public class RegistrationUserTest extends TestBase {
+public class RegistrationAndAuthorisationUserTest extends TestBase {
 
 LoginPage loginPage;
 RegistrationPage registrationPage;
+HomeBlogPage homeBlogPage;
+Header header;
     @Test(description = "CHATTY-16")
     public void UserCanRegistration(){
 
-        String email = "registrationUser@gmail.com";
-        String password = "User3333";
-        String confirmPassword = "User3333";
+        String email = "tatar@abv.bg";
+        String password = "Manowar33246";
+        String confirmPassword = "Manowar333246";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -27,26 +33,16 @@ RegistrationPage registrationPage;
         registrationPage.registration(email,password,confirmPassword);
         registrationPage.waitForLoading();
 
-    }
+        homeBlogPage = new HomeBlogPage(app.driver);
+        homeBlogPage.waitForLoading();
 
-    @Test(description = "CHATTY-04")
-    public void AdminCanRegistration(){
-
-        String email = "RegistrationAdmin@gmail.com";
-        String password = "Admin3333";
-        String confirmPassword = "Admin3333";
+        header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.signUp();
-
-        registrationPage = new RegistrationPage(app.driver);
-        registrationPage.waitForLoading();
-        registrationPage.optionAdmin();
-        registrationPage.registration(email,password,confirmPassword);
-        registrationPage.waitForLoading();
-
-
+        loginPage.login(email,password);
+        loginPage.waitForLoading();
     }
 }
 

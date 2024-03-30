@@ -4,23 +4,24 @@ import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
-
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
+import e2e.pages.profile.AddUserDialog;
 import e2e.pages.profile.EditUserForm;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class EditUserProfileTest extends TestBase {
+public class AddUserDataProfileTest extends TestBase {
 
     Faker faker = new Faker();
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
     EditUserForm editUserForm;
+    AddUserDialog addUserDialog;
 
-    private void checkUserData(EditUserForm page, String name, String surname, String date, String phone) {
+    private void checkUserData(AddUserDialog page, String name, String surname, String date, String phone) {
         String actualName = page.getName();
         String actualSurname = page.getSurname();
         String actualDate = page.getDate();
@@ -36,10 +37,10 @@ public class EditUserProfileTest extends TestBase {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
 
-        String editName = "Georgiy";
-        String editSurname = "Manolov";
-        String editDate = "03.01.1985";
-        String editPhone = "4915777777";
+        String name = "Georgiy";
+        String surname = "Manolov";
+        String date = "03.01.1985";
+        String phone = "4915777777";
         String imageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5204092180870848055_121.jpg";
 
         loginPage = new LoginPage(app.driver);
@@ -51,17 +52,17 @@ public class EditUserProfileTest extends TestBase {
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
 
-        editUserForm = new EditUserForm(app.driver);
-        editUserForm.waitForLoading();
-        editUserForm.imageAvatarLoading(imageAvatar);
-        editUserForm.clickEditUserForm();
+        addUserDialog = new AddUserDialog(app.driver);
+        addUserDialog.waitForLoading();
+        addUserDialog.imageAvatarLoading(imageAvatar);
+        addUserDialog.clickAddUserForm();
+        addUserDialog.waitForLoading();
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE, date,phone);
+        addUserDialog.waitForLoading();
+        addUserDialog.saveButtonClick();
+        addUserDialog.waitForLoading();
+        //checkUserData(addUserDialog,name,surname,date,phone);
 
-
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
-        editUserForm.waitForLoading();
-        //checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
-        editUserForm.saveButtonClick();
-        editUserForm.waitForLoading();
 
         header = new Header(app.driver);
         header.clickHome();

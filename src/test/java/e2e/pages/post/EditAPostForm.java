@@ -16,11 +16,6 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@data-test='edit-button']")
     WebElement editPostButton;
 
-    @FindBy(xpath = "//*[@class='close']")
-    WebElement closButton;
-
-
-
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -33,6 +28,9 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
     WebElement imageUpload;
 
+    @FindBy(xpath = "//*[@class='close']")
+    WebElement closButton;
+
     //@FindBy(xpath = "//*[@id='draftCheckbox']")
     //WebElement tumblerSwitch;
 
@@ -43,12 +41,12 @@ public class EditAPostForm extends BasePage {
     public void waitForLoading() {
         try {
             getWait().forClickable(editPostButton);
-            getWait().forClickable(closButton);
 
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
             getWait().forVisibility(imageUpload);
+            getWait().forClickable(closButton);
             //getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitButton);
 
@@ -57,7 +55,9 @@ public class EditAPostForm extends BasePage {
     }
 
     public void editPostButtonClick(){
-        editPostButton.sendKeys();
+        WebElement editButton = driver.findElement((By.xpath("//*[@data-test='edit-button']")));
+        editButton.click();
+
     }
     public void editPost(String editTitle,String editDescription,String editContent){
         titleInput.clear();
