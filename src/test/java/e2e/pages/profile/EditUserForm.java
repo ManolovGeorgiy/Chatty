@@ -70,7 +70,7 @@ public class EditUserForm extends BasePage {
     public void imageAvatarLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);
+            fileInput.sendKeys(imagePath);;
         } catch (Exception e) {
             e.printStackTrace();
         }

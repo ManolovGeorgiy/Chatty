@@ -41,6 +41,9 @@ public class Header extends BasePage {
     @FindBy(xpath = "//*[@class='post-header__left']")
     WebElement myPostClickButton;
 
+    @FindBy(xpath = "//*[@class='post-content']")
+    WebElement myPostTab;
+
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement createAPostButton;
 
@@ -56,6 +59,7 @@ public class Header extends BasePage {
             getWait().forVisibility(contactButton);
             getWait().forClickable(dropdownMenu);
             getWait().forClickable(myPostClickButton);
+            getWait().forVisibility(myPostTab);
             getWait().forClickable(createAPostButton);
 
 
@@ -83,6 +87,9 @@ public class Header extends BasePage {
     }
     public void myPostClick() {
         myPostClickButton.click();
+    }
+    public void setMyPostTab() {
+        myPostTab.click();
     }
     public void createAPostClick() {
         createAPostButton.click();

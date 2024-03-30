@@ -42,11 +42,11 @@ public class CreateANewPost extends TestBase {
                 Random random = new Random();
                 return imagePaths.get(random.nextInt(imagePaths.size()));
             } else {
-                System.err.println("Папка " + folderPath + " не содержит изображений формата .jpg.");
+                System.err.println("image" + folderPath + " не содержит изображений формата .jpg.");
                 return null;
             }
         } else {
-            System.err.println("Папка " + folderPath + " не существует или не содержит файлов.");
+            System.err.println("image" + folderPath + " не существует или не содержит файлов.");
             return null;
         }
     }

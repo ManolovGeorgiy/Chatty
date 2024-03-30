@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 public class EditUserProfileTest extends TestBase {
 
+    Faker faker = new Faker();
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
@@ -52,11 +53,13 @@ public class EditUserProfileTest extends TestBase {
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
-
-        editUserForm.clickEditUserForm();
         editUserForm.imageAvatarLoading(imageAvatar);
+        editUserForm.clickEditUserForm();
+
+
         editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
         editUserForm.waitForLoading();
+        //checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
 

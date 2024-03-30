@@ -7,6 +7,7 @@ import e2e.pages.contactUs.ContactUsPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
+import e2e.pages.post.EditAPostForm;
 import org.testng.annotations.Test;
 
 public class UserCanEditAPostTest extends TestBase {
@@ -16,6 +17,7 @@ public class UserCanEditAPostTest extends TestBase {
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
+    EditAPostForm editAPostForm;
 
 
     @Test
@@ -41,14 +43,13 @@ public class UserCanEditAPostTest extends TestBase {
         header = new Header(app.driver);
         header.waitForLoading();
         header.myPostClick();
+        header.waitForLoading();
+        header.setMyPostTab();
 
-        homeBlogPage = new HomeBlogPage(app.driver);
+        editAPostForm = new EditAPostForm(app.driver);
+        //editAPostForm.waitForLoading();
 
-
-
-
-        // Ожидание появления поста на главной странице
-        homeBlogPage.waitForLoading();
-        // Добавьте здесь проверку, что пост отображается на главной странице
+        editAPostForm.editPostButtonClick();
+        //editAPostForm.editPost();
     }
 }
