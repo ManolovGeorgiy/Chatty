@@ -78,11 +78,16 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "Admin is not logged in")
     @Description(value = "Admin can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("CHATTY-47")
-    @Test(dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
-    public void adminCanNotLoginWithInvalidData(String email, String password) {
+    @AllureId("7")
+    @Test(description = "All negative Test",dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
+    public void adminCanNotLoginWithInvalidData(String email, String password,String caseName) {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
         loginPage.waitForLoading();
+
+        //loginPage.waitForLoading();
+        //loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
+        //loginPage.waitForLoading();
     }
+
 }
