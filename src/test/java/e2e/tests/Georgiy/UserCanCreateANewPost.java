@@ -13,7 +13,7 @@ import java.util.Locale;
 import java.util.Random;
 import org.testng.annotations.Test;
 
-public class CreateANewPost extends TestBase {
+public class UserCanCreateANewPost extends TestBase {
 
     Faker faker = new Faker(new Locale("ru"));
 
@@ -82,5 +82,9 @@ public class CreateANewPost extends TestBase {
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
+        createAPostForm.waitForLoading();
+
+        homeBlogPage = new HomeBlogPage(app.driver);
+
     }
 }

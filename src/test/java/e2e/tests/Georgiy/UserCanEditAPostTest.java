@@ -11,6 +11,11 @@ import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class UserCanEditAPostTest extends TestBase {
 
     Faker faker = new Faker();
@@ -21,6 +26,33 @@ public class UserCanEditAPostTest extends TestBase {
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
 
+    public String selectRandomImagePath(String folderPath) {
+        File folder = new File(folderPath);
+        File[] files = folder.listFiles();
+
+        List<String> imagePaths = new ArrayList<>();
+
+        // Проверяем, что папка существует и содержит файлы
+        if (files != null && files.length > 0) {
+            // Фильтруем только файлы с расширением .jpg
+            for (File file : files) {
+                if (file.isFile() && file.getName().endsWith(".jpg")) {
+                    imagePaths.add(file.getAbsolutePath());
+                }
+            }
+            // Если есть хотя бы одно изображение, выбираем случайный путь к нему
+            if (!imagePaths.isEmpty()) {
+                Random random = new Random();
+                return imagePaths.get(random.nextInt(imagePaths.size()));
+            } else {
+                System.err.println("image" + folderPath + " не содержит изображений формата .jpg.");
+                return null;
+            }
+        } else {
+            System.err.println("image" + folderPath + " не существует или не содержит файлов.");
+            return null;
+        }
+    }
 
     @Test
     public void userCanEditAPost() {
@@ -30,7 +62,7 @@ public class UserCanEditAPostTest extends TestBase {
         String editTitle = faker.lorem().sentence(1);
         String editDescription = faker.lorem().sentence(1);
         String editContent = faker.lorem().sentence(70);
-        String image = "C:\\Users\\PC\\Chatty\\reference\\5204092180870848344_121.jpg";
+        String folderPath = "C:\\Users\\PC\\Chatty\\reference";
 
         // Вход на сайт
         loginPage = new LoginPage(app.driver);
@@ -55,18 +87,25 @@ public class UserCanEditAPostTest extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.editPost(editTitle,editDescription,editContent);
-        editAPostForm.editImageLoading(image);
-        editAPostForm.clickSubmitButton();
+
+        String randomImagePath = selectRandomImagePath(folderPath);
+
+        if (randomImagePath != null) {
+            editAPostForm.imageLoading(randomImagePath);
+            editAPostForm.waitForLoading();
+
+        } else {
+            System.err.println("Не удалось выбрать изображение для публикации.");
+        }
+
+        editAPostForm.clickEditSubmitButton();
         editAPostForm.waitForLoading();
 
         editPostPage = new EditPostPage(app.driver);
         editPostPage.waitForLoading();
 
         header = new Header(app.driver);
-        header.clickHome();
-
-
-
-
+        header.clickLogo();
     }
+
 }

@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class EditAPostForm extends BasePage {
+
+    private final By imageInputLocator = By.id("image");
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
@@ -24,8 +26,6 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@data-test='textarea']")
     WebElement contentInput;
 
-    @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
-    WebElement imageUpload;
 
     @FindBy(xpath = "//*[@class='close']")
     WebElement closButton;
@@ -34,7 +34,7 @@ public class EditAPostForm extends BasePage {
     WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")
-    WebElement submitButton;
+    WebElement submitEditButton;
 
     @FindBy(xpath = "//*[@class='close']")
     WebElement closeButton;
@@ -42,17 +42,14 @@ public class EditAPostForm extends BasePage {
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {
-
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
-            getWait().forVisibility(imageUpload);
             getWait().forClickable(closButton);
             getWait().forVisibility(tumblerSwitch);
-            getWait().forVisibility(submitButton);
+            getWait().forVisibility(submitEditButton);
             getWait().forVisibility(closButton);
-
-        } catch (StaleElementReferenceException e) {
+        } catch (StaleElementReferenceException ignored) {
         }
     }
     public void editPost(String editTitle,String editDescription,String editContent){
@@ -63,7 +60,7 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-    public void editImageLoading(String imagePath) {
+    public void imageLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(imagePath);
@@ -72,11 +69,11 @@ public class EditAPostForm extends BasePage {
         }
     }
     public void draftTumblerSwitch() {
-        //tumblerSwitch.click();
+        tumblerSwitch.click();
     }
 
-    public void clickSubmitButton() {
-        submitButton.click();
+    public void clickEditSubmitButton() {
+        submitEditButton.click();
     }
 
 }
