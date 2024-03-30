@@ -13,8 +13,7 @@ public class EditAPostForm extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@data-test='edit-button']")
-    WebElement editPostButton;
+
 
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
@@ -31,33 +30,30 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@class='close']")
     WebElement closButton;
 
-    //@FindBy(xpath = "//*[@id='draftCheckbox']")
-    //WebElement tumblerSwitch;
+    @FindBy(xpath = "//*[@id='draftCheckbox']")
+    WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
 
+    @FindBy(xpath = "//*[@class='close']")
+    WebElement closeButton;
+
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {
-            getWait().forClickable(editPostButton);
 
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
             getWait().forVisibility(imageUpload);
             getWait().forClickable(closButton);
-            //getWait().forVisibility(tumblerSwitch);
+            getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitButton);
+            getWait().forVisibility(closButton);
 
         } catch (StaleElementReferenceException e) {
         }
-    }
-
-    public void editPostButtonClick(){
-        WebElement editButton = driver.findElement((By.xpath("//*[@data-test='edit-button']")));
-        editButton.click();
-
     }
     public void editPost(String editTitle,String editDescription,String editContent){
         titleInput.clear();
@@ -65,7 +61,7 @@ public class EditAPostForm extends BasePage {
         descriptionInput.clear();
         descriptionInput.sendKeys(editDescription);
         contentInput.clear();
-        contentInput.sendKeys();
+        contentInput.sendKeys(editContent);
     }
     public void editImageLoading(String imagePath) {
         try {

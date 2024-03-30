@@ -8,6 +8,7 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
 import e2e.pages.post.EditAPostForm;
+import e2e.pages.post.EditPostPage;
 import org.testng.annotations.Test;
 
 public class UserCanEditAPostTest extends TestBase {
@@ -17,6 +18,7 @@ public class UserCanEditAPostTest extends TestBase {
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
+    EditPostPage editPostPage;
     EditAPostForm editAPostForm;
 
 
@@ -25,10 +27,10 @@ public class UserCanEditAPostTest extends TestBase {
         // Генерация случайных данных для создания поста
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
-        String title = faker.lorem().sentence(1);
-        String description = faker.lorem().sentence(1);
-        String content = faker.lorem().sentence(70);
-        String image = "C:\\Users\\PC\\Pictures\\Screenshots\\Screenshot 2023-11-26 075141.png";
+        String editTitle = faker.lorem().sentence(1);
+        String editDescription = faker.lorem().sentence(1);
+        String editContent = faker.lorem().sentence(70);
+        String image = "C:\\Users\\PC\\Chatty\\reference\\5204092180870848344_121.jpg";
 
         // Вход на сайт
         loginPage = new LoginPage(app.driver);
@@ -46,10 +48,25 @@ public class UserCanEditAPostTest extends TestBase {
         header.waitForLoading();
         header.setMyPostTab();
 
-        editAPostForm = new EditAPostForm(app.driver);
-        //editAPostForm.waitForLoading();
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage.editPostButtonClick();
+        editPostPage.waitForLoading();
 
-        editAPostForm.editPostButtonClick();
+        editAPostForm = new EditAPostForm(app.driver);
+        editAPostForm.editPost(editTitle,editDescription,editContent);
+        editAPostForm.editImageLoading(image);
+        editAPostForm.clickSubmitButton();
         editAPostForm.waitForLoading();
+
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.clickHome();
+
+
+
+
     }
 }
