@@ -50,7 +50,7 @@ public class CreateANewPost extends TestBase {
             return null;
         }
     }
-    @Test
+    @Test(description = "CHATTY-39")
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
