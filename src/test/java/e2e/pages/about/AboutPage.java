@@ -14,7 +14,7 @@ public class AboutPage extends BasePage {
     @FindBy(xpath = "//div[@class='about-box']")
     WebElement aboutBox;
 
-    @Step("Wait for loading Header")
+    @Step("Wait for loading open About")
     public void waitForLoading() {
         try {
             getWait().forVisibility(aboutBox);

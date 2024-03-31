@@ -23,16 +23,13 @@ public class EditPostPage extends BasePage {
     public void waitForLoading() {
         try {
             getWait().forClickable(editPostButton);
-            getWait().forVisibility(deletePostButton);
+            getWait().forClickable(deletePostButton);
         } catch (StaleElementReferenceException e) {
         }
     }
 
     public void editPostButtonClick(){
         editPostButton.click();
-
-        // editButton = driver.findElement((By.xpath("//*[@data-test='edit-button']")));
-        //editButton.click();
     }
     public void deletePostButtonClick() {
         deletePostButton.click();

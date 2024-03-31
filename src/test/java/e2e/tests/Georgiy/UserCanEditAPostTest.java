@@ -59,10 +59,16 @@ public class UserCanEditAPostTest extends TestBase {
         // Генерация случайных данных для создания поста
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
-        String editTitle = faker.lorem().sentence(1);
-        String editDescription = faker.lorem().sentence(1);
-        String editContent = faker.lorem().sentence(70);
-        String folderPath = "C:\\Users\\PC\\Chatty\\reference";
+        String editTitle = "Привет";
+        String editDescription = "Рассказ о месте";
+        String editContent = "Это уникальное место";
+
+        String image = "C:\\Users\\PC\\Chatty\\reference\\5204092180870848356_121.jpg";
+        //String editTitle = faker.lorem().sentence(1);
+        //String editDescription = faker.lorem().sentence(1);
+        //String editContent = faker.lorem().sentence(70);
+        //String folderPath = "C:\\Users\\PC\\Chatty\\reference";
+
 
         // Вход на сайт
         loginPage = new LoginPage(app.driver);
@@ -88,21 +94,21 @@ public class UserCanEditAPostTest extends TestBase {
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
         editAPostForm.editPost(editTitle,editDescription,editContent);
-
-        String randomImagePath = selectRandomImagePath(folderPath);
-
-        if (randomImagePath != null) {
-            editAPostForm.imageLoading(randomImagePath);
-            editAPostForm.waitForLoading();
-        } else {
-            System.err.println("Не удалось выбрать изображение для публикации.");
-        }
+        editAPostForm.imageLoading(image);
+        editAPostForm.waitForLoading();
+        //String randomImagePath = selectRandomImagePath(folderPath);
+        //if (randomImagePath != null) {
+            //editAPostForm.imageLoading(randomImagePath);
+            //editAPostForm.waitForLoading();
+        //} else {
+            //System.err.println("Не удалось выбрать изображение для публикации.");
+        //}
 
         editAPostForm.clickEditSubmitButton();
-        //editAPostForm.waitForLoading();
+        editAPostForm.waitForLoading();
 
         editPostPage = new EditPostPage(app.driver);
-        //editPostPage.waitForLoading();
+        editPostPage.waitForLoading();
 
         header = new Header(app.driver);
         header.clickLogo();
