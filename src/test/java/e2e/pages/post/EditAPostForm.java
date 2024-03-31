@@ -56,14 +56,14 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
+
     public void imageLoading(String imagePath) {
-        try {
+
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(imagePath);
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-    }
+
+
     public void draftTumblerSwitch() {
         //tumblerSwitch.click();
     }
@@ -71,5 +71,4 @@ public class EditAPostForm extends BasePage {
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }
-
 }

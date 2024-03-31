@@ -86,6 +86,7 @@ public class UserCanEditAPostTest extends TestBase {
         editPostPage.waitForLoading();
 
         editAPostForm = new EditAPostForm(app.driver);
+        editAPostForm.waitForLoading();
         editAPostForm.editPost(editTitle,editDescription,editContent);
 
         String randomImagePath = selectRandomImagePath(folderPath);
@@ -93,16 +94,15 @@ public class UserCanEditAPostTest extends TestBase {
         if (randomImagePath != null) {
             editAPostForm.imageLoading(randomImagePath);
             editAPostForm.waitForLoading();
-
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
 
         editAPostForm.clickEditSubmitButton();
-        editAPostForm.waitForLoading();
+        //editAPostForm.waitForLoading();
 
         editPostPage = new EditPostPage(app.driver);
-        editPostPage.waitForLoading();
+        //editPostPage.waitForLoading();
 
         header = new Header(app.driver);
         header.clickLogo();
