@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[@class='registration-btn']")
     WebElement loginButton;
 
-    @Step("Wait for loading Login page")
+    @Step("Login page")
     public void waitForLoading(){
         try {
             getWait().forVisibility(signUpLink);
