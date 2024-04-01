@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
+
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class UserCanCreateANewPost extends TestBase {
@@ -50,6 +52,11 @@ public class UserCanCreateANewPost extends TestBase {
             return null;
         }
     }
+    @Epic(value = "User can create a post")
+    @Feature(value = "User created post")
+    @Description(value = "User can create a post")
+    @Severity(SeverityLevel.BLOCKER)
+    @AllureId("15")
     @Test(description = "CHATTY-39")
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";

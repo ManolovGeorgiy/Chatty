@@ -5,6 +5,7 @@ import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.EditPostPage;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class UserCanDeleteAPostTest extends TestBase {
@@ -14,7 +15,12 @@ public class UserCanDeleteAPostTest extends TestBase {
     Header header;
     EditPostPage editPostPage;
 
-    @Test
+    @Epic(value = "User can delete a post")
+    @Feature(value = "User deleted post")
+    @Description(value = "User can delete a post")
+    @Severity(SeverityLevel.BLOCKER)
+    @AllureId("17")
+    @Test(description = "CHATTY-8")
     public void userCanEDeleteAPost() {
 
         String email = "tatar@abv.bg";

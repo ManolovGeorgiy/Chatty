@@ -32,15 +32,15 @@ public class EditUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
-    @Test
+    @Test(description = "CHATTY-30")
     public void userCanEditProfile() {
 
         String email = "tatar@abv.bg";
         String password = "Manowar333246";
 
-        String editName = "Georg";
-        String editSurname = "Man";
-        String editDate = "03.01.1984";
+        String editName = "Georgiy";
+        String editSurname = "Manolov";
+        String editDate = "03.01.1985";
         String editPhone = "4915731078";
         String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
 

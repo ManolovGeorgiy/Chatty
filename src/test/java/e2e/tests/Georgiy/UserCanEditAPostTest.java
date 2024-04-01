@@ -7,6 +7,7 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class UserCanEditAPostTest extends TestBase {
@@ -17,7 +18,12 @@ public class UserCanEditAPostTest extends TestBase {
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
 
-    @Test
+    @Epic(value = "User can edit a post")
+    @Feature(value = "User edited post")
+    @Description(value = "User can edit a post")
+    @Severity(SeverityLevel.BLOCKER)
+    @AllureId("16")
+    @Test(description = "CHATTY-40")
     public void userCanEditAPost() {
 
         String email = "tatar@abv.bg";

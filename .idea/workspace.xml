@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change afterPath="$PROJECT_DIR$/reference/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeleteAPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/about/AboutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/about/AboutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditAPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditAPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/05af295e-f09e-490f-9f1f-3e0877189ed9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2486fcea-71ae-48cb-a624-785a0ab613e0-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/271a5493-67bc-4a39-9bfd-d7ba2e1268b6-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/366e2753-e209-4925-b0c2-bf53ead27294-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6173a2a9-2e87-4ccf-8fda-dcfe1874dc51-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b86ce953-453d-4c90-b058-09918a3883f2-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c4e9a7ec-e4de-4334-814d-cf959d16d999-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/dc8aa731-88df-4b9b-910c-f418b5d3b23d-result.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,25 +80,7 @@
       <recent name="C:\Users\PC\Chatty\reference" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanDeleteAPostTest.userCanEDeleteAPost">
-    <configuration name="AboutPageTests.testAboutBoxText" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AboutPageTests" />
-      <option name="METHOD_NAME" value="testAboutBoxText" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.UserCanDeleteAPostTest">
     <configuration name="UserCanCreateANewPost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -120,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanDeleteAPostTest.userCanEDeleteAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanDeleteAPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -130,24 +109,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanDeleteAPostTest" />
-      <option name="METHOD_NAME" value="userCanEDeleteAPost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanEditAPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanEditAPostTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -175,11 +136,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanDeleteAPostTest.userCanEDeleteAPost" />
+        <item itemvalue="TestNG.UserCanDeleteAPostTest" />
         <item itemvalue="TestNG.UserCanEditAPostTest.userCanEditAPost" />
         <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserCanEditAPostTest" />
-        <item itemvalue="TestNG.AboutPageTests.testAboutBoxText" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711912849331</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711965325051</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711965325051</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -307,7 +274,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditAPostTest.java</url>
-          <line>54</line>
+          <line>57</line>
           <option name="timeStamp" value="231" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
