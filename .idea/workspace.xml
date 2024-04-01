@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Screenshot">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminDeleteUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/UserApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/profile/ProfileApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/profile/ProfileApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +77,12 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\reference" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="e2e.tests.Georgiy" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanDeletePostTest.userCanDeletePost">
-    <configuration name="ContactUsTest.userCanSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AdminDeleteUserTest.deleteAccount">
+    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -83,8 +91,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.ContactUsTest" />
-      <option name="METHOD_NAME" value="userCanSendMessage" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AddUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanAddDataProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminDeleteUserTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminDeleteUserTest" />
+      <option name="METHOD_NAME" value="deleteAccount" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -110,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateANewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -119,25 +145,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateANewPost" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanCreateANewPost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateANewPost" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest" />
+      <option name="METHOD_NAME" value="UserCanRegistration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -145,17 +154,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanDeletePostTest.userCanDeletePost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserApiTest.userLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="PATTERN" value="integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanDeletePostTest" />
-      <option name="METHOD_NAME" value="userCanDeletePost" />
+      <option name="PACKAGE_NAME" value="integration" />
+      <option name="MAIN_CLASS_NAME" value="integration.UserApiTest" />
+      <option name="METHOD_NAME" value="userLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -165,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanDeletePostTest.userCanDeletePost" />
-        <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserCanCreateANewPost" />
-        <item itemvalue="TestNG.ContactUsTest.userCanSendMessage" />
+        <item itemvalue="TestNG.AdminDeleteUserTest.deleteAccount" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
+        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
         <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.UserApiTest.userLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711985394601</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Screenshot">
+      <option name="closed" value="true" />
+      <created>1711988461029</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711988461029</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Screenshot">
+      <option name="closed" value="true" />
+      <created>1711988833467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711988833467</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -381,11 +406,20 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditPostTest.java</url>
           <line>26</line>
-          <properties class="e2e.tests.Georgiy.UserCanEditPostTest" method="userCanEditAPost">
+          <properties class="e2e.tests.Georgiy.UserCanEditPostTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/UserLogin.java</url>
+          <line>7</line>
+          <properties class="integration.UserLogin" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="242" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

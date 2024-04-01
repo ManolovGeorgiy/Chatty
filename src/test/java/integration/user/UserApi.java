@@ -24,7 +24,6 @@ public class UserApi extends ApiBase {
         return response.jsonPath().getString("refreshToken" + refreshToken);
 
     }
-
     @Step("New User Registration : {email},{password},{confirmPassword},{role}")
     public String newUserRegistration(String email, String password,String confirmPassword,String user ,int code) {
         String endpoint = "/api/auth/register";

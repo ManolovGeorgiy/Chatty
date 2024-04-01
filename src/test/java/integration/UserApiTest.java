@@ -10,8 +10,8 @@ public class UserApiTest {
 
     @Test
     public void userLogin() {
-        String email = "g.power@gmail.com";
-        String password = "GPower3333";
+        String email = "tatar@abv.bg";
+        String password = "Manowar33246";
 
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
