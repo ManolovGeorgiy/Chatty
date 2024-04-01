@@ -10,6 +10,7 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -32,6 +33,11 @@ public class EditUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
+    @Epic(value = "User can edit data to the profile")
+    @Feature(value = "User edited data to the profile")
+    @Description(value = "User can edit data")
+    @Severity(SeverityLevel.CRITICAL)
+    @AllureId("")
     @Test(description = "CHATTY-30")
     public void userCanEditProfile() {
 
