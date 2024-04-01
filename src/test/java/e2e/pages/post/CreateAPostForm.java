@@ -30,7 +30,7 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@id='publishDate']")
     WebElement publishData;
 
-    @FindBy(xpath = "//*[@id='draftCheckbox']")
+    @FindBy(xpath = "//*[@class='post-header__checkbox']")
     WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")

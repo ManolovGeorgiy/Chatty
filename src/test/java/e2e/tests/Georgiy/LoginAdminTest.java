@@ -84,10 +84,8 @@ public class LoginAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
         loginPage.waitForLoading();
-
-        //loginPage.waitForLoading();
-        //loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
-        //loginPage.waitForLoading();
+        loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
+        loginPage.waitForLoading();
     }
 
 }

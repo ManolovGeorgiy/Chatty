@@ -22,9 +22,9 @@ public class ContactUsTest extends TestBase {
 
     @Epic(value = "Contact Us")
     @Feature(value = "User can sent a message")
-    @Description(value = "positive test :user can send feedback")
+    @Description(value = "User can send feedback")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("7")
+    @AllureId("20")
     @Test(description = "CHATTY-23")
     public void userCanSendMessage() {
 
@@ -32,7 +32,6 @@ public class ContactUsTest extends TestBase {
         String password = "Manowar33246";
 
         String name = faker.name().fullName();
-        //String emailContact = "tatar@abv.bg";
         String emailContact = faker.internet().emailAddress();
         String text = faker.lorem().sentence(100);
         String newText = faker.lorem().sentence(10);

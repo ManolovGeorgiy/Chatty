@@ -37,7 +37,12 @@ public class LoginPage extends BasePage {
         }
     }
     public void takeLoginPageScreenshot(String actualScreenshotName){
-        takeAndCompareScreenshot(actualScreenshotName,null);
+        try {
+            waitForLoading();
+            takeAndCompareScreenshot(actualScreenshotName, null);
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
     }
     @Step("Login as user: {email}, {password}")
     public void login(String email, String password) {

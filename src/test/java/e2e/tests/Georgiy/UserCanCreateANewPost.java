@@ -79,18 +79,20 @@ public class UserCanCreateANewPost extends TestBase {
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
 
+
         // Получаем случайный путь к изображению из указанной папки
         String randomImagePath = selectRandomImagePath(folderPath);
 
         if (randomImagePath != null) {
             createAPostForm.imageLoading(randomImagePath);
-            createAPostForm.waitForLoading();
-            createAPostForm.clickSubmitButton();
-            createAPostForm.waitForLoading();
+            //createAPostForm.waitForLoading();
+
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
-        //homeBlogPage = new HomeBlogPage(app.driver);
-
+        createAPostForm.draftTumblerSwitch();
+        createAPostForm.waitForLoading();
+        createAPostForm.clickSubmitButton();
+        createAPostForm.waitForLoading();
     }
 }

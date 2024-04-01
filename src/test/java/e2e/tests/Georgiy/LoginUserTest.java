@@ -85,9 +85,9 @@ public class LoginUserTest extends TestBase {
         loginPage.waitForLoading();
         loginPage.login(email, password);
 
-        //loginPage.waitForLoading();
-        //loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
-        //loginPage.waitForLoading();
+        loginPage.waitForLoading();
+        loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
+        loginPage.waitForLoading();
 
     }
 }
