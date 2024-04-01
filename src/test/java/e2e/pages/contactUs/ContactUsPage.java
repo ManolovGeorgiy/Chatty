@@ -42,6 +42,5 @@ public class ContactUsPage extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(newText);
         sendMessageButton.click();
-
     }
 }

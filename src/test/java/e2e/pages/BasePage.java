@@ -19,39 +19,39 @@ import java.nio.file.StandardCopyOption;
 public class BasePage {
     public WebDriver driver;
 
-    public BasePage(WebDriver driver){
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public Wait getWait(){
+    public Wait getWait() {
         return new Wait(driver);
     }
 
-    public Select getSelect(WebElement element){
+    public Select getSelect(WebElement element) {
         return new Select(element);
     }
 
     protected boolean isElementDisplayed(WebElement element) {
         try {
             return element.isDisplayed();
-        }catch (NoSuchElementException e){
+        } catch (NoSuchElementException e) {
             return false;
         }
     }
 
-    protected void setInput(WebElement input,String value){
+    protected void setInput(WebElement input, String value) {
         input.click();
         input.clear();
         input.sendKeys(value);
     }
 
-    private File takeScreenshot(WebElement element){
+    private File takeScreenshot(WebElement element) {
         File tmp;
-        if (element == null){
+        if (element == null) {
             tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             System.out.println("Take screenshot page");
-        }else {
+        } else {
             tmp = element.getScreenshotAs(OutputType.FILE);
             System.out.println("Take screenshot element");
         }
@@ -59,12 +59,12 @@ public class BasePage {
         return tmp;
     }
 
-    private double calculateMaxDifferentPercentRation(){
+    private double calculateMaxDifferentPercentRation() {
         Dimension windowSize = driver.manage().window().getSize();
         int width = windowSize.width;
         int height = windowSize.height;
 
-        return  0.01 * width * height;
+        return 0.01 * width * height;
     }
 
     private Process setCompareCommandToTerminal(String refImgFilePath, String tmpFilePath) throws IOException {
@@ -75,33 +75,34 @@ public class BasePage {
 
     private double getDifferenceFromLogs(BufferedReader reader) throws IOException {
         String line;
-        double difference= 0;
-        while ((line=reader.readLine()) != null){
+        double difference = 0;
+        while ((line = reader.readLine()) != null) {
             difference = Integer.parseInt(line.trim());
         }
 
-        return  difference;
+        return difference;
     }
 
 
     @Attachment(value = "Screenshot", type = "image/png")
-    public byte[] saveScreenshot(byte[] screenShot){
+    public byte[] saveScreenshot(byte[] screenShot) {
         return screenShot;
     }
 
     @Step("Take and compare screenshot name: {actualScreenshotName}")
-    protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element){
-        String referenceImageFilePath = "reference/" + actualScreenshotName + ".png";
-        String tmpFilePath = "reference/tmp_" + actualScreenshotName + ".png";
+    protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element) {
+        String referenceImageFilePath = "reference/screenshot/" + actualScreenshotName + ".png";
+        String tmpFilePath = "reference/screenshot/tmp_" + actualScreenshotName + ".png";
         File tmp = takeScreenshot(element);
         try {
-            saveScreenshot(Files.readAllBytes(tmp.toPath()));
             Files.copy(tmp.toPath(), new File(tmpFilePath).toPath(), StandardCopyOption.REPLACE_EXISTING);
 
             File referenceImageFile = new File(referenceImageFilePath);
             if (!referenceImageFile.exists()) {
-                throw new RuntimeException("Reference image file does not exist, but there is tmp file, need remove tmp_ from name file" + tmpFilePath);
+                String errorMessage = "Reference image file does not exist. Reference Image File Path: " + referenceImageFilePath;
+                throw new RuntimeException(errorMessage);
             }
+
             double maxDiffPercent = calculateMaxDifferentPercentRation();
             Process process = setCompareCommandToTerminal(referenceImageFilePath, tmpFilePath);
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
@@ -114,7 +115,7 @@ public class BasePage {
             }
 
             Files.deleteIfExists(new File(tmpFilePath).toPath());
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

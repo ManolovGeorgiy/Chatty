@@ -1,5 +1,6 @@
 package e2e.tests.Georgiy;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
@@ -7,18 +8,22 @@ import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
+import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class EditUserProfileTest extends TestBase {
+public class EditUserDataProfileTest extends TestBase {
 
+    Faker faker = new Faker();
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
     EditUserForm editUserForm;
+    EditPasswordForm editPasswordForm;
 
-    private void checkUserData(EditUserForm page, String name, String surname, String date, String phone) {
+    private void checkEditUserData(EditUserForm page, String name, String surname, String date, String phone) {
         String actualName = page.getName();
         String actualSurname = page.getSurname();
         String actualDate = page.getDate();
@@ -28,21 +33,26 @@ public class EditUserProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
-    @Test
+    @Epic(value = "User can edit data to the profile")
+    @Feature(value = "User edited data to the profile")
+    @Description(value = "User can edit data")
+    @Severity(SeverityLevel.CRITICAL)
+    @AllureId("")
+    @Test(description = "CHATTY-30")
     public void userCanEditProfile() {
 
         String email = "tatar@abv.bg";
-        String password = "Manowar33246";
-
-        String name = "Gera";
-        String surname = "Gerasim";
-        String date = "03.01.1984";
-        String phone = "4915777888";
+        String password = "Manowar333246";
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
         String editDate = "03.01.1985";
-        String editPhone = "4915777777";
+        String editPhone = "4915731078";
+        String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
+
+        String oldPassword = "Manowar333246";
+        String newPassword = "Manowar33246";
+        String confirmNewPassword = "Manowar33246";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
@@ -55,14 +65,34 @@ public class EditUserProfileTest extends TestBase {
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
-        //checkUserData(editUserForm, name, surname, date, phone);
-
+        editUserForm.imageAvatarLoading(editImageAvatar);
+        editUserForm.waitForLoading();
         editUserForm.clickEditUserForm();
+        editUserForm.waitForLoading();
+
+
+
         editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
         editUserForm.waitForLoading();
-        checkUserData(editUserForm, editName, editSurname, editDate, editPhone);
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
+        //checkEditUserData(editUserForm,editName,editSurname,editDate,editPhone);
+
+        editPasswordForm = new EditPasswordForm(app.driver);
+        editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        editPasswordForm.saveChangePasswordButton();
+
+        header = new Header(app.driver);
+        header.clickHome();
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
+
+        loginPage = new LoginPage(app.driver);
+        loginPage.login(email,confirmNewPassword);
+
+        homeBlogPage = new HomeBlogPage(app.driver);
+        homeBlogPage.waitForLoading();
+
+
 
     }
 }

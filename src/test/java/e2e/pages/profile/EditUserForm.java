@@ -17,6 +17,9 @@ public class EditUserForm extends BasePage {
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
+    @FindBy(xpath = "//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']")
+    WebElement avatarImage;
+
     @FindBy(xpath = "//*[@name='name']")
     WebElement nameInput;
 
@@ -32,18 +35,6 @@ public class EditUserForm extends BasePage {
     @FindBy(xpath = "//*[@name='phone']")
     WebElement phoneInput;
 
-    @FindBy(xpath = "//*[@class='data-input pass__btn']")
-    WebElement changePasswordButton;
-
-    @FindBy(xpath = "//*[@placeholder='Old password']")
-    WebElement oldPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='New password']")
-    WebElement newPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='Confirm new password']")
-    WebElement confirmNewPasswordInput;
-
     @FindBy(xpath = "//*[@data-test='profileSaveButton']")
     WebElement saveButton;
 
@@ -57,7 +48,6 @@ public class EditUserForm extends BasePage {
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
             getWait().forVisibility(saveButton);
-            getWait().forVisibility(changePasswordButton);
         } catch (StaleElementReferenceException e) {
         }
     }
@@ -76,6 +66,15 @@ public class EditUserForm extends BasePage {
     public String getPhone() {
         return phoneInput.getText();
     }
+
+    public void imageAvatarLoading(String imagePath) {
+        try {
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(imagePath);;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         nameInput.clear();
         nameInput.sendKeys(name);
@@ -89,10 +88,6 @@ public class EditUserForm extends BasePage {
         birthDateForm.sendKeys(date);
         phoneInput.clear();
         phoneInput.sendKeys(phone);
-
-    }
-    public void changeUserPassword(){
-        changePasswordButton.click();
     }
     public void saveButtonClick() {
         saveButton.click();

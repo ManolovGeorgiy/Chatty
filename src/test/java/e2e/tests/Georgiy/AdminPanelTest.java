@@ -7,6 +7,7 @@ import e2e.pages.*;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
+import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
@@ -19,6 +20,9 @@ public class AdminPanelTest extends TestBase {
     Header header;
     AdminPanelPage adminPanelPage;
     EditUserForm editUserForm;
+    EditPasswordForm editPasswordForm;
+
+
     @Test
     public void deleteAccount(){
 
@@ -31,9 +35,9 @@ public class AdminPanelTest extends TestBase {
         String password = "User3333";
         String confirmPassword = "User3333";
 
-        String name = "Daniel";
-        String surname = "Daniel";
-        String date = "03.01.1984";
+        String name = "Georgiy";
+        String surname = "Manolov";
+        String date = "03.01.1985";
         String phone = "4915777888";
 
         String oldPassword = "User3333";
@@ -50,6 +54,7 @@ public class AdminPanelTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
+
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
 
@@ -66,13 +71,17 @@ public class AdminPanelTest extends TestBase {
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
 
+        // bug
         editUserForm.clickEditUserForm();
         editUserForm.setProfileForm(name, surname, GenderInfo.MALE, date, phone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
-        //editUserForm.changeUserPassword(oldPassword,newPassword,confirmNewPassword);
 
+
+        //editPasswordForm = new EditPasswordForm(app.driver);
+        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        //editPasswordForm.saveChangePasswordButton();
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERS);
@@ -84,8 +93,7 @@ public class AdminPanelTest extends TestBase {
         adminPanelPage.clickDeleteAccount();
 
         header = new Header(app.driver);
-        header.clickHomeButton();
-
+        header.clickHome();
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();

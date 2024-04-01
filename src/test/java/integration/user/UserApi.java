@@ -4,7 +4,6 @@ package integration.user;
 import integration.ApiBase;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-
 import java.util.LinkedHashMap;
 
 public class UserApi extends ApiBase {

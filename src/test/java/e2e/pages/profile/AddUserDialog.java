@@ -9,10 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class EditUserFormT extends BasePage {
-    public EditUserFormT(WebDriver driver) {
+public class AddUserDialog extends BasePage {
+    public AddUserDialog(WebDriver driver) {
         super(driver);
     }
+
+
 
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
@@ -32,27 +34,16 @@ public class EditUserFormT extends BasePage {
     @FindBy(xpath = "//*[@name='phone']")
     WebElement phoneInput;
 
-    //@FindBy(xpath = "//*[@']")
-    //WebElement changePasswordButton;
-
-    @FindBy(xpath = "//*[@placeholder='Old password']")
-    WebElement oldPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='New password']")
-    WebElement newPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='Confirm new password']")
-    WebElement confirmNewPasswordInput;
-
-    //@FindBy(xpath = "//*[@class='']")
-    //WebElement saveChangePasswordButton;
-
     @FindBy(xpath = "//*[@data-test='profileSaveButton']")
     WebElement saveButton;
+
+    @FindBy(xpath = "//*[@class='header']")
+    WebElement headerElement;
 
     @Step("Wait for loading Edit profile page")
     public void waitForLoading() {
         try {
+
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
             getWait().forVisibility(surnameInput);
@@ -60,15 +51,12 @@ public class EditUserFormT extends BasePage {
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
             getWait().forVisibility(saveButton);
-            //getWait().forVisibility(changePasswordButton);
-            getWait().forVisibility(oldPasswordInput);
-            getWait().forVisibility(newPasswordInput);
-            getWait().forVisibility(confirmNewPasswordInput);
-            //getWait().forVisibility(saveChangePasswordButton);
+            getWait().forVisibility(headerElement);
+
         } catch (StaleElementReferenceException e) {
         }
     }
-    public void clickEditUserForm() {
+    public void clickAddUserForm() {
         editButton.click();
     }
     public String getName() {
@@ -83,10 +71,18 @@ public class EditUserFormT extends BasePage {
     public String getPhone() {
         return phoneInput.getText();
     }
-    public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
-        nameInput.clear();
+
+    public void imageAvatarLoading(String imagePath) {
+        try {
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(imagePath);;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
+
         nameInput.sendKeys(name);
-        surnameInput.clear();
         surnameInput.sendKeys(surname);
         WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));
         gender.click();
@@ -94,18 +90,10 @@ public class EditUserFormT extends BasePage {
         option.click();
         birthDateForm.clear();
         birthDateForm.sendKeys(date);
-        phoneInput.clear();
         phoneInput.sendKeys(phone);
-
     }
-    //public void changeUserPassword(String oldPassword,String newPassword, String confirmPassword){
-        //changePasswordButton.click();
-        //oldPasswordInput.sendKeys(oldPassword);
-        //newPasswordInput.sendKeys(newPassword);
-        //confirmNewPasswordInput.sendKeys(confirmPassword);
-        //saveChangePasswordButton.click();
-    //}
     public void saveButtonClick() {
         saveButton.click();
     }
 }
+

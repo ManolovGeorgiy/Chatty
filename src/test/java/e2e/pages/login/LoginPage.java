@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[@class='registration-btn']")
     WebElement loginButton;
 
-    @Step("Wait for loading Login page")
+    @Step("Login page")
     public void waitForLoading(){
         try {
             getWait().forVisibility(signUpLink);
@@ -34,6 +34,14 @@ public class LoginPage extends BasePage {
         } catch (StaleElementReferenceException e) {
             driver.navigate().refresh();
 
+        }
+    }
+    public void takeLoginPageScreenshot(String actualScreenshotName){
+        try {
+            waitForLoading();
+            takeAndCompareScreenshot(actualScreenshotName, null);
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
         }
     }
     @Step("Login as user: {email}, {password}")

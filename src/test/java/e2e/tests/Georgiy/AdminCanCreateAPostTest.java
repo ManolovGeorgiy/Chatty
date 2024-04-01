@@ -2,52 +2,47 @@ package e2e.tests.Georgiy;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
-import e2e.pages.contactUs.ContactUsPage;
-import e2e.pages.homeBlog.HomeBlogPage;
+import e2e.pages.Header;
+import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
 import org.testng.annotations.Test;
 
-public class UserCanCreateAPostTest extends TestBase {
+public class AdminCanCreateAPostTest extends TestBase {
 
     Faker faker = new Faker();
 
     LoginPage loginPage;
-    HomeBlogPage homeBlogPage;
+    AdminPanelPage adminPanelPage;
     CreateAPostForm createAPostForm;
-    ContactUsPage contactUsPage;
+    Header header;
+
+
 
     @Test
-    public void userCanCreateAPost() {
-
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
-
+    public void adminCanCreateAPost() {
+        String email = "g.power@gmail.com";
+        String password = "GPower3333";
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(70);
-        String image = "C:\\Users\\PC\\Pictures\\Screenshots\\Screenshot 2023-11-26 075141.png";
-        //String date = "";
+        String imagePath = "C:\\Users\\PC\\Chatty\\reference\\5204092180870848057_121.jpg";
+
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email, password);
 
-        homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.waitForLoading();
-        homeBlogPage.createAPostButton();
+        adminPanelPage = new AdminPanelPage(app.driver);
+        adminPanelPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.clickHome();
+        header.createAPostClick();
 
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
-        createAPostForm.imageLoading(image);
         createAPostForm.clickSubmitButton();
-        //createAPostForm.waitForLoading();
-
-        homeBlogPage = new HomeBlogPage(app.driver);
-
-
-
-
-
     }
 }

@@ -6,7 +6,6 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 public class AdminPanelPage extends BasePage {
     public AdminPanelPage(WebDriver driver) {
         super(driver);
@@ -23,7 +22,6 @@ public class AdminPanelPage extends BasePage {
 
     @FindBy(xpath = "//*[@class='svg-inline--fa fa-trash ']")
     WebElement deleteAccount;
-
     @Step("Wait for loading Login page")
     public void waitForLoading() {
         try {
@@ -38,9 +36,7 @@ public class AdminPanelPage extends BasePage {
     public void searchAccount(String emailAccount){
         searchEmailInput.sendKeys(emailAccount);
         emailButton.click();
-
     }
-
     public void clickEditAccount(){
         editAccount.click();
     }
