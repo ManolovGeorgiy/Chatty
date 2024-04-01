@@ -10,8 +10,6 @@ public class AdminDeleteUserTest extends TestBase {
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
-
-
     @Test
     public void deleteAccount(){
 
@@ -29,7 +27,6 @@ public class AdminDeleteUserTest extends TestBase {
         adminPanelPage.searchAccount(emailAccount);
         adminPanelPage.waitForLoading();
         adminPanelPage.clickDeleteAccount();
-
     }
 }
 
