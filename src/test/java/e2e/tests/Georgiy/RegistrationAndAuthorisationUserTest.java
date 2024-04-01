@@ -30,7 +30,7 @@ Header header;
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 
-        @Step("User click sign up button")
+
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();
@@ -50,7 +50,7 @@ Header header;
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email,password);
-        loginPage.waitForLoading();
+
     }
 }
 

@@ -79,12 +79,11 @@ public class UserCanCreateANewPost extends TestBase {
             createAPostForm.imageLoading(randomImagePath);
             createAPostForm.waitForLoading();
             createAPostForm.clickSubmitButton();
+            createAPostForm.waitForLoading();
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
-        createAPostForm.waitForLoading();
-
-        homeBlogPage = new HomeBlogPage(app.driver);
+        //homeBlogPage = new HomeBlogPage(app.driver);
 
     }
 }

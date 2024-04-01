@@ -9,13 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class EditAPostForm extends BasePage {
-
-    private final By imageInputLocator = By.id("image");
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
-
-
 
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
@@ -56,18 +52,13 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-
     public void imageLoading(String imagePath) {
-
-            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);
+        WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+        fileInput.sendKeys(imagePath);
         }
-
-
     public void draftTumblerSwitch() {
         //tumblerSwitch.click();
     }
-
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }
