@@ -1,8 +1,10 @@
 .gradle
-build/
+build/allure-results
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+allure-results
+
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
