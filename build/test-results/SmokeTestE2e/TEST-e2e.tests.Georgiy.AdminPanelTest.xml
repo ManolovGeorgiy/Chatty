@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="e2e.tests.Georgiy.AdminPanelTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-01T16:57:34" hostname="NATA" time="6.977">
+  <properties/>
+  <testcase name="deleteAccount" classname="e2e.tests.Georgiy.AdminPanelTest" time="6.977"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[???. 01, 2024 6:57:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 119; Please update to a Selenium version that supports CDP version 123
+]]></system-err>
+</testsuite>
