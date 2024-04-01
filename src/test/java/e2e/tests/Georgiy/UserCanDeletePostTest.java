@@ -8,20 +8,20 @@ import e2e.pages.post.EditPostPage;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
-public class UserCanDeleteAPostTest extends TestBase {
+public class UserCanDeletePostTest extends TestBase {
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
     EditPostPage editPostPage;
 
-    @Epic(value = "User can delete a post")
+    @Epic(value = "User can delete post")
     @Feature(value = "User deleted post")
-    @Description(value = "User can delete a post")
+    @Description(value = "User can delete post")
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("17")
     @Test(description = "CHATTY-8")
-    public void userCanEDeleteAPost() {
+    public void userCanDeletePost() {
 
         String email = "tatar@abv.bg";
         String password = "Manowar33246";

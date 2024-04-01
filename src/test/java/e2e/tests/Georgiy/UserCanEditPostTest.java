@@ -1,6 +1,5 @@
 package e2e.tests.Georgiy;
 
-import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
@@ -10,7 +9,7 @@ import e2e.pages.post.EditPostPage;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
-public class UserCanEditAPostTest extends TestBase {
+public class UserCanEditPostTest extends TestBase {
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
@@ -18,9 +17,9 @@ public class UserCanEditAPostTest extends TestBase {
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
 
-    @Epic(value = "User can edit a post")
+    @Epic(value = "User can edit post")
     @Feature(value = "User edited post")
-    @Description(value = "User can edit a post")
+    @Description(value = "User can edit post")
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("16")
     @Test(description = "CHATTY-40")
