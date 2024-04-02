@@ -65,7 +65,8 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        //checkUserData(addUserDialog,name,surname,date,phone);
+
+        checkUserData(addUserDialog,name,surname,date,phone);
 
 
         header = new Header(app.driver);
