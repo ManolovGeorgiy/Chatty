@@ -3,7 +3,7 @@ package integration;
 import integration.user.AdminApi;
 import org.testng.annotations.Test;
 
-public class AdminApiTest extends AdminApi {
+public class AdminApiTest extends AdminLogin{
 
     AdminApi adminApi;
 
@@ -14,8 +14,8 @@ public class AdminApiTest extends AdminApi {
         String password = "GPower3333";
 
         adminApi = new AdminApi();
-        String token;
-        token = adminApi.login(email, password, 200);
+        String refreshAccessToken;
+       refreshAccessToken= adminApi.login(email, password, 200);
 
     }
 }

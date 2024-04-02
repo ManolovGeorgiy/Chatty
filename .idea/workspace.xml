@@ -5,94 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Screenshot">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/admin/RegisterraqApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/post/PostResApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserReqApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_15__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_24__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_35__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_03_2024_20_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_03_2024_20_52__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_27_03_2024_18_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_27_03_2024_18_19__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_03_2024_18_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_03_2024_18_36__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_30_03_2024_20_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_30_03_2024_20_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2024_20_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2024_20_52__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/admin/getLoginReq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/UserApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/UserApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/admin/AdminApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/homeBlog/HomeApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/images/ImagesApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/post/PostApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/AuthRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/AuthRes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/LoginReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/LoginReq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostRes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RegisterReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RegisterReq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UploadFileRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UploadFileRes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserRes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserUpdateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserUpdateReq.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/user/UserApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/user/UserApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.AddUserDataProfileTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.AdminPanelTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.EditUserDataProfileTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.UserCanCreateANewPost.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.UserCanDeletePostTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/classes/e2e.tests.Georgiy.UserCanEditPostTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/SmokeTestE2e/packages/e2e.tests.Georgiy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.AddUserDataProfileTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.AdminPanelTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.EditUserDataProfileTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.UserCanCreateANewPost.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.UserCanDeletePostTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/TEST-e2e.tests.Georgiy.UserCanEditPostTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/SmokeTestE2e/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/SmokeTestE2e/jar_extract_9206721755399511044_tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserDataProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/AdminLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/AdminApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/homeBlog/HomeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/homeBlog/LoginReqApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/images/ImagesApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/post/PostApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/AuthRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/AuthRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/LoginReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/LoginReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/PostCreateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostCreateReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/PostRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/RegisterReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/RegisterReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UploadFileRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UploadFileRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UserRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UserResForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserResForAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +76,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="integration.admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\reference" />
     </key>
@@ -165,7 +86,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserReqApi.userCanWorkWithDateApiTest">
+  <component name="RunManager" selected="TestNG.AdminApiTest.adminLogin">
     <configuration name="AdminLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="integration.AdminLogin" />
       <module name="Chatty.test" />
@@ -253,8 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserReqApi.userCanWorkWithDateApiTest" />
         <item itemvalue="TestNG.AdminApiTest.adminLogin" />
+        <item itemvalue="TestNG.UserReqApi.userCanWorkWithDateApiTest" />
         <item itemvalue="Application.AdminLogin" />
         <item itemvalue="TestNG.AdminApiTest.userLogin" />
         <item itemvalue="TestNG.LoginAdminTest.adminCanNotLoginWithInvalidData" />
@@ -342,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711994129770</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Screenshot">
+      <created>1712077525953</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712077525953</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

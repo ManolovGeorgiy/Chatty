@@ -10,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 public class ApiBase {
     private final Config config = new Config();
     private final String BASE_URI = config.getProjectUrl();
-    private final RequestSpecification spec;
+    private RequestSpecification spec;
 
     public ApiBase() {
         this.spec = new RequestSpecBuilder()
@@ -18,6 +18,7 @@ public class ApiBase {
                 .setContentType(ContentType.JSON)
                 .build();
     }
+
 
     public ApiBase(String token) {
         this.spec = new RequestSpecBuilder()
@@ -85,7 +86,7 @@ public class ApiBase {
         return response;
     }
 
-    protected Response putRequest(String endpoint, int code, Object body) {
+    protected Response putRequest(String endpoint, int code, String email, Object body) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -107,15 +108,20 @@ public class ApiBase {
                 .delete(endpoint)
                 .then().log().all()
                 .extract().response();
-        //validateStatusCode(response, code);
+        validateStatusCode(response, code);
         return response;
     }
 
     //private void validateStatusCode(Response response, int expectedStatusCode) {
-       // response.then().assertThat().statusCode(expectedStatusCode);
+    //response.then().assertThat().statusCode(expectedStatusCode);
     //}
 
-    private void refreshAccessToken(String refreshToken) {
-        // Логика обновления токена
+    public void refreshAccessToken(String refreshToken) {
+        RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
+        requestSpecBuilder.setBaseUri(BASE_URI);
+        requestSpecBuilder.setContentType(ContentType.JSON);
+        requestSpecBuilder.addHeader("Access-Token", refreshToken);
+        this.spec = requestSpecBuilder
+                .build();
     }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="e2e.tests.Georgiy.AboutPageTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-02T15:13:25" hostname="NATA" time="3.248">
+  <properties/>
+  <testcase name="testAboutBoxText" classname="e2e.tests.Georgiy.AboutPageTests" time="3.248"/>
+  <system-out><![CDATA[The text on the about page does not match the expected text
+]]></system-out>
+  <system-err><![CDATA[???. 02, 2024 5:13:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 123, returning the closest version; found: 119; Please update to a Selenium version that supports CDP version 123
+]]></system-err>
+</testsuite>
