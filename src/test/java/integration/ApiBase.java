@@ -10,7 +10,8 @@ import io.restassured.specification.RequestSpecification;
 public class ApiBase {
     private final Config config = new Config();
     private final String BASE_URI = config.getProjectUrl();
-    private final RequestSpecification spec;
+    private RequestSpecification spec;
+
 
     public ApiBase() {
         this.spec = new RequestSpecBuilder()
@@ -20,6 +21,7 @@ public class ApiBase {
     }
 
     public ApiBase(String token) {
+        this();
         this.spec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URI)
                 .setContentType(ContentType.JSON)
@@ -39,28 +41,10 @@ public class ApiBase {
         return response;
     }
 
-    protected Response getRequestWithParam(String endpoint, int code, String paramName, int id) {
+    protected Response getRequestWithQueryParam(String endpoint, int code, String paramName, String paramValue, String refreshToken) {
         Response response = RestAssured.given()
                 .spec(spec)
-                .when()
-                .pathParam(paramName, id)
-                .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
-        validateStatusCode(response, code);
-        return response;
-    }
-
-    private void validateStatusCode(Response response, int code) {
-    }
-
-    protected Response getRequestWithParamString(String endpoint, int code, Object body, String paramName, String paramValue, String refreshToken) {
-        Response response = RestAssured.given()
-                .spec(spec)
-                .body(body)
-                .when()
-                .pathParam(paramName, paramValue)
+                .param(paramName, paramValue)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -69,6 +53,19 @@ public class ApiBase {
             refreshAccessToken(refreshToken);
         }
         validateStatusCode(response, code);
+        return response;
+    }
+
+    protected Response getRequestWithParamString(String endpoint, int code,String paramName, String paramValue){
+        Response response = RestAssured.given()
+                .spec(spec)
+                .when()
+                .pathParam(paramName,paramValue)
+                .log().all()
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
         return response;
     }
 
@@ -107,15 +104,15 @@ public class ApiBase {
                 .delete(endpoint)
                 .then().log().all()
                 .extract().response();
-        //validateStatusCode(response, code);
+        validateStatusCode(response, code);
         return response;
     }
 
-    //private void validateStatusCode(Response response, int expectedStatusCode) {
-       // response.then().assertThat().statusCode(expectedStatusCode);
-    //}
+    private void validateStatusCode(Response response, int code) {
+        response.then().assertThat().statusCode(code);
+    }
 
-    private void refreshAccessToken(String refreshToken) {
+    protected void refreshAccessToken(String refreshToken) {
         // Логика обновления токена
     }
 }

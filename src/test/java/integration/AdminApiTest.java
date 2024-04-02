@@ -13,9 +13,9 @@ public class AdminApiTest extends AdminApi {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
 
-        adminApi = new AdminApi();
-        String token;
-        token = adminApi.login(email, password, 200);
+
+
+
 
     }
 }

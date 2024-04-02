@@ -1,47 +1,58 @@
 package integration.user;
 
-
 import integration.ApiBase;
 import io.qameta.allure.Step;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+
 import java.util.LinkedHashMap;
 
 public class AdminApi extends ApiBase {
     Response response;
 
-    public AdminApi(){
+    public AdminApi() {
 
     }
 
-    @Step("Login via api: {email},{password}")
-    public String login(String email, String password,int code) {
+    @Step("User Login via api: {email},{password}")
+    public Tokens userLogin(String email, String password, int code) {
         String endpoint = "/api/auth/login";
         LinkedHashMap<String, String> body = new LinkedHashMap<>();
         body.put("email", email);
         body.put("password", password);
-        response = postRequest(endpoint,code,body);
-        //String refreshToken = response.jsonPath().getString("refreshToken");
-        //return response.jsonPath().getString("refreshToken" + refreshToken);
-        return response.header("RefreshToken");
+        response = postRequest(endpoint, code, body);
+
+        // Проверяем успешность запроса
+        if (response.getStatusCode() == 200) {
+            String accessToken = response.jsonPath().getString("accessToken");
+            String refreshToken = response.jsonPath().getString("refreshToken");
+            long expiration = response.jsonPath().getLong("expiration");
+            System.out.println("Access Token: " + accessToken);
+            System.out.println("Refresh Token: " + refreshToken);
+            System.out.println("Expiration: " + expiration);
+
+        }
+        return (Tokens) response;
     }
-    @Step("New User Registration : {email},{password},{confirmPassword},{role}")
-    public String newUserRegistration(String email, String password,String confirmPassword,String user ,int code) {
+
+    @Step("New Admin Registration : {email},{password},{confirmPassword},{role}")
+    public String newAdminRegistration(String email, String password, String confirmPassword, String role, int code) {
         String endpoint = "/api/auth/register";
         LinkedHashMap<String, String> body = new LinkedHashMap<>();
         body.put("email", email);
         body.put("password", password);
         body.put("confirmPassword", confirmPassword);
-        body.put("user", user);
+        body.put("role", role);
         response = postRequest(endpoint, code, body);
         return response.asString();
     }
 
-    // Метод переименован и удалены ненужные параметры
-    @Step("Activate New User: {token}")
-    public void activateNewUser(String accessToken,String refreshToken, int code) {
-        String endpoint = "/api/auth/token";
+    @Step("Refresh Access Token via api: {refreshToken}")
+    public String refreshAccessToken(String refreshToken, int code) {
+        String endpoint = "/api/auth/refresh";
         LinkedHashMap<String, String> body = new LinkedHashMap<>();
-        body.put("AccessToken: " + accessToken + ", RefreshToken: " + refreshToken, String.valueOf(code));
+        body.put("refreshToken", refreshToken);
         response = postRequest(endpoint, code, body);
+        return response.asString();
     }
 }
