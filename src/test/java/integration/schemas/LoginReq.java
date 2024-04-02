@@ -12,6 +12,11 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 
 public class LoginReq {
+    @JsonProperty("email")
+    private String email;
+
+    @JsonProperty("password")
+    private String password;
 
 
     public String getEmail() {
@@ -30,9 +35,5 @@ public class LoginReq {
         this.password = password;
     }
 
-    @JsonProperty("email")
-    private String email;
 
-    @JsonProperty("password")
-    private String password;
 }

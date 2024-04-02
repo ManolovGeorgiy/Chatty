@@ -3,15 +3,15 @@ package integration;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class UserLogin {
+public class AdminLogin {
 
     public static void main(String[] args) {
         String baseUrl = "http://chatty.telran-edu.de:8989";
         String endpoint = "/api/auth/login";
 
         // Подготовка данных для запроса
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
+        String email = "g.power@gmail.com";
+        String password = "GPower3333";
 
         // Выполнение запроса
         Response response = RestAssured.given()
@@ -38,6 +38,7 @@ public class UserLogin {
             System.out.println("Access Token: " + accessToken);
             System.out.println("Refresh Token: " + refreshToken);
             System.out.println("Expiration: " + expiration);
+
         }
     }
 }

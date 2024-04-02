@@ -7,6 +7,14 @@ public class PostCreateReq {
     private String title;
     @JsonProperty("description")
     private String description;
+    @JsonProperty("body")
+    private String body;
+    @JsonProperty("imageUrl")
+    private String imageUrl;
+    @JsonProperty("publishDate")
+    private String publishDate;
+    @JsonProperty("draft")
+    private boolean draft;
 
     public String getTitle() {
         return title;
@@ -56,12 +64,5 @@ public class PostCreateReq {
         this.draft = draft;
     }
 
-    @JsonProperty("body")
-    private String body;
-    @JsonProperty("imageUrl")
-    private String imageUrl;
-    @JsonProperty("publishDate")
-    private String publishDate;
-    @JsonProperty("draft")
-    private boolean draft;
+
 }

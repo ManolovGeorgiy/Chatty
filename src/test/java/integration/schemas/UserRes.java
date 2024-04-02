@@ -16,6 +16,14 @@ public class UserRes {
     private String email;
     @JsonProperty("role")
     private String role;
+    @JsonProperty("gender")
+    private String gender;
+    @JsonProperty("birthDate")
+    private String birthDate;
+    @JsonProperty("avatarUrl")
+    private String avatarUrl;
+    @JsonProperty("backgroundUrl")
+    private String backgroundUrl;
 
     public String getId() {
         return id;
@@ -97,12 +105,5 @@ public class UserRes {
         this.backgroundUrl = backgroundUrl;
     }
 
-    @JsonProperty("gender")
-    private String gender;
-    @JsonProperty("birthDate")
-    private String birthDate;
-    @JsonProperty("avatarUrl")
-    private String avatarUrl;
-    @JsonProperty("backgroundUrl")
-    private String backgroundUrl;
+
 }

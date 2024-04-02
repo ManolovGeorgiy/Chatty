@@ -15,7 +15,7 @@
             </class>
             <class name="e2e.tests.Georgiy.UserCanDeletePostTest">
             </class>
-            <class name="e2e.tests.Georgiy.AdminPanelTest">
+            <class name="e2e.tests.Georgiy.AdminDeleteUserTest">
             </class>
         </classes>
     </test>

@@ -17,6 +17,30 @@ public class UserResForAdmin {
 
     @JsonProperty("email")
     private String email;
+    @JsonProperty("surname")
+    private String surname;
+
+    @JsonProperty("phone")
+    private String phone;
+
+
+    @JsonProperty("role > Array [User,Admin]")
+    private String role;
+
+    @JsonProperty("gender > Array [Male,Female]")
+    private String gender;
+
+    @JsonProperty("birthDate ($date-time)")
+    private  String birthDate;
+
+    @JsonProperty("avatarUrl")
+    private  String avatarUrl;
+
+    @JsonProperty("backgroundUrl")
+    private String backgroundUrl;
+
+    @JsonProperty("blocked")
+    private Boolean blocked;
 
     public String getEmail() {
         return email;
@@ -101,28 +125,4 @@ public class UserResForAdmin {
         this.blocked = blocked;
     }
 
-    @JsonProperty("surname")
-    private String surname;
-
-    @JsonProperty("phone")
-    private String phone;
-
-
-    @JsonProperty("role > Array [User,Admin]")
-    private String role;
-
-    @JsonProperty("gender > Array [Male,Female]")
-    private String gender;
-
-    @JsonProperty("birthDate ($date-time)")
-    private  String birthDate;
-
-    @JsonProperty("avatarUrl")
-    private  String avatarUrl;
-
-    @JsonProperty("backgroundUrl")
-    private String backgroundUrl;
-
-    @JsonProperty("blocked")
-    private Boolean blocked;
 }

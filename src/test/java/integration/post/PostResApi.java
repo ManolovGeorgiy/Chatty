@@ -1,4 +1,4 @@
 package integration.post;
 
-public class PostApi {
+public class PostResApi {
 }

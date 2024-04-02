@@ -70,8 +70,6 @@ public class EditUserDataProfileTest extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-
-
         editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
@@ -91,8 +89,5 @@ public class EditUserDataProfileTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
-
-
-
     }
 }
