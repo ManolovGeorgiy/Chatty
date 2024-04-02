@@ -20,7 +20,7 @@ public class ApplicationManager {
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
-            capabilities.setVersion("123.0.6312.86");
+            capabilities.setVersion("120.0");
             Map<String, Object> selenoidOptions = new HashMap<>();
             selenoidOptions.put("enableVNC", false);
 
