@@ -15,6 +15,10 @@ public class UserUpdateReq {
     private String phone;
     @JsonProperty("gender")
     private String gender;
+    @JsonProperty("backgroundUrl")
+    private String backgroundUrl;
+    @JsonProperty("blocked")
+    private boolean blocked;
 
     public String getAvatarUrl() {
         return avatarUrl;
@@ -80,9 +84,6 @@ public class UserUpdateReq {
         this.blocked = blocked;
     }
 
-    @JsonProperty("backgroundUrl")
-    private String backgroundUrl;
-    @JsonProperty("blocked")
-    private boolean blocked;
+
 
 }

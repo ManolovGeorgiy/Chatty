@@ -7,6 +7,11 @@ public class AuthRes {
     @JsonProperty("accessToken")
     private  String accessToken;
 
+    @JsonProperty("refreshToken")
+    private  String refreshToken;
+    @JsonProperty("expiration ($int64)")
+    private  Integer expiration;
+
     public String getAccessToken() {
         return accessToken;
     }
@@ -31,8 +36,5 @@ public class AuthRes {
         this.expiration = expiration;
     }
 
-    @JsonProperty("refreshToken")
-    private  String refreshToken;
-    @JsonProperty("expiration ($int64)")
-    private  Integer expiration;
+
 }

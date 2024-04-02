@@ -6,10 +6,10 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import java.util.LinkedHashMap;
 
-public class UserApi extends ApiBase {
+public class AdminApi extends ApiBase {
     Response response;
 
-    public UserApi(){
+    public AdminApi(){
 
     }
 
@@ -20,9 +20,9 @@ public class UserApi extends ApiBase {
         body.put("email", email);
         body.put("password", password);
         response = postRequest(endpoint,code,body);
-        String refreshToken = response.jsonPath().getString("refreshToken");
-        return response.jsonPath().getString("refreshToken" + refreshToken);
-
+        //String refreshToken = response.jsonPath().getString("refreshToken");
+        //return response.jsonPath().getString("refreshToken" + refreshToken);
+        return response.header("RefreshToken");
     }
     @Step("New User Registration : {email},{password},{confirmPassword},{role}")
     public String newUserRegistration(String email, String password,String confirmPassword,String user ,int code) {

@@ -6,6 +6,14 @@ public class RegisterReq {
 
     @JsonProperty("email")
     private String email;
+    @JsonProperty("password")
+    private  String password;
+
+    @JsonProperty("confirmPassword")
+    private String confirmPassword;
+
+    @JsonProperty("role")
+    private  String role;
 
     public String getEmail() {
         return email;
@@ -39,12 +47,5 @@ public class RegisterReq {
         this.role = role;
     }
 
-    @JsonProperty("password")
-    private  String password;
 
-    @JsonProperty("confirmPassword")
-    private String confirmPassword;
-
-    @JsonProperty("role")
-    private  String role;
 }

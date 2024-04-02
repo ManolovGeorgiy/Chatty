@@ -50,7 +50,6 @@ Header header;
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email,password);
-
     }
 }
 

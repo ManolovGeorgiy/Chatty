@@ -1,4 +1,4 @@
 package integration.admin;
 
-public class AdminApi {
+public class LoginReqApi {
 }
