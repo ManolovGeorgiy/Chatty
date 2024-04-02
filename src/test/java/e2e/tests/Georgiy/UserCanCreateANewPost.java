@@ -64,7 +64,7 @@ public class UserCanCreateANewPost extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(70);
-        String folderPath = "C:\\Users\\PC\\Chatty\\reference";
+        String folderPath = "C:\\Daniel\\SKOALA\\Chatty\\reference";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
