@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import java.util.Locale;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 public class ContactUsTest extends TestBase {
 
     Faker faker = new Faker(new Locale("en"));
@@ -28,8 +30,8 @@ public class ContactUsTest extends TestBase {
     @Test(description = "CHATTY-23")
     public void userCanSendMessage() {
 
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
+        String email = "Baba@mail.ru";
+        String password = "Baba1234";
 
         String name = faker.name().fullName();
         String emailContact = faker.internet().emailAddress();
@@ -49,6 +51,8 @@ public class ContactUsTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text, newText);
+        contactUsPage.waitForLoading();
+        assertTrue("Feedback submitted successfully!", contactUsPage.isMessageSent());
         contactUsPage.waitForLoading();
 
         header = new Header(app.driver);
