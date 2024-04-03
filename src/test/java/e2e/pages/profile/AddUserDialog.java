@@ -8,6 +8,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class AddUserDialog extends BasePage {
     public AddUserDialog(WebDriver driver) {
@@ -19,7 +20,7 @@ public class AddUserDialog extends BasePage {
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
-    @FindBy(xpath = "//*[@name='name']")
+    @FindBy(xpath = "//*[@data-test='profileName']")
     WebElement nameInput;
 
     @FindBy(xpath = "//*[@name='surname']")
@@ -46,12 +47,19 @@ public class AddUserDialog extends BasePage {
 
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
+            Assert.assertTrue(nameInput.isDisplayed());
             getWait().forVisibility(surnameInput);
+            Assert.assertTrue(surnameInput.isDisplayed());
             getWait().forVisibility(gender);
+            Assert.assertTrue(gender.isDisplayed());
             getWait().forVisibility(birthDateForm);
+            Assert.assertTrue(birthDateForm.isDisplayed());
             getWait().forVisibility(phoneInput);
+            Assert.assertTrue(phoneInput.isDisplayed());
             getWait().forVisibility(saveButton);
             getWait().forVisibility(headerElement);
+            Assert.assertTrue(headerElement.isDisplayed());
+
 
         } catch (StaleElementReferenceException e) {
         }
@@ -59,9 +67,9 @@ public class AddUserDialog extends BasePage {
     public void clickAddUserForm() {
         editButton.click();
     }
-    public String getName() {
-        return nameInput.getText();
-    }
+    //public String getName() {
+       // return nameInput.getText();
+    //}
     public String getSurname() {
         return surnameInput.getText();
     }
@@ -76,13 +84,18 @@ public class AddUserDialog extends BasePage {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(imagePath);;
-        } catch (Exception e) {
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
     }
     public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
-
-        nameInput.sendKeys(name);
+        try {
+            nameInput.clear();
+            nameInput.sendKeys(name);
+        } catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
+        surnameInput.clear();
         surnameInput.sendKeys(surname);
         WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));
         gender.click();

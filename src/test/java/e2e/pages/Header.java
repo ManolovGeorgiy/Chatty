@@ -53,6 +53,7 @@ public class Header extends BasePage {
             getWait().forVisibility(headerElement);
             getWait().forVisibility(headerMenu);
             getWait().forVisibility(headerList);
+            Assert.assertTrue(headerList.isDisplayed());
             getWait().forVisibility(logo);
             getWait().forVisibility(homeButton);
             getWait().forVisibility(aboutButton);

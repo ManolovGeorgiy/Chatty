@@ -8,6 +8,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class EditUserForm extends BasePage {
     public EditUserForm(WebDriver driver) {
@@ -43,10 +44,14 @@ public class EditUserForm extends BasePage {
         try {
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
+            Assert.assertTrue(nameInput.isDisplayed());
             getWait().forVisibility(surnameInput);
+            Assert.assertTrue(surnameInput.isDisplayed());
             getWait().forVisibility(gender);
             getWait().forVisibility(birthDateForm);
+            Assert.assertTrue(birthDateForm.isDisplayed());
             getWait().forVisibility(phoneInput);
+            Assert.assertTrue(phoneInput.isDisplayed());
             getWait().forVisibility(saveButton);
         } catch (StaleElementReferenceException e) {
         }
@@ -76,8 +81,12 @@ public class EditUserForm extends BasePage {
         }
     }
     public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
-        nameInput.clear();
-        nameInput.sendKeys(name);
+        try {
+            nameInput.clear();
+            nameInput.sendKeys(name);
+        } catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
         surnameInput.clear();
         surnameInput.sendKeys(surname);
         WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));

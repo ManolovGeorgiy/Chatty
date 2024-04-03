@@ -36,7 +36,6 @@ public class FullTest extends TestBase {
         String image = "reference";
         //String date = "";
 
-
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email, password);
@@ -57,7 +56,5 @@ public class FullTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name,emailContact,text,newText);
-
-
     }
 }

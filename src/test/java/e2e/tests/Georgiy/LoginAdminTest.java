@@ -87,5 +87,4 @@ public class LoginAdminTest extends TestBase {
         loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
         loginPage.waitForLoading();
     }
-
 }

@@ -34,6 +34,7 @@ public class AdminPanelPage extends BasePage {
         }
     }
     public void searchAccount(String emailAccount){
+        searchEmailInput.clear();
         searchEmailInput.sendKeys(emailAccount);
         emailButton.click();
     }
@@ -43,4 +44,5 @@ public class AdminPanelPage extends BasePage {
     public void clickDeleteAccount(){
         deleteAccount.click();
     }
+
 }

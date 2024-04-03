@@ -5,6 +5,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class EditPasswordForm extends BasePage {
     public EditPasswordForm(WebDriver driver) {
@@ -30,8 +31,11 @@ public class EditPasswordForm extends BasePage {
         try {
             getWait().forVisibility(changePasswordButton);
             getWait().forVisibility(oldPasswordInput);
+            Assert.assertTrue(oldPasswordInput.isDisplayed());
             getWait().forVisibility(newPasswordInput);
+            Assert.assertTrue(newPasswordInput.isDisplayed());
             getWait().forVisibility(confirmNewPasswordInput);
+            Assert.assertTrue(confirmNewPasswordInput.isDisplayed());
             getWait().forVisibility(saveChangeButton);
         } catch (StaleElementReferenceException e) {
         }

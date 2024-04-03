@@ -63,8 +63,8 @@ public class UserCanCreateANewPost extends TestBase {
         String password = "Manowar33246";
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
-        String content = faker.lorem().sentence(70);
-        String folderPath = "C:\\Daniel\\SKOALA\\Chatty\\reference";
+        String content = faker.lorem().sentence(50);
+        String folderPath = "C:\\Users\\PC\\Chatty\\reference\\path";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -88,9 +88,8 @@ public class UserCanCreateANewPost extends TestBase {
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
+
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
-
-
     }
 }

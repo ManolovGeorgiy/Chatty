@@ -16,17 +16,14 @@ public class AdminCanCreateAPostTest extends TestBase {
     AdminPanelPage adminPanelPage;
     CreateAPostForm createAPostForm;
     Header header;
-
-
-
     @Test
     public void adminCanCreateAPost() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
-        String content = faker.lorem().sentence(70);
-        String imagePath = "C:\\Users\\PC\\Chatty\\reference\\5204092180870848057_121.jpg";
+        String content = faker.lorem().sentence(50);
+        String imagePath = "C:\\Users\\PC\\Chatty\\image\\5204092180870848388_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -41,8 +38,10 @@ public class AdminCanCreateAPostTest extends TestBase {
 
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.waitForLoading();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
         createAPostForm.clickSubmitButton();
+        createAPostForm.waitForLoading();
     }
 }

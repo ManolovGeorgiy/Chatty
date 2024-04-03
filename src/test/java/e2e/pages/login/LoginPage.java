@@ -30,7 +30,9 @@ public class LoginPage extends BasePage {
         try {
             getWait().forVisibility(signUpLink);
             getWait().forVisibility(emailInput);
+            Assert.assertTrue(emailInput.isDisplayed());
             getWait().forVisibility(passwordInput);
+            Assert.assertTrue(passwordInput.isDisplayed());
             getWait().forVisibility(loginButton);
         } catch (StaleElementReferenceException e) {
             driver.navigate().refresh();

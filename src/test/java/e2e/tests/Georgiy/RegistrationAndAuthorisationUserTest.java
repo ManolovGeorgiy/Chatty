@@ -50,6 +50,9 @@ Header header;
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email,password);
+
+        homeBlogPage = new HomeBlogPage(app.driver);
+        homeBlogPage.waitForLoading();
     }
 }
 

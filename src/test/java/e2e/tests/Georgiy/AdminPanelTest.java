@@ -22,7 +22,6 @@ public class AdminPanelTest extends TestBase {
     EditUserForm editUserForm;
     EditPasswordForm editPasswordForm;
 
-
     @Test
     public void deleteAccount(){
 
@@ -77,7 +76,6 @@ public class AdminPanelTest extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
-
 
         //editPasswordForm = new EditPasswordForm(app.driver);
         //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);

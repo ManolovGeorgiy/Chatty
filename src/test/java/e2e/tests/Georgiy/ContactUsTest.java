@@ -21,7 +21,6 @@ public class ContactUsTest extends TestBase {
     Header header;
     HomeBlogPage homeBlogPage;
     ContactUsPage contactUsPage;
-
     @Epic(value = "Contact Us")
     @Feature(value = "User can sent a message")
     @Description(value = "User can send feedback")

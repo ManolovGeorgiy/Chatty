@@ -5,7 +5,143 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/UserApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_41__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_15_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_15__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_18_18__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_12_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_12__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_00_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_00_38__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_00_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_00_39__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_00_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_00_40__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_17_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_17_12__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_03_2024_18_35__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_03_2024_20_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_03_2024_20_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_04_2024_18_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_04_2024_18_18__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_27_03_2024_18_19_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_27_03_2024_18_19__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_03_2024_17_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_03_2024_17_12__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_03_2024_18_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_03_2024_18_36__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_30_03_2024_20_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_30_03_2024_20_53__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2024_18_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2024_18_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_03_2024_19_24_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_03_2024_19_24__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_03_2024_17_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_03_2024_17_12__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2024_20_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_03_2024_20_52__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/TestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/enums/GenderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/enums/GenderInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/enums/SideBarInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/enums/SideBarInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/Header.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/Header.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/about/AboutPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/about/AboutPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditPostPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditPostPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/AddUserDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/AddUserDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditPasswordForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditPasswordForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditUserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditUserForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AboutPageTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AboutPageTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AddUserDataProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AddUserDataProfileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminPanelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminPanelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/FullTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/FullTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginAdminTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginAdminTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationAdminTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationAdminTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanDeletePostTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanDeletePostTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserFullTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserFullTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/utils/DataProviders.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/utils/DataProviders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/ApiBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/ApiBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/UserApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/UserApiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/UserLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/contactUs/ContactUsApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/contactUs/ContactUsApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/profile/ProfileApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/profile/ProfileApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/AuthRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/AuthRes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/ErrorRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/ErrorRes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/FeedbackReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/FeedbackReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/LoginReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/LoginReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PasswordUpdateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PasswordUpdateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostGetRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostGetRes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostRes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostUpdateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostUpdateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RefreshTokenReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RefreshTokenReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RegisterReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RegisterReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UploadFileRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UploadFileRes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserRes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserUpdateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserUpdateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/user/UserApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/user/UserApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848057_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848057_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848344_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848344_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848345_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848345_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848350_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848350_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848353_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848355_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848355_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848356_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848356_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848359_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848359_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848361_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848361_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848366_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848366_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848376_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848382_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848382_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848388_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848388_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/5204092180870848405_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848405_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/depositphotos_32011021-stock-photo-information-technology-it.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/tree-736885_1280.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/tree-736885_1280.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditPasswordForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditPasswordForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AddUserDataProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminDeleteUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminDeleteUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/ContactUsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/FullTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/FullTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditPostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +179,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Georgiy" />
+        <entry key="$PROJECT_DIR$" value="dev_Oksana" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,14 +205,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Chatty\reference\screenshot" />
       <recent name="C:\Users\PC\Chatty\reference" />
+      <recent name="C:\Users\PC\Chatty" />
+      <recent name="C:\Users\PC\Chatty\reference\image" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsTest.userCanSendMessage">
-    <configuration name="ContactUsTest.userCanSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AdminDeleteUserTest.deleteAccount">
+    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -85,8 +224,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.ContactUsTest" />
-      <option name="METHOD_NAME" value="userCanSendMessage" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AddUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanAddDataProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -94,7 +233,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminDeleteUserTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +242,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.LoginUserTest" />
-      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminDeleteUserTest" />
+      <option name="METHOD_NAME" value="deleteAccount" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,7 +251,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateANewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EditUserDataProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +260,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateANewPost" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.EditUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanEditProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest" />
+      <option name="METHOD_NAME" value="UserCanRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -147,31 +305,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateAPostTest" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactUsTest.userCanSendMessage" />
-        <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
+        <item itemvalue="TestNG.AdminDeleteUserTest.deleteAccount" />
+        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
         <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserCanCreateANewPost" />
-        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -248,15 +388,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711562947418</updated>
     </task>
-    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712156040251</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1712156040252</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -270,11 +402,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
@@ -511,14 +638,90 @@
           <line>28</line>
           <option name="timeStamp" value="163" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java</url>
-          <line>11</line>
-          <properties class="e2e.tests.Georgiy.LoginUserTest" method="userCanLogin">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
@@ -539,13 +742,22 @@
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>
-          <line>22</line>
-          <properties class="e2e.tests.Georgiy.AdminPanelTest">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserDataProfileTest.java</url>
+          <line>41</line>
+          <properties class="e2e.tests.Georgiy.EditUserDataProfileTest" method="userCanEditProfile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="172" />
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java</url>
+          <line>19</line>
+          <properties class="e2e.tests.Georgiy.AdminCanCreateAPostTest" method="adminCanCreateAPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="194" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

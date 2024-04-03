@@ -3,9 +3,11 @@ package e2e.pages.post;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class CreateAPostForm extends BasePage {
 
@@ -53,8 +55,11 @@ public class CreateAPostForm extends BasePage {
 
     public void userCanCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
+        Assert.assertTrue(titleInput.isDisplayed());
         descriptionInput.sendKeys(description);
+        Assert.assertTrue(descriptionInput.isDisplayed());
         contentInput.sendKeys(content);
+        Assert.assertTrue(contentInput.isDisplayed());
         imageInput.click();
     }
 
@@ -62,7 +67,7 @@ public class CreateAPostForm extends BasePage {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(imagePath);
-        } catch (Exception e) {
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
     }
