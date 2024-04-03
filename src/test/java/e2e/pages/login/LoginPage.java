@@ -53,7 +53,7 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
         loginButton.click();
     }
-    @Step("Open Registration page")
+    @Step("Open Registration page {}")
     public void signUp(){
         try {
             signUpLink.click();

@@ -53,6 +53,7 @@ public class CreateAPostForm extends BasePage {
         }
     }
 
+    @Step("Fill form {title},{description},{content}")
     public void userCanCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
         Assert.assertTrue(titleInput.isDisplayed());
@@ -63,6 +64,7 @@ public class CreateAPostForm extends BasePage {
         imageInput.click();
     }
 
+    @Step("upload image {imagePath}")
     public void imageLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -75,7 +77,7 @@ public class CreateAPostForm extends BasePage {
     public void draftTumblerSwitch() {
         tumblerSwitch.click();
     }
-
+    @Step("Click Button")
     public void clickSubmitButton() {
         submitButton.click();
     }

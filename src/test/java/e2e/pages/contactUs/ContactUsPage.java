@@ -26,7 +26,7 @@ public class ContactUsPage extends BasePage {
     @FindBy(xpath = "//*[@type='submit']")
     WebElement sendMessageButton;
 
-    @Step("Wait for loading Login page")
+    @Step("Wait for loading Contact Us")
     public void waitForLoading() {
         try {
             getWait().forVisibility(nameInput);
