@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="dev_Georgiy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +75,25 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanCreateANewPost.userCanCreateAPost">
+  <component name="RunManager" selected="TestNG.ContactUsTest.userCanSendMessage">
+    <configuration name="ContactUsTest.userCanSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.ContactUsTest" />
+      <option name="METHOD_NAME" value="userCanSendMessage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginUserTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -127,23 +147,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateAPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateAPostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -164,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactUsTest.userCanSendMessage" />
+        <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
         <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
         <item itemvalue="TestNG.UserCanCreateANewPost" />
         <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
-        <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserCanCreateAPostTest" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711562947418</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712156040251</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712156040252</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -379,11 +390,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
           <line>46</line>
           <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/ApiBase.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
@@ -543,5 +549,13 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest.ic" NAME="LoginAdminTest Coverage Results" MODIFIED="1712092384546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>e2e.tests.Georgiy.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest_adminCanNotLoginWithoutInvalidEmailAndPassword.ic" NAME="LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword Coverage Results" MODIFIED="1712091402972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>e2e.tests.Georgiy.*</FILTER>
+    </SUITE>
   </component>
 </project>

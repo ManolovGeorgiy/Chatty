@@ -30,8 +30,8 @@ public class ContactUsTest extends TestBase {
     @Test(description = "CHATTY-23")
     public void userCanSendMessage() {
 
-        String email = "Baba@mail.ru";
-        String password = "Baba1234";
+        String email = "tatar@abv.bg";
+        String password = "Manowar333246";
 
         String name = faker.name().fullName();
         String emailContact = faker.internet().emailAddress();
