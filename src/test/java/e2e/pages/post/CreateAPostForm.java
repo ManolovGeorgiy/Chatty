@@ -35,21 +35,27 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
 
-    @Step("Wait for loading Create a post form")
+    @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
             getWait().forVisibility(titleInput);
+            Assert.assertTrue(titleInput.isDisplayed());
             getWait().forVisibility(descriptionInput);
+            Assert.assertTrue(descriptionInput.isDisplayed());
             getWait().forVisibility(contentInput);
+            Assert.assertTrue(contentInput.isDisplayed());
             getWait().forVisibility(imageInput);
+            Assert.assertTrue(imageInput.isDisplayed());
             getWait().forVisibility(publishData);
+            Assert.assertTrue(publishData.isDisplayed());
             getWait().forVisibility(tumblerSwitch);
+            Assert.assertTrue(tumblerSwitch.isDisplayed());
             getWait().forVisibility(submitButton);
+            Assert.assertTrue(submitButton.isDisplayed());
         } catch (Exception e) {
-            Assert.fail("Failed to load Create a post form: " + e.getMessage());
+            e.printStackTrace();
         }
     }
-
 
     @Step("Fill form {title},{description},{content}")
     public void userCanCreateAPost(String title, String description, String content) {

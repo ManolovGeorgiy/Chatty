@@ -23,7 +23,7 @@ public class AdminCanCreateAPostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
-        String imagePath = "C:\\Users\\PC\\Chatty\\image\\5204092180870848388_121.jpg";
+        String imagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\Best-AI-tools-for-Image-Processing.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
