@@ -6,6 +6,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.testng.annotations.BeforeClass;
 
 public class ApiBase {
     private final Config config = new Config();
@@ -116,6 +117,13 @@ public class ApiBase {
         // Логика обновления токена
     }
 
-    protected void setUp() {
+
+        @BeforeClass
+        public void setUp() {
+            // Установка базового URI для API
+            RestAssured.baseURI = "http://your_api_base_url";
+            // Если требуется авторизация, установите здесь заголовок авторизации
+            // RestAssured.authentication = basic("username", "password");
+        }
     }
-}
+
