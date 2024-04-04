@@ -1,11 +1,18 @@
 package integration.user;
 
 import integration.user.UserApi;
+import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class UserApiTest {
 
     UserApi userApi;
+
+
 
 
     @Test
@@ -17,4 +24,5 @@ public class UserApiTest {
         String token = userApi.login(email, password, 200);
 
     }
+
 }

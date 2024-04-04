@@ -115,4 +115,7 @@ public class ApiBase {
     private void refreshAccessToken(String refreshToken) {
         // Логика обновления токена
     }
+
+    protected void setUp() {
+    }
 }

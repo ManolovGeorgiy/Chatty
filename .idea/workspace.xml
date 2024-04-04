@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminPostTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/ErrorRes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PasswordUpdateReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserLogin_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,76 +89,74 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginUserTest.userCanLogin">
-    <configuration name="AdminPanelTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ChattyApiTest_2">
+    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="integration.user.UserLogin" />
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="PATTERN" value="integration.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminPanelTest" />
-      <option name="METHOD_NAME" value="deleteAccount" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="EditUserProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="PATTERN" value="integration.Admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.EditUserProfileTest" />
-      <option name="METHOD_NAME" value="userCanEditProfile" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginUserTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.LoginUserTest" />
-      <option name="METHOD_NAME" value="userCanLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanCreateAPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateAPostTest" />
+      <option name="PACKAGE_NAME" value="integration.Admin" />
+      <option name="MAIN_CLASS_NAME" value="integration.Admin.AdminPostTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="ChattyApiTest_2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.ChattyApiTest_2" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="UserApiTest_2.TestGetAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest_2" />
+      <option name="METHOD_NAME" value="TestGetAllUsers" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -165,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
+        <item itemvalue="TestNG.ChattyApiTest_2" />
+        <item itemvalue="TestNG.AdminPostTest" />
+        <item itemvalue="TestNG.UserApiTest_2.TestGetAllUsers" />
+        <item itemvalue="Application.UserLogin" />
         <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserCanCreateAPostTest" />
-        <item itemvalue="TestNG.EditUserProfileTest.userCanEditProfile" />
-        <item itemvalue="TestNG.AdminPanelTest.deleteAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -536,7 +550,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>
           <line>22</line>
-          <properties class="e2e.tests.Georgiy.AdminPanelTest" method="deleteAccount">
+          <properties class="e2e.tests.Georgiy.AdminPanelTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
