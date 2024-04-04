@@ -39,6 +39,7 @@ public class LoginPage extends BasePage {
 
         }
     }
+    @Step("Screenshot {actualScreenshotName}")
     public void takeLoginPageScreenshot(String actualScreenshotName){
         try {
             waitForLoading();

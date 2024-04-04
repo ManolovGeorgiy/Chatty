@@ -6,6 +6,8 @@ import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
+import e2e.pages.profile.AddUserDialog;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AdminCanCreateAPostTest extends TestBase {
@@ -16,6 +18,14 @@ public class AdminCanCreateAPostTest extends TestBase {
     AdminPanelPage adminPanelPage;
     CreateAPostForm createAPostForm;
     Header header;
+    private void checkPostData(CreateAPostForm page, String title, String description, String content) {
+        String actualTitle = page.getTitle();
+        String actualDescription = page.getDescriptionText();
+        String actualContent = page.getContent();
+        Assert.assertEquals(actualTitle, title, actualTitle + " is not equal " + title);
+        Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
+        Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
+    }
     @Test
     public void adminCanCreateAPost() {
         String email = "g.power@gmail.com";
@@ -41,7 +51,9 @@ public class AdminCanCreateAPostTest extends TestBase {
         createAPostForm.waitForLoading();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
+        checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
+
     }
 }

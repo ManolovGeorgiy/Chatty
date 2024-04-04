@@ -15,7 +15,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class ContactUsTest extends TestBase {
 
-    Faker faker = new Faker(new Locale("en"));
+    Faker faker = new Faker(new Locale("ENGLISH"));
 
     LoginPage loginPage;
     Header header;

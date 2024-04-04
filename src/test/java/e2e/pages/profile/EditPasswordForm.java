@@ -1,6 +1,7 @@
 package e2e.pages.profile;
 
 import e2e.pages.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +28,7 @@ public class EditPasswordForm extends BasePage {
     @FindBy(xpath = "//*[@class='PasswordModal_pass_btn__eGL9h']")
     WebElement saveChangeButton;
 
+    @Step("Wait for loading change password")
     public void waitForLoading() {
         try {
             getWait().forVisibility(changePasswordButton);
@@ -40,14 +42,19 @@ public class EditPasswordForm extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+    @Step("Fill out password forms")
     public void changePassword(String oldPassword,String newPassword,String confirmNewPassword){
         changePasswordButton.click();
         oldPasswordInput.sendKeys(oldPassword);
         newPasswordInput.sendKeys(newPassword);
         confirmNewPasswordInput.sendKeys(confirmNewPassword);
     }
+    @Step("click change password button")
     public void saveChangePasswordButton() {
         saveChangeButton.click();
-
+        getWait().forClickable(changePasswordButton);
+    }
+    public boolean isPasswordChanged() {
+        return !saveChangeButton.isEnabled();
     }
 }

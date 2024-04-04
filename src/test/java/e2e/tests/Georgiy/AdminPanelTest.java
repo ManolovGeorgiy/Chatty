@@ -10,6 +10,7 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
 import e2e.pages.registration.RegistrationPage;
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
 public class AdminPanelTest extends TestBase {

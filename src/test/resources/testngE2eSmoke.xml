@@ -11,6 +11,8 @@
             </class>
             <class name="e2e.tests.Georgiy.ContactUsTest">
             </class>
+            <class name="e2e.tests.Georgiy.AboutPageTests">
+            </class>
             <class name="e2e.tests.Georgiy.UserCanCreateANewPost">
             </class>
             <class name="e2e.tests.Georgiy.UserCanEditPostTest">

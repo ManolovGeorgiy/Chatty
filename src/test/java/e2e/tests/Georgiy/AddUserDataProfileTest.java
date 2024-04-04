@@ -12,13 +12,27 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class AddUserDataProfileTest extends TestBase {
+
 
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
     AddUserDialog addUserDialog;
 
+    private void checkUserData(AddUserDialog page, String name, String surname, String date, String phone) {
+        String actualName = page.getName();
+        String actualSurname = page.getSurname();
+        String actualDate = page.getDate();
+        String actualPhone = page.getPhone();
+        Assert.assertEquals(actualName, name, actualName + " is not equal " + name);
+        Assert.assertEquals(actualSurname, surname, actualSurname + " is not equal " + surname);
+        Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
+        Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
+    }
 
     @Epic(value = "User can add data to the profile")
     @Feature(value = "User added data to the profile")
@@ -33,8 +47,10 @@ public class AddUserDataProfileTest extends TestBase {
 
         String name = "Georg";
         String surname = "Man";
-        String date = "24.01.1983";
-        String phone = "4915777777";
+        String date = "1984-01-08";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate birthDate = LocalDate.parse(date, formatter);
+        String phone = "+4915777777";
         String imageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5204092180870848055_121.jpg";
 
         loginPage = new LoginPage(app.driver);
@@ -55,8 +71,9 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
+        //checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")),phone);
+        //addUserDialog.waitForLoading();
 
-        //checkUserData(addUserDialog,name,surname,date,phone);
         header = new Header(app.driver);
         header.clickHome();
     }

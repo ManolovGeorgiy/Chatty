@@ -33,16 +33,18 @@ public class AdminPanelPage extends BasePage {
             e.printStackTrace();
         }
     }
+    @Step("search account")
     public void searchAccount(String emailAccount){
         searchEmailInput.clear();
         searchEmailInput.sendKeys(emailAccount);
         emailButton.click();
     }
+    @Step("click edit account button")
     public void clickEditAccount(){
         editAccount.click();
     }
+    @Step("click delete account button")
     public void clickDeleteAccount(){
         deleteAccount.click();
     }
-
 }

@@ -37,6 +37,7 @@ public class ContactUsPage extends BasePage {
             e.printStackTrace();
         }
     }
+    @Step("Fill out the feedback form {name},{emailContact},{text},{newText}")
     public void feedback(String name, String emailContact, String text, String newText) {
         nameInput.sendKeys(name);
         emailInput.sendKeys(emailContact);
@@ -52,8 +53,7 @@ public class ContactUsPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='success-message']")));
     }
-
-
+    @Step("check after sending")
     public boolean isMessageSent() {
         try {
             return driver.findElement(By.xpath("//div[@class='success-message']")).isDisplayed();

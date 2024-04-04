@@ -68,6 +68,18 @@ public class CreateAPostForm extends BasePage {
         imageInput.click();
     }
 
+    public String getTitle() {
+        return titleInput.getAttribute("value");
+    }
+    public String getDescriptionText() {
+        return descriptionInput.getAttribute("value");
+    }
+
+    public String getContent() {
+        return contentInput.getAttribute("value");
+    }
+
+
     @Step("Upload image: {imagePath}")
     public void imageLoading(String imagePath) {
         try {

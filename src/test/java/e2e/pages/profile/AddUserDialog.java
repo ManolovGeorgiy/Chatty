@@ -44,7 +44,6 @@ public class AddUserDialog extends BasePage {
     @Step("Wait for loading Edit profile page")
     public void waitForLoading() {
         try {
-
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
             Assert.assertTrue(nameInput.isDisplayed());
@@ -53,33 +52,34 @@ public class AddUserDialog extends BasePage {
             getWait().forVisibility(gender);
             Assert.assertTrue(gender.isDisplayed());
             getWait().forVisibility(birthDateForm);
-            Assert.assertTrue(birthDateForm.isDisplayed());
             getWait().forVisibility(phoneInput);
             Assert.assertTrue(phoneInput.isDisplayed());
             getWait().forVisibility(saveButton);
             getWait().forVisibility(headerElement);
             Assert.assertTrue(headerElement.isDisplayed());
-
-
         } catch (StaleElementReferenceException e) {
         }
     }
+    @Step("click edit button profile")
     public void clickAddUserForm() {
         editButton.click();
     }
-    //public String getName() {
-       // return nameInput.getText();
-    //}
+    public String getName() {
+        return nameInput.getAttribute("value");
+    }
     public String getSurname() {
-        return surnameInput.getText();
-    }
-    public String getDate() {
-        return birthDateForm.getText();
-    }
-    public String getPhone() {
-        return phoneInput.getText();
+        return surnameInput.getAttribute("value");
     }
 
+    public String getDate() {
+        return birthDateForm.getAttribute("value");
+    }
+
+    public String getPhone() {
+        return phoneInput.getAttribute("value");
+    }
+
+    @Step("upload avatar image {imagePath}")
     public void imageAvatarLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -88,6 +88,7 @@ public class AddUserDialog extends BasePage {
             e.printStackTrace();
         }
     }
+    @Step("Fill profile form {name},{surname},{date},{phone}")
     public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
@@ -105,6 +106,7 @@ public class AddUserDialog extends BasePage {
         birthDateForm.sendKeys(date);
         phoneInput.sendKeys(phone);
     }
+    @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();
     }
