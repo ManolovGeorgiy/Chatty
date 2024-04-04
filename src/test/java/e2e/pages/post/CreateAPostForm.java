@@ -10,9 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class CreateAPostForm extends BasePage {
-
-    private By imageInputLocator = By.id("image");
-
     public CreateAPostForm(WebDriver driver) {
         super(driver);
     }
@@ -38,7 +35,7 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
 
-    @Step("Wait for loading Create a post")
+    @Step("Wait for loading Create a post form")
     public void waitForLoading() {
         try {
             getWait().forVisibility(titleInput);
@@ -49,9 +46,10 @@ public class CreateAPostForm extends BasePage {
             getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitButton);
         } catch (Exception e) {
-            e.printStackTrace();
+            Assert.fail("Failed to load Create a post form: " + e.getMessage());
         }
     }
+
 
     @Step("Fill form {title},{description},{content}")
     public void userCanCreateAPost(String title, String description, String content) {
@@ -64,20 +62,20 @@ public class CreateAPostForm extends BasePage {
         imageInput.click();
     }
 
-    @Step("upload image {imagePath}")
+    @Step("Upload image: {imagePath}")
     public void imageLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(imagePath);
-        } catch (StaleElementReferenceException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
 
     public void draftTumblerSwitch() {
         tumblerSwitch.click();
     }
-    @Step("Click Button")
+    @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();
     }
