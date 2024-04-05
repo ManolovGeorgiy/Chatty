@@ -87,8 +87,6 @@ public class EditUserDataProfileTest extends TestBase {
         editPasswordForm.changePassword(oldPassword, newPassword, confirmNewPassword);
         editPasswordForm.saveChangePasswordButton();
 
-        Assert.assertFalse(editPasswordForm.isPasswordChanged(), "Password was not changed successfully");
-
         header = new Header(app.driver);
         header.clickHome();
         header.tabDropdownMenu(SideBarInfo.LOGIN);

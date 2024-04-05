@@ -47,8 +47,8 @@ public class AddUserDataProfileTest extends TestBase {
 
         String name = "Georg";
         String surname = "Man";
-        String date = "1984-01-08";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String date = "08-01-1984";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate birthDate = LocalDate.parse(date, formatter);
         String phone = "+4915777777";
         String imageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5204092180870848055_121.jpg";
@@ -67,12 +67,12 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.imageAvatarLoading(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE, date,phone);
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        //checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")),phone);
-        //addUserDialog.waitForLoading();
+        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
+        addUserDialog.waitForLoading();
 
         header = new Header(app.driver);
         header.clickHome();

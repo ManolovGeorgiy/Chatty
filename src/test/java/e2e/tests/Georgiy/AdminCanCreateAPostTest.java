@@ -54,6 +54,5 @@ public class AdminCanCreateAPostTest extends TestBase {
         checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
-
     }
 }

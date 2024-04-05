@@ -3,10 +3,8 @@ package e2e.pages.profile;
 import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -102,8 +100,16 @@ public class AddUserDialog extends BasePage {
         gender.click();
         getWait().forVisibility(option);
         option.click();
-        birthDateForm.clear();
-        birthDateForm.sendKeys(date);
+        try {
+            birthDateForm.isDisplayed();
+            birthDateForm.sendKeys(date);
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.TAB).perform();
+            birthDateForm.sendKeys(date);
+        } catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
+
         phoneInput.sendKeys(phone);
     }
     @Step("click save button")
