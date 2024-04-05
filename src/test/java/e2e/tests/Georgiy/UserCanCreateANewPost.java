@@ -13,6 +13,7 @@ import java.util.Locale;
 import java.util.Random;
 
 import io.qameta.allure.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UserCanCreateANewPost extends TestBase {
@@ -52,6 +53,15 @@ public class UserCanCreateANewPost extends TestBase {
             return null;
         }
     }
+
+    private void checkPostData(CreateAPostForm page, String title, String description, String content) {
+        String actualTitle = page.getTitle();
+        String actualDescription = page.getDescriptionText();
+        String actualContent = page.getContent();
+        Assert.assertEquals(actualTitle, title, actualTitle + " is not equal " + title);
+        Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
+        Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
+    }
     @Epic(value = "User can create a post")
     @Feature(value = "User created post")
     @Description(value = "User can create a post")
@@ -63,7 +73,7 @@ public class UserCanCreateANewPost extends TestBase {
         String password = "Manowar33246";
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
-        String content = faker.lorem().sentence(50);
+        String content = faker.lorem().sentence(20);
         String folderPath = "C:\\Users\\PC\\Chatty\\reference\\path";
 
         loginPage = new LoginPage(app.driver);
@@ -88,7 +98,7 @@ public class UserCanCreateANewPost extends TestBase {
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
-
+        checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
     }

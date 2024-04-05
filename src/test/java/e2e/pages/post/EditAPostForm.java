@@ -33,6 +33,17 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@class='close']")
     WebElement closeButton;
 
+    public String getEditTitle() {
+        return titleInput.getAttribute("value");
+    }
+    public String getEditDescriptionText() {
+        return descriptionInput.getAttribute("value");
+    }
+
+    public String getEditContent() {
+        return contentInput.getAttribute("value");
+    }
+
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {

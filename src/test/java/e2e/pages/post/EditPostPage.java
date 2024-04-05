@@ -19,6 +19,7 @@ public class EditPostPage extends BasePage {
     @FindBy(xpath = "//*[@data-test='delete-button']")
     WebElement deletePostButton;
 
+
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {

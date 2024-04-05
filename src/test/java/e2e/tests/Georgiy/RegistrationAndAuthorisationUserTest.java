@@ -39,7 +39,6 @@ Header header;
         registrationPage.waitForLoading();
         registrationPage.optionUser();
         registrationPage.registration(email,password,confirmPassword);
-        //registrationPage.waitForLoading();
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
