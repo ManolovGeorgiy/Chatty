@@ -72,7 +72,7 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
-        addUserDialog.waitForLoading();
+        //addUserDialog.waitForLoading();
 
         header = new Header(app.driver);
         header.clickHome();

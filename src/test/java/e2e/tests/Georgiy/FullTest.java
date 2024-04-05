@@ -55,6 +55,6 @@ public class FullTest extends TestBase {
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
-        contactUsPage.feedback(name,emailContact,text,newText);
+        contactUsPage.feedback(name,emailContact,text);
     }
 }

@@ -16,9 +16,10 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class UserCanCreateANewPost extends TestBase {
 
-    Faker faker = new Faker(new Locale("ru"));
+    Faker faker = new Faker(new Locale("ENGLISH"));
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;

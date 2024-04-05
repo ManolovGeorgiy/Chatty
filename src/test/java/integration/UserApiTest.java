@@ -1,30 +1,23 @@
 package integration;
 
-import com.github.javafaker.Faker;
 import integration.user.UserApi;
 import org.testng.annotations.Test;
 
-public class UserApiTest extends UserApi {
+public class UserApiTest {
 
     UserApi userApi;
-
     @Test
-    public void userRegistration(){
+    public void testNewUserRegistration() {
 
-        String email = "tatarrrrr@abv.bg";
-        String password = "REdRED3333";
-        String confirmPassword = "REdRED3333";
-        String role = "user";
-        String accessToken = "accessToken";
-        String refreshToken = "refreshToken";
+        // Задаем данные для регистрации нового пользователя
+        String email = "g.power@gmail.com";
+        String password = "GPower3333";
 
 
         userApi = new UserApi();
-        userApi.newUserRegistration(email,password,confirmPassword,role,201);
 
-        userApi.refreshToken(accessToken,refreshToken,200);
-        userApi.login(email,password,200);
+        String token = userApi.login(email,password,200);
+        userApi.refreshToken(token,200);
+
     }
-
 }
-

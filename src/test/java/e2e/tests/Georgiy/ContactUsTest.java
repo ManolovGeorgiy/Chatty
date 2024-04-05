@@ -6,6 +6,7 @@ import e2e.pages.contactUs.ContactUsPage;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
+import e2e.pages.profile.AddUserDialog;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -22,6 +23,15 @@ public class ContactUsTest extends TestBase {
     Header header;
     HomeBlogPage homeBlogPage;
     ContactUsPage contactUsPage;
+
+    private void checkFeedbackData(ContactUsPage page, String userName, String userEmail, String userContent) {
+        String actualUserName = page.getUserName();
+        String actualUserEmail = page.getUserEmail();
+        String actualUserContent = page.getUserContent();
+        Assert.assertEquals(actualUserName, userName, actualUserName + " is not equal " + userName);
+        Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
+        Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
+    }
     @Epic(value = "Contact Us")
     @Feature(value = "User can sent a message")
     @Description(value = "User can send feedback")
@@ -33,10 +43,9 @@ public class ContactUsTest extends TestBase {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
 
-        String name = faker.name().fullName();
+        String userName = faker.name().fullName();
         String emailContact = faker.internet().emailAddress();
         String text = faker.lorem().sentence(100);
-        String newText = faker.lorem().sentence(10);
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -50,8 +59,10 @@ public class ContactUsTest extends TestBase {
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
-        contactUsPage.feedback(name, emailContact, text, newText);
+        contactUsPage.feedback(userName, emailContact, text);
         contactUsPage.waitForLoading();
+        checkFeedbackData(contactUsPage,userName,emailContact,text);
+        contactUsPage.sendMessageButtonClick();
         assertTrue("Feedback submitted successfully!", contactUsPage.isMessageSent());
         contactUsPage.waitForLoading();
 
@@ -68,7 +79,6 @@ public class ContactUsTest extends TestBase {
         String name = faker.name().fullName();
         String emailContact = "tatarabv.bg";
         String text = faker.lorem().sentence(100);
-        String newText = faker.lorem().sentence(10);
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -82,9 +92,9 @@ public class ContactUsTest extends TestBase {
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
-        contactUsPage.feedback(name, emailContact, text, newText);
+        contactUsPage.feedback(name, emailContact, text);
         contactUsPage.waitForLoading();
-        //assertTrue("Error message should be displayed", contactUsPage.isErrorDisplayed());
+        //assertTrue("Invalid email format", contactUsPage.errorDisplayed());
         contactUsPage.waitForLoading();
 
         header = new Header(app.driver);
