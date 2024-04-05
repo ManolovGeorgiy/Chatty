@@ -72,8 +72,8 @@ public class UserCanCreateANewPost extends TestBase {
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
-        String title = faker.lorem().sentence(1);
-        String description = faker.lorem().sentence(1);
+        String title = "My first post";
+        String description = "Pice";
         String content = faker.lorem().sentence(20);
         String folderPath = "C:\\Users\\PC\\Chatty\\reference\\path";
 

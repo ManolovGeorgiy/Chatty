@@ -4,20 +4,25 @@ import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
+import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
-import e2e.pages.profile.AddUserDialog;
+import e2e.pages.post.EditAPostForm;
+import e2e.pages.post.EditPostPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AdminCanCreateAPostTest extends TestBase {
+public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
     Faker faker = new Faker();
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
+    HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
     Header header;
+    EditPostPage editPostPage;
+    EditAPostForm editAPostForm;
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
         String actualDescription = page.getDescriptionText();
@@ -25,6 +30,14 @@ public class AdminCanCreateAPostTest extends TestBase {
         Assert.assertEquals(actualTitle, title, actualTitle + " is not equal " + title);
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
+    }
+    private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
+        String actualTitle = page.getEditTitle();
+        String actualDescription = page.getEditDescriptionText();
+        String actualContent = page.getEditContent();
+        Assert.assertEquals(actualTitle, editTitle, actualTitle + " is not equal " + editTitle);
+        Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
+        Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
     @Test
     public void adminCanCreateAPost() {
@@ -34,6 +47,11 @@ public class AdminCanCreateAPostTest extends TestBase {
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
         String imagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\Best-AI-tools-for-Image-Processing.jpg";
+
+        String editTitle = "IT";
+        String editDescription = "QA Engineer";
+        String editContent = "HALLO WORLD";
+        String newImagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\tree-736885_1280.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -54,6 +72,32 @@ public class AdminCanCreateAPostTest extends TestBase {
         checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
+
+
+
+        header = new Header(app.driver);
+        header.clickHome();
+        header.myPostClick();
+        header.waitForLoading();
+        header.setMyPostTab();
+
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage.editPostButtonClick();
+        editPostPage.waitForLoading();
+
+        editAPostForm = new EditAPostForm(app.driver);
+        editAPostForm.waitForLoading();
+        editAPostForm.imageLoading(newImagePath);
+        editAPostForm.editPost(editTitle,editDescription,editContent);
+        checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
+        editAPostForm.clickEditSubmitButton();
+
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage.deletePostButtonClick();
+
+        homeBlogPage = new HomeBlogPage(app.driver);
 
 
     }

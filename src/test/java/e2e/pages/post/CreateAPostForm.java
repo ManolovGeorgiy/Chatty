@@ -14,6 +14,10 @@ public class CreateAPostForm extends BasePage {
         super(driver);
     }
 
+
+    @FindBy(xpath = "//*[@class='post-header']")
+    public WebElement header;
+
     @FindBy(xpath = "//*[@name='title']")
     WebElement titleInput;
 
@@ -38,18 +42,13 @@ public class CreateAPostForm extends BasePage {
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
+            getWait().forVisibility(header);
             getWait().forVisibility(titleInput);
-            Assert.assertTrue(titleInput.isDisplayed());
             getWait().forVisibility(descriptionInput);
-            Assert.assertTrue(descriptionInput.isDisplayed());
             getWait().forVisibility(contentInput);
-            Assert.assertTrue(contentInput.isDisplayed());
             getWait().forVisibility(imageInput);
-            Assert.assertTrue(imageInput.isDisplayed());
             getWait().forVisibility(publishData);
-            Assert.assertTrue(publishData.isDisplayed());
             getWait().forVisibility(tumblerSwitch);
-            Assert.assertTrue(tumblerSwitch.isDisplayed());
             getWait().forVisibility(submitButton);
             Assert.assertTrue(submitButton.isDisplayed());
         } catch (Exception e) {
@@ -60,11 +59,8 @@ public class CreateAPostForm extends BasePage {
     @Step("Fill form {title},{description},{content}")
     public void userCanCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
-        Assert.assertTrue(titleInput.isDisplayed());
         descriptionInput.sendKeys(description);
-        Assert.assertTrue(descriptionInput.isDisplayed());
         contentInput.sendKeys(content);
-        Assert.assertTrue(contentInput.isDisplayed());
         imageInput.click();
     }
 
