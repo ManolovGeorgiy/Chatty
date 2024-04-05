@@ -89,8 +89,6 @@ public class UserCanCreateANewPost extends TestBase {
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
 
-
-        // Получаем случайный путь к изображению из указанной папки
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {
             createAPostForm.imageLoading(randomImagePath);

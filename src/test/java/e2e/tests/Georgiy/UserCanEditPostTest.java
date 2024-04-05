@@ -18,7 +18,6 @@ public class UserCanEditPostTest extends TestBase {
     Header header;
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
-
     private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
         String actualTitle = page.getEditTitle();
         String actualDescription = page.getEditDescriptionText();
@@ -27,7 +26,6 @@ public class UserCanEditPostTest extends TestBase {
         Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
         Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
-
     @Epic(value = "User can edit post")
     @Feature(value = "User edited post")
     @Description(value = "User can edit post")
@@ -43,7 +41,6 @@ public class UserCanEditPostTest extends TestBase {
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
         String imagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\5204092180870848355_121.jpg";
-
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -71,6 +68,5 @@ public class UserCanEditPostTest extends TestBase {
 
         editPostPage = new EditPostPage(app.driver);
         editPostPage.waitForLoading();
-
     }
 }
