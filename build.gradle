@@ -55,4 +55,4 @@ task SmokeTestE2e2(type: Test) {
         suites 'src/test/resources/testngE2eSmoke2.xml'
     }
     systemProperty 'allure.results.directory', 'build/allure-results'
-
+}
