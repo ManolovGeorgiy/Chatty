@@ -33,7 +33,7 @@ public class UserApi extends ApiBase {
         body.put("email", email);
         body.put("password", password);
         body.put("confirmPassword", confirmPassword);
-        body.put("user", user);
+        //body.put("role", role);
         response = postRequest(endpoint, code, body);
         return response.asString();
     }
