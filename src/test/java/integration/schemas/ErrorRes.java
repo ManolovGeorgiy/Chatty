@@ -6,6 +6,9 @@ public class ErrorRes {
     @JsonProperty("httpStatus")
     private String httpStatus;
 
+    @JsonProperty("message")
+    private String message;
+
     public String getHttpStatus() {
         return httpStatus;
     }
@@ -21,7 +24,4 @@ public class ErrorRes {
     public void setMessage(String message) {
         this.message = message;
     }
-
-    @JsonProperty("message")
-    private String message;
 }

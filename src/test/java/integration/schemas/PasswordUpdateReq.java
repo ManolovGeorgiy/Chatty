@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PasswordUpdateReq {
     @JsonProperty("currentPassword")
     private String currentPassword;
+    @JsonProperty("newPassword")
+    private String newPassword;
+
+    @JsonProperty("confirmPassword")
+    private String confirmPassword;
 
     public String getCurrentPassword() {
         return currentPassword;
@@ -29,10 +34,4 @@ public class PasswordUpdateReq {
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
-
-    @JsonProperty("newPassword")
-    private String newPassword;
-    @JsonProperty("confirmPassword")
-    private String confirmPassword;
-
 }
