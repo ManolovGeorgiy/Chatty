@@ -7,28 +7,23 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.net.URI;
+
 public class ApiBase {
     private final Config config = new Config();
     private final String BASE_URI = config.getProjectUrl();
     private RequestSpecification spec;
 
     public ApiBase() {
-        this.spec = new RequestSpecBuilder()
+        RequestSpecification spec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URI)
                 .setContentType(ContentType.JSON)
+                .addHeader("RefreshToken", BASE_URI)
                 .build();
     }
 
 
-    public ApiBase(String token) {
-        this.spec = new RequestSpecBuilder()
-                .setBaseUri(BASE_URI)
-                .setContentType(ContentType.JSON)
-                .addHeader("RefreshToken", token)
-                .build();
-    }
-
-    protected Response getRequest(String endpoint, int code) {
+    public Response getRequest(String endpoint, int code) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
@@ -56,7 +51,8 @@ public class ApiBase {
     private void validateStatusCode(Response response, int code) {
     }
 
-    protected Response getRequestWithParamString(String endpoint, int code, Object body, String paramName, String paramValue, String refreshToken) {
+    protected Response getRequestWithParamString() {
+
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -112,9 +108,6 @@ public class ApiBase {
         return response;
     }
 
-    //private void validateStatusCode(Response response, int expectedStatusCode) {
-    //response.then().assertThat().statusCode(expectedStatusCode);
-    //}
 
     public void refreshAccessToken(String refreshToken) {
         RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();

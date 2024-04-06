@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Screenshot">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/admin/getLoginReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminLogin.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/RegisterraqApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserReqApi.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,9 +100,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminApiTest.adminLogin">
-    <configuration name="AdminLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="integration.AdminLogin" />
+  <component name="RunManager" selected="TestNG.UserApiTest.userCanWorkWithLoginViaApiTest">
+    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="integration.UserLogin" />
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -100,61 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminApiTest.adminLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration" />
-      <option name="MAIN_CLASS_NAME" value="integration.AdminApiTest" />
-      <option name="METHOD_NAME" value="adminLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminApiTest.userLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration" />
-      <option name="MAIN_CLASS_NAME" value="integration.AdminApiTest" />
-      <option name="METHOD_NAME" value="userLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginAdminTest.adminCanNotLoginWithInvalidData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.LoginAdminTest" />
-      <option name="METHOD_NAME" value="adminCanNotLoginWithInvalidData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserReqApi.userCanWorkWithDateApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginReqApi" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -163,8 +123,60 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.UserReqApi" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.LoginReqApi" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginReqApi.userCanWorkWithDateApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.LoginReqApi" />
       <option name="METHOD_NAME" value="userCanWorkWithDateApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApiTest.userCanWorkWithLoginViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest" />
+      <option name="METHOD_NAME" value="userCanWorkWithLoginViaApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -174,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminApiTest.adminLogin" />
-        <item itemvalue="TestNG.UserReqApi.userCanWorkWithDateApiTest" />
-        <item itemvalue="Application.AdminLogin" />
-        <item itemvalue="TestNG.AdminApiTest.userLogin" />
-        <item itemvalue="TestNG.LoginAdminTest.adminCanNotLoginWithInvalidData" />
+        <item itemvalue="TestNG.UserApiTest.userCanWorkWithLoginViaApiTest" />
+        <item itemvalue="TestNG.UserApiTest" />
+        <item itemvalue="TestNG.LoginReqApi" />
+        <item itemvalue="TestNG.LoginReqApi.userCanWorkWithDateApiTest" />
+        <item itemvalue="Application.UserLogin" />
       </list>
     </recent_temporary>
   </component>
