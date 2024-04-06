@@ -81,7 +81,7 @@ public class EditUserDataProfileTest extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
-        //checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
+        checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
 
         editPasswordForm = new EditPasswordForm(app.driver);
         editPasswordForm.changePassword(oldPassword, newPassword, confirmNewPassword);
