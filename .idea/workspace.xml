@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/enums/MenuInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditUserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditUserForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginAdminTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginAdminTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/LoginUserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/homeBlog/HomeBlogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/homeBlog/HomeBlogPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/registration/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/registration/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/ContactUsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +86,7 @@
       <command value="y" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsTest.userCanNotSendMessage">
+  <component name="RunManager" selected="TestNG.AdminDeleteUserTest.deleteAccount">
     <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -120,6 +98,24 @@
       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AddUserDataProfileTest" />
       <option name="METHOD_NAME" value="userCanAddDataProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminDeleteUserTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminDeleteUserTest" />
+      <option name="METHOD_NAME" value="deleteAccount" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -181,31 +177,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest" />
-      <option name="METHOD_NAME" value="UserCanRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdminDeleteUserTest.deleteAccount" />
         <item itemvalue="TestNG.ContactUsTest.userCanNotSendMessage" />
         <item itemvalue="TestNG.ContactUsTest.userCanSendMessage" />
         <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
         <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
-        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712356925412</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712416322770</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712416322770</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
