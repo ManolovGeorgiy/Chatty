@@ -1,10 +1,12 @@
 package e2e.pages.profile;
 
 import e2e.pages.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class EditPasswordForm extends BasePage {
     public EditPasswordForm(WebDriver driver) {
@@ -26,24 +28,33 @@ public class EditPasswordForm extends BasePage {
     @FindBy(xpath = "//*[@class='PasswordModal_pass_btn__eGL9h']")
     WebElement saveChangeButton;
 
+    @Step("Wait for loading change password")
     public void waitForLoading() {
         try {
             getWait().forVisibility(changePasswordButton);
             getWait().forVisibility(oldPasswordInput);
+            Assert.assertTrue(oldPasswordInput.isDisplayed());
             getWait().forVisibility(newPasswordInput);
+            Assert.assertTrue(newPasswordInput.isDisplayed());
             getWait().forVisibility(confirmNewPasswordInput);
+            Assert.assertTrue(confirmNewPasswordInput.isDisplayed());
             getWait().forVisibility(saveChangeButton);
         } catch (StaleElementReferenceException e) {
         }
     }
+    @Step("Fill out password forms")
     public void changePassword(String oldPassword,String newPassword,String confirmNewPassword){
         changePasswordButton.click();
         oldPasswordInput.sendKeys(oldPassword);
         newPasswordInput.sendKeys(newPassword);
         confirmNewPasswordInput.sendKeys(confirmNewPassword);
     }
+    @Step("click change password button")
     public void saveChangePasswordButton() {
         saveChangeButton.click();
-
+        getWait().forClickable(changePasswordButton);
+    }
+    public boolean isPasswordChanged() {
+        return !saveChangeButton.isEnabled();
     }
 }

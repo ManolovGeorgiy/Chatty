@@ -2,10 +2,12 @@ package e2e.pages.contactUs;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ContactUsPage extends BasePage {
     public ContactUsPage(WebDriver driver) {
@@ -13,34 +15,73 @@ public class ContactUsPage extends BasePage {
     }
 
     @FindBy(xpath = "//*[@id='name']")
-    WebElement nameInput;
+    WebElement nameUserInput;
 
     @FindBy(xpath = "//*[@id='email']")
-    WebElement emailInput;
+    WebElement emailUserInput;
 
     @FindBy(xpath = "//*[@id='content']")
-    WebElement contentInput;
+    WebElement contentUserInput;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement sendMessageButton;
 
-    @Step("Wait for loading Login page")
+    public String getUserName() {
+        return nameUserInput.getAttribute("value");
+    }
+    public String getUserEmail() {
+        return emailUserInput.getAttribute("value");
+    }
+
+    public String getUserContent() {
+        return contentUserInput.getAttribute("value");
+    }
+    public String getNewContent() {
+        return contentUserInput.getAttribute("value");
+    }
+    @Step("Wait for loading Contact Us")
     public void waitForLoading() {
         try {
-            getWait().forVisibility(nameInput);
-            getWait().forVisibility(emailInput);
-            getWait().forVisibility(contentInput);
+            getWait().forVisibility(nameUserInput);
+            getWait().forVisibility(emailUserInput);
+            getWait().forVisibility(contentUserInput);
             getWait().forVisibility(sendMessageButton);
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
     }
-    public void feedback(String name,String emailContact,String text, String newText){
-        nameInput.sendKeys(name);
-        emailInput.sendKeys(emailContact);
-        contentInput.sendKeys(text);
-        contentInput.clear();
-        contentInput.sendKeys(newText);
+    @Step("Fill out the feedback form {name},{emailContact},{text}")
+    public void feedback(String name, String emailContact, String text) {
+        nameUserInput.sendKeys(name);
+        emailUserInput.sendKeys(emailContact);
+        contentUserInput.sendKeys(text);
+    }
+    public void sendMessageButtonClick(){
         sendMessageButton.click();
+    }
+    @Step("check after sending")
+    public boolean isMessageSent() {
+        Duration timeout = Duration.ofSeconds(1);
+        // Добавляем ожидание появления подтверждения успешной отправки сообщения
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='success-message']")));
+        try {
+            return driver.findElement(By.xpath("//div[@class='success-message']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false; // Возвращаем false, если элемент не найден
+        }
+    }
+
+    public boolean errorDisplayed() {
+        Duration timeout = Duration.ofSeconds(10
+        );
+        // Добавляем ожидание появления подтверждения error
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error']")));
+        try {
+            return driver.findElement(By.xpath("//div[@class='error']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false; // Возвращаем false, если элемент не найден
+        }
     }
 }

@@ -12,7 +12,11 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class AddUserDataProfileTest extends TestBase {
+
 
     LoginPage loginPage;
     Header header;
@@ -43,8 +47,10 @@ public class AddUserDataProfileTest extends TestBase {
 
         String name = "Georg";
         String surname = "Man";
-        String date = "03.01.1984";
-        String phone = "4915777777";
+        String date = "08-01-1984";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate birthDate = LocalDate.parse(date, formatter);
+        String phone = "+4915777777";
         String imageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5204092180870848055_121.jpg";
 
         loginPage = new LoginPage(app.driver);
@@ -61,11 +67,11 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.imageAvatarLoading(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE, date,phone);
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        //checkUserData(addUserDialog,name,surname,date,phone);
+        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
 
 
         header = new Header(app.driver);

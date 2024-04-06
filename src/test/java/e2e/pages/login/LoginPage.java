@@ -30,13 +30,16 @@ public class LoginPage extends BasePage {
         try {
             getWait().forVisibility(signUpLink);
             getWait().forVisibility(emailInput);
+            Assert.assertTrue(emailInput.isDisplayed());
             getWait().forVisibility(passwordInput);
+            Assert.assertTrue(passwordInput.isDisplayed());
             getWait().forVisibility(loginButton);
         } catch (StaleElementReferenceException e) {
             driver.navigate().refresh();
 
         }
     }
+    @Step("Screenshot {actualScreenshotName}")
     public void takeLoginPageScreenshot(String actualScreenshotName){
         try {
             waitForLoading();
@@ -51,7 +54,7 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
         loginButton.click();
     }
-    @Step("Open Registration page")
+    @Step("Open Registration page {}")
     public void signUp(){
         try {
             signUpLink.click();

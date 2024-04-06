@@ -12,7 +12,6 @@ public class AdminDeleteUserTest extends TestBase {
     AdminPanelPage adminPanelPage;
     @Test
     public void deleteAccount(){
-
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 
@@ -27,6 +26,7 @@ public class AdminDeleteUserTest extends TestBase {
         adminPanelPage.searchAccount(emailAccount);
         adminPanelPage.waitForLoading();
         adminPanelPage.clickDeleteAccount();
+        adminPanelPage.searchAccount(emailAccount);
     }
 }
 

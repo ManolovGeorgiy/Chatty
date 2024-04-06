@@ -13,11 +13,13 @@ import java.util.Locale;
 import java.util.Random;
 
 import io.qameta.allure.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class UserCanCreateANewPost extends TestBase {
 
-    Faker faker = new Faker(new Locale("ru"));
+    Faker faker = new Faker(new Locale("ENGLISH"));
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
@@ -52,6 +54,15 @@ public class UserCanCreateANewPost extends TestBase {
             return null;
         }
     }
+
+    private void checkPostData(CreateAPostForm page, String title, String description, String content) {
+        String actualTitle = page.getTitle();
+        String actualDescription = page.getDescriptionText();
+        String actualContent = page.getContent();
+        Assert.assertEquals(actualTitle, title, actualTitle + " is not equal " + title);
+        Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
+        Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
+    }
     @Epic(value = "User can create a post")
     @Feature(value = "User created post")
     @Description(value = "User can create a post")
@@ -61,10 +72,10 @@ public class UserCanCreateANewPost extends TestBase {
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
-        String title = faker.lorem().sentence(1);
-        String description = faker.lorem().sentence(1);
-        String content = faker.lorem().sentence(70);
-        String folderPath = "C:\\Users\\PC\\Chatty\\reference";
+        String title = "My first post";
+        String description = "Pice";
+        String content = faker.lorem().sentence(20);
+        String folderPath = "C:\\Users\\PC\\Chatty\\reference\\path";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -79,8 +90,6 @@ public class UserCanCreateANewPost extends TestBase {
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
 
-
-        // Получаем случайный путь к изображению из указанной папки
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {
             createAPostForm.imageLoading(randomImagePath);
@@ -88,9 +97,8 @@ public class UserCanCreateANewPost extends TestBase {
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
+        checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
-
-
     }
 }

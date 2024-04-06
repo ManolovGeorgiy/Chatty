@@ -7,6 +7,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
@@ -32,6 +33,17 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@class='close']")
     WebElement closeButton;
 
+    public String getEditTitle() {
+        return titleInput.getAttribute("value");
+    }
+    public String getEditDescriptionText() {
+        return descriptionInput.getAttribute("value");
+    }
+
+    public String getEditContent() {
+        return contentInput.getAttribute("value");
+    }
+
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {
@@ -41,7 +53,9 @@ public class EditAPostForm extends BasePage {
             getWait().forVisibility(submitEditButton);
             //getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(closeButton);
-        } catch (StaleElementReferenceException ignored) {
+        } catch (Exception e) {
+            Assert.fail("Failed to load Create a post form: " + e.getMessage());
+            e.printStackTrace();
         }
     }
     public void editPost(String editTitle,String editDescription,String editContent){
@@ -53,9 +67,13 @@ public class EditAPostForm extends BasePage {
         contentInput.sendKeys(editContent);
     }
     public void imageLoading(String imagePath) {
-        WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-        fileInput.sendKeys(imagePath);
+        try {
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(imagePath);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
     public void draftTumblerSwitch() {
         //tumblerSwitch.click();
     }

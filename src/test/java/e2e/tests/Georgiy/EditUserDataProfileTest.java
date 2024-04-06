@@ -14,6 +14,9 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class EditUserDataProfileTest extends TestBase {
 
     Faker faker = new Faker();
@@ -33,6 +36,7 @@ public class EditUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
+
     @Epic(value = "User can edit data to the profile")
     @Feature(value = "User edited data to the profile")
     @Description(value = "User can edit data")
@@ -46,8 +50,11 @@ public class EditUserDataProfileTest extends TestBase {
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
-        String editDate = "03.01.1985";
-        String editPhone = "4915731078";
+        String editFormattedDate = "1985-01-03";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
+
+        String editPhone = "+4915731078";
         String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
 
         String oldPassword = "Manowar333246";
@@ -70,14 +77,14 @@ public class EditUserDataProfileTest extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editDate, editPhone);
+        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
-        //checkEditUserData(editUserForm,editName,editSurname,editDate,editPhone);
+        checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
 
         editPasswordForm = new EditPasswordForm(app.driver);
-        editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        editPasswordForm.changePassword(oldPassword, newPassword, confirmNewPassword);
         editPasswordForm.saveChangePasswordButton();
 
         header = new Header(app.driver);
@@ -85,7 +92,7 @@ public class EditUserDataProfileTest extends TestBase {
         header.tabDropdownMenu(SideBarInfo.LOGIN);
 
         loginPage = new LoginPage(app.driver);
-        loginPage.login(email,confirmNewPassword);
+        loginPage.login(email, confirmNewPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();

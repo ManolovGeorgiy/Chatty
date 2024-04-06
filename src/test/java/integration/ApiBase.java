@@ -7,23 +7,29 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-import java.net.URI;
-
 public class ApiBase {
     private final Config config = new Config();
     private final String BASE_URI = config.getProjectUrl();
     private RequestSpecification spec;
 
+
     public ApiBase() {
-        RequestSpecification spec = new RequestSpecBuilder()
+        this.spec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URI)
                 .setContentType(ContentType.JSON)
-                .addHeader("RefreshToken", BASE_URI)
                 .build();
     }
 
+    public ApiBase(String token) {
+        this();
+        this.spec = new RequestSpecBuilder()
+                .setBaseUri(BASE_URI)
+                .setContentType(ContentType.JSON)
+                .addHeader("RefreshToken", token)
+                .build();
+    }
 
-    public Response getRequest(String endpoint, int code) {
+    protected Response getRequest(String endpoint, int code) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
@@ -35,29 +41,10 @@ public class ApiBase {
         return response;
     }
 
-    protected Response getRequestWithParam(String endpoint, int code, String paramName, int id) {
+    protected Response getRequestWithQueryParam(String endpoint, int code, String paramName, String paramValue, String refreshToken) {
         Response response = RestAssured.given()
                 .spec(spec)
-                .when()
-                .pathParam(paramName, id)
-                .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
-        validateStatusCode(response, code);
-        return response;
-    }
-
-    private void validateStatusCode(Response response, int code) {
-    }
-
-    protected Response getRequestWithParamString() {
-
-        Response response = RestAssured.given()
-                .spec(spec)
-                .body(body)
-                .when()
-                .pathParam(paramName, paramValue)
+                .param(paramName, paramValue)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -66,6 +53,19 @@ public class ApiBase {
             refreshAccessToken(refreshToken);
         }
         validateStatusCode(response, code);
+        return response;
+    }
+
+    protected Response getRequestWithParamString(String endpoint, int code,String paramName, String paramValue){
+        Response response = RestAssured.given()
+                .spec(spec)
+                .when()
+                .pathParam(paramName,paramValue)
+                .log().all()
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
         return response;
     }
 
@@ -82,7 +82,7 @@ public class ApiBase {
         return response;
     }
 
-    protected Response putRequest(String endpoint, int code, String email, Object body) {
+    protected Response putRequest(String endpoint, int code, Object body) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -108,13 +108,11 @@ public class ApiBase {
         return response;
     }
 
+    private void validateStatusCode(Response response, int code) {
+        response.then().assertThat().statusCode(code);
+    }
 
-    public void refreshAccessToken(String refreshToken) {
-        RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
-        requestSpecBuilder.setBaseUri(BASE_URI);
-        requestSpecBuilder.setContentType(ContentType.JSON);
-        requestSpecBuilder.addHeader("Access-Token", refreshToken);
-        this.spec = requestSpecBuilder
-                .build();
+    protected void refreshAccessToken(String refreshToken) {
+        // Логика обновления токена
     }
 }

@@ -10,6 +10,7 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
 import e2e.pages.registration.RegistrationPage;
+import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
 public class AdminPanelTest extends TestBase {
@@ -21,7 +22,6 @@ public class AdminPanelTest extends TestBase {
     AdminPanelPage adminPanelPage;
     EditUserForm editUserForm;
     EditPasswordForm editPasswordForm;
-
 
     @Test
     public void deleteAccount(){
@@ -77,7 +77,6 @@ public class AdminPanelTest extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
-
 
         //editPasswordForm = new EditPasswordForm(app.driver);
         //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);

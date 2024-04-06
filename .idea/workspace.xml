@@ -4,27 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Screenshot">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_17_53__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/LoginReqApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/admin/RegisterraqApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserReqApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditPostPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditPostPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AddUserDataProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AddUserDataProfileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/FullTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/FullTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/UserApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/UserApiTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/user/UserApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/user/UserApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AddUserDataProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateANewPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +67,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -90,58 +87,33 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="integration.admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Chatty\reference\screenshot" />
       <recent name="C:\Users\PC\Chatty\reference" />
+      <recent name="C:\Users\PC\Chatty" />
+      <recent name="C:\Users\PC\Chatty\reference\image" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserApiTest.userCanWorkWithLoginViaApiTest">
-    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="integration.UserLogin" />
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="y" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost">
+    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.*" />
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginReqApi" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.LoginReqApi" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginReqApi.userCanWorkWithDateApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.LoginReqApi" />
-      <option name="METHOD_NAME" value="userCanWorkWithDateApiTest" />
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AddUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanAddDataProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -149,16 +121,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCanCreateEditAndDeletePostTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.user.*" />
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest" />
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminCanCreateEditAndDeletePostTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -166,17 +138,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApiTest.userCanWorkWithLoginViaApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.user.*" />
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest" />
-      <option name="METHOD_NAME" value="userCanWorkWithLoginViaApiTest" />
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminCanCreateEditAndDeletePostTest" />
+      <option name="METHOD_NAME" value="adminCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminDeleteUserTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminDeleteUserTest" />
+      <option name="METHOD_NAME" value="deleteAccount" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EditUserDataProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.EditUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanEditProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -186,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserApiTest.userCanWorkWithLoginViaApiTest" />
-        <item itemvalue="TestNG.UserApiTest" />
-        <item itemvalue="TestNG.LoginReqApi" />
-        <item itemvalue="TestNG.LoginReqApi.userCanWorkWithDateApiTest" />
-        <item itemvalue="Application.UserLogin" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest" />
+        <item itemvalue="TestNG.AdminDeleteUserTest.deleteAccount" />
+        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
+        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -267,28 +275,84 @@
       <option name="project" value="LOCAL" />
       <updated>1711562947418</updated>
     </task>
-    <task id="LOCAL-00009" summary="Screenshot">
+    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1711994129770</created>
+      <created>1712180400693</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1711994129770</updated>
+      <updated>1712180400693</updated>
     </task>
-    <task id="LOCAL-00010" summary="Screenshot">
-      <created>1712077525953</created>
+    <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712180575795</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1712077525953</updated>
+      <updated>1712180575795</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712181476439</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712181476439</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712242783951</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712242783951</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712244412282</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712244412282</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712245539963</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712245539963</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712339844810</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712339844810</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712344431793</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712344431793</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712353705339</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712353705339</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
-    <MESSAGE value="Screenshot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Screenshot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration,Login,Post,Contact Us" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -299,105 +363,329 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="188" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="189" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="190" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="191" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="192" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="193" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="194" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="195" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="196" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="198" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="200" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="201" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
           <line>23</line>
-          <option name="timeStamp" value="202" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="223" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="233" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="234" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="184" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanDeletePostTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>
-          <line>26</line>
-          <properties class="e2e.tests.Georgiy.AdminPanelTest" method="deleteAccount">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+          <line>19</line>
+          <properties class="e2e.tests.Georgiy.UserCanCreateAPostTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="172" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+          <line>17</line>
+          <properties class="e2e.tests.Georgiy.EditUserProfileTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java</url>
+          <line>43</line>
+          <properties class="e2e.tests.Georgiy.AdminCanCreateAPostTest" method="adminCanCreateAPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java</url>
+          <line>26</line>
+          <properties class="e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
+          <line>9</line>
+          <properties class="integration.UserApiTest" method="testNewUserRegistration">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="213" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest.ic" NAME="LoginAdminTest Coverage Results" MODIFIED="1712092384546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>e2e.tests.Georgiy.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest_adminCanNotLoginWithoutInvalidEmailAndPassword.ic" NAME="LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword Coverage Results" MODIFIED="1712091402972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>e2e.tests.Georgiy.*</FILTER>
+    </SUITE>
   </component>
 </project>

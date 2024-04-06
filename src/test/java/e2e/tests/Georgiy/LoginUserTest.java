@@ -88,6 +88,5 @@ public class LoginUserTest extends TestBase {
         loginPage.waitForLoading();
         loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
         loginPage.waitForLoading();
-
     }
 }

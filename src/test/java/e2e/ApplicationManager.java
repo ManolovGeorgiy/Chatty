@@ -34,7 +34,8 @@ public class ApplicationManager {
                 e.printStackTrace();
             }
         } else {
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearResolutionCache().setup();
+            //WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
         driver.get(config.getProjectUrl());
