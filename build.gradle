@@ -42,3 +42,17 @@ task SmokeTestE2e(type: Test) {
     }
     systemProperty 'allure.results.directory', 'build/allure-results'
 }
+
+test {
+    useTestNG()
+}
+task SmokeTestE2e2(type: Test) {
+    useTestNG() {
+        testLogging {
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+            exceptionFormat "full"
+        }
+        suites 'src/test/resources/testngE2eSmoke2.xml'
+    }
+    systemProperty 'allure.results.directory', 'build/allure-results'
+
