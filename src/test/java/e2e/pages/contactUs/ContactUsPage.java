@@ -50,6 +50,16 @@ public class ContactUsPage extends BasePage {
             e.printStackTrace();
         }
     }
+
+    @Step("Screenshot {actualScreenshotName}")
+    public void takeFeedbackFormPageScreenshot(String actualScreenshotName){
+        try {
+            waitForLoading();
+            takeAndCompareScreenshot(actualScreenshotName, null);
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
+    }
     @Step("Fill out the feedback form {name},{emailContact},{text}")
     public void feedback(String name, String emailContact, String text) {
         nameUserInput.sendKeys(name);
@@ -72,16 +82,14 @@ public class ContactUsPage extends BasePage {
         }
     }
 
-    public boolean errorDisplayed() {
-        Duration timeout = Duration.ofSeconds(10
-        );
-        // Добавляем ожидание появления подтверждения error
+    public boolean error() {
+        Duration timeout = Duration.ofSeconds(1);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error']")));
         try {
             return driver.findElement(By.xpath("//div[@class='error']")).isDisplayed();
         } catch (NoSuchElementException e) {
-            return false; // Возвращаем false, если элемент не найден
+            return false;
         }
     }
 }

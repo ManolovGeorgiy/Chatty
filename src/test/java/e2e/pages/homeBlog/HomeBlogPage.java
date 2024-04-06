@@ -2,8 +2,11 @@ package e2e.pages.homeBlog;
 
 
 
+import e2e.enums.MenuInfo;
+import e2e.enums.SideBarInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,20 +21,22 @@ public class HomeBlogPage extends BasePage {
     @FindBy(xpath = "//*[@class='sidebar__section']")
     WebElement sectionSidebar;
 
-    //@FindBy(xpath = "//*[@class='menu-item']//a[@href='/homeblog']")
-    //WebElement homeBlogButton;
-
-    //@FindBy(xpath = "//a[@class='menu-item']//a[@href='/draft']")
-    //WebElement draftButton;
+    @FindBy(xpath = "//*[@class='menu']")
+    WebElement menu;
 
     @Step("Wait for loading HomeBlog page")
     public void waitForLoading() {
         try {
             getWait().forVisibility(sectionSidebar);
-            //getWait().forVisibility(homeBlogButton);
-            //getWait().forVisibility(draftButton);
+            getWait().forVisibility(menu);
         } catch (StaleElementReferenceException e) {
         }
+    }
+    public void tabMenu(MenuInfo tab) {
+        WebElement option = driver.findElement(By.xpath("//a[@href='" + tab.value + "']"));
+        menu.click();
+        getWait().forVisibility(option);
+        option.click();
     }
     public void clickHomeBlogButton(){
         sectionSidebar.sendKeys();

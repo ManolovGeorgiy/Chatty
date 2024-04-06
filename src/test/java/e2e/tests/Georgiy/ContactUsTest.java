@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.Locale;
 
+import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class ContactUsTest extends TestBase {
@@ -93,9 +94,10 @@ public class ContactUsTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text);
+        contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();
-        //assertTrue("Invalid email format", contactUsPage.errorDisplayed());
-        contactUsPage.waitForLoading();
+        //assertTrue("Invalid email format", contactUsPage.error());
+        contactUsPage.takeFeedbackFormPageScreenshot("Invalid email format");
 
         header = new Header(app.driver);
         header.clickHome();

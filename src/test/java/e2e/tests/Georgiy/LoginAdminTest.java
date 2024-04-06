@@ -6,6 +6,8 @@ import e2e.utils.DataProviders;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 public class LoginAdminTest extends TestBase {
 
     LoginPage loginPage;
@@ -34,6 +36,7 @@ public class LoginAdminTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        assertTrue("User not found. Please register.", loginPage.textError());
     }
     @Epic(value = "Admin can't login with invalid password")
     @Feature(value = "Admin is not logged in")
@@ -60,6 +63,7 @@ public class LoginAdminTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        loginPage.takeLoginPageScreenshot("adminCanNotLoginWithoutAEmailAndPassword");
     }
     @Epic(value = "Admin can't login with invalid email and password")
     @Feature(value = "Admin is not logged in")
@@ -67,12 +71,13 @@ public class LoginAdminTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("6")
     @Test(description = "CHATTY-49")
-    public void adminCanNotLoginWithoutInvalidEmailAndPassword() {
+    public void adminCanNotLoginWiInvalidEmailAndPassword() {
         String email = "gpower@gmail.com";
         String password = "GPower3334";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        assertTrue("User not found. Please register.", loginPage.textError());
     }
     @Epic(value = "Admin can' login with invalid data")
     @Feature(value = "Admin is not logged in")

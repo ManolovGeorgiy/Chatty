@@ -63,17 +63,17 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         header = new Header(app.driver);
         header.clickHome();
         header.createAPostClick();
-
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content);
         createAPostForm.waitForLoading();
+        //createAPostForm.tumblerSwitchClick();
+        //createAPostForm.waitForLoading();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
+
         checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
-
-
 
         header = new Header(app.driver);
         header.clickHome();
@@ -98,7 +98,5 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
-
-
     }
 }

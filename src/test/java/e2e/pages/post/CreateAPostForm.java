@@ -2,10 +2,8 @@ package e2e.pages.post;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -27,14 +25,14 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@name='content']")
     WebElement contentInput;
 
+    @FindBy(xpath = "//*[@class='checkbox']")
+    WebElement tumblerSwitch;
+
     @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
     WebElement imageInput;
 
     @FindBy(xpath = "//*[@id='publishDate']")
     WebElement publishData;
-
-    @FindBy(xpath = "//*[@class='post-header__checkbox']")
-    WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
@@ -46,9 +44,9 @@ public class CreateAPostForm extends BasePage {
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
+            getWait().forClickable(tumblerSwitch);
             getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
-            getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(submitButton);
             Assert.assertTrue(submitButton.isDisplayed());
         } catch (Exception e) {
@@ -75,7 +73,12 @@ public class CreateAPostForm extends BasePage {
         return contentInput.getAttribute("value");
     }
 
-
+    public void tumblerSwitchClick() {
+        tumblerSwitch.sendKeys();
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.TAB).perform();
+        tumblerSwitch.click();
+    }
     @Step("Upload image: {imagePath}")
     public void imageLoading(String imagePath) {
         try {
@@ -86,9 +89,6 @@ public class CreateAPostForm extends BasePage {
         }
     }
 
-    public void draftTumblerSwitch() {
-        tumblerSwitch.click();
-    }
     @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();

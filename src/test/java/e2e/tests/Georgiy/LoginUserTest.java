@@ -6,6 +6,8 @@ import e2e.utils.DataProviders;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 public class LoginUserTest extends TestBase {
 
     LoginPage loginPage;
@@ -28,12 +30,13 @@ public class LoginUserTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("9")
     @Test(description = "CHATTY-5")
-    public void adminCanNotLoginWithInvalidEmail() {
+    public void userCanNotLoginWithInvalidEmail() {
         String email = "tatara@abv.bg";
         String password = "Manowar33246";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+
     }
     @Epic(value = "User can't login with invalid password")
     @Feature(value = "User is not logged in")
@@ -41,12 +44,13 @@ public class LoginUserTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("10")
     @Test(description = "CHATTY-6")
-    public void adminCanNotLoginWithInvalidPassword() {
+    public void userCanNotLoginWithInvalidPassword() {
         String email = "tatar@abv.bg";
         String password = "Mannn32";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        assertTrue("User not found. Please register.", loginPage.textError());
     }
     @Epic(value = "User can't login without a email and password")
     @Feature(value = "User is not logged in")
@@ -54,12 +58,13 @@ public class LoginUserTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("11")
     @Test(description = "CHATTY-20")
-    public void adminCanNotLoginWithoutAEmailAndPassword() {
+    public void userCanNotLoginWithoutAEmailAndPassword() {
         String email = "";
         String password = "";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        loginPage.takeLoginPageScreenshot("userCanNotLoginWithInvalidEmail");
     }
     @Epic(value = "Admin can't login with invalid email and password")
     @Feature(value = "Admin is not logged in")
@@ -67,12 +72,13 @@ public class LoginUserTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("12")
     @Test(description = "CHATTY-47")
-    public void adminCanNotLoginWithoutInvalidEmailAndPassword() {
+    public void userCanNotLoginWithoutInvalidEmailAndPassword() {
         String email = "tatar@abvbg";
         String password = "Manowar332466";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
+        assertTrue("User not found. Please register.", loginPage.textError());
     }
     @Epic(value = "User can login with invalid Data")
     @Feature(value = "User is not logged in")
@@ -85,8 +91,10 @@ public class LoginUserTest extends TestBase {
         loginPage.waitForLoading();
         loginPage.login(email, password);
 
+
         loginPage.waitForLoading();
         loginPage.takeLoginPageScreenshot(caseName + "_negative_login_case");
         loginPage.waitForLoading();
+
     }
 }

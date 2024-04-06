@@ -102,7 +102,6 @@ public class EditUserForm extends BasePage {
         } catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
-
         phoneInput.clear();
         phoneInput.sendKeys(phone);
     }

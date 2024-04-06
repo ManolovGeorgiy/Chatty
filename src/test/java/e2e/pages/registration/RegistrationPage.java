@@ -24,6 +24,9 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//*[@class='input-password']")
     WebElement passwordInput;
 
+    @FindBy(xpath = "//*[@class='password-eye']")
+    WebElement eyeTab;
+
     @FindBy(xpath = "//*[@name='confirmPassword']")
     WebElement confirmPasswordInput;
 
@@ -37,6 +40,7 @@ public class RegistrationPage extends BasePage {
             getWait().forVisibility(adminOption);
             getWait().forVisibility(emailInput);
             getWait().forVisibility(passwordInput);
+            getWait().forClickable(eyeTab);
             getWait().forVisibility(confirmPasswordInput);
             getWait().forVisibility(registrationButton);
         }catch (StaleElementReferenceException e){
@@ -53,7 +57,9 @@ public class RegistrationPage extends BasePage {
     public void registration(String email, String password, String confirmPassword) {
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
+        eyeTab.click();
         confirmPasswordInput.sendKeys(confirmPassword);
+        eyeTab.click();
         registrationButton.click();
     }
 }
