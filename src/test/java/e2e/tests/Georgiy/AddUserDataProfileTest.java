@@ -50,7 +50,7 @@ public class AddUserDataProfileTest extends TestBase {
         String date = "08-01-1984";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate birthDate = LocalDate.parse(date, formatter);
-        String phone = "+4915777777";
+        String phone = "+49157777774";
         String imageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5204092180870848055_121.jpg";
 
         loginPage = new LoginPage(app.driver);

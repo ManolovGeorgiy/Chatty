@@ -83,7 +83,7 @@ public class ContactUsPage extends BasePage {
     }
 
     public boolean error() {
-        Duration timeout = Duration.ofSeconds(1);
+        Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error']")));
         try {

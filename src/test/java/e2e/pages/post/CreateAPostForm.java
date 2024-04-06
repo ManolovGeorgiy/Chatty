@@ -75,8 +75,6 @@ public class CreateAPostForm extends BasePage {
 
     public void tumblerSwitchClick() {
         tumblerSwitch.sendKeys();
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.TAB).perform();
         tumblerSwitch.click();
     }
     @Step("Upload image: {imagePath}")
