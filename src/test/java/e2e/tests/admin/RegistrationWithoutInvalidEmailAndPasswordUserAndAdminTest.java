@@ -1,4 +1,4 @@
-package e2e.tests.Natalie;
+package e2e.tests.admin;
 
 import e2e.TestBase;
 import e2e.pages.Header;
