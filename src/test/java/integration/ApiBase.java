@@ -1,5 +1,6 @@
 package integration;
 
+import com.github.javafaker.File;
 import config.Config;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -9,97 +10,122 @@ import io.restassured.specification.RequestSpecification;
 
 public class ApiBase {
     private final Config config = new Config();
-    private final String BASE_URI = config.getProjectUrl();
-    private RequestSpecification spec;
-
-
-    public ApiBase() {
+    protected final String BASE_URL = config.getProjectUrl();
+    protected final RequestSpecification spec;
+    public ApiBase(){
         this.spec = new RequestSpecBuilder()
-                .setBaseUri(BASE_URI)
+                .setBaseUri(BASE_URL)
                 .setContentType(ContentType.JSON)
                 .build();
-    }
 
-    public ApiBase(String token) {
-        this();
+    }
+    public ApiBase(String token){
         this.spec = new RequestSpecBuilder()
-                .setBaseUri(BASE_URI)
+                .setBaseUri(BASE_URL)
                 .setContentType(ContentType.JSON)
-                .addHeader("RefreshToken", token)
+                .addHeader("Authorization", "Bearer " + token) // Используем токен в заголовке Authorization
                 .build();
     }
+    public Response getAllPosts(int skip, int limit, int expectedStatusCode, String endpoint) {
+        Response response = RestAssured.given()
+                .spec(spec)
+                .queryParam("skip", skip)
+                .queryParam("limit", limit)
+                .when()
+                .log().all()
+                .get(endpoint)
+                .then().log().all()
+                .statusCode(expectedStatusCode)
+                .extract()
+                .response();
+        return response;
+    }
 
-    protected Response getRequest(String endpoint, int code) {
+
+
+    protected Response getRequest(String endpoint, int code){
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
                 .log().all()
-                .get(endpoint);
-        validateStatusCode(response, code);
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
         return response;
     }
-
-    protected Response getRequestWithQueryParam(String endpoint, int code, String paramName, String paramValue, String refreshToken) {
+    protected Response getRequestWhitParam(String endpoint,int code,String paramName,int paramValue){
         Response response = RestAssured.given()
                 .spec(spec)
-                .param(paramName, paramValue)
-                .log().all()
-                .get(endpoint);
-        if (refreshToken != null && !refreshToken.isEmpty()) {
-            refreshAccessToken(refreshToken);
-        }
-        validateStatusCode(response, code);
-        return response;
-    }
-
-    protected Response getRequestWithParamString(String endpoint, int code,String paramName, String paramValue){
-        Response response = RestAssured.given()
-                .spec(spec)
+                .when()
                 .pathParam(paramName,paramValue)
                 .log().all()
-                .get(endpoint);
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
         response.then().assertThat().statusCode(code);
         return response;
     }
-
-    protected Response postRequest(String endpoint, int code, Object body) {
+    protected Response getRequestWhitParamString(String endpoint,int code,String paramName,String paramValue){
+        Response response = RestAssured.given()
+                .spec(spec)
+                .when()
+                .pathParam(paramName,paramValue)
+                .log().all()
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
+        return response;
+    }
+    protected Response postRequest(String endpoint,int code,Object body){
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
                 .when()
                 .log().all()
-                .post(endpoint);
-        validateStatusCode(response, code);
+                .post(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
         return response;
     }
-
-    protected Response putRequest(String endpoint, int code, Object body) {
+    protected Response putRequest(String endpoint,int code,Object body){
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
                 .when()
                 .log().all()
-                .put(endpoint);
-        validateStatusCode(response, code);
+                .put(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
         return response;
     }
-
-    protected Response deleteRequest(String endpoint, int code, int id) {
+    protected Response deleteRequest(String endpoint,int code){
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
-                .pathParam("id", id)
                 .log().all()
-                .delete(endpoint);
-        validateStatusCode(response, code);
+                .delete(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
         return response;
     }
+    public Response uploadImageRequest(String endpoint, File imageFile, int code) {
+        Response response = RestAssured.given()
+                .spec(spec)
+                .contentType("multipart/form-data")
+                .multiPart("multipartFile", imageFile,"image/png")
+                .when()
+                .post(endpoint)
+                .then().log().all()
+                .statusCode(code)
+                .extract()
+                .response();
 
-    private void validateStatusCode(Response response, int code) {
         response.then().assertThat().statusCode(code);
-    }
-
-    protected void refreshAccessToken(String refreshToken) {
-        // Логика обновления токена
+        return response;
     }
 }

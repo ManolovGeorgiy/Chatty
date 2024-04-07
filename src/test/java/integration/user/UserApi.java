@@ -5,27 +5,29 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class UserApi extends ApiBase {
 
-    @Step("Регистрация нового пользователя: {email}, {role}")
-    public String newUserRegistration(String email, String password, String confirmPassword, String role, int expectedStatusCode) {
-        String endpoint = "/api/auth/register";
-        Map<String, String> body = new HashMap<>();
+    Response response;
+    @Step("Registration user")
+    public String registration(String email, String password, String confirmPassword, String role, int expectedStatusCode) {
+        String endPoint = "/api/auth/register";
+        LinkedHashMap<String, String> body = new LinkedHashMap<>();
         body.put("email", email);
         body.put("password", password);
         body.put("confirmPassword", confirmPassword);
         body.put("role", role);
 
-        Response response = postRequest(endpoint, expectedStatusCode, body);
-        int code = response.statusCode();
+        Response response = postRequest(endPoint, expectedStatusCode, body);
+        int statusCode = response.statusCode();
 
-        if (code == expectedStatusCode) {
-            return "Пользователь успешно зарегистрирован";
+        if (statusCode == expectedStatusCode) {
+            return "User registered successfully";
         } else {
-            String errorMessage = response.getBody().asString();
-            return "Не удалось зарегистрировать пользователя: " + errorMessage;
+            String errorMessage = response.jsonPath().getString("message");
+            return "Failed to register user: " + errorMessage;
         }
     }
 
@@ -58,9 +60,4 @@ public class UserApi extends ApiBase {
         return response.getBody().asString();
     }
 
-    @Step("Получение пользователя")
-    public Response getUser(String token) {
-        String endpoint = "/api/me";
-        return getRequestWithParamString(endpoint, 200, "token", token);
-    }
 }

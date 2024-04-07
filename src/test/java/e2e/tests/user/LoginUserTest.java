@@ -19,7 +19,7 @@ public class LoginUserTest extends TestBase {
     @Test(description = "CHATTY-3")
     public void userCanLogin() {
         String email = "tatar@abv.bg";
-        String password = "Manowar33246";
+        String password = "Manowar333246";
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
