@@ -1,0 +1,284 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1" date="1712091766127" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 02.04.2024 23:02 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ContactUsTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/UploadFileRes.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/UploadFileRes.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UploadFileRes.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/PostUpdateReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/PostUpdateReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/PostUpdateReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserFullTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserFullTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserFullTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/FeedbackReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/FeedbackReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/FeedbackReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/PostCreateReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/PostCreateReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/PostCreateReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileTestJava/previous-compilation-data.bin" />
+    <option name="AFTER_PATH" value="build/tmp/compileTestJava/previous-compilation-data.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/previous-compilation-data.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/PostGetRes.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/PostGetRes.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/PostGetRes.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/org/example/Main.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/org/example/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AdminPanelPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationAdminTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationAdminTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/RegistrationAndAuthorisationAdminTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/ErrorRes.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/ErrorRes.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ErrorRes.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/utils/DataProviders.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/utils/DataProviders.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/DataProviders.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/LoginUserTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/LoginUserTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/LoginUserTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/enums/GenderInfo.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/enums/GenderInfo.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/GenderInfo.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserCanEditPostTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/contactUs/ContactUsApi.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/contactUs/ContactUsApi.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ContactUsApi.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/LoginReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/LoginReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/LoginReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ContactUsPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/UserResForAdmin.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/UserResForAdmin.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserResForAdmin.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/TestBase.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/TestBase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/TestBase.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AdminPanelTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AdminPanelTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AdminPanelTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/Header.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/Header.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/Header.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/about/AboutPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/about/AboutPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AboutPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/profile/EditPasswordForm.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/profile/EditPasswordForm.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/EditPasswordForm.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/BasePage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/BasePage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/BasePage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/registration/RegistrationPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/registration/RegistrationPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/RegistrationPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/RefreshTokenReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/RefreshTokenReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/RefreshTokenReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/post/EditAPostForm.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/post/EditAPostForm.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/EditAPostForm.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AddUserDataProfileTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AddUserDataProfileTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AddUserDataProfileTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/PasswordUpdateReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/PasswordUpdateReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/PasswordUpdateReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/PostRes.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/PostRes.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/PostRes.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/enums/SideBarInfo.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/enums/SideBarInfo.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/SideBarInfo.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/profile/AddUserDialog.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/profile/AddUserDialog.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AddUserDialog.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/login/LoginPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/login/LoginPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/LoginPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/post/CreateAPostForm.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/post/CreateAPostForm.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/CreateAPostForm.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/RegisterReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/RegisterReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/RegisterReq.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/ApplicationManager.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/ApplicationManager.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ApplicationManager.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/UserRes.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/UserRes.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserRes.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/profile/ProfileApi.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/profile/ProfileApi.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ProfileApi.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/profile/EditUserForm.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/profile/EditUserForm.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/EditUserForm.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/EditUserDataProfileTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AboutPageTests.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AboutPageTests.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AboutPageTests.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/AdminCanCreateAPostTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AdminCanCreateAPostTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/FullTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/FullTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/FullTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/post/EditPostPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/post/EditPostPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/EditPostPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/config/Config.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/config/Config.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/Config.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/wait/Wait.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/wait/Wait.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/Wait.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/HomeBlogPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/RegistrationAndAuthorisationUserTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/AuthRes.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/AuthRes.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/AuthRes.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/LoginAdminTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/LoginAdminTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/LoginAdminTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserCanCreateANewPost.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserCanCreateANewPost.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserCanDeletePostTest.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/e2e/tests/Georgiy/UserCanDeletePostTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserCanDeletePostTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/ApiBase.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/ApiBase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/ApiBase.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/test/integration/schemas/UserUpdateReq.class" />
+    <option name="AFTER_PATH" value="build/classes/java/test/integration/schemas/UserUpdateReq.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02_[Changes]1/UserUpdateReq.class" />
+  </binary>
+</changelist>

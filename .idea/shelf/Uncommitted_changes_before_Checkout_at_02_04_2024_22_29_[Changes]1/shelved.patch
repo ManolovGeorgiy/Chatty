@@ -1,0 +1,207 @@
+Index: src/test/java/e2e/ApplicationManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e;\r\n\r\nimport config.Config;\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.Dimension;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.remote.DesiredCapabilities;\r\nimport org.openqa.selenium.remote.RemoteWebDriver;\r\n\r\nimport java.net.MalformedURLException;\r\nimport java.net.URI;\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\npublic class ApplicationManager {\r\n    private final Config config = new Config();\r\n    public WebDriver driver;\r\n    protected void init() {\r\n        if (config.getSelenoidState()) {\r\n            DesiredCapabilities capabilities = new DesiredCapabilities();\r\n            capabilities.setBrowserName(\"chrome\");\r\n            capabilities.setVersion(\"120.0\");\r\n            Map<String, Object> selenoidOptions = new HashMap<>();\r\n            selenoidOptions.put(\"enableVNC\", false);\r\n\r\n            capabilities.setCapability(\"selenoid:options\", selenoidOptions);\r\n            try {\r\n                driver = new RemoteWebDriver(\r\n                        URI.create(config.getSelenoidUrl()).toURL(),\r\n                        capabilities\r\n                );\r\n            } catch (MalformedURLException e) {\r\n                e.printStackTrace();\r\n            }\r\n        } else {\r\n            WebDriverManager.chromedriver().setup();\r\n            driver = new ChromeDriver();\r\n        }\r\n        driver.get(config.getProjectUrl());\r\n        driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));\r\n    }\r\n    protected void stop() {\r\n        driver.quit();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/ApplicationManager.java b/src/test/java/e2e/ApplicationManager.java
+--- a/src/test/java/e2e/ApplicationManager.java	
++++ b/src/test/java/e2e/ApplicationManager.java	
+@@ -34,6 +34,7 @@
+                 e.printStackTrace();
+             }
+         } else {
++            WebDriverManager.chromedriver().clearResolutionCache().setup();
+             WebDriverManager.chromedriver().setup();
+             driver = new ChromeDriver();
+         }
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.gradle\r\nbuild/allure-results\r\n!gradle/wrapper/gradle-wrapper.jar\r\n!**/src/main/**/build/\r\n!**/src/test/**/build/\r\nallure-results\r\n\r\n\r\n### IntelliJ IDEA ###\r\n.idea/modules.xml\r\n.idea/jarRepositories.xml\r\n.idea/compiler.xml\r\n.idea/libraries/\r\n*.iws\r\n*.iml\r\n*.ipr\r\nout/\r\n!**/src/main/**/out/\r\n!**/src/test/**/out/\r\n\r\n### Eclipse ###\r\n.apt_generated\r\n.classpath\r\n.factorypath\r\n.project\r\n.settings\r\n.springBeans\r\n.sts4-cache\r\nbin/\r\n!**/src/main/**/bin/\r\n!**/src/test/**/bin/\r\n\r\n### NetBeans ###\r\n/nbproject/private/\r\n/nbbuild/\r\n/dist/\r\n/nbdist/\r\n/.nb-gradle/\r\n\r\n### VS Code ###\r\n.vscode/\r\n\r\n### Mac OS ###\r\n.DS_Store
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	
++++ b/.gitignore	
+@@ -1,5 +1,4 @@
+ .gradle
+-build/allure-results
+ !gradle/wrapper/gradle-wrapper.jar
+ !**/src/main/**/build/
+ !**/src/test/**/build/
+Index: src/test/java/integration/user/Tokens.java
+===================================================================
+diff --git a/src/test/java/integration/user/Tokens.java b/src/test/java/integration/user/Tokens.java
+deleted file mode 100644
+--- a/src/test/java/integration/user/Tokens.java	
++++ /dev/null	
+@@ -1,36 +0,0 @@
+-package integration.user;
+-
+-import integration.ApiBase;
+-
+-public class Tokens extends ApiBase {
+-    private String accessToken;
+-    private String refreshToken;
+-    private long expiration;
+-
+-    public Tokens(String accessToken, String refreshToken, long expiration) {
+-        this.accessToken = accessToken;
+-        this.refreshToken = refreshToken;
+-        this.expiration = expiration;
+-    }
+-
+-    public String getAccessToken() {
+-        return accessToken;
+-    }
+-
+-    public String getRefreshToken() {
+-        return refreshToken;
+-    }
+-
+-    public long getExpiration() {
+-        return expiration;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "Tokens{" +
+-                "accessToken='" + accessToken + '\'' +
+-                ", refreshToken='" + refreshToken + '\'' +
+-                ", expiration=" + expiration +
+-                '}';
+-    }
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e5cc04c9-2e2d-445e-8122-810ff6848930\" name=\"Changes\" comment=\"Screenshot\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/Tokens.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_21__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_21__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_24__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_24__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_04_2024_18_18__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_04_2024_18_18__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2024_18_21__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2024_18_21__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/integration/ApiBase.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/integration/ApiBase.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand />\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"package-info\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"dev_Natalie\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2dbRMPjRf3fRiwYltbX5qD5VUEa\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/PC/Chatty\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/PC/Chatty/src/main/java/org/example/Main.java\",\r\n    \"settings.editor.selected.configurable\": \"reference.settingsdialog.project.gradle\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"integration.user\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\PC\\Chatty\\reference\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"TestNG.AdminApiTest.adminLogin\">\r\n    <configuration name=\"AdminLogin\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.AdminLogin\" />\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AdminApiTest.adminLogin\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"integration\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.AdminApiTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"adminLogin\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"LoginAdminTest.adminCanNotLoginWithInvalidData\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.Georgiy.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.Georgiy\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.Georgiy.LoginAdminTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"adminCanNotLoginWithInvalidData\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.Georgiy.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.Georgiy\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.Georgiy.LoginAdminTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"adminCanNotLoginWithoutInvalidEmailAndPassword\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"UserApiTest.userRegistration\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.user.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"integration.user\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.user.UserApiTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"userRegistration\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"TestNG.AdminApiTest.adminLogin\" />\r\n        <item itemvalue=\"Application.AdminLogin\" />\r\n        <item itemvalue=\"TestNG.UserApiTest.userRegistration\" />\r\n        <item itemvalue=\"TestNG.LoginAdminTest.adminCanNotLoginWithInvalidData\" />\r\n        <item itemvalue=\"TestNG.LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e5cc04c9-2e2d-445e-8122-810ff6848930\" name=\"Changes\" comment=\"\" />\r\n      <created>1710274744017</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710274744017</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711370136449</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711370136449</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711385939570</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711385939570</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711386153761</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711386153761</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711528350961</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711528350961</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711535105707</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711535105707</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711551832253</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711551832253</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711556229247</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711556229247</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711562947418</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711562947418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Screenshot\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711994129770</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711994129770</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Registration,Login,Post,Contact Us\" />\r\n    <MESSAGE value=\"Screenshot\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Screenshot\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/integration/ApiBase.java</url>\r\n          <line>116</line>\r\n          <option name=\"timeStamp\" value=\"43\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"188\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"189\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>33</line>\r\n          <option name=\"timeStamp\" value=\"190\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"191\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"192\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>48</line>\r\n          <option name=\"timeStamp\" value=\"193\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>50</line>\r\n          <option name=\"timeStamp\" value=\"194\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>54</line>\r\n          <option name=\"timeStamp\" value=\"195\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>56</line>\r\n          <option name=\"timeStamp\" value=\"196\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>59</line>\r\n          <option name=\"timeStamp\" value=\"197\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>60</line>\r\n          <option name=\"timeStamp\" value=\"198\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>63</line>\r\n          <option name=\"timeStamp\" value=\"199\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>58</line>\r\n          <option name=\"timeStamp\" value=\"200\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserFullTest.java</url>\r\n          <line>64</line>\r\n          <option name=\"timeStamp\" value=\"201\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminCanCreateAPostTest.java</url>\r\n          <line>23</line>\r\n          <option name=\"timeStamp\" value=\"202\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java</url>\r\n          <line>12</line>\r\n          <option name=\"timeStamp\" value=\"223\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditPostTest.java</url>\r\n          <line>58</line>\r\n          <option name=\"timeStamp\" value=\"225\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditPostTest.java</url>\r\n          <line>63</line>\r\n          <option name=\"timeStamp\" value=\"231\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java</url>\r\n          <line>8</line>\r\n          <option name=\"timeStamp\" value=\"233\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginAdminTest.java</url>\r\n          <line>83</line>\r\n          <option name=\"timeStamp\" value=\"234\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserDataProfileTest.java</url>\r\n          <line>22</line>\r\n          <properties class=\"e2e.tests.Georgiy.EditUserDataProfileTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"164\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>\r\n          <line>26</line>\r\n          <properties class=\"e2e.tests.Georgiy.AdminPanelTest\" method=\"deleteAccount\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"172\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationAndAuthorisationUserTest.java</url>\r\n          <line>29</line>\r\n          <properties class=\"e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"203\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanEditPostTest.java</url>\r\n          <line>26</line>\r\n          <properties class=\"e2e.tests.Georgiy.UserCanEditPostTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"232\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,20 +5,13 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Screenshot">
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/Tokens.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_18_21__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_44__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_49__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_18_50__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_24__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_04_2024_18_18__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_04_2024_18_18__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2024_18_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_04_2024_18_21__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/AdminApiTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/AdminApi.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/Tokens.java" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -60,6 +53,9 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+@@ -70,16 +66,16 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "last_opened_file_path": "C:/Users/PC/Chatty",
+-    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
+-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="integration.user" />
+@@ -91,7 +87,7 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="TestNG.AdminApiTest.adminLogin">
++  <component name="RunManager" selected="TestNG.LoginAdminTest.adminCanLogin">
+     <configuration name="AdminLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="integration.AdminLogin" />
+       <module name="Chatty.test" />
+@@ -123,7 +119,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="LoginAdminTest.adminCanNotLoginWithInvalidData" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="AdminDeleteUserTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="Chatty.test" />
+       <extension name="coverage">
+         <pattern>
+@@ -132,8 +128,8 @@
+         </pattern>
+       </extension>
+       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.LoginAdminTest" />
+-      <option name="METHOD_NAME" value="adminCanNotLoginWithInvalidData" />
++      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminDeleteUserTest" />
++      <option name="METHOD_NAME" value="deleteAccount" />
+       <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+@@ -141,7 +137,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="LoginAdminTest.adminCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="Chatty.test" />
+       <extension name="coverage">
+         <pattern>
+@@ -151,7 +147,7 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+       <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.LoginAdminTest" />
+-      <option name="METHOD_NAME" value="adminCanNotLoginWithoutInvalidEmailAndPassword" />
++      <option name="METHOD_NAME" value="adminCanLogin" />
+       <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+@@ -179,11 +175,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="TestNG.LoginAdminTest.adminCanLogin" />
++        <item itemvalue="TestNG.AdminDeleteUserTest.deleteAccount" />
+         <item itemvalue="TestNG.AdminApiTest.adminLogin" />
+         <item itemvalue="Application.AdminLogin" />
+         <item itemvalue="TestNG.UserApiTest.userRegistration" />
+-        <item itemvalue="TestNG.LoginAdminTest.adminCanNotLoginWithInvalidData" />
+-        <item itemvalue="TestNG.LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword" />
+       </list>
+     </recent_temporary>
+   </component>
