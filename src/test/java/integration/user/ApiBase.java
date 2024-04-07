@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 
 public class ApiBase {
     private final Config config = new Config();
-    protected final String BASE_URL = config.getProjectUrl();
+    protected final String BASE_URL = config.getProjectApiUrl();
     protected final RequestSpecification spec;
     public ApiBase(){
         this.spec = new RequestSpecBuilder()

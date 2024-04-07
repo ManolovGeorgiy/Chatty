@@ -19,7 +19,7 @@ public class Config {
         return properties.getProperty("project.url");
     }
     public String getProjectApiUrl() {
-        return properties.getProperty("project.url");
+        return properties.getProperty("project.api.url");
     }
 
     public String getSelenoidUrl() {
