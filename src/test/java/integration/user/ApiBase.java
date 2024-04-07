@@ -1,4 +1,4 @@
-package integration;
+package integration.user;
 
 import com.github.javafaker.File;
 import config.Config;
@@ -7,6 +7,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.testng.annotations.BeforeClass;
 
 public class ApiBase {
     private final Config config = new Config();
@@ -128,4 +129,14 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-}
+
+
+        @BeforeClass
+        public void setUp() {
+            // Установка базового URI для API
+            RestAssured.baseURI = "http://your_api_base_url";
+            // Если требуется авторизация, установите здесь заголовок авторизации
+            // RestAssured.authentication = basic("username", "password");
+        }
+    }
+

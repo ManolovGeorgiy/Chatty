@@ -3,8 +3,6 @@ package integration.schemas;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UploadFileRes {
-    @JsonProperty("imageUrl")
-    private String imageUrl;
     public String getImageUrl() {
         return imageUrl;
     }
@@ -13,5 +11,7 @@ public class UploadFileRes {
         this.imageUrl = imageUrl;
     }
 
+    @JsonProperty("imageUrl")
+    private String imageUrl;
 
 }
