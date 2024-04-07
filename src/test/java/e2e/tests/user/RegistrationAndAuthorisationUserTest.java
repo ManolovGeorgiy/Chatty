@@ -1,4 +1,4 @@
-package e2e.tests;
+package e2e.tests.user;
 
 import e2e.TestBase;
 

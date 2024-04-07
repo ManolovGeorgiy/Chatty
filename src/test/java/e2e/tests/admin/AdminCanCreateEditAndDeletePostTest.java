@@ -1,4 +1,4 @@
-package e2e.tests;
+package e2e.tests.admin;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;

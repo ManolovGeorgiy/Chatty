@@ -1,4 +1,4 @@
-package e2e.tests;
+package e2e.tests.admin;
 
 import e2e.TestBase;
 import e2e.enums.SideBarInfo;
@@ -9,6 +9,8 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
+
+import static org.testng.AssertJUnit.assertTrue;
 
 public class RegistrationAndAuthorisationAdminTest extends TestBase {
 
@@ -55,5 +57,29 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
+    }
+    @Epic(value = "Admin can not registration with valid Email")
+    @Feature(value = "The administrator has not registered")
+    @Description(value = "Admin can not registration ")
+    @Severity(SeverityLevel.BLOCKER)
+    @AllureId("")
+    @Test(description = "CHATTY-50")
+    public void AdminCanNotRegistrationWithValidEmail() {
+
+        String email = "g.power@gmail.com";
+        String password = "Admin3333";
+        String confirmPassword = "Admin3333";
+
+        loginPage = new LoginPage(app.driver);
+        loginPage.waitForLoading();
+        loginPage.signUp();
+
+        registrationPage = new RegistrationPage(app.driver);
+        registrationPage.waitForLoading();
+        registrationPage.optionAdmin();
+        registrationPage.registration(email, password, confirmPassword);
+        registrationPage.waitForLoading();
+        assertTrue("Email already exists!", registrationPage.textError());
+        registrationPage.takeLoginPageScreenshot("Admin_can't_registration");
     }
 }

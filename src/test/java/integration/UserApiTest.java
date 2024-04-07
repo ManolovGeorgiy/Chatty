@@ -1,8 +1,6 @@
 package integration;
 
 import integration.user.UserApi;
-import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UserApiTest {
@@ -18,7 +16,7 @@ public class UserApiTest {
 
         userApi = new UserApi();
 
-        // Для регистрации пользователя должен использоваться метод POST
+
         userApi.newUserRegistration(email, password, confirmPassword, role, 201);
         userApi.login(email,password,200);
 
