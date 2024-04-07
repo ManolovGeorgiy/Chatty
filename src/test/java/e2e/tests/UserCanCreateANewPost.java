@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;

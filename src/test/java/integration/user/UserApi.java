@@ -1,58 +1,66 @@
 package integration.user;
 
-
 import integration.ApiBase;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import java.util.LinkedHashMap;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserApi extends ApiBase {
-    Response response;
 
-    public UserApi(){
-
-    }
-
-    @Step("Login via api: {email},{password}")
-    public String login(String email, String password,int code) {
-        String endpoint = "/api/auth/login";
-        LinkedHashMap<String, String> body = new LinkedHashMap<>();
-        body.put("email", email);
-        body.put("password", password);
-        response = postRequest(endpoint,code,body);
-        String token = response.jsonPath().getString("accessToken" + "RefreshToken");
-        String refreshToken = null;
-        return response.jsonPath().getString("refreshToken" + refreshToken);
-
-    }
-
-    @Step("New User Registration : {email},{password},{confirmPassword},{role}")
-    public String newUserRegistration(String email, String password,String confirmPassword,String user ,int code) {
+    @Step("Регистрация нового пользователя: {email}, {role}")
+    public String newUserRegistration(String email, String password, String confirmPassword, String role, int expectedStatusCode) {
         String endpoint = "/api/auth/register";
-        LinkedHashMap<String, String> body = new LinkedHashMap<>();
+        Map<String, String> body = new HashMap<>();
         body.put("email", email);
         body.put("password", password);
         body.put("confirmPassword", confirmPassword);
-        //body.put("role", role);
-        response = postRequest(endpoint, code, body);
-        return response.asString();
+        body.put("role", role);
+
+        Response response = postRequest(endpoint, expectedStatusCode, body);
+        int code = response.statusCode();
+
+        if (code == expectedStatusCode) {
+            return "Пользователь успешно зарегистрирован";
+        } else {
+            String errorMessage = response.getBody().asString();
+            return "Не удалось зарегистрировать пользователя: " + errorMessage;
+        }
     }
 
-    // Метод переименован и удалены ненужные параметры
-    @Step("Activate New User: {token}")
-    public String refreshToken(String refreshToken, int code) {
+    @Step("Вход через API: {email}")
+    public String login(String email, String password, int expectedStatusCode) {
+        String endpoint = "/api/auth/login";
+        Map<String, String> body = new HashMap<>();
+        body.put("email", email);
+        body.put("password", password);
+
+        Response response = postRequest(endpoint, expectedStatusCode, body);
+        int code = response.statusCode();
+
+        if (code == expectedStatusCode) {
+            String refreshToken = response.jsonPath().getString("refreshToken");
+            return "Токен обновления: " + refreshToken;
+        } else {
+            String errorMessage = response.getBody().asString();
+            return "Не удалось войти: " + errorMessage;
+        }
+    }
+
+    @Step("Активация нового пользователя: {refreshToken}")
+    public String refreshToken(String refreshToken, int expectedStatusCode) {
         String endpoint = "/api/auth/refresh";
-        LinkedHashMap<String, String> body = new LinkedHashMap<>();
-        body.put( "RefreshToken" + refreshToken, String.valueOf(code));
-        response = postRequest(endpoint, code, body);
-        return response.asString();
+        Map<String, String> body = new HashMap<>();
+        body.put("refreshToken", refreshToken);
+
+        Response response = postRequest(endpoint, expectedStatusCode, body);
+        return response.getBody().asString();
     }
 
-
-    public Response getUser (int code, String token){
-        String endpoint = "api/me";
-        response = getRequestWithParamString(endpoint,code,"token",token);
-        return response;
+    @Step("Получение пользователя")
+    public Response getUser(String token) {
+        String endpoint = "/api/me";
+        return getRequestWithParamString(endpoint, 200, "token", token);
     }
-
 }

@@ -1,9 +1,10 @@
-package e2e.tests.Georgiy;
+package e2e.tests;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
+
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
@@ -16,7 +17,7 @@ import org.testng.annotations.Test;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class EditUserDataProfileTest2 extends TestBase {
+public class EditUserDataProfileTest extends TestBase {
 
     Faker faker = new Faker();
     LoginPage loginPage;
@@ -49,11 +50,11 @@ public class EditUserDataProfileTest2 extends TestBase {
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
-        String editFormattedDate = "03-01-1985";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String editFormattedDate = "1985-01-03";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
 
-        String editPhone = "+4915731078";
+        String editPhone = "+49157310789";
         String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
 
         String oldPassword = "Manowar333246";
@@ -76,7 +77,7 @@ public class EditUserDataProfileTest2 extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), editPhone);
+        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();

@@ -34,9 +34,7 @@ public class ApiBase {
                 .spec(spec)
                 .when()
                 .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
+                .get(endpoint);
         validateStatusCode(response, code);
         return response;
     }
@@ -46,9 +44,7 @@ public class ApiBase {
                 .spec(spec)
                 .param(paramName, paramValue)
                 .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
+                .get(endpoint);
         if (refreshToken != null && !refreshToken.isEmpty()) {
             refreshAccessToken(refreshToken);
         }
@@ -59,12 +55,9 @@ public class ApiBase {
     protected Response getRequestWithParamString(String endpoint, int code,String paramName, String paramValue){
         Response response = RestAssured.given()
                 .spec(spec)
-                .when()
                 .pathParam(paramName,paramValue)
                 .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
+                .get(endpoint);
         response.then().assertThat().statusCode(code);
         return response;
     }
@@ -75,9 +68,7 @@ public class ApiBase {
                 .body(body)
                 .when()
                 .log().all()
-                .post(endpoint)
-                .then().log().all()
-                .extract().response();
+                .post(endpoint);
         validateStatusCode(response, code);
         return response;
     }
@@ -88,9 +79,7 @@ public class ApiBase {
                 .body(body)
                 .when()
                 .log().all()
-                .put(endpoint)
-                .then().log().all()
-                .extract().response();
+                .put(endpoint);
         validateStatusCode(response, code);
         return response;
     }
@@ -101,9 +90,7 @@ public class ApiBase {
                 .when()
                 .pathParam("id", id)
                 .log().all()
-                .delete(endpoint)
-                .then().log().all()
-                .extract().response();
+                .delete(endpoint);
         validateStatusCode(response, code);
         return response;
     }

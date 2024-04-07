@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests;
 
 
 import e2e.TestBase;
