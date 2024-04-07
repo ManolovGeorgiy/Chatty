@@ -3,23 +3,23 @@
 <suite name="testE2eSmoke" verbose="1">
     <test name="SmokeTestE2e">
         <classes>
-            <class name="e2e.tests.Georgiy.RegistrationAndAuthorisationUserTest">
+            <class name="e2e.tests.user.RegistrationAndAuthorisationUserTest">
             </class>
-            <class name="e2e.tests.Georgiy.AddUserDataProfileTest">
+            <class name="e2e.tests.user.AddUserDataProfileTest">
             </class>
-            <class name="e2e.tests.Georgiy.EditUserDataProfileTest">
+            <class name="e2e.tests.user.EditUserDataProfileTest">
             </class>
-            <class name="e2e.tests.Georgiy.ContactUsTest">
+            <class name="e2e.tests.user.ContactUsTest">
             </class>
-            <class name="e2e.tests.Georgiy.AboutPageTests">
+            <class name="e2e.tests.user.AboutPageTests">
             </class>
-            <class name="e2e.tests.Georgiy.UserCanCreateANewPost">
+            <class name="e2e.tests.user.UserCanCreateANewPost">
             </class>
-            <class name="e2e.tests.Georgiy.UserCanEditPostTest">
+            <class name="e2e.tests.user.UserCanEditPostTest">
             </class>
-            <class name="e2e.tests.Georgiy.UserCanDeletePostTest">
+            <class name="e2e.tests.user.UserCanDeletePostTest">
             </class>
-            <class name="e2e.tests.Georgiy.AdminDeleteUserTest">
+            <class name="e2e.tests.admin.AdminDeleteUserTest">
             </class>
         </classes>
     </test>
