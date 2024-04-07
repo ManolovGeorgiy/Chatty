@@ -86,29 +86,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserApiTest.userCanRegistrationAsUser">
-    <configuration name="Chatty [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="TestNG.ContactUsNegativeTest.userCanNotSendMessage">
     <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -120,6 +98,24 @@
       <option name="PACKAGE_NAME" value="e2e.tests.admin" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.admin.AdminCanCreateEditAndDeletePostTest" />
       <option name="METHOD_NAME" value="adminCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactUsNegativeTest.userCanNotSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.ContactUsNegativeTest" />
+      <option name="METHOD_NAME" value="userCanNotSendMessage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -145,6 +141,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.RegistrationAndAuthorisationUserTest" />
+      <option name="METHOD_NAME" value="UserCanRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserApiTest.userCanRegistrationAsUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -163,31 +177,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserFullTest.fullUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.user" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.UserFullTest" />
-      <option name="METHOD_NAME" value="fullUserTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactUsNegativeTest.userCanNotSendMessage" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
         <item itemvalue="TestNG.UserApiTest.userCanRegistrationAsUser" />
         <item itemvalue="TestNG.RegistrationAndAuthorisationAdminTest.AdminCanNotRegistrationWithValidEmail" />
         <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
-        <item itemvalue="TestNG.UserFullTest.fullUserTest" />
-        <item itemvalue="Gradle.Chatty [dependencies]" />
       </list>
     </recent_temporary>
   </component>
