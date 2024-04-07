@@ -42,7 +42,7 @@ public class UserCanNotCreateAPost extends TestBase {
         String title = faker.lorem().sentence(10);
         String description = faker.lorem().sentence(10);
         String content = faker.lorem().sentence(10);
-
+        String imagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\5204092180870848361_121.jpg";
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email, password);
@@ -56,11 +56,11 @@ public class UserCanNotCreateAPost extends TestBase {
 
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanNotCreateAPost(title, description, content);
-        //createAPostForm.imageLoading(imagePath);
-        //createAPostForm.waitForLoading();
+        createAPostForm.imageLoading(imagePath);
+        createAPostForm.waitForLoading();
         checkPostData(createAPostForm, title,description,content);
-        //createAPostForm.waitForLoading();
-        Assert.assertEquals("Please fill the field", createAPostForm.textError());
+        createAPostForm.waitForLoading();
+        assertTrue("Please fill the field", createAPostForm.errorText());
+        createAPostForm.takePostPageScreenshot("User_can_not_create_a_post");
     }
 }
-

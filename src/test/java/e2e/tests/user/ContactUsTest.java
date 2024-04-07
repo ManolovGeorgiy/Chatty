@@ -97,7 +97,7 @@ public class ContactUsTest extends TestBase {
         contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();
         assertTrue("Invalid email format", contactUsPage.error());
-        contactUsPage.takeFeedbackFormPageScreenshot("Invalid email format");
+        contactUsPage.takeFeedbackFormPageScreenshot("Useр_cannot_feedback");
 
         header = new Header(app.driver);
         header.clickHome();

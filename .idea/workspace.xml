@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/AddUserDataProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/ContactUsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +80,61 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanNotCreateAPost.userCanNotCreateAPost">
+  <component name="RunManager" selected="TestNG.ContactUsTest.userCanNotSendMessage">
+    <configuration name="ContactUsTest.userCanNotSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.ContactUsTest" />
+      <option name="METHOD_NAME" value="userCanNotSendMessage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactUsTest.userCanSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.ContactUsTest" />
+      <option name="METHOD_NAME" value="userCanSendMessage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationAndAuthorisationAdminTest.AdminCanNotRegistrationWithValidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.admin" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.admin.RegistrationAndAuthorisationAdminTest" />
+      <option name="METHOD_NAME" value="AdminCanNotRegistrationWithValidEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserCanCreateANewPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -87,59 +146,6 @@
       <option name="PACKAGE_NAME" value="e2e.tests.user" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.user.UserCanCreateANewPost" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanDeletePostTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.user" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.UserCanDeletePostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanDeletePostTest.userCanDeletePost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.user" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.UserCanDeletePostTest" />
-      <option name="METHOD_NAME" value="userCanDeletePost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanEditPostTest.userCanEditAPost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.user" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.UserCanEditPostTest" />
-      <option name="METHOD_NAME" value="userCanEditAPost" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -166,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactUsTest.userCanNotSendMessage" />
+        <item itemvalue="TestNG.ContactUsTest.userCanSendMessage" />
         <item itemvalue="TestNG.UserCanNotCreateAPost.userCanNotCreateAPost" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationAdminTest.AdminCanNotRegistrationWithValidEmail" />
         <item itemvalue="TestNG.UserCanCreateANewPost" />
-        <item itemvalue="TestNG.UserCanDeletePostTest" />
-        <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
-        <item itemvalue="TestNG.UserCanDeletePostTest.userCanDeletePost" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712479153697</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712480907976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712480907976</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -615,6 +629,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java</url>
+          <line>38</line>
+          <properties class="e2e.tests.user.UserCanNotCreateAPost" method="userCanNotCreateAPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="220" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

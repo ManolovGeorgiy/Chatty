@@ -33,7 +33,6 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
-
     @Epic(value = "User can add data to the profile")
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
@@ -72,7 +71,6 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
-
 
         header = new Header(app.driver);
         header.clickHome();

@@ -74,6 +74,7 @@ public class CreateAPostForm extends BasePage {
     public String getContent() {
         return contentInput.getAttribute("value");
     }
+
     public void tumblerSwitchClick() {
         tumblerSwitch.sendKeys();
         tumblerSwitch.click();
@@ -91,19 +92,19 @@ public class CreateAPostForm extends BasePage {
     public void clickSubmitButton() {
         submitButton.click();
     }
-    @Step("check error message")
-    public boolean textError() {
-        Duration timeout = Duration.ofSeconds(1);
+    @Step("check after sending")
+    public boolean errorText() {
+        Duration timeout = Duration.ofSeconds(10);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error']")));
-            return driver.findElements(By.xpath("//div[@class='error']")).("Please fill the field");
-        } catch (TimeoutException e) {
-            return false (); // Если элемент не найден в течение таймаута, возвращаем false
+            return driver.findElement(By.xpath("//*[@class='error']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
         }
     }
     @Step("Screenshot {actualScreenshotName}")
-    public void takeLoginPageScreenshot(String actualScreenshotName){
+    public void takePostPageScreenshot(String actualScreenshotName){
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
