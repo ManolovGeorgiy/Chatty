@@ -93,13 +93,13 @@ public class CreateAPostForm extends BasePage {
     }
     @Step("check error message")
     public boolean textError() {
-        Duration timeout = Duration.ofSeconds(10);
+        Duration timeout = Duration.ofSeconds(1);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error']")));
-            return driver.findElement(By.xpath("//div[@class='error']")).isDisplayed();
+            return driver.findElements(By.xpath("//div[@class='error']")).("Please fill the field");
         } catch (TimeoutException e) {
-            return false; // Если элемент не найден в течение таймаута, возвращаем false
+            return false (); // Если элемент не найден в течение таймаута, возвращаем false
         }
     }
     @Step("Screenshot {actualScreenshotName}")

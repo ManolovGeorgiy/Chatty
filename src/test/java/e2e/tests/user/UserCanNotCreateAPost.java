@@ -41,7 +41,7 @@ public class UserCanNotCreateAPost extends TestBase {
         String password = "Manowar33246";
         String title = faker.lorem().sentence(10);
         String description = faker.lorem().sentence(10);
-        String content = faker.lorem().sentence(1001);
+        String content = faker.lorem().sentence(10);
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -60,7 +60,7 @@ public class UserCanNotCreateAPost extends TestBase {
         //createAPostForm.waitForLoading();
         checkPostData(createAPostForm, title,description,content);
         //createAPostForm.waitForLoading();
-        assertTrue("Please fill the field", createAPostForm.textError());
+        Assert.assertEquals("Please fill the field", createAPostForm.textError());
     }
 }
 
