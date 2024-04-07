@@ -70,13 +70,14 @@ public class AdminPanelTest extends TestBase {
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
 
-        // bug
+
         editUserForm.clickEditUserForm();
         editUserForm.setProfileForm(name, surname, GenderInfo.MALE, date, phone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
 
+        // bug
         //editPasswordForm = new EditPasswordForm(app.driver);
         //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
         //editPasswordForm.saveChangePasswordButton();

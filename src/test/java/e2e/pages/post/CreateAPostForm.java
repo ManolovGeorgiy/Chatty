@@ -30,14 +30,14 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@name='content']")
     WebElement contentInput;
 
-    @FindBy(xpath = "//*[@class='checkbox']")
-    WebElement tumblerSwitch;
-
     @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
     WebElement imageInput;
 
     @FindBy(xpath = "//*[@id='publishDate']")
     WebElement publishData;
+
+    @FindBy(xpath = "//*[@for='draftCheckbox']")
+    WebElement tumblerSwitchDraft;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
@@ -49,9 +49,9 @@ public class CreateAPostForm extends BasePage {
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
-            getWait().forClickable(tumblerSwitch);
             getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
+            getWait().forClickable(tumblerSwitchDraft);
             getWait().forVisibility(submitButton);
             Assert.assertTrue(submitButton.isDisplayed());
         } catch (Exception e) {
@@ -76,8 +76,8 @@ public class CreateAPostForm extends BasePage {
     }
 
     public void tumblerSwitchClick() {
-        tumblerSwitch.sendKeys();
-        tumblerSwitch.click();
+        //tumblerSwitchDraft.sendKeys();
+        tumblerSwitchDraft.click();
     }
     @Step("Upload image: {imagePath}")
     public void imageLoading(String imagePath) {
@@ -112,7 +112,6 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-
     @Step("Fill form {title},{description},{content}")
     public void userCanNotCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
