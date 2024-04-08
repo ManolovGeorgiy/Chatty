@@ -5,24 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change beforePath="$PROJECT_DIR$/reference/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848057_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848057_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848344_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848344_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848345_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848345_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848350_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848350_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848353_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848355_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848355_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848356_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848356_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848359_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848359_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848361_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848361_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848366_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848366_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848376_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848382_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848382_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848388_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848388_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848405_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848405_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference/path/tree-736885_1280.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/tree-736885_1280.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
@@ -415,7 +397,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712592960776</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712593667582</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712593667582</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712593693397</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712593693397</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
