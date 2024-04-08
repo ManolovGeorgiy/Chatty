@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_31_03_2024_20_56_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_31_03_2024_20_56__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/UserApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/UserApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848057_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848057_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848344_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848344_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848345_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848345_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848350_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848350_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848353_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848355_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848355_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848356_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848356_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848359_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848359_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848361_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848361_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848366_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848366_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848376_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848382_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848382_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848388_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848388_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848405_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/5204092180870848405_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/path/tree-736885_1280.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/path/tree-736885_1280.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +91,7 @@
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Chatty\src\test\java" />
       <recent name="C:\Users\PC\Chatty\reference" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -87,6 +102,28 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost">
+    <configuration name="Chatty [LoginTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="LoginTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -98,24 +135,6 @@
       <option name="PACKAGE_NAME" value="e2e.tests.admin" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.admin.AdminCanCreateEditAndDeletePostTest" />
       <option name="METHOD_NAME" value="adminCanCreateAPost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.user" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.RegistrationAndAuthorisationUserTest" />
-      <option name="METHOD_NAME" value="UserCanRegistration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -180,10 +199,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+        <item itemvalue="Gradle.Chatty [LoginTest]" />
         <item itemvalue="TestNG.UserApiTest.testNewUserRegistration" />
         <item itemvalue="TestNG.UserApiTest.userCanRegistrationAsUser" />
         <item itemvalue="TestNG.RegistrationWithoutInvalidEmailAndPasswordUserAndAdminTest.UserCannotRegistration" />
-        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +391,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712512776609</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712592027283</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712592027283</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712592504868</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712592504868</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712592960776</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712592960776</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
