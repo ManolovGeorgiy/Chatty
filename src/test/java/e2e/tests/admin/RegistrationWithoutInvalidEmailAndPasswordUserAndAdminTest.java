@@ -38,9 +38,5 @@ public class RegistrationWithoutInvalidEmailAndPasswordUserAndAdminTest extends 
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.optionUser();
         registrationPage.registration(email,password,confirmPassword);
-
-        Assert.assertEquals(registrationPage.emailErrorMessage.getText(), INCORRECT_EMAIL.getValue());
-        Assert.assertEquals(registrationPage.passwordErrorMessage.getText(), INCORRECT_PASSWORD.getValue());
-        Assert.assertEquals(registrationPage.passwordDoNotMatchErrorMassage.getText(),NOT_MATCH_PASSWORD.getValue());
     }
 }

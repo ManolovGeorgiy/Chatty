@@ -35,16 +35,6 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//*[@class='registration-btn']")
     WebElement registrationButton;
 
-    @FindBy(xpath = "//div[text()='Incorrect email format']" )
-    public WebElement emailErrorMessage;
-
-    @FindBy(xpath = "//div[contains(text(), 'Password must be 8-100')]")
-    public WebElement passwordErrorMessage;
-
-    @FindBy(xpath = "//div[text()= 'Passwords do not match']")
-    public WebElement passwordDoNotMatchErrorMassage;
-
-
     @Step("Wait for loading Login page")
     public void waitForLoading(){
         try {
@@ -55,9 +45,6 @@ public class RegistrationPage extends BasePage {
             getWait().forClickable(eyeTab);
             getWait().forVisibility(confirmPasswordInput);
             getWait().forVisibility(registrationButton);
-            getWait().forVisibility(emailErrorMessage);
-            getWait().forVisibility(passwordErrorMessage);
-            getWait().forVisibility(passwordDoNotMatchErrorMassage);
         }catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
