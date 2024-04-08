@@ -15,7 +15,7 @@ public class AdminDeleteUserTest extends TestBase {
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 
-        String emailAccount = "tatar@abv.bg";
+        String emailAccount = "RegistrationAdmin@gmail.com";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
