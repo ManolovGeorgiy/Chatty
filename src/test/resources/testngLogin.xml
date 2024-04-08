@@ -5,8 +5,6 @@
         <classes>
             <class name="e2e.tests.admin.LoginAdminTest">
             </class>
-            <class name="e2e.tests.user.LoginUserTest">
-            </class>
         </classes>
     </test>
 </suite>

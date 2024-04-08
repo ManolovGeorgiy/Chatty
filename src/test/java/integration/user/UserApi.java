@@ -58,5 +58,4 @@ public class UserApi extends ApiBase {
         Response response = postRequest(endpoint, expectedStatusCode, body);
         return response.getBody().asString();
     }
-
 }
