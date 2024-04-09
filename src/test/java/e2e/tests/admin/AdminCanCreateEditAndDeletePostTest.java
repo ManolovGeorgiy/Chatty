@@ -18,7 +18,7 @@ import java.io.File;
 public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
     Faker faker = new Faker();
-    File file = new File("src/test/java/path");
+    File file = new File("src/test/java/resource/path");
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
@@ -50,14 +50,14 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
-        //String imagePath = String.valueOf(file.isFile();
-        String imagePath = "C:\\Users\\PC\\Chatty\\src\\test\\resources\\path\\5204092180870848366_121.jpg";
+        String imagePath = "src/test/java/resources/5204092180870848057_121.jpg";
+
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        //String newImagePath = file.getAbsolutePath();
-        String newImagePath = "C:\\Users\\PC\\Chatty\\src\\test\\resources\\path\\5204092180870848345_121.jpg";
+        String newImagePath = "src/test/java/resources/5204092180870848356_121.jpg";
+
 
 
 
@@ -106,4 +106,5 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
     }
+
 }

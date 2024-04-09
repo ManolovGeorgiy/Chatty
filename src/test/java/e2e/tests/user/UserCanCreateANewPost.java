@@ -75,7 +75,7 @@ public class UserCanCreateANewPost extends TestBase {
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "C:\\Users\\PC\\Chatty\\src\\test\\java\\path";
+        String folderPath = "src/test/java/resources";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
