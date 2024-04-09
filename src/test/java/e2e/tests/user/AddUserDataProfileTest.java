@@ -33,11 +33,10 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
-    @Epic(value = "User can add data to the profile")
+
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("")
     @Test(description = "CHATTY-29")
     public void userCanAddDataProfile() {
 

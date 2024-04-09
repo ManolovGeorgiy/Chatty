@@ -41,7 +41,6 @@ public class EditUserDataProfileTest extends TestBase {
     @Feature(value = "User edited data to the profile")
     @Description(value = "User can edit data")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("")
     @Test(description = "CHATTY-30")
     public void userCanEditProfile() {
 

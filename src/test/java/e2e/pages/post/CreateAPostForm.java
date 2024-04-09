@@ -17,7 +17,6 @@ public class CreateAPostForm extends BasePage {
         super(driver);
     }
 
-
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
 
@@ -41,7 +40,6 @@ public class CreateAPostForm extends BasePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
-
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
@@ -74,17 +72,13 @@ public class CreateAPostForm extends BasePage {
     public String getContent() {
         return contentInput.getAttribute("value");
     }
-
     public void tumblerSwitchClick() {
         tumblerSwitchDraft.click();
     }
     @Step("Upload image: {imagePath}")
     public void imageLoading(String relativeImagePath) {
         try {
-            // Получаем абсолютный путь к файлу изображения внутри проекта
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
-
-            // Находим элемент <input> для загрузки файла и передаем абсолютный путь к изображению
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {

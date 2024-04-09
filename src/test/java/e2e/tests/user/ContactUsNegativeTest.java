@@ -31,11 +31,9 @@ public class ContactUsNegativeTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
-    @Epic(value = "Contact Us")
     @Feature(value = "User can not sent a message")
     @Description(value = "User can not send feedback")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("20")
     @Test(description = "CHATTY-23")
     public void userCanNotSendMessage() {
 

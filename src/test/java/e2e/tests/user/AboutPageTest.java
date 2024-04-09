@@ -7,7 +7,7 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import org.testng.annotations.Test;
 
-public class AboutPageTests extends TestBase {
+public class AboutPageTest extends TestBase {
 
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;

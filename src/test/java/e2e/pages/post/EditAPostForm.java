@@ -13,7 +13,6 @@ public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -23,12 +22,8 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@data-test='textarea']")
     WebElement contentInput;
 
-
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitEditButton;
-
-    //@FindBy(xpath = "//*[@id='draftCheckbox']")
-    //WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@class='close']")
     WebElement closeButton;
@@ -36,6 +31,7 @@ public class EditAPostForm extends BasePage {
     public String getEditTitle() {
         return titleInput.getAttribute("value");
     }
+
     public String getEditDescriptionText() {
         return descriptionInput.getAttribute("value");
     }
@@ -58,7 +54,7 @@ public class EditAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-    public void editPost(String editTitle,String editDescription,String editContent){
+    public void editPost(String editTitle, String editDescription, String editContent) {
         titleInput.clear();
         titleInput.sendKeys(editTitle);
         descriptionInput.clear();
