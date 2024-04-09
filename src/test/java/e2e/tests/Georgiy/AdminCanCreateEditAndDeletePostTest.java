@@ -52,7 +52,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String newImagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\tree-736885_1280.jpg";
+        String newImagePath = "src/test/java/resources/5204092180870848382_121";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
