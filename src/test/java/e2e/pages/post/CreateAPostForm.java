@@ -16,6 +16,9 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
 
+    @FindBy(xpath = "//*[@id='draftCheckbox']")
+    WebElement tumblerSwitch;
+
     @FindBy(xpath = "//*[@name='title']")
     WebElement titleInput;
 
@@ -25,8 +28,6 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@name='content']")
     WebElement contentInput;
 
-    @FindBy(xpath = "//*[@class='checkbox']")
-    WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@class='post_uploaded_image__7qSWV']")
     WebElement imageInput;
@@ -41,10 +42,10 @@ public class CreateAPostForm extends BasePage {
     public void waitForLoading() {
         try {
             getWait().forVisibility(header);
+            getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
-            getWait().forClickable(tumblerSwitch);
             getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
             getWait().forVisibility(submitButton);
@@ -52,6 +53,9 @@ public class CreateAPostForm extends BasePage {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void tumblerSwitchClick() {
+        tumblerSwitch.click();
     }
 
     @Step("Fill form {title},{description},{content}")
@@ -73,12 +77,6 @@ public class CreateAPostForm extends BasePage {
         return contentInput.getAttribute("value");
     }
 
-    public void tumblerSwitchClick() {
-        tumblerSwitch.sendKeys();
-        Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.TAB).perform();
-        tumblerSwitch.click();
-    }
     @Step("Upload image: {imagePath}")
     public void imageLoading(String imagePath) {
         try {

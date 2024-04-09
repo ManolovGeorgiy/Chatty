@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests.Daniel;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
@@ -41,18 +41,17 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
     }
     @Test
     public void adminCanCreateAPost() {
-        String email = "g.power@gmail.com";
-        String password = "GPower3333";
+        String email = "Biba@mail.ru";
+        String password = "Biba1234";
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
-        String imagePath = "src/test/java/resources/5204092180870848057_121.jpg";
-
+        String imagePath = "C:\\Daniel\\SKOALA\\Chatty\\reference\\path\\5204092180870848057_121.jpg";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String newImagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\tree-736885_1280.jpg";
+        String newImagePath = "C:\\Daniel\\SKOALA\\Chatty\\reference\\path\\5204092180870848366_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -65,9 +64,11 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         header.clickHome();
         header.createAPostClick();
         createAPostForm = new CreateAPostForm(app.driver);
+        createAPostForm.waitForLoading();
+        createAPostForm.tumblerSwitchClick();
         createAPostForm.userCanCreateAPost(title, description, content);
         createAPostForm.waitForLoading();
-        //createAPostForm.tumblerSwitchClick();
+//        createAPostForm.tumblerSwitchClick();
         //createAPostForm.waitForLoading();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
