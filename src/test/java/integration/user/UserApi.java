@@ -49,13 +49,16 @@ public class UserApi extends ApiBase {
         }
     }
 
-    @Step("Активация нового пользователя: {refreshToken}")
+    @Step(": {refreshToken}")
     public String refreshToken(String refreshToken, int expectedStatusCode) {
         String endpoint = "/api/auth/refresh";
         Map<String, String> body = new HashMap<>();
         body.put("refreshToken", refreshToken);
-
         Response response = postRequest(endpoint, expectedStatusCode, body);
         return response.getBody().asString();
+    }
+    public String userInfo(){
+        String endpoint = "/api/me";
+        return endpoint;
     }
 }

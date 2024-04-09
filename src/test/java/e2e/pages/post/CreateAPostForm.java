@@ -76,7 +76,6 @@ public class CreateAPostForm extends BasePage {
     }
 
     public void tumblerSwitchClick() {
-        //tumblerSwitchDraft.sendKeys();
         tumblerSwitchDraft.click();
     }
     @Step("Upload image: {imagePath}")

@@ -12,7 +12,7 @@ public class UserApiTest {
 
     @Test
     public void testNewUserRegistration() {
-        String email = "testt@example.com";
+        String email = "testtt@example.com";
         String password = "TestPassword123";
         String confirmPassword = "TestPassword123";
         String role = "user";
@@ -22,6 +22,7 @@ public class UserApiTest {
 
         userApi.registration(email, password, confirmPassword, role, 201);
         userApi.login(email,password,200);
+
 
     }
 }

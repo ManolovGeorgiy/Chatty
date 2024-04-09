@@ -1,6 +1,7 @@
 package e2e.tests.admin;
 
 import com.github.javafaker.Faker;
+
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
@@ -12,9 +13,12 @@ import e2e.pages.post.EditPostPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
     Faker faker = new Faker();
+    File file = new File("src/test/java/path");
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
@@ -46,12 +50,14 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
-        String imagePath = "C:\\Users\\PC\\Chatty\\src\\test\\java\\path\\5204092180870848355_121.jpg";
+        //String imagePath = String.valueOf(file.isFile();
+        String imagePath = "C:\\Users\\PC\\Chatty\\src\\test\\resources\\path\\5204092180870848366_121.jpg";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String newImagePath = "C:\\Users\\PC\\Chatty\\src\\test\\java\\path\\5204092180870848388_121.jpg";
+        //String newImagePath = file.getAbsolutePath();
+        String newImagePath = "C:\\Users\\PC\\Chatty\\src\\test\\resources\\path\\5204092180870848345_121.jpg";
 
 
 
