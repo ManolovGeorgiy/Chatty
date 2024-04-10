@@ -100,3 +100,16 @@ task TestRegistration(type: Test) {
     }
     systemProperty 'allure.results.directory', 'build/allure-results'
 }
+test {
+    useTestNG()
+}
+task TestApiSmoke(type: Test) {
+    useTestNG() {
+        testLogging {
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+            exceptionFormat "full"
+        }
+        suites 'src/test/resources/testngApi.xml'
+    }
+    systemProperty 'allure.results.directory', 'build/allure-results'
+}
