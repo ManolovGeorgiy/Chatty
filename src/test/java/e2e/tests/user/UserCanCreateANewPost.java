@@ -72,7 +72,7 @@ public class UserCanCreateANewPost extends TestBase {
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources/5204092180870848356_121.jpg";
+        String folderPath = "./src/test/java/resources";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
