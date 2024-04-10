@@ -6,16 +6,13 @@ import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
+import java.util.Locale;
+import java.util.Random;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Random;
-
-import io.qameta.allure.*;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 
 public class UserCanCreateANewPost extends TestBase {
 
@@ -43,11 +40,11 @@ public class UserCanCreateANewPost extends TestBase {
                 Random random = new Random();
                 return imagePaths.get(random.nextInt(imagePaths.size()));
             } else {
-                System.err.println("image" + folderPath + " не содержит изображений формата .jpg.");
+                System.err.println("Folder " + folderPath + " не содержит изображений формата .jpg.");
                 return null;
             }
         } else {
-            System.err.println("image" + folderPath + " не существует или не содержит файлов.");
+            System.err.println("Folder " + folderPath + " не существует или не содержит файлов.");
             return null;
         }
     }
@@ -60,19 +57,15 @@ public class UserCanCreateANewPost extends TestBase {
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
     }
-    @Epic(value = "User can create a post")
-    @Feature(value = "User created post")
-    @Description(value = "User can create a post")
-    @Severity(SeverityLevel.BLOCKER)
-    @AllureId("15")
-    @Test(description = "CHATTY-39")
+
+    @Test(description = "User can create a post")
     public void userCanCreateAPost() {
         String email = "tatar@abv.bg";
         String password = "Manowar33246";
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "./src/test/java/resources";
+        String folderPath = "src/test/java/resources";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -95,7 +88,8 @@ public class UserCanCreateANewPost extends TestBase {
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
         }
-        checkPostData(createAPostForm, title,description,content);
+
+        checkPostData(createAPostForm, title, description, content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
     }
