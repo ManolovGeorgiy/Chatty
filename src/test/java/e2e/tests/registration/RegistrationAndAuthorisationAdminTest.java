@@ -19,9 +19,9 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
     AdminPanelPage adminPanelPage;
-    @Epic(value = "Admin can registration and authorisation")
+    @Epic(value = "adminPanel can registration and authorisation")
     @Feature(value = "The administrator has registered and logged in")
-    @Description(value = "Admin can registration and authorisation")
+    @Description(value = "adminPanel can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("1")
     @Test(description = "CHATTY-04")
@@ -58,9 +58,9 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
     }
-    @Epic(value = "Admin can not registration with valid Email")
+    @Epic(value = "adminPanel can not registration with valid Email")
     @Feature(value = "The administrator has not registered")
-    @Description(value = "Admin can not registration ")
+    @Description(value = "adminPanel can not registration ")
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("")
     @Test(description = "CHATTY-50")

@@ -16,7 +16,7 @@ public class DraftPostTest extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
 
-    @Epic(value = "Admin can login with valid Email and Password")
+    @Epic(value = "adminPanel can login with valid Email and Password")
     @Feature(value = "admin has been logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)

@@ -59,8 +59,8 @@ public class LoginUserTest extends TestBase {
         loginPage.login(email, password);
         loginPage.takeLoginPageScreenshot("userCanNotLoginWithInvalidEmail");
     }
-    @Feature(value = "Admin is not logged in")
-    @Description(value = "Admin can't login")
+    @Feature(value = "adminPanel is not logged in")
+    @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-47")
     public void userCanNotLoginWithoutInvalidEmailAndPassword() {

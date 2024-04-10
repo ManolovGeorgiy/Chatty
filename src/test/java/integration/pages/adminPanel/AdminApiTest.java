@@ -1,4 +1,4 @@
-package integration.pages.Admin;
+package integration.pages.adminPanel;
 
 import integration.ApiBase;
 import org.testng.annotations.Test;
