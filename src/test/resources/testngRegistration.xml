@@ -3,9 +3,9 @@
 <suite name="testRegistration" verbose="1">
     <test name="RegistrationTest">
         <classes>
-            <class name="e2e.tests.admin.RegistrationAndAuthorisationAdminTest">
+            <class name="e2e.tests.registration.RegistrationAndAuthorisationAdminTest">
             </class>
-            <class name="e2e.tests.admin.AdminDeleteUserTest">
+            <class name="e2e.tests.adminPanel.AdminDeleteUserTest">
             </class>
         </classes>
     </test>

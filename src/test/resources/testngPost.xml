@@ -3,7 +3,7 @@
 <suite name="testPost" verbose="1">
     <test name="PostTest">
         <classes>
-            <class name="e2e.tests.admin.AdminCanCreateEditAndDeletePostTest">
+            <class name="e2e.tests.post.AdminCanCreateEditAndDeletePostTest">
             </class>
         </classes>
     </test>

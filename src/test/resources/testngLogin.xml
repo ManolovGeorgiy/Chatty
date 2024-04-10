@@ -3,7 +3,7 @@
 <suite name="TestLogin" verbose="1">
     <test name="LoginTest">
         <classes>
-            <class name="e2e.tests.admin.LoginAdminTest">
+            <class name="e2e.tests.login.LoginAdminTest">
             </class>
         </classes>
     </test>
