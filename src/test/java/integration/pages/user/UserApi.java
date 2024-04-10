@@ -51,10 +51,10 @@ public class UserApi extends ApiBase {
     }
 
     @Step(": {refreshToken}")
-    public String refreshToken(String refreshToken, int expectedStatusCode) {
+    public String refreshToken(String token, int expectedStatusCode) {
         String endpoint = "/api/auth/refresh";
         Map<String, String> body = new HashMap<>();
-        body.put("refreshToken", refreshToken);
+        body.put("refreshToken", token);
         Response response = postRequest(endpoint, expectedStatusCode, body);
         return response.getBody().asString();
     }

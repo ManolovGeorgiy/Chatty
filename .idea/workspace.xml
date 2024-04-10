@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/EditUserProfileApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateANewPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/Admin/AdminApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/Admin/AdminPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/Admin/AdminProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/Admin/getLoginReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/getLoginReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UserResForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserResForAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/PostCreateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostCreateReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/registration/RegistrationApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserProfileApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wait/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wait/Wait.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,59 +96,8 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanCreateANewPost.userCanCreateAPost">
-    <configuration name="AddUserDataProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EditUserDataProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationAndAuthorisationUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.registration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.registration" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.registration.RegistrationAndAuthorisationUserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanCreateANewPost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginApiTest.userCanLogin">
+    <configuration name="AdminCanCreateEditAndDeletePostTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -159,8 +106,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateANewPost" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.AdminCanCreateEditAndDeletePostTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.AdminCanCreateEditAndDeletePostTest" />
+      <option name="METHOD_NAME" value="adminCanCreateAPost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -168,17 +132,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanEditPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginApiTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="PATTERN" value="integration.tests.login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanEditPostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="integration.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
+      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginApiTest.userCanNotLoginWitInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
+      <option name="METHOD_NAME" value="userCanNotLoginWitInvalidEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostApi.rndDataForCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.pages.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.pages.post" />
+      <option name="MAIN_CLASS_NAME" value="integration.pages.post.PostApi" />
+      <option name="METHOD_NAME" value="rndDataForCreatePost" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -187,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserCanEditPostTest" />
-        <item itemvalue="TestNG.EditUserDataProfileTest" />
-        <item itemvalue="TestNG.AddUserDataProfileTest" />
-        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest" />
+        <item itemvalue="TestNG.LoginApiTest.userCanLogin" />
+        <item itemvalue="TestNG.LoginApiTest.userCanNotLoginWitInvalidEmail" />
+        <item itemvalue="TestNG.PostApi.rndDataForCreatePost" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest" />
       </list>
     </recent_temporary>
   </component>
@@ -203,14 +204,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1711370136449</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1711370136449</updated>
     </task>
     <task id="LOCAL-00002" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -596,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712764013473</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712768147972</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1712768147974</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -898,9 +899,24 @@
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/registration/RegistrationApiTest.java</url>
           <line>22</line>
           <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="228" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
@@ -923,16 +939,16 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java</url>
           <line>26</line>
-          <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
+          <properties class="e2e.tests.registration.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/registration/RegistrationApiTest.java</url>
           <line>13</line>
-          <properties class="integration.UserApiTest" method="testNewUserRegistration">
+          <properties class="integration.tests.registration.RegistrationApiTest" method="testNewUserRegistration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -941,7 +957,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java</url>
           <line>32</line>
-          <properties class="e2e.tests.admin.LoginAdminTest" method="adminCanNotLoginWithInvalidEmail">
+          <properties class="e2e.tests.login.LoginAdminTest" method="adminCanNotLoginWithInvalidEmail">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -950,7 +966,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java</url>
           <line>38</line>
-          <properties class="e2e.tests.user.UserCanNotCreateAPost" method="userCanNotCreateAPost">
+          <properties class="e2e.tests.post.UserCanNotCreateAPost" method="userCanNotCreateAPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -959,7 +975,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java</url>
           <line>24</line>
-          <properties class="e2e.tests.admin.DraftPostTest" method="editDraftPost">
+          <properties class="e2e.tests.post.DraftPostTest" method="editDraftPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -968,7 +984,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java</url>
           <line>44</line>
-          <properties class="e2e.tests.user.EditUserDataProfileTest" method="userCanEditProfile">
+          <properties class="e2e.tests.profile.EditUserDataProfileTest" method="userCanEditProfile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

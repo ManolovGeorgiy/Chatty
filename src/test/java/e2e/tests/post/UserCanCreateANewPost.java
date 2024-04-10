@@ -79,7 +79,7 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.userCanCreateAPost(title, description, content,folderPath);
 
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {
@@ -92,5 +92,7 @@ public class UserCanCreateANewPost extends TestBase {
         checkPostData(createAPostForm, title, description, content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
+
+
     }
 }

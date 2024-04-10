@@ -24,7 +24,7 @@ public class Wait {
     public void forVisibility(WebElement element){
         try {
             setWait().until(ExpectedConditions.visibilityOf(element));
-        }catch (TimeoutException e){throw new TimeoutException(element.getAccessibleName() + "is not visible more thasn " + TIMEOUT.toString());
+        }catch (TimeoutException e){throw new TimeoutException(element.getAccessibleName() + "is not visible more than " + TIMEOUT.toString());
         }
     }
     public void forAllVisibility(List<WebElement> elements){

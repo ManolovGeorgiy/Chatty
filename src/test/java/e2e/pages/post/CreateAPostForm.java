@@ -56,12 +56,13 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-    @Step("Fill form {title},{description},{content}")
-    public void userCanCreateAPost(String title, String description, String content) {
+    @Step("Fill form {title},{description},{content},{path}")
+    public void userCanCreateAPost(String title, String description, String content,String path) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
-        imageInput.click();
+        imageLoading(path);
+
     }
     public String getTitle() {
         return titleInput.getAttribute("value");

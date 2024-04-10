@@ -1,10 +1,10 @@
-package integration.tests;
+package integration.tests.registration;
 
 import com.github.javafaker.Faker;
 import integration.pages.user.UserApi;
 import org.testng.annotations.Test;
 
-public class UserApiTest {
+public class RegistrationApiTest {
 
     UserApi userApi;
 
@@ -12,14 +12,12 @@ public class UserApiTest {
 
     @Test
     public void testNewUserRegistration() {
-        String email = "testeer@gmail.com";
-        String password = "TestPassword123";
-        String confirmPassword = "TestPassword123";
+        String email = "tatar@abv.bg";
+        String password = "Manowar33246";
+        String confirmPassword = "Manowar33246";
         String role = "user";
 
         userApi = new UserApi();
-
-
         userApi.registration(email, password, confirmPassword, role, 201);
         userApi.login(email,password,200);
 

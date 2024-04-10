@@ -1,4 +1,4 @@
 package integration.tests.profile;
 
-public class AddUserDataProfileTest {
+public class EditUserProfileApiTest {
 }
