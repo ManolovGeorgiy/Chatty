@@ -56,6 +56,8 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
+
     @Step("Fill form {title},{description},{content},{path}")
     public void userCanCreateAPost(String title, String description, String content,String path) {
         titleInput.sendKeys(title);
@@ -117,4 +119,18 @@ public class CreateAPostForm extends BasePage {
         contentInput.sendKeys(content);
         submitButton.click();
     }
+
+    public boolean isPostDisplayed(String postTitle) {
+        try {
+
+            // Используйте метод findElement для поиска элемента, содержащего заголовок поста
+            WebElement postElement = driver.findElement(By.xpath("//div[@class='post-content__top' and .//h2[text()='" + postTitle + "']]"));
+            // Если элемент найден, возвращаем true
+            return postElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            // Если элемент не найден, возвращаем false
+            return false;
+        }
+    }
 }
+

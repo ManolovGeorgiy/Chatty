@@ -24,31 +24,7 @@ public class UserCanCreateANewPost extends TestBase {
     CreateAPostForm createAPostForm;
     Header header;
 
-    // Метод для выбора случайного пути к изображению в указанной папке
-    public String selectRandomImagePath(String folderPath) {
-        File folder = new File(folderPath);
-        File[] files = folder.listFiles();
 
-        List<String> imagePaths = new ArrayList<>();
-
-        if (files != null && files.length > 0) {
-            for (File file : files) {
-                if (file.isFile() && file.getName().endsWith(".jpg")) {
-                    imagePaths.add(file.getAbsolutePath());
-                }
-            }
-            if (!imagePaths.isEmpty()) {
-                Random random = new Random();
-                return imagePaths.get(random.nextInt(imagePaths.size()));
-            } else {
-                System.err.println("Folder " + folderPath + " не содержит изображений формата .jpg.");
-                return null;
-            }
-        } else {
-            System.err.println("Folder " + folderPath + " не существует или не содержит файлов.");
-            return null;
-        }
-    }
 
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
@@ -60,13 +36,13 @@ public class UserCanCreateANewPost extends TestBase {
     }
 
     @Test(description = "User can create a post")
-    public void userCanCreateAPost() {
+    public void userCanCreateAPost() throws InterruptedException {
         String email = "Biba10@mail.ru";
         String password = "Biba1234";
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources/5204092180870848057_121.jpg";
+        String imagePath = "src/test/java/resources/5204092180870848057_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -80,19 +56,17 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,folderPath);
-
-        String randomImagePath = selectRandomImagePath(folderPath);
-        if (randomImagePath != null) {
-            createAPostForm.imageLoading(randomImagePath);
-            createAPostForm.waitForLoading();
-        } else {
-            System.err.println("Не удалось выбрать изображение для публикации.");
-        }
-
-        checkPostData(createAPostForm, title, description, content);
-        createAPostForm.clickSubmitButton();
+        createAPostForm.userCanCreateAPost(title, description, content,imagePath);
         createAPostForm.waitForLoading();
+        createAPostForm.imageLoading(imagePath);
+        createAPostForm.waitForLoading();
+        checkPostData(createAPostForm, title, description, content);
+        createAPostForm.waitForLoading();
+        createAPostForm.clickSubmitButton();
+        Thread.sleep(3000);
+
+        Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+
 
 
     }
