@@ -1,4 +1,4 @@
-package integration;
+package integration.tests.Georgiy;
 
 import integration.schemas.LoginReq;
 import integration.user.ApiBase;

@@ -1,4 +1,4 @@
-package integration;
+package integration.tests.Georgiy;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
