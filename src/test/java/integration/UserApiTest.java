@@ -12,7 +12,7 @@ public class UserApiTest {
 
     @Test
     public void testNewUserRegistration() {
-        String email = "test@example.com";
+        String email = faker.internet().emailAddress();
         String password = "TestPassword123";
         String confirmPassword = "TestPassword123";
         String role = "user";
@@ -27,8 +27,8 @@ public class UserApiTest {
     @Test
     public void userCanRegistrationAsUser() {
         String email = faker.internet().emailAddress();
-        String password = "Gazmanov11234";
-        String confirmPassword = "Gazmanov11234";
+        String password = "Tatata123";
+        String confirmPassword = "Tatata123";
         String role = "user";
         userApi = new UserApi();
         userApi.registration(email,password,confirmPassword,role,201);
