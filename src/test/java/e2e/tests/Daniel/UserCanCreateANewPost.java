@@ -1,4 +1,4 @@
-package e2e.tests.post;
+package e2e.tests.Daniel;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
@@ -6,13 +6,14 @@ import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
-import java.util.Locale;
-import java.util.Random;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Random;
 
 public class UserCanCreateANewPost extends TestBase {
 
@@ -65,7 +66,7 @@ public class UserCanCreateANewPost extends TestBase {
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources";
+        String folderPath = "src/test/java/resources/5204092180870848057_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
