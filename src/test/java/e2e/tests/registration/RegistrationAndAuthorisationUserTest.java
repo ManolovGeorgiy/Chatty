@@ -24,9 +24,9 @@ Header header;
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("14")
     @Test(description = "CHATTY-16")
-    public void UserCanRegistration(){
+    public void userCanRegistration(){
 
-        String email = "tatar@abv.bg";
+        String email = "userdeletepost@abv.bg";
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 

@@ -60,7 +60,7 @@ public class UserCanCreateANewPost extends TestBase {
 
     @Test(description = "User can create a post")
     public void userCanCreateNewPost() {
-        String email = "tatar@abv.bg";
+        String email = "usercreatepost@abv.bg";
         String password = "Manowar33246";
         String title = "My first post";
         String description = "Pice";
