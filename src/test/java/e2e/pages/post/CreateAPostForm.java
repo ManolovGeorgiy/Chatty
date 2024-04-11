@@ -122,9 +122,9 @@ public class CreateAPostForm extends BasePage {
 
     public boolean isPostDisplayed(String postTitle) {
         try {
-
+            Duration timeout = Duration.ofSeconds(1);
             // Используйте метод findElement для поиска элемента, содержащего заголовок поста
-            WebElement postElement = driver.findElement(By.xpath("//div[@class='post-content__top' and .//h2[text()='" + postTitle + "']]"));
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
             // Если элемент найден, возвращаем true
             return postElement.isDisplayed();
         } catch (NoSuchElementException e) {
@@ -132,5 +132,16 @@ public class CreateAPostForm extends BasePage {
             return false;
         }
     }
+//    public boolean isMessageSent() {
+//        Duration timeout = Duration.ofSeconds(1);
+//        // Добавляем ожидание появления подтверждения успешной отправки сообщения
+//        WebDriverWait wait = new WebDriverWait(driver, timeout);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='post-content__top']")));
+//        try {
+//            return driver.findElement(By.xpath("//div[@class='post-content__top']")).isDisplayed();
+//        } catch (NoSuchElementException e) {
+//            return false; // Возвращаем false, если элемент не найден
+//        }
+//    }
 }
 

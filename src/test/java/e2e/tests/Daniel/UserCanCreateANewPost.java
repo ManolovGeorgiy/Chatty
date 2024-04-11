@@ -6,6 +6,7 @@ import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
+import e2e.pages.post.EditPostPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,6 +16,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 public class UserCanCreateANewPost extends TestBase {
 
     Faker faker = new Faker(new Locale("ENGLISH"));
@@ -23,6 +26,7 @@ public class UserCanCreateANewPost extends TestBase {
     HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
     Header header;
+    EditPostPage editPostPage;
 
 
 
@@ -64,6 +68,13 @@ public class UserCanCreateANewPost extends TestBase {
         createAPostForm.waitForLoading();
         createAPostForm.clickSubmitButton();
         Thread.sleep(3000);
+        header = new Header(app.driver);
+        header.myPostClick();
+        header.waitForLoading();
+        header.setMyPostTab();
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+
 
         Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
 
