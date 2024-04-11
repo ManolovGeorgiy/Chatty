@@ -49,8 +49,8 @@ public class EditUserDataProfileTest extends TestBase {
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
-        String editFormattedDate = "1985-01-03";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String editFormattedDate = "03-01-1985";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
 
         String editPhone = "+49157310789";
@@ -76,7 +76,7 @@ public class EditUserDataProfileTest extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), editPhone);
+        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
