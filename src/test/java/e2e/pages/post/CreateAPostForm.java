@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.List;
 
@@ -63,7 +64,6 @@ public class CreateAPostForm extends BasePage {
         contentInput.sendKeys(content);
         imageInput.click();
         imageLoading(path);
-
     }
     public String getTitle() {
         return titleInput.getAttribute("value");
@@ -80,7 +80,7 @@ public class CreateAPostForm extends BasePage {
     @Step("Upload image: {imagePath}")
     public void imageLoading(String relativeImagePath) {
         try {
-            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
+            String absoluteImagePath = Paths.get(relativeImagePath).toAbsolutePath().toString();
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
