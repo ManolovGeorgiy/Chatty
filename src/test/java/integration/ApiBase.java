@@ -1,4 +1,4 @@
-package integration.user;
+package integration;
 
 import com.github.javafaker.File;
 import config.Config;
@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 
 public class ApiBase {
     private final Config config = new Config();
-    protected final String BASE_URL = config.getProjectUrl();
+    protected final String BASE_URL = config.getProjectApiUrl();
     protected final RequestSpecification spec;
     public ApiBase(){
         this.spec = new RequestSpecBuilder()
@@ -24,7 +24,7 @@ public class ApiBase {
         this.spec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
                 .setContentType(ContentType.JSON)
-                .addHeader("Authorization", "Bearer " + token) // Используем токен в заголовке Authorization
+                .addHeader("Authorization", "Bearer " + token)
                 .build();
     }
     public Response getAllPosts(int skip, int limit, int expectedStatusCode, String endpoint) {
@@ -131,12 +131,11 @@ public class ApiBase {
     }
 
 
-        @BeforeClass
-        public void setUp() {
-            // Установка базового URI для API
-            RestAssured.baseURI = "http://your_api_base_url";
-            // Если требуется авторизация, установите здесь заголовок авторизации
-            // RestAssured.authentication = basic("username", "password");
-        }
+    @BeforeClass
+    public void setUp() {
+        // Установка базового URI для API
+        RestAssured.baseURI = "http://your_api_base_url";
+        // Если требуется авторизация, установите здесь заголовок авторизации
+        // RestAssured.authentication = basic("username", "password");
     }
-
+}
