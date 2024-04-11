@@ -2,10 +2,12 @@ package e2e.pages.registration;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class RegistrationPage extends BasePage {
     public RegistrationPage(WebDriver driver) {
@@ -61,5 +63,25 @@ public class RegistrationPage extends BasePage {
         confirmPasswordInput.sendKeys(confirmPassword);
         eyeTab.click();
         registrationButton.click();
+    }
+    @Step("check error message")
+    public boolean textError() {
+        Duration timeout = Duration.ofSeconds(5);
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='text-error']")));
+        try {
+            return driver.findElement(By.xpath("//div[@class='text-error']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+    @Step("Screenshot {actualScreenshotName}")
+    public void takeLoginPageScreenshot(String actualScreenshotName){
+        try {
+            waitForLoading();
+            takeAndCompareScreenshot(actualScreenshotName, null);
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
     }
 }

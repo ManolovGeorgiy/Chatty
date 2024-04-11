@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests.post;
 
 import e2e.TestBase;
 import e2e.pages.Header;
@@ -40,7 +40,7 @@ public class UserCanEditPostTest extends TestBase {
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String imagePath = "C:\\Users\\PC\\Chatty\\reference\\path\\5204092180870848355_121.jpg";
+        String imagePath = "src/test/java/resources/5204092180870848366_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();

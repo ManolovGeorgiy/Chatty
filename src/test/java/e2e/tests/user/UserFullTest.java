@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests.user;
 
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
@@ -22,7 +22,7 @@ public class UserFullTest extends TestBase {
 
 
     @Test
-    public void registrationAndAuthorisationUser() {
+    public void fullUserTest() {
 
         String emailLogin = "tatara@abv.bg";
         String changePassword = "User3333";
@@ -61,9 +61,9 @@ public class UserFullTest extends TestBase {
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
 
-        //editPasswordForm = new EditPasswordForm(app.driver);
-        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
-        //editPasswordForm.saveChangePasswordButton();
+        editPasswordForm = new EditPasswordForm(app.driver);
+        editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        editPasswordForm.saveChangePasswordButton();
 
 
         header = new Header(app.driver);
