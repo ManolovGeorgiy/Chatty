@@ -83,11 +83,11 @@ public class ContactUsPage extends BasePage {
     }
 
     public boolean error() {
-        Duration timeout = Duration.ofSeconds(1);
+        Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));
         try {
-            return driver.findElement(By.xpath("//div[@class='error']")).isDisplayed();
+            return driver.findElement(By.xpath("//*[@class='error']")).isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }

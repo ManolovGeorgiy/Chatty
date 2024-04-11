@@ -1,22 +1,20 @@
-package e2e.tests.Georgiy;
+package e2e.tests.contactUs;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
-import e2e.pages.contactUs.ContactUsPage;
 import e2e.pages.Header;
+import e2e.pages.contactUs.ContactUsPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
-import e2e.pages.profile.AddUserDialog;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Locale;
 
-import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
-public class ContactUsTest extends TestBase {
+public class ContactUsNegativeTest extends TestBase {
 
     Faker faker = new Faker(new Locale("ENGLISH"));
 
@@ -33,45 +31,10 @@ public class ContactUsTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
-    @Epic(value = "Contact Us")
-    @Feature(value = "User can sent a message")
-    @Description(value = "User can send feedback")
+    @Feature(value = "User can not sent a message")
+    @Description(value = "User can not send feedback")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("20")
     @Test(description = "CHATTY-23")
-    public void userCanSendMessage() {
-
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
-
-        String userName = faker.name().fullName();
-        String emailContact = faker.internet().emailAddress();
-        String text = faker.lorem().sentence(100);
-
-        loginPage = new LoginPage(app.driver);
-        loginPage.waitForLoading();
-        loginPage.login(email, password);
-
-        homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.waitForLoading();
-
-        header = new Header(app.driver);
-        header.clickContact();
-
-        contactUsPage = new ContactUsPage(app.driver);
-        contactUsPage.waitForLoading();
-        contactUsPage.feedback(userName, emailContact, text);
-        contactUsPage.waitForLoading();
-        checkFeedbackData(contactUsPage,userName,emailContact,text);
-        contactUsPage.sendMessageButtonClick();
-        assertTrue("Feedback submitted successfully!", contactUsPage.isMessageSent());
-        contactUsPage.waitForLoading();
-
-        header = new Header(app.driver);
-        header.clickHome();
-    }
-
-    @Test
     public void userCanNotSendMessage() {
 
         String email = "tatar@abv.bg";
@@ -94,14 +57,13 @@ public class ContactUsTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text);
+        checkFeedbackData(contactUsPage,name,emailContact,text);
         contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();
-        //assertTrue("Invalid email format", contactUsPage.error());
-        contactUsPage.takeFeedbackFormPageScreenshot("Invalid email format");
+        assertTrue("Invalid email format", contactUsPage.error());
+        contactUsPage.takeFeedbackFormPageScreenshot("User_cannot_feedback");
 
         header = new Header(app.driver);
         header.clickHome();
     }
-
-
 }
