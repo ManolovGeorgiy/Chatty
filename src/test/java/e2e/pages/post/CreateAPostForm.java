@@ -3,15 +3,12 @@ package e2e.pages.post;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.List;
 
 public class CreateAPostForm extends BasePage {
     public CreateAPostForm(WebDriver driver) {
@@ -41,6 +38,7 @@ public class CreateAPostForm extends BasePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
+
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
@@ -57,28 +55,38 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("Fill form {title},{description},{content},{path}")
-    public void userCanCreateAPost(String title, String description, String content,String path) {
+    public void createAPost(String title, String description, String content, String path) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
         imageInput.click();
-        imageLoading(path);
+        if (
+                path != null
+        ) {
+            uploadImage(path);
+        }
     }
+
     public String getTitle() {
         return titleInput.getAttribute("value");
     }
+
     public String getDescriptionText() {
         return descriptionInput.getAttribute("value");
     }
+
     public String getContent() {
         return contentInput.getAttribute("value");
     }
-    public void tumblerSwitchClick() {
+
+    public void clickToSwitchAsDraft() {
         tumblerSwitchDraft.click();
     }
+
     @Step("Upload image: {imagePath}")
-    public void imageLoading(String relativeImagePath) {
+    public void uploadImage(String relativeImagePath) {
         try {
 //            String absoluteImagePath = Paths.get(relativeImagePath).toAbsolutePath().toString();
 //            System.out.println(absoluteImagePath);
@@ -88,10 +96,12 @@ public class CreateAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+
     @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();
     }
+
     @Step("check after sending")
     public boolean errorText() {
         Duration timeout = Duration.ofSeconds(10);
@@ -103,20 +113,14 @@ public class CreateAPostForm extends BasePage {
             return false;
         }
     }
+
     @Step("Screenshot {actualScreenshotName}")
-    public void takePostPageScreenshot(String actualScreenshotName){
+    public void takePostPageScreenshot(String actualScreenshotName) {
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
-    }
-    @Step("Fill form {title},{description},{content}")
-    public void userCanNotCreateAPost(String title, String description, String content) {
-        titleInput.sendKeys(title);
-        descriptionInput.sendKeys(description);
-        contentInput.sendKeys(content);
-        submitButton.click();
     }
 }

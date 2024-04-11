@@ -79,11 +79,11 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,folderPath);
+        createAPostForm.createAPost(title, description, content,folderPath);
 
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {
-            createAPostForm.imageLoading(randomImagePath);
+            createAPostForm.uploadImage(randomImagePath);
             createAPostForm.waitForLoading();
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");
