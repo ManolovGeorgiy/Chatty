@@ -61,6 +61,7 @@ public class CreateAPostForm extends BasePage {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
+        imageInput.click();
         imageLoading(path);
 
     }
