@@ -80,9 +80,10 @@ public class CreateAPostForm extends BasePage {
     @Step("Upload image: {imagePath}")
     public void imageLoading(String relativeImagePath) {
         try {
-            String absoluteImagePath = Paths.get(relativeImagePath).toAbsolutePath().toString();
+//            String absoluteImagePath = Paths.get(relativeImagePath).toAbsolutePath().toString();
+//            System.out.println(absoluteImagePath);
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(absoluteImagePath);
+            fileInput.sendKeys(relativeImagePath);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }

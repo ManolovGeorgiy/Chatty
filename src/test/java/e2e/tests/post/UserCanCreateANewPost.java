@@ -65,7 +65,7 @@ public class UserCanCreateANewPost extends TestBase {
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources/5204092180870848359_121.jpg";
+        String folderPath = "/var/jenkins_home/workspace/Chatty/GPower/src/test/java/resources/5204092180870848359_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
