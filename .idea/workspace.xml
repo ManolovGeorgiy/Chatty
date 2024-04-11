@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Renamed test method name">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/AdminCanCreatePost.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/userCanEditPost.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,17 +65,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/Selenide-300523-e-qa&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration.executor": "Run",
+    "TestNG.UserCanCreateANewPost.userCanCreateAPost.executor": "Run",
+    "git-widget-placeholder": "dev__Georgiy",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/Selenide-300523-e-qa",
+    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\reference\screenshot" />
@@ -97,24 +99,7 @@
       <command value="y" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost">
-    <configuration name="AddUserDataProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.UserCanCreateANewPost.userCanCreateNewPost">
     <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -133,17 +118,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditUserDataProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="PATTERN" value="e2e.tests.registration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="e2e.tests.registration" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.registration.RegistrationAndAuthorisationUserTest" />
+      <option name="METHOD_NAME" value="UserCanRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -161,6 +147,24 @@
       <option name="PACKAGE_NAME" value="e2e.tests.post" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateANewPost" />
       <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCanCreateANewPost.userCanCreateNewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateANewPost" />
+      <option name="METHOD_NAME" value="userCanCreateNewPost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -188,13 +192,21 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateNewPost" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
+        <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
         <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
         <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
-        <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
-        <item itemvalue="TestNG.EditUserDataProfileTest" />
-        <item itemvalue="TestNG.AddUserDataProfileTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-92e50af3" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -365,13 +377,60 @@
       <option name="project" value="LOCAL" />
       <updated>1712850331640</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Updated method to get abs path">
+      <option name="closed" value="true" />
+      <created>1712853936409</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712853936409</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Selenoid changed status to true">
+      <option name="closed" value="true" />
+      <created>1712854942731</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712854942731</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Changed path for image in test">
+      <option name="closed" value="true" />
+      <created>1712855457636</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855457636</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Renamed test method name">
+      <option name="closed" value="true" />
+      <created>1712855726426</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712855726426</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added e2e Test" />
     <MESSAGE value="Registration,Login,Post,Contact Us" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration,Login,Post,Contact Us" />
+    <MESSAGE value="Updated method to get abs path" />
+    <MESSAGE value="Selenoid changed status to true" />
+    <MESSAGE value="Changed path for image in test" />
+    <MESSAGE value="Renamed test method name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed test method name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
