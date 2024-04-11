@@ -1,6 +1,7 @@
-package e2e.tests.Georgiy;
+package e2e.tests.post;
 
 import com.github.javafaker.Faker;
+
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
@@ -12,9 +13,12 @@ import e2e.pages.post.EditPostPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
     Faker faker = new Faker();
+    File file = new File("src/test/java/resource/path");
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
@@ -46,13 +50,12 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
-        String imagePath = "src/test/java/resources/5204092180870848057_121.jpg";
-
+        String imagePath = "./src/test/java/resources/adminCanCreateAPost_IT.jpg";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String newImagePath = "src/test/java/resources/5204092180870848382_121";
+        String editImagePath = "./src/test/java/resources/adminCanCreateAPost_edit.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -65,10 +68,9 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         header.clickHome();
         header.createAPostClick();
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.userCanCreateAPost(title, description, content,imagePath);
         createAPostForm.waitForLoading();
         //createAPostForm.tumblerSwitchClick();
-        //createAPostForm.waitForLoading();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
 
@@ -89,7 +91,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
-        editAPostForm.imageLoading(newImagePath);
+        editAPostForm.imageLoading(editImagePath);
         editAPostForm.editPost(editTitle,editDescription,editContent);
         checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
         editAPostForm.clickEditSubmitButton();
@@ -99,5 +101,9 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
+
+
+
     }
+
 }

@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests.adminPanel;
 
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
@@ -10,7 +10,6 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
 import e2e.pages.registration.RegistrationPage;
-import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
 public class AdminPanelTest extends TestBase {
@@ -71,13 +70,14 @@ public class AdminPanelTest extends TestBase {
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
 
-        // bug
+
         editUserForm.clickEditUserForm();
         editUserForm.setProfileForm(name, surname, GenderInfo.MALE, date, phone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
 
+        // bug
         //editPasswordForm = new EditPasswordForm(app.driver);
         //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
         //editPasswordForm.saveChangePasswordButton();
