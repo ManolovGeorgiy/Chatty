@@ -1,4 +1,4 @@
-package integration.homeBlog;
+package integration.pages.homeBlog;
 
 import integration.schemas.LoginReq;
 import io.restassured.RestAssured;

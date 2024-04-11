@@ -1,4 +1,4 @@
-package e2e.tests.Georgiy;
+package e2e.tests.profile;
 
 import com.github.javafaker.Faker;
 import e2e.TestBase;
@@ -41,7 +41,6 @@ public class EditUserDataProfileTest extends TestBase {
     @Feature(value = "User edited data to the profile")
     @Description(value = "User can edit data")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("")
     @Test(description = "CHATTY-30")
     public void userCanEditProfile() {
 
@@ -54,7 +53,7 @@ public class EditUserDataProfileTest extends TestBase {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
 
-        String editPhone = "+4915731078";
+        String editPhone = "+49157310789";
         String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
 
         String oldPassword = "Manowar333246";

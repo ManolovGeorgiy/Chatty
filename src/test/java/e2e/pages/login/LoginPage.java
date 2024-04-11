@@ -66,7 +66,7 @@ public class LoginPage extends BasePage {
             signUp();
         }
     }
-    @Step("check after sending")
+    @Step("check error message")
     public boolean textError() {
         Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
