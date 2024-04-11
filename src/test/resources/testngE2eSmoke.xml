@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="testE2eSmoke" verbose="1">
+    <test name="SmokeTestE2e">
+        <classes>
+<!--            <class name="e2e.tests.registration.RegistrationAndAuthorisationAdminTest">-->
+<!--            </class>-->
+<!--            <class name="e2e.tests.login.LoginAdminTest">-->
+<!--            </class>-->
+            <class name="e2e.tests.post.AdminCanCreateEditAndDeletePostTest">
+            </class>
+            <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
+            </class>
+            <class name="e2e.tests.profile.AddUserDataProfileTest">
+            </class>
+            <class name="e2e.tests.profile.EditUserDataProfileTest">
+            </class>
+            <class name="e2e.tests.contactUs.ContactUsPositiveTest">
+            </class>
+            <class name="e2e.tests.about.AboutPageTest">
+            </class>
+            <class name="e2e.tests.post.UserCanCreateANewPost">
+            </class>
+            <class name="e2e.tests.post.UserCanEditPostTest">
+            </class>
+            <class name="e2e.tests.post.UserCanDeletePostTest">
+            </class>
+            <class name="e2e.tests.adminPanel.AdminDeleteUserTest">
+            </class>
+        </classes>
+    </test>
+</suite>
