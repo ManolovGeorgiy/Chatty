@@ -18,7 +18,6 @@ import java.io.File;
 public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
     Faker faker = new Faker();
-    File file = new File("src/test/java/resource/path");
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
@@ -101,9 +100,5 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
-
-
-
     }
-
 }

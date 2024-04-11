@@ -8,6 +8,9 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
 import java.util.Locale;
 import java.util.Random;
+
+import e2e.pages.post.EditPostPage;
+import e2e.pages.registration.RegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.File;
@@ -19,35 +22,11 @@ public class UserCanCreateANewPost extends TestBase {
     Faker faker = new Faker(new Locale("ENGLISH"));
 
     LoginPage loginPage;
+    RegistrationPage registrationPage;
     HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
     Header header;
-
-    // Метод для выбора случайного пути к изображению в указанной папке
-    public String selectRandomImagePath(String folderPath) {
-        File folder = new File(folderPath);
-        File[] files = folder.listFiles();
-
-        List<String> imagePaths = new ArrayList<>();
-
-        if (files != null && files.length > 0) {
-            for (File file : files) {
-                if (file.isFile() && file.getName().endsWith(".jpg")) {
-                    imagePaths.add(file.getAbsolutePath());
-                }
-            }
-            if (!imagePaths.isEmpty()) {
-                Random random = new Random();
-                return imagePaths.get(random.nextInt(imagePaths.size()));
-            } else {
-                System.err.println("Folder " + folderPath + " не содержит изображений формата .jpg.");
-                return null;
-            }
-        } else {
-            System.err.println("Folder " + folderPath + " не существует или не содержит файлов.");
-            return null;
-        }
-    }
+    EditPostPage editPostPage;
 
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
@@ -57,19 +36,25 @@ public class UserCanCreateANewPost extends TestBase {
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
     }
-
     @Test(description = "User can create a post")
-    public void userCanCreateAPost() {
-        String email = "Biba10@mail.ru";
-        String password = "Biba1234";
+    public void userCanCreateAPost() throws InterruptedException {
+        String email = faker.internet().emailAddress();
+        String password = "RedBul1234";
+        String confirmPassword = "RedBul1234";
+
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources";
+        String imagePath = "src/test/java/resources/tree-736885_1280.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(email, password);
+        loginPage.signUp();
+
+        registrationPage = new RegistrationPage(app.driver);
+        registrationPage.waitForLoading();
+        registrationPage.optionUser();
+        registrationPage.registration(email,password,confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -79,19 +64,24 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,folderPath);
-
-        String randomImagePath = selectRandomImagePath(folderPath);
-        if (randomImagePath != null) {
-            createAPostForm.imageLoading(randomImagePath);
-            createAPostForm.waitForLoading();
-        } else {
-            System.err.println("Не удалось выбрать изображение для публикации.");
-        }
+        createAPostForm.userCanCreateAPost(title, description, content,imagePath);
+        createAPostForm.imageLoading(imagePath);
+        createAPostForm.waitForLoading();
 
         checkPostData(createAPostForm, title, description, content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
+        Thread.sleep(3000);
+        header = new Header(app.driver);
+        header.myPostClick();
+        header.waitForLoading();
+        header.setMyPostTab();
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+
+
+        Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+
 
 
     }

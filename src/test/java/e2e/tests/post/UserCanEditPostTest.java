@@ -1,5 +1,6 @@
 package e2e.tests.post;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
@@ -13,6 +14,7 @@ import org.testng.annotations.Test;
 
 public class UserCanEditPostTest extends TestBase {
 
+    Faker faker = new Faker();
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
@@ -34,8 +36,9 @@ public class UserCanEditPostTest extends TestBase {
     @Test(description = "CHATTY-40")
     public void userCanEditAPost() {
 
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
+        String email = faker.internet().emailAddress();
+        String password = "RedBull1234";
+        String confirmPassword = "RedBull1234";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";

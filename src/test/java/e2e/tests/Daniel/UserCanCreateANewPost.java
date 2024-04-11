@@ -10,19 +10,8 @@ import e2e.pages.post.EditPostPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-<<<<<<< HEAD
-
 import java.util.Locale;
 
-=======
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Random;
-
-import static org.testng.AssertJUnit.assertTrue;
->>>>>>> origin/dev_Pislaru
 
 public class UserCanCreateANewPost extends TestBase {
 
