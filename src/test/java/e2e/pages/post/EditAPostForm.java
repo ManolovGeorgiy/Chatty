@@ -62,12 +62,14 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-    public void imageLoading(String imagePath) {
+    @Step("Upload image: {imagePath}")
+    public void imageLoading(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);
+            fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
-            e.printStackTrace();
+            Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
     public void draftTumblerSwitch() {
