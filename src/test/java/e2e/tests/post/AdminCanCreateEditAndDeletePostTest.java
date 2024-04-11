@@ -55,7 +55,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String editImagePath = "src/test/java/resources/adminCanEditAPost_IT.jpg";
+        String editImagePath = "src/test/java/resources/adminCanCreateAPost_edit.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -101,9 +101,5 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
-
-
-
     }
-
 }

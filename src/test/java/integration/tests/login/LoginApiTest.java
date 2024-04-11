@@ -17,7 +17,6 @@ public class LoginApiTest {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
 
-
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
         userInfo = new UserInfo(token);
@@ -25,10 +24,7 @@ public class LoginApiTest {
         JsonPath object = new JsonPath(userJson);
         String userId = object.getString("id");
         System.out.println(userId);
-
-
     }
-
     @Feature(value= "User login")
     @Story(value = "User can login with role user")
     @Description(value = "User can not login")

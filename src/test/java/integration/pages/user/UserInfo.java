@@ -3,7 +3,6 @@ package integration.pages.user;
 import integration.ApiBase;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-
 public class UserInfo extends ApiBase {
 
     public UserInfo(String token) {
