@@ -5,16 +5,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostCreateReq {
     @JsonProperty("title")
     private String title;
+
     @JsonProperty("description")
     private String description;
     @JsonProperty("body")
     private String body;
+
     @JsonProperty("imageUrl")
     private String imageUrl;
     @JsonProperty("publishDate")
     private String publishDate;
+
     @JsonProperty("draft")
-    private boolean draft;
+    private int draft; //boolean
 
     public String getTitle() {
         return title;
@@ -40,7 +43,7 @@ public class PostCreateReq {
         this.body = body;
     }
 
-    public String getImageUrl() {
+    public String getImageUrl(String image) {
         return imageUrl;
     }
 
@@ -56,13 +59,11 @@ public class PostCreateReq {
         this.publishDate = publishDate;
     }
 
-    public boolean isDraft() {
+    public int getDraft() {
         return draft;
     }
 
-    public void setDraft(boolean draft) {
+    public void setDraft(int draft) {
         this.draft = draft;
     }
-
-
 }
