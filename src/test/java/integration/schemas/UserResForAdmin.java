@@ -24,7 +24,7 @@ public class UserResForAdmin {
     private String phone;
 
 
-    @JsonProperty("role > Array [User,Admin]")
+    @JsonProperty("role > Array [User,adminPanel]")
     private String role;
 
     @JsonProperty("gender > Array [Male,Female]")

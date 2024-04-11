@@ -1,6 +1,5 @@
 package integration.Admin;
-
-import integration.user.ApiBase;
+import integration.ApiBase;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;

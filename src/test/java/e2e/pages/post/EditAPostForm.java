@@ -13,7 +13,6 @@ public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -23,12 +22,8 @@ public class EditAPostForm extends BasePage {
     @FindBy(xpath = "//*[@data-test='textarea']")
     WebElement contentInput;
 
-
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitEditButton;
-
-    //@FindBy(xpath = "//*[@id='draftCheckbox']")
-    //WebElement tumblerSwitch;
 
     @FindBy(xpath = "//*[@class='close']")
     WebElement closeButton;
@@ -36,6 +31,7 @@ public class EditAPostForm extends BasePage {
     public String getEditTitle() {
         return titleInput.getAttribute("value");
     }
+
     public String getEditDescriptionText() {
         return descriptionInput.getAttribute("value");
     }
@@ -58,7 +54,7 @@ public class EditAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-    public void editPost(String editTitle,String editDescription,String editContent){
+    public void editPost(String editTitle, String editDescription, String editContent) {
         titleInput.clear();
         titleInput.sendKeys(editTitle);
         descriptionInput.clear();
@@ -66,12 +62,13 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-    public void imageLoading(String imagePath) {
+    public void imageLoading(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);
+            fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
-            e.printStackTrace();
+            Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
     public void draftTumblerSwitch() {

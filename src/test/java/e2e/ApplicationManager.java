@@ -16,8 +16,6 @@ import java.util.Map;
 public class ApplicationManager {
     private final Config config = new Config();
     public WebDriver driver;
-
-
     protected void init() {
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -37,7 +35,7 @@ public class ApplicationManager {
             }
         } else {
             WebDriverManager.chromedriver().clearResolutionCache().setup();
-            //WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
         driver.get(config.getProjectUrl());
