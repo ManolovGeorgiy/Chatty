@@ -4,22 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminPostTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/ErrorRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PasswordUpdateReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserLogin_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserPostTest.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Assert na ContactUsPage">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/profile/ProfileApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/profile/ProfileApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserProfileApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserProfileApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +65,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="dev_Georgiy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,32 +97,36 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ChattyApiTest_2">
-    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="integration.user.UserLogin" />
+  <component name="RunManager" selected="TestNG.AddUserProfileApiTest.testNewUserRegistration">
+    <configuration name="AddUserProfileApiTest.testAddUserProfile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.user.*" />
+          <option name="PATTERN" value="integration.tests.profile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.AddUserProfileApiTest" />
+      <option name="METHOD_NAME" value="testAddUserProfile" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="AdminPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddUserProfileApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.Admin.*" />
+          <option name="PATTERN" value="integration.tests.profile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.Admin" />
-      <option name="MAIN_CLASS_NAME" value="integration.Admin.AdminPostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="integration.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.AddUserProfileApiTest" />
+      <option name="METHOD_NAME" value="testNewUserRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -122,17 +134,18 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="ChattyApiTest_2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.user.*" />
+          <option name="PATTERN" value="integration.tests.registration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.ChattyApiTest_2" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="integration.tests.registration" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.registration.RegistrationApiTest" />
+      <option name="METHOD_NAME" value="testNewUserRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -159,31 +172,32 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserApiTest_2.testGetAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="PATTERN" value="integration.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateAPostTest" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest_2" />
+      <option name="METHOD_NAME" value="testGetAllUsers" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ChattyApiTest_2" />
-        <item itemvalue="TestNG.AdminPostTest" />
+        <item itemvalue="TestNG.AddUserProfileApiTest.testNewUserRegistration" />
+        <item itemvalue="TestNG.RegistrationApiTest.testNewUserRegistration" />
+        <item itemvalue="JUnit.AddUserProfileApiTest.testAddUserProfile" />
+        <item itemvalue="TestNG.UserApiTest_2.testGetAllUsers" />
         <item itemvalue="TestNG.UserApiTest_2.TestGetAllUsers" />
-        <item itemvalue="Application.UserLogin" />
-        <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
       </list>
     </recent_temporary>
   </component>
@@ -260,12 +274,20 @@
       <option name="project" value="LOCAL" />
       <updated>1711562947418</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Assert na ContactUsPage">
+      <created>1712956749563</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712956749563</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration,Login,Post,Contact Us" />
+    <MESSAGE value="Assert na ContactUsPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assert na ContactUsPage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -396,11 +418,6 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/ApiBase.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
           <line>21</line>
           <option name="timeStamp" value="65" />
@@ -523,7 +540,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java</url>
           <line>11</line>
-          <properties class="e2e.tests.Georgiy.LoginUserTest" method="userCanLogin">
+          <properties class="e2e.tests.Georgiy.LoginUserTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -532,7 +549,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
           <line>19</line>
-          <properties class="e2e.tests.Georgiy.UserCanCreateAPostTest" method="userCanCreateAPost">
+          <properties class="e2e.tests.Georgiy.UserCanCreateAPostTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -558,5 +575,13 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest.ic" NAME="LoginAdminTest Coverage Results" MODIFIED="1712092384546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>e2e.tests.Georgiy.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest_adminCanNotLoginWithoutInvalidEmailAndPassword.ic" NAME="LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword Coverage Results" MODIFIED="1712091402972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>e2e.tests.Georgiy.*</FILTER>
+    </SUITE>
   </component>
 </project>

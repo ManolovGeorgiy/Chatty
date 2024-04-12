@@ -138,5 +138,7 @@ public class ApiBase {
             // Если требуется авторизация, установите здесь заголовок авторизации
             // RestAssured.authentication = basic("username", "password");
         }
-    }
+
+
+}
 

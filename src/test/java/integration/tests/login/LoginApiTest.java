@@ -9,6 +9,7 @@ public class LoginApiTest {
     UserApi userApi;
 
 
+
     @Test
     public void userCanLogin() {
         String email = "g.power@gmail.com";
