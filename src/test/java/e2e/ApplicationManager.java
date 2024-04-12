@@ -34,12 +34,14 @@ public class ApplicationManager {
                 e.printStackTrace();
             }
         } else {
+            WebDriverManager.chromedriver().clearResolutionCache().setup();
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
         driver.get(config.getProjectUrl());
         driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));
     }
+
     protected void stop() {
         driver.quit();
     }

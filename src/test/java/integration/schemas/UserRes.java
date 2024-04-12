@@ -3,12 +3,13 @@ package integration.schemas;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserRes {
+
     @JsonProperty("id")
     private String id;
     @JsonProperty("name")
     private String name;
-    @JsonProperty("surName")
-    private String surName;
+    @JsonProperty("surname")
+    private String surname;
     @JsonProperty("phone")
     private String phone;
     @JsonProperty("email")
@@ -17,8 +18,8 @@ public class UserRes {
     private String role;
     @JsonProperty("gender")
     private String gender;
-    @JsonProperty("birthDay")
-    private String birthDay;
+    @JsonProperty("birthDate")
+    private String birthDate;
     @JsonProperty("avatarUrl")
     private String avatarUrl;
     @JsonProperty("backgroundUrl")
@@ -40,12 +41,12 @@ public class UserRes {
         this.name = name;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getPhone() {
@@ -80,12 +81,12 @@ public class UserRes {
         this.gender = gender;
     }
 
-    public String getBirthDay() {
-        return birthDay;
+    public String getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthDay(String birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getAvatarUrl() {
@@ -103,4 +104,6 @@ public class UserRes {
     public void setBackgroundUrl(String backgroundUrl) {
         this.backgroundUrl = backgroundUrl;
     }
+
+
 }

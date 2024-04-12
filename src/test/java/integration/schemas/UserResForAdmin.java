@@ -3,8 +3,6 @@ package integration.schemas;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserResForAdmin {
-    @JsonProperty("id")
-    private String id;
 
     public String getId() {
         return id;
@@ -14,6 +12,36 @@ public class UserResForAdmin {
         this.id = id;
     }
 
+    @JsonProperty("id")
+    private String id;
+
+    @JsonProperty("email")
+    private String email;
+    @JsonProperty("surname")
+    private String surname;
+
+    @JsonProperty("phone")
+    private String phone;
+
+
+    @JsonProperty("role > Array [User,adminPanel]")
+    private String role;
+
+    @JsonProperty("gender > Array [Male,Female]")
+    private String gender;
+
+    @JsonProperty("birthDate ($date-time)")
+    private  String birthDate;
+
+    @JsonProperty("avatarUrl")
+    private  String avatarUrl;
+
+    @JsonProperty("backgroundUrl")
+    private String backgroundUrl;
+
+    @JsonProperty("blocked")
+    private Boolean blocked;
+
     public String getEmail() {
         return email;
     }
@@ -21,6 +49,9 @@ public class UserResForAdmin {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @JsonProperty("name")
+    private String name;
 
     public String getName() {
         return name;
@@ -30,12 +61,12 @@ public class UserResForAdmin {
         this.name = name;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getPhone() {
@@ -86,37 +117,12 @@ public class UserResForAdmin {
         this.backgroundUrl = backgroundUrl;
     }
 
-    public int getBlocked() {
+    public Boolean getBlocked() {
         return blocked;
     }
 
-    public void setBlocked(int blocked) {
+    public void setBlocked(Boolean blocked) {
         this.blocked = blocked;
     }
 
-    @JsonProperty("email")
-    private String email;
-
-    @JsonProperty("name")
-    private String name;
-    @JsonProperty("surName")
-    private String surName;
-
-    @JsonProperty("phone")
-    private String phone;
-    @JsonProperty("role")
-    private String role;
-
-    @JsonProperty("gender")
-    private String gender;
-    @JsonProperty("birthDate")
-    private String birthDate;
-
-    @JsonProperty("avatarUrl")
-    private String avatarUrl;
-    @JsonProperty("backgroundUrl")
-    private String backgroundUrl;
-
-    @JsonProperty("blocked")
-    private int blocked; //boolean
 }

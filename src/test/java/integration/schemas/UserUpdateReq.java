@@ -9,17 +9,16 @@ public class UserUpdateReq {
     private String name;
     @JsonProperty("surname")
     private String surname;
-    @JsonProperty("birtDate")
-    private String birtDate;
+    @JsonProperty("birthDate")
+    private String birthDate;
     @JsonProperty("phone")
     private String phone;
     @JsonProperty("gender")
     private String gender;
-
     @JsonProperty("backgroundUrl")
     private String backgroundUrl;
     @JsonProperty("blocked")
-    private int blocked;  //boolean
+    private boolean blocked;
 
     public String getAvatarUrl() {
         return avatarUrl;
@@ -45,12 +44,12 @@ public class UserUpdateReq {
         this.surname = surname;
     }
 
-    public String getBirtDate() {
-        return birtDate;
+    public String getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirtDate(String birtDate) {
-        this.birtDate = birtDate;
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getPhone() {
@@ -77,11 +76,14 @@ public class UserUpdateReq {
         this.backgroundUrl = backgroundUrl;
     }
 
-    public int getBlocked() {
+    public boolean isBlocked() {
         return blocked;
     }
 
-    public void setBlocked(int blocked) {
+    public void setBlocked(boolean blocked) {
         this.blocked = blocked;
     }
+
+
+
 }

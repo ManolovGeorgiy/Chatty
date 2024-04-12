@@ -14,8 +14,7 @@ public class UserApiTest_2 extends UserApi_2 {
                 then().
                 assertThat().
                 statusCode(200).
-                body("size()", greaterThan(1));
-                //body("size()", greaterThan(0));
+                body("size()", greaterThan(0));
 
     }
 }

@@ -3,13 +3,15 @@ package integration.schemas;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AuthRes {
+
     @JsonProperty("accessToken")
     private String accessToken;
 
     @JsonProperty("refreshToken")
     private String refreshToken;
+
     @JsonProperty("expiration")
-    private String expiration;
+    private Integer expiration;
 
     public String getAccessToken() {
         return accessToken;
@@ -27,11 +29,11 @@ public class AuthRes {
         this.refreshToken = refreshToken;
     }
 
-    public String getExpiration() {
+    public Integer getExpiration() {
         return expiration;
     }
 
-    public void setExpiration(String expiration) {
+    public void setExpiration(Integer expiration) {
         this.expiration = expiration;
     }
 }

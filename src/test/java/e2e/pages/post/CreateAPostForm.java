@@ -2,18 +2,23 @@ package e2e.pages.post;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
+import java.util.List;
 
 public class CreateAPostForm extends BasePage {
-
-    private By imageInputLocator = By.id("image");
-
     public CreateAPostForm(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(xpath = "//*[@class='post-header']")
+    public WebElement header;
 
     @FindBy(xpath = "//*[@name='title']")
     WebElement titleInput;
@@ -30,48 +35,113 @@ public class CreateAPostForm extends BasePage {
     @FindBy(xpath = "//*[@id='publishDate']")
     WebElement publishData;
 
-    @FindBy(xpath = "//*[@id='draftCheckbox']")
-    WebElement TumblerSwitch;
+    @FindBy(xpath = "//*[@for='draftCheckbox']")
+    WebElement tumblerSwitchDraft;
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
-
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
+            getWait().forVisibility(header);
             getWait().forVisibility(titleInput);
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
             getWait().forVisibility(imageInput);
             getWait().forVisibility(publishData);
-            getWait().forVisibility(TumblerSwitch);
+            getWait().forClickable(tumblerSwitchDraft);
             getWait().forVisibility(submitButton);
+            Assert.assertTrue(submitButton.isDisplayed());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void userCanCreateAPost(String title, String description, String content){
+
+    @Step("Fill form {title},{description},{content},{path}")
+    public void userCanCreateAPost(String title, String description, String content,String path) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
-        imageInput.click();
-    }
+        imageLoading(path);
 
-    public void imageLoading(String imagePath){
+    }
+    public String getTitle() {
+        return titleInput.getAttribute("value");
+    }
+    public String getDescriptionText() {
+        return descriptionInput.getAttribute("value");
+    }
+    public String getContent() {
+        return contentInput.getAttribute("value");
+    }
+    public void tumblerSwitchClick() {
+        tumblerSwitchDraft.click();
+    }
+    @Step("Upload image: {imagePath}")
+    public void imageLoading(String relativeImagePath) {
         try {
-            WebElement fileInput = driver.findElement(imageInputLocator);
-            fileInput.sendKeys(imagePath);
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
+            WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+            fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
+            Assert.fail("Failed to upload image: " + e.getMessage());
+        }
+    }
+    @Step("Click Submit Button")
+    public void clickSubmitButton() {
+        submitButton.click();
+    }
+    @Step("check after sending")
+    public boolean errorText() {
+        Duration timeout = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));
+        try {
+            return driver.findElement(By.xpath("//*[@class='error']")).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+    @Step("Screenshot {actualScreenshotName}")
+    public void takePostPageScreenshot(String actualScreenshotName){
+        try {
+            waitForLoading();
+            takeAndCompareScreenshot(actualScreenshotName, null);
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
     }
-
-    public void draftTumblerSwitch(){
-        TumblerSwitch.click();
-    }
-
-    public void clickSubmitButton(){
+    @Step("Fill form {title},{description},{content}")
+    public void userCanNotCreateAPost(String title, String description, String content) {
+        titleInput.sendKeys(title);
+        descriptionInput.sendKeys(description);
+        contentInput.sendKeys(content);
         submitButton.click();
     }
+
+    public boolean isPostDisplayed(String postTitle) {
+        try {
+            Duration timeout = Duration.ofSeconds(1);
+            // Используйте метод findElement для поиска элемента, содержащего заголовок поста
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
+            // Если элемент найден, возвращаем true
+            return postElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            // Если элемент не найден, возвращаем false
+            return false;
+        }
+    }
+//    public boolean isMessageSent() {
+//        Duration timeout = Duration.ofSeconds(1);
+//        // Добавляем ожидание появления подтверждения успешной отправки сообщения
+//        WebDriverWait wait = new WebDriverWait(driver, timeout);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='post-content__top']")));
+//        try {
+//            return driver.findElement(By.xpath("//div[@class='post-content__top']")).isDisplayed();
+//        } catch (NoSuchElementException e) {
+//            return false; // Возвращаем false, если элемент не найден
+//        }
+//    }
 }
+
