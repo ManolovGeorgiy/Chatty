@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminPostTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/ErrorRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PasswordUpdateReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserLogin_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserPostTest.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ApiBase (1 metod, Before)">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/pom.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +66,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/Selenide-300523-e-qa&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -89,16 +77,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ChattyApiTest_2">
-    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="integration.user.UserLogin" />
+  <component name="RunManager" selected="TestNG.UserApiTest_2.testGetAllUsers">
+    <configuration name="AdminApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.user.*" />
+          <option name="PATTERN" value="integration.Admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="integration.Admin" />
+      <option name="MAIN_CLASS_NAME" value="integration.Admin.AdminApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
@@ -159,31 +151,32 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserApiTest_2.testGetAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+          <option name="PATTERN" value="integration.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateAPostTest" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="PACKAGE_NAME" value="integration.user" />
+      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest_2" />
+      <option name="METHOD_NAME" value="testGetAllUsers" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserApiTest_2.testGetAllUsers" />
+        <item itemvalue="TestNG.AdminApiTest" />
         <item itemvalue="TestNG.ChattyApiTest_2" />
         <item itemvalue="TestNG.AdminPostTest" />
         <item itemvalue="TestNG.UserApiTest_2.TestGetAllUsers" />
-        <item itemvalue="Application.UserLogin" />
-        <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
       </list>
     </recent_temporary>
   </component>
@@ -260,12 +253,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711562947418</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added UserTest, AdminTest">
+      <created>1712273103690</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712273103690</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added ApiBase (1 metod, Before)">
+      <created>1712273347416</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712273347416</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration,Login,Post,Contact Us" />
+    <MESSAGE value="Added UserTest, AdminTest" />
+    <MESSAGE value="Added ApiBase (1 metod, Before)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ApiBase (1 metod, Before)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
