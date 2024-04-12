@@ -79,7 +79,6 @@ public class UserCanCreateANewPost extends TestBase {
         editPostPage = new EditPostPage(app.driver);
         editPostPage.waitForLoading();
 
-
         Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
 
 

@@ -32,7 +32,7 @@ public class UserApi extends ApiBase {
     }
 
     @Step("Вход через API: {email}")
-    public String login(String email, String password, int expectedStatusCode) {
+    public static String login(String email, String password, int expectedStatusCode) {
         String endpoint = "/api/auth/login";
         Map<String, String> body = new HashMap<>();
         body.put("email", email);
@@ -43,7 +43,7 @@ public class UserApi extends ApiBase {
 
         if (code == expectedStatusCode) {
             String refreshToken = response.jsonPath().getString("refreshToken");
-            return "Токен обновления: " + refreshToken;
+            return "refreshToken: " + refreshToken;
         } else {
             String errorMessage = response.getBody().asString();
             return "Не удалось войти: " + errorMessage;

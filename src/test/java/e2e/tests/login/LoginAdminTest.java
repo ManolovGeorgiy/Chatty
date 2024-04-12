@@ -11,11 +11,9 @@ import static org.testng.AssertJUnit.assertTrue;
 public class LoginAdminTest extends TestBase {
 
     LoginPage loginPage;
-    @Epic(value = "adminPanel can login with valid Email and Password")
     @Feature(value = "admin has been logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("2")
     @Test(description = "CHATTY-47")
     public void adminCanLogin() {
         String email = "g.power@gmail.com";
@@ -24,11 +22,9 @@ public class LoginAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
-    @Epic(value = "adminPanel can't login with invalid email")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("3")
     @Test(description = "CHATTY-15")
     public void adminCanNotLoginWithInvalidEmail() {
         String email = "gpower@gmail.com";
