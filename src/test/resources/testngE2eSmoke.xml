@@ -3,7 +3,7 @@
 <suite name="testE2eSmoke" verbose="1">
     <test name="SmokeTestE2e">
         <classes>
-            <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
+            <class name="e2e.tests.post.AdminCanCreateEditAndDeletePostTest">
             </class>
             <class name="e2e.tests.contactUs.ContactUsPositiveTest">
             </class>
