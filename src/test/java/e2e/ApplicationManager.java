@@ -2,7 +2,11 @@ package e2e;
 
 import config.Config;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Allure;
+
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,6 +14,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.ByteArrayInputStream;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.util.HashMap;
@@ -46,7 +51,11 @@ public class ApplicationManager {
         driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));
     }
 
-    protected void stop() {
-        driver.quit();
+    protected void stop(boolean testPassed) {
+    if (!testPassed) {
+        byte[] screenshotData = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        Allure.addAttachment("Screenshot on failure", new ByteArrayInputStream(screenshotData));
     }
+    driver.quit();
+}
 }
