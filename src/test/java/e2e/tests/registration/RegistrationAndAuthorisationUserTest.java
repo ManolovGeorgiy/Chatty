@@ -1,5 +1,6 @@
 package e2e.tests.registration;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 
 import e2e.enums.SideBarInfo;
@@ -13,6 +14,7 @@ import org.testng.annotations.Test;
 
 public class RegistrationAndAuthorisationUserTest extends TestBase {
 
+    Faker faker = new Faker();
 LoginPage loginPage;
 RegistrationPage registrationPage;
 HomeBlogPage homeBlogPage;
@@ -26,7 +28,7 @@ Header header;
     @Test(description = "CHATTY-16")
     public void UserCanRegistration(){
 
-        String email = "tatar@abv.bg";
+        String email = faker.internet().emailAddress();
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 
