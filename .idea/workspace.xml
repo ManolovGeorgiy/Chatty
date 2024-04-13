@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Updated ApplicationManager">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" afterDir="false" />
-    </list>
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added attach allure screenshot after fail test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -482,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713048693025</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added attach allure screenshot after fail test">
+      <option name="closed" value="true" />
+      <created>1713049991805</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713049991805</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +508,8 @@
     <MESSAGE value="Removed allureId" />
     <MESSAGE value="Updated a lot of things" />
     <MESSAGE value="Updated ApplicationManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ApplicationManager" />
+    <MESSAGE value="Added attach allure screenshot after fail test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added attach allure screenshot after fail test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

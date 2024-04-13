@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
-
 import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
@@ -42,6 +41,7 @@ public class EditUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
+
     private void checkEditUserData(EditUserForm page, String name, String surname, String date, String phone) {
         String actualName = page.getName();
         String actualSurname = page.getSurname();
@@ -79,7 +79,7 @@ public class EditUserDataProfileTest extends TestBase {
         DateTimeFormatter editFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate editBirthDate = LocalDate.parse(editFormattedDate, editFormatter);
         String editPhone = "+49157310789";
-        String editImageAvatar = "src/test/java/resources/userCanAddEditDate_Avatar.jpg";
+        String editImageAvatar = "uploadReferences//userCanAddEditDate_Avatar.jpg";
 
         String oldPassword = "Manowar333246";
         String newPassword = "Manowar33246";
@@ -97,7 +97,7 @@ public class EditUserDataProfileTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -107,7 +107,7 @@ public class EditUserDataProfileTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(email,password);
+        loginPage.login(email, password);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -120,11 +120,11 @@ public class EditUserDataProfileTest extends TestBase {
         addUserDialog.imageAvatarLoading(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
+        checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
 
         header = new Header(app.driver);
         header.clickHome();
@@ -162,7 +162,7 @@ public class EditUserDataProfileTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
