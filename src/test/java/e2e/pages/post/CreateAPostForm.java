@@ -1,8 +1,14 @@
 package e2e.pages.post;
 
+import com.google.common.net.MediaType;
 import config.Config;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.*;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
@@ -88,9 +95,12 @@ public class CreateAPostForm extends BasePage {
     @Step("Upload image: {relativeImagePath}")
     public void uploadImage(String relativeImagePath) {
         try {
-            String selenoidImageUrl = getSelenoidFileUrl(relativeImagePath);
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
+//            uploadFileToSelenoid(absoluteImagePath);
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(selenoidImageUrl);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'block';", fileInput);
+            ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+            fileInput.sendKeys(absoluteImagePath);
             Thread.sleep(5000);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
@@ -100,6 +110,29 @@ public class CreateAPostForm extends BasePage {
     public String getSelenoidFileUrl(String filename) {
         SessionId sessionId = ((RemoteWebDriver) driver).getSessionId();
         return String.format("%s/session/%s/aerokube/download/%s", config.getSelenoidUrl(), sessionId.toString(), filename);
+    }
+
+    private void uploadFileToSelenoid(String absoluteImagePath) {
+        try {
+            File file = new File(absoluteImagePath);
+            OkHttpClient client = new OkHttpClient();
+            RequestBody requestBody = new MultipartBody.Builder()
+                    .setType(MultipartBody.FORM)
+                    .addFormDataPart("file", file.getName(),
+                            RequestBody.create(file, okhttp3.MediaType.parse("image/*")))
+                    .build();
+    
+            Request request = new Request.Builder()
+                    .url(config.getSelenoidUrl() + "/upload")
+                    .post(requestBody)
+                    .build();
+    
+            Response response = client.newCall(request).execute();
+            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+    
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to upload file to Selenoid: " + e.getMessage(), e);
+        }
     }
     
     @Step("Click Submit Button")
