@@ -4,7 +4,6 @@ import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -103,10 +102,9 @@ public class AddUserDialog extends BasePage {
         getWait().forVisibility(option);
         option.click();
         try {
-            birthDateForm.isDisplayed();
-            birthDateForm.sendKeys(date);
-            Actions actions = new Actions(driver);
-            actions.sendKeys(Keys.TAB).perform();
+            birthDateForm.sendKeys(Keys.CONTROL, "a");
+            birthDateForm.sendKeys(Keys.DELETE);
+            birthDateForm.sendKeys(Keys.CONTROL, "a");
             birthDateForm.sendKeys(date);
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();

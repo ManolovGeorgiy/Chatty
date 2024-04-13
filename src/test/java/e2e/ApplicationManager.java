@@ -3,7 +3,6 @@ package e2e;
 import config.Config;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
-
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,6 +22,7 @@ import java.util.Map;
 public class ApplicationManager {
     private final Config config = new Config();
     public WebDriver driver;
+
     protected void init() {
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -44,7 +44,10 @@ public class ApplicationManager {
         } else {
             WebDriverManager.chromedriver().clearResolutionCache().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+            if (config.getHeadless()) {
+                options.addArguments("--headless");
+            }
+            options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
         }
         driver.get(config.getProjectUrl());
@@ -52,10 +55,10 @@ public class ApplicationManager {
     }
 
     protected void stop(boolean testPassed) {
-    if (!testPassed) {
-        byte[] screenshotData = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-        Allure.addAttachment("Screenshot on failure", new ByteArrayInputStream(screenshotData));
+        if (!testPassed) {
+            byte[] screenshotData = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            Allure.addAttachment("Screenshot on failure", new ByteArrayInputStream(screenshotData));
+        }
+        driver.quit();
     }
-    driver.quit();
-}
 }
