@@ -1,21 +1,25 @@
 package e2e.pages.post;
 
+import config.Config;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 
 public class CreateAPostForm extends BasePage {
     public CreateAPostForm(WebDriver driver) {
         super(driver);
     }
+
+    private final Config config = new Config();
 
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
@@ -84,14 +88,20 @@ public class CreateAPostForm extends BasePage {
     @Step("Upload image: {relativeImagePath}")
     public void uploadImage(String relativeImagePath) {
         try {
-            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
+            String selenoidImageUrl = getSelenoidFileUrl(relativeImagePath);
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(absoluteImagePath);
+            fileInput.sendKeys(selenoidImageUrl);
             Thread.sleep(5000);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+
+    public String getSelenoidFileUrl(String filename) {
+        SessionId sessionId = ((RemoteWebDriver) driver).getSessionId();
+        return String.format("%s/session/%s/aerokube/download/%s", config.getSelenoidUrl(), sessionId.toString(), filename);
+    }
+    
     @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();
