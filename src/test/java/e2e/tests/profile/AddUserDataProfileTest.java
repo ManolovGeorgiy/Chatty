@@ -72,7 +72,7 @@ public class AddUserDataProfileTest extends TestBase {
         registrationPage.registration(email,password,confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.waitForLoading();
+        //homeBlogPage.waitForLoading();
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
