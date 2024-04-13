@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added attach allure screenshot after fail test" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Fixed tests related to user profile">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -486,7 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713049991805</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Fixed tests related to user profile">
+      <option name="closed" value="true" />
+      <created>1713050505643</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713050505643</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +519,8 @@
     <MESSAGE value="Updated a lot of things" />
     <MESSAGE value="Updated ApplicationManager" />
     <MESSAGE value="Added attach allure screenshot after fail test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added attach allure screenshot after fail test" />
+    <MESSAGE value="Fixed tests related to user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed tests related to user profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -70,7 +70,7 @@ public class EditUserDataProfileTest extends TestBase {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate birthDate = LocalDate.parse(date, formatter);
         String phone = "+4915777777";
-        String imageAvatar = "./src/test/java/resources/userCanAddDate_Avatra.jpg";
+        String imageAvatar = "uploadReferences/userCanAddDate_Avatra.jpg";
 
 
         String editName = "Georgiy";
@@ -79,7 +79,7 @@ public class EditUserDataProfileTest extends TestBase {
         DateTimeFormatter editFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate editBirthDate = LocalDate.parse(editFormattedDate, editFormatter);
         String editPhone = "+49157310789";
-        String editImageAvatar = "uploadReferences//userCanAddEditDate_Avatar.jpg";
+        String editImageAvatar = "uploadReferences/userCanAddEditDate_Avatar.jpg";
 
         String oldPassword = "Manowar333246";
         String newPassword = "Manowar33246";
