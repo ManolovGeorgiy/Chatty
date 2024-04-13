@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -37,7 +38,9 @@ public class ApplicationManager {
             }
         } else {
             WebDriverManager.chromedriver().clearResolutionCache().setup();
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+            driver = new ChromeDriver(options);
         }
         driver.get(config.getProjectUrl());
         driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));
