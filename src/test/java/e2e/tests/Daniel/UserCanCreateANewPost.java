@@ -55,9 +55,9 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,imagePath);
+        createAPostForm.setPostForm(title, description, content,imagePath);
         createAPostForm.waitForLoading();
-        createAPostForm.imageLoading(imagePath);
+        createAPostForm.uploadImage(imagePath);
         createAPostForm.waitForLoading();
         checkPostData(createAPostForm, title, description, content);
         createAPostForm.waitForLoading();

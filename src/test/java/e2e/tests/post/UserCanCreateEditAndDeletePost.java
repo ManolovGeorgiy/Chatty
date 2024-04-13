@@ -53,12 +53,12 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         String title = "My first post";
         String description = "My World";
         String content = faker.lorem().sentence(20);
-        String imagePath = "src/test/java/resources/userCanCreateAPost_MyPost.jpg";
+        String imagePath = "uploadReferences/userCanCreateAPost_MyPost.jpg";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String editImagePath = "src/test/java/resources/userCanEditPost_MyPost.jpg";
+        String editImagePath = "uploadReferences/userCanEditPost_MyPost.jpg";
 
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
@@ -82,8 +82,8 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,imagePath);
-        createAPostForm.imageLoading(imagePath);
+        createAPostForm.setPostForm(title, description, content,imagePath);
+        createAPostForm.uploadImage(imagePath);
         createAPostForm.waitForLoading();
 
         checkPostData(createAPostForm, title, description, content);

@@ -4,18 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added e2e Test">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Removed allureId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/Admin_can't_registration.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/Admin_can't_registration.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/User_can_not_create_a_post.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/User_can_not_create_a_post.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/User_cannot_feedback.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/User_cannot_feedback.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/adminCanNotLoginWithoutAEmailAndPassword.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/adminCanNotLoginWithoutAEmailAndPassword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/invalid_email_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/invalid_email_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/invalid_password_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/invalid_password_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/no_fields_filled_in_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/no_fields_filled_in_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/tmp_User_can_not_create_a_post.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/tmp_User_cannot_feedback.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/userCanNotLoginWithInvalidEmail.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/userCanNotLoginWithInvalidEmail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reference/with_invalid_data_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/with_invalid_data_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/LoginApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848057_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848057_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848353_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848355_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848355_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848356_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848356_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848359_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848359_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848366_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848366_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/5204092180870848376_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/adminCanCreateAPost_IT.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/adminCanCreateAPost_IT.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/adminCanCreateAPost_edit.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/adminCanCreateAPost_edit.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/depositphotos_32011021-stock-photo-information-technology-it.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/depositphotos_32011021-stock-photo-information-technology-it.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/userCanAddDate_Avatra.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/userCanAddDate_Avatra.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/userCanAddEditDate_Avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/userCanAddEditDate_Avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/userCanCreateAPost_MyPost.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/userCanCreateAPost_MyPost.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/userCanEditPost_MyPost.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/uploadReferences/userCanEditPost_MyPost.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +98,8 @@
     "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost.executor": "Run",
+    "TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost.executor": "Run",
     "git-widget-placeholder": "dev__Manolov",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/ACER/IdeaProjects/Chatty/src/test/resources",
@@ -97,7 +122,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddUserProfileApiTest.testNewUserRegistration">
+  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost">
     <configuration name="AddUserProfileApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -116,40 +141,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.Admin.*" />
+          <option name="PATTERN" value="e2e.tests.post.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.Admin" />
-      <option name="MAIN_CLASS_NAME" value="integration.Admin.AdminPostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.AdminCanCreateEditAndDeletePostTest" />
+      <option name="METHOD_NAME" value="adminCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="ChattyApiTest_2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.ChattyApiTest_2" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration name="UserApiTest_2.TestGetAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -189,13 +196,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserCanCreateEditAndDeletePost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateEditAndDeletePost" />
+      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
         <item itemvalue="TestNG.AddUserProfileApiTest.testNewUserRegistration" />
         <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
         <item itemvalue="TestNG.UserApiTest_2.TestGetAllUsers" />
-        <item itemvalue="TestNG.ChattyApiTest_2" />
-        <item itemvalue="TestNG.AdminPostTest" />
       </list>
     </recent_temporary>
   </component>
@@ -418,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712986830444</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Removed allureId">
+      <option name="closed" value="true" />
+      <created>1713037048547</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713037048547</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -437,7 +470,8 @@
     <MESSAGE value="Added Api Test" />
     <MESSAGE value="Added ContactUsApiTest" />
     <MESSAGE value="Added e2e Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added e2e Test" />
+    <MESSAGE value="Removed allureId" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed allureId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -726,6 +760,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
           <line>22</line>
           <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="239" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>

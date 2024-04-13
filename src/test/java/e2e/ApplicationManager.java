@@ -35,7 +35,6 @@ public class ApplicationManager {
             }
         } else {
             WebDriverManager.chromedriver().clearResolutionCache().setup();
-            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
         driver.get(config.getProjectUrl());

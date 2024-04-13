@@ -13,8 +13,6 @@ import e2e.pages.post.EditPostPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.File;
-
 public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
     Faker faker = new Faker();
@@ -67,9 +65,9 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         header.clickHome();
         header.createAPostClick();
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,imagePath);
+        createAPostForm.setPostForm(title, description, content,imagePath);
         createAPostForm.waitForLoading();
-        createAPostForm.imageLoading(imagePath);
+        createAPostForm.uploadImage(imagePath);
         createAPostForm.waitForLoading();
 
         checkPostData(createAPostForm, title,description,content);
@@ -99,5 +97,6 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
+        homeBlogPage.waitForLoading();
     }
 }
