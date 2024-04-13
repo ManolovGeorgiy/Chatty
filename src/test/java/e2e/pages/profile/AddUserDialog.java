@@ -77,13 +77,14 @@ public class AddUserDialog extends BasePage {
         return phoneInput.getAttribute("value");
     }
 
-    @Step("upload avatar image {imagePath}")
-    public void imageAvatarLoading(String imagePath) {
+    @Step("Upload image: {imagePath}")
+    public void imageAvatarLoading(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);;
-        } catch (StaleElementReferenceException e) {
-            e.printStackTrace();
+            fileInput.sendKeys(absoluteImagePath);
+        } catch (Exception e) {
+            Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
     @Step("Fill profile form {name},{surname},{date},{phone}")
