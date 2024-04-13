@@ -47,7 +47,7 @@ public class UserCanNotCreateAPost extends TestBase {
         String title = "";
         String description = faker.lorem().sentence(10);
         String content = faker.lorem().sentence(10);
-        String imagePath = "src/test/java/resources/userCanCreateAPost_MyPost.jpg";
+        String imagePath = "uploadReferences/userCanCreateAPost_MyPost.jpg";
 
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";

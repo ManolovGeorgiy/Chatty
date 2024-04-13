@@ -41,7 +41,7 @@ public class UserCanCreateANewPost extends TestBase {
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String imagePath = "src/test/java/resources/5204092180870848057_121.jpg";
+        String imagePath = "uploadReferences/5204092180870848057_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();

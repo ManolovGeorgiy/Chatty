@@ -47,12 +47,12 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String title = faker.lorem().sentence(1);
         String description = faker.lorem().sentence(1);
         String content = faker.lorem().sentence(50);
-        String imagePath = "./src/test/java/resources/adminCanCreateAPost_IT.jpg";
+        String imagePath = "uploadReferences/adminCanCreateAPost_IT.jpg";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String editImagePath = "./src/test/java/resources/adminCanCreateAPost_edit.jpg";
+        String editImagePath = "uploadReferences/adminCanCreateAPost_edit.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
