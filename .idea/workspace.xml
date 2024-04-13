@@ -4,18 +4,97 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12c2e221-12c8-4fb0-9665-1b0cb7c0d976" name="Changes" comment="api test r">
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" afterDir="false" />
+    <list default="true" id="12c2e221-12c8-4fb0-9665-1b0cb7c0d976" name="Changes" comment="Added e2e Test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/post/DeletePost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/post/GetPostByPostId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/post/UpdatePost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/GetUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdatePassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/LoginApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/RegistrationApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/UserCanCreateEditAndDeletePost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/utils/DataProviders.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/utils/DataProviders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostUpdateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostUpdateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsPositiveTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/utils/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/utils/DataProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminPostTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminProfileTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/getLoginReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/homeBlog/LoginReqApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/post/CreatePost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/post/CreatePost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/post/PostResApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/profile/ProfileApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserAuthLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/PostCreateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostCreateReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/PostGetReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostGetReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/post/UserCanCreateAPostEditAndDelete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserProfileApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/EditUserProfileApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/registration/RegistrationApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/tree-736885_1280.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/userCanCreateAPost_MyPost.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngPost.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngRegistration.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -32,43 +111,70 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/PC/Chatty/src/test/resources"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="e2e.tests.Daniel" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Chatty\src\test\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginApiTest.userCanNotLoginWitInvalidEmail">
-    <configuration name="LoginApiTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.UserAuthLogin">
+    <configuration name="UserAuthLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="integration.pages.user.UserAuthLogin" />
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.login.*" />
+          <option name="PATTERN" value="integration.pages.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
-      <option name="METHOD_NAME" value="userCanLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginApiTest.userCanNotLoginWitInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="ApiTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RegistrationApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.login.*" />
+          <option name="PATTERN" value="integration.tests.myTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
-      <option name="METHOD_NAME" value="userCanNotLoginWitInvalidEmail" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="integration.tests.myTests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.myTests.RegistrationApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -79,12 +185,12 @@
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.registration.*" />
+          <option name="PATTERN" value="integration.tests.myTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.registration" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.registration.RegistrationApiTest" />
+      <option name="PACKAGE_NAME" value="integration.tests.myTests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.myTests.RegistrationApiTest" />
       <option name="METHOD_NAME" value="testNewUserRegistration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -93,17 +199,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateANewPost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanCreateEditAndDeletePost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="PATTERN" value="integration.tests.myTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateANewPost" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="PACKAGE_NAME" value="integration.tests.myTests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.myTests.UserCanCreateEditAndDeletePost" />
+      <option name="METHOD_NAME" value="userCanCreatePost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -113,9 +219,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginApiTest.userCanNotLoginWitInvalidEmail" />
-        <item itemvalue="TestNG.LoginApiTest.userCanLogin" />
-        <item itemvalue="TestNG.UserCanCreateANewPost.userCanCreateAPost" />
+        <item itemvalue="Application.UserAuthLogin" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreatePost" />
+        <item itemvalue="Gradle.Chatty [ApiTest]" />
+        <item itemvalue="TestNG.RegistrationApiTest" />
         <item itemvalue="TestNG.RegistrationApiTest.testNewUserRegistration" />
       </list>
     </recent_temporary>
@@ -150,7 +257,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="api test r" />
-    <option name="LAST_COMMIT_MESSAGE" value="api test r" />
+    <MESSAGE value="Added e2e Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added e2e Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/myTests/LoginApiTest.java</url>
+          <line>36</line>
+          <properties class="integration.tests.login.LoginApiTest" method="adminCannotLoginWithInvalidPassword">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/myTests/UserCanCreateEditAndDeletePost.java</url>
+          <line>48</line>
+          <properties class="integration.tests.myTests.UserCanCreateEditAndDeletePost" method="userCanCreatePost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/myTests/LoginApiTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest.ic" NAME="LoginAdminTest Coverage Results" MODIFIED="1712092384546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

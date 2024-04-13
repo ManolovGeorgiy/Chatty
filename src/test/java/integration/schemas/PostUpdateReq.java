@@ -5,17 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostUpdateReq {
     @JsonProperty("id")
     private String id;
-
     @JsonProperty("title")
     private String title;
     @JsonProperty("description")
     private String description;
-
     @JsonProperty("body")
     private String body;
     @JsonProperty("imageUrl")
     private String imageUrl;
-
     @JsonProperty("draft")
     private String draft;
 

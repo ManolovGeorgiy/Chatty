@@ -11,7 +11,6 @@ import static org.testng.AssertJUnit.assertTrue;
 public class LoginAdminTest extends TestBase {
 
     LoginPage loginPage;
-    @Feature(value = "admin has been logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-47")
@@ -34,11 +33,10 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());
     }
-    @Epic(value = "adminPanel can't login with invalid password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("4")
+    @AllureId("")
     @Test(description = "CHATTY-14")
     public void adminCanNotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
@@ -51,7 +49,7 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("5")
+    @AllureId("")
     @Test(description = "CHATTY-14")
     public void adminCanNotLoginWithoutAEmailAndPassword() {
         String email = "";
@@ -65,7 +63,7 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("6")
+    @AllureId("")
     @Test(description = "CHATTY-49")
     public void adminCanNotLoginWiInvalidEmailAndPassword() {
         String email = "gpower@gmail.com";
@@ -79,7 +77,7 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("7")
+    @AllureId("")
     @Test(description = "All negative Test",dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
     public void adminCanNotLoginWithInvalidData(String email, String password,String caseName) {
         loginPage = new LoginPage(app.driver);

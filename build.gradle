@@ -49,54 +49,13 @@ task SmokeTestE2e(type: Test) {
 test {
     useTestNG()
 }
-task SmokeTestE2e2(type: Test) {
+task ApiTest(type: Test) {
     useTestNG() {
         testLogging {
             events "passed", "skipped", "failed", "standardOut", "standardError"
             exceptionFormat "full"
         }
-        suites 'src/test/resources/testngE2eSmoke2.xml'
-    }
-    systemProperty 'allure.results.directory', 'build/allure-results'
-
-}
-
-test {
-    useTestNG()
-}
-task LoginTest(type: Test) {
-    useTestNG() {
-        testLogging {
-            events "passed", "skipped", "failed", "standardOut", "standardError"
-            exceptionFormat "full"
-        }
-        suites 'src/test/resources/testngLogin.xml'
-    }
-    systemProperty 'allure.results.directory', 'build/allure-results'
-}
-test {
-    useTestNG()
-}
-task PostTest(type: Test) {
-    useTestNG() {
-        testLogging {
-            events "passed", "skipped", "failed", "standardOut", "standardError"
-            exceptionFormat "full"
-        }
-        suites 'src/test/resources/testngPost.xml'
-    }
-    systemProperty 'allure.results.directory', 'build/allure-results'
-}
-test {
-    useTestNG()
-}
-task TestRegistration(type: Test) {
-    useTestNG() {
-        testLogging {
-            events "passed", "skipped", "failed", "standardOut", "standardError"
-            exceptionFormat "full"
-        }
-        suites 'src/test/resources/testngRegistration.xml'
+        suites 'src/test/resources/testngApi.xml'
     }
     systemProperty 'allure.results.directory', 'build/allure-results'
 }

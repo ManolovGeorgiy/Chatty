@@ -8,16 +8,15 @@ import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
-import e2e.pages.registration.RegistrationPage;
-import io.qameta.allure.*;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import java.util.Locale;
 
-import static org.testng.AssertJUnit.*;
+import e2e.pages.post.EditAPostForm;
+import e2e.pages.post.EditPostPage;
+import e2e.pages.registration.RegistrationPage;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-
-public class UserCanNotCreateAPost extends TestBase {
+public class UserCanCreateEditAndDeletePost extends TestBase {
 
     Faker faker = new Faker(new Locale("ENGLISH"));
 
@@ -26,6 +25,8 @@ public class UserCanNotCreateAPost extends TestBase {
     HomeBlogPage homeBlogPage;
     CreateAPostForm createAPostForm;
     Header header;
+    EditPostPage editPostPage;
+    EditAPostForm editAPostForm;
     AdminPanelPage adminPanelPage;
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
@@ -35,25 +36,34 @@ public class UserCanNotCreateAPost extends TestBase {
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
     }
-    @Epic(value = "User can not create a post")
-    @Feature(value = "User not created post")
-    @Description(value = "User can not create a post")
-    @Severity(SeverityLevel.BLOCKER)
-    @AllureId("15")
-    @Test(description = "CHATTY-22")
-    public void userCanNotCreateAPost() throws InterruptedException {
-        String email = "user.can.notCreateAPost@gmail.com";
+    private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
+        String actualTitle = page.getEditTitle();
+        String actualDescription = page.getEditDescriptionText();
+        String actualContent = page.getEditContent();
+        Assert.assertEquals(actualTitle, editTitle, actualTitle + " is not equal " + editTitle);
+        Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
+        Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
+    }
+    @Test(description = "User can create a post")
+    public void userCanCreateAPost() throws InterruptedException {
+        String email = "user.create.post@gmail.com";
         String password = "RedBul1234";
         String confirmPassword = "RedBul1234";
-        String title = "";
-        String description = faker.lorem().sentence(10);
-        String content = faker.lorem().sentence(10);
+
+        String title = "My first post";
+        String description = "Pice";
+        String content = faker.lorem().sentence(20);
         String imagePath = "src/test/java/resources/userCanCreateAPost_MyPost.jpg";
+
+        String editTitle = "IT";
+        String editDescription = "QA Engineer";
+        String editContent = "HALLO WORLD";
+        String editImagePath = "src/test/java/resources/5204092180870848366_121.jpg";
 
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 
-        String emailAccount = "user.can.notCreateAPost@gmail.com";
+        String emailAccount = "user.create.post@gmail.com";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -75,15 +85,43 @@ public class UserCanNotCreateAPost extends TestBase {
         createAPostForm.userCanCreateAPost(title, description, content,imagePath);
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
-        createAPostForm.clickSubmitButton();
 
         checkPostData(createAPostForm, title, description, content);
+        createAPostForm.clickSubmitButton();
+        createAPostForm.waitForLoading();
         Thread.sleep(3000);
+        header = new Header(app.driver);
+        header.myPostClick();
+        header.waitForLoading();
+        header.setMyPostTab();
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+
+        Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage.editPostButtonClick();
+        editPostPage.waitForLoading();
+
+        editAPostForm = new EditAPostForm(app.driver);
+        editAPostForm.waitForLoading();
+        editAPostForm.imageLoading(editImagePath);
+        editAPostForm.editPost(editTitle,editDescription,editContent);
+        checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
+        editAPostForm.clickEditSubmitButton();
+
+        Assert.assertTrue(editAPostForm.editIsPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage.deletePostButtonClick();
+
 
         homeBlogPage = new HomeBlogPage(app.driver);
-
-        assertTrue("Please fill the field", createAPostForm.errorText());
-        createAPostForm.takePostPageScreenshot("User_can_not_create_a_post");
+        homeBlogPage.waitForLoading();
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
@@ -102,5 +140,4 @@ public class UserCanNotCreateAPost extends TestBase {
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
     }
-
 }

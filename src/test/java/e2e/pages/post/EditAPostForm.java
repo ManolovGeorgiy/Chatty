@@ -2,12 +2,11 @@ package e2e.pages.post;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
@@ -76,5 +75,18 @@ public class EditAPostForm extends BasePage {
     }
     public void clickEditSubmitButton() {
         submitEditButton.click();
+    }
+
+    public boolean editIsPostDisplayed(String postTitle) {
+        try {
+            Duration timeout = Duration.ofSeconds(1);
+            // Используйте метод findElement для поиска элемента, содержащего заголовок поста
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
+            // Если элемент найден, возвращаем true
+            return postElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            // Если элемент не найден, возвращаем false
+            return false;
+        }
     }
 }

@@ -7,20 +7,6 @@
             </class>
             <class name="e2e.tests.profile.AddUserDataProfileTest">
             </class>
-            <class name="e2e.tests.profile.EditUserDataProfileTest">
-            </class>
-            <class name="e2e.tests.contactUs.ContactUsPositiveTest">
-            </class>
-            <class name="e2e.tests.about.AboutPageTest">
-            </class>
-            <class name="e2e.tests.post.UserCanCreateANewPost">
-            </class>
-            <class name="e2e.tests.post.UserCanEditPostTest">
-            </class>
-            <class name="e2e.tests.post.UserCanDeletePostTest">
-            </class>
-            <class name="e2e.tests.adminPanel.AdminDeleteUserTest">
-            </class>
         </classes>
     </test>
 </suite>

@@ -30,5 +30,16 @@ public class DataProviders {
         list.add(new Object[]{"gpower@gmail.com", "Gpower3334", "with_invalid_data"});
         return list.iterator();
     }
+
+    @DataProvider
+    public Iterator<Object[]> userCanNotLoginApiTest() {
+
+        List<Object[]> list = new ArrayList<>();
+
+        list.add(new Object[]{"gpower@gmail.com", "GPower3333"});
+        list.add(new Object[]{"g.power@gmail.com", "Gpower3334"});
+        list.add(new Object[]{"gpower@gmail.com", "Gpower3334"});
+        return list.iterator();
+    }
 }
 
