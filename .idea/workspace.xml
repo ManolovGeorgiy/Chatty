@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added Api Test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/SelenideTestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPageNatalie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserNatalieTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/LoginApiTest.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/getLoginReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/getLoginReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserLoginApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/UserRegistrationApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/AddUserDataProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Georgiy" />
+        <entry key="$PROJECT_DIR$" value="dev_Natalie_Pull_Request" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,18 +92,18 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminProfileTest.testGetAdminProfile">
-    <configuration name="AdminProfileTest.testGetAdminProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ContactUsApiTest.testNewUserRegistration">
+    <configuration name="ContactUsApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.pages.adminPanel.*" />
+          <option name="PATTERN" value="integration.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.pages.adminPanel" />
-      <option name="MAIN_CLASS_NAME" value="integration.pages.adminPanel.AdminProfileTest" />
-      <option name="METHOD_NAME" value="testGetAdminProfile" />
+      <option name="PACKAGE_NAME" value="integration.tests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.ContactUsApiTest" />
+      <option name="METHOD_NAME" value="testNewUserRegistration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -204,10 +185,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminProfileTest.testGetAdminProfile" />
-        <item itemvalue="TestNG.LoginApiTest.testUserLogin" />
+        <item itemvalue="TestNG.ContactUsApiTest.testNewUserRegistration" />
         <item itemvalue="TestNG.ContactUsApiTest.testSendMessageFeedbackViaApi" />
         <item itemvalue="TestNG.UserRegistrationApiTest.testNewUserRegistration" />
+        <item itemvalue="TestNG.LoginApiTest.testUserLogin" />
         <item itemvalue="TestNG.ContactUsApiTest.testUserLogin" />
       </list>
     </recent_temporary>
@@ -424,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712769623602</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added ContactUsApiTest">
+      <created>1712986830444</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712986830444</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -442,7 +430,8 @@
     <MESSAGE value="Registration,Login,Post,Contact Us" />
     <MESSAGE value="Added e2e Test" />
     <MESSAGE value="Added Api Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Api Test" />
+    <MESSAGE value="Added ContactUsApiTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ContactUsApiTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

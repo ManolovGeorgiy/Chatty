@@ -1,6 +1,8 @@
 package integration.tests;
 
 
+import integration.ApiBase;
+import integration.pages.user.UserApi;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -8,7 +10,30 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.baseURI;
 
 
-public class ContactUsApiTest extends UserRegistrationApiTest {
+public class ContactUsApiTest extends ApiBase {
+    UserApi userApi;
+
+    @Test
+    public void testNewUserRegistration() {
+        //String email = faker.internet().emailAddress();
+        String email = "string1234@gmail.com";
+        String password = "Qer123w999";
+        String confirmPassword = "Qer123w999";
+        String role = "user";
+
+        userApi = new UserApi();
+
+        userApi.registration(email, password, confirmPassword, role, 201);
+        userApi.login(email,password,200);
+    }
+
+    @Test
+    public void testUserLogin() {
+        String email = "string1234@gmail.com";
+        String password = "Qer123w999";
+        userApi = new UserApi();
+        userApi.login(email, password, 200);
+    }
     @Test
     public void testSendMessageFeedbackViaApi() {
 
