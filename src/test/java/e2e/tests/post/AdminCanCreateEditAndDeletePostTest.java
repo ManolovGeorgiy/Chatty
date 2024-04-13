@@ -87,7 +87,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
-        createAPostForm.uploadImage(imagePath);
+        createAPostForm.uploadImage(editImagePath);
         editAPostForm.editPost(editTitle,editDescription,editContent);
         checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
         editAPostForm.clickEditSubmitButton();

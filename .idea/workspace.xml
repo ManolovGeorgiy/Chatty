@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Updated a lot of things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wait/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wait/Wait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,9 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -52,6 +60,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -67,13 +78,14 @@
     "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.AddUserDataProfileTest.userCanAddDataProfile.executor": "Run",
     "TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost.executor": "Run",
     "TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost.executor": "Run",
     "git-widget-placeholder": "dev__Manolov",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/ACER/IdeaProjects/Chatty/src/test/resources",
     "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,7 +103,25 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost">
+  <component name="RunManager" selected="TestNG.AddUserDataProfileTest.userCanAddDataProfile">
+    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanAddDataProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddUserProfileApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -126,25 +156,6 @@
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserApiTest_2.TestGetAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.user" />
-      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest_2" />
-      <option name="METHOD_NAME" value="TestGetAllUsers" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
     <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -185,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
         <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
         <item itemvalue="TestNG.AddUserProfileApiTest.testNewUserRegistration" />
         <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
-        <item itemvalue="TestNG.UserApiTest_2.TestGetAllUsers" />
       </list>
     </recent_temporary>
   </component>
@@ -452,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713046112464</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Updated a lot of things">
+      <option name="closed" value="true" />
+      <created>1713046384142</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713046384142</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

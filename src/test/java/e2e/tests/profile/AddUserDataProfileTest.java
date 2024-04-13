@@ -53,7 +53,7 @@ public class AddUserDataProfileTest extends TestBase {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate birthDate = LocalDate.parse(date, formatter);
         String phone = "+4915777777";
-        String imageAvatar = "./src/test/java/resources/userCanAddDate_Avatra.jpg";
+        String imageAvatar = "uploadReferences/userCanAddDate_Avatra.jpg";
 
 
         String emailLogin = "g.power@gmail.com";

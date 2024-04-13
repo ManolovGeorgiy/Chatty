@@ -96,42 +96,12 @@ public class CreateAPostForm extends BasePage {
     public void uploadImage(String relativeImagePath) {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
-//            uploadFileToSelenoid(absoluteImagePath);
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'block';", fileInput);
-            ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
             fileInput.sendKeys(absoluteImagePath);
             Thread.sleep(5000);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
-        }
-    }
-
-    public String getSelenoidFileUrl(String filename) {
-        SessionId sessionId = ((RemoteWebDriver) driver).getSessionId();
-        return String.format("%s/session/%s/aerokube/download/%s", config.getSelenoidUrl(), sessionId.toString(), filename);
-    }
-
-    private void uploadFileToSelenoid(String absoluteImagePath) {
-        try {
-            File file = new File(absoluteImagePath);
-            OkHttpClient client = new OkHttpClient();
-            RequestBody requestBody = new MultipartBody.Builder()
-                    .setType(MultipartBody.FORM)
-                    .addFormDataPart("file", file.getName(),
-                            RequestBody.create(file, okhttp3.MediaType.parse("image/*")))
-                    .build();
-    
-            Request request = new Request.Builder()
-                    .url(config.getSelenoidUrl() + "/upload")
-                    .post(requestBody)
-                    .build();
-    
-            Response response = client.newCall(request).execute();
-            if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-    
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to upload file to Selenoid: " + e.getMessage(), e);
         }
     }
     

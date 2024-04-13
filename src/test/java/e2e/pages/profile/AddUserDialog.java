@@ -14,7 +14,6 @@ public class AddUserDialog extends BasePage {
     }
 
 
-
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
@@ -44,32 +43,33 @@ public class AddUserDialog extends BasePage {
         try {
             getWait().forVisibility(editButton);
             getWait().forVisibility(nameInput);
-            Assert.assertTrue(nameInput.isDisplayed());
             getWait().forVisibility(surnameInput);
-            Assert.assertTrue(surnameInput.isDisplayed());
             getWait().forVisibility(gender);
-            Assert.assertTrue(gender.isDisplayed());
             getWait().forVisibility(birthDateForm);
             getWait().forVisibility(phoneInput);
-            Assert.assertTrue(phoneInput.isDisplayed());
             getWait().forVisibility(saveButton);
             getWait().forVisibility(headerElement);
-            Assert.assertTrue(headerElement.isDisplayed());
         } catch (StaleElementReferenceException e) {
         }
     }
+
     @Step("click edit button profile")
     public void clickAddUserForm() {
         editButton.click();
     }
+
     public String getName() {
+        getWait().forAttributeNotEmpty(nameInput);
         return nameInput.getAttribute("value");
     }
+
     public String getSurname() {
+        getWait().forAttributeNotEmpty(surnameInput);
         return surnameInput.getAttribute("value");
     }
 
     public String getDate() {
+        getWait().forAttributeNotEmpty(birthDateForm);
         return birthDateForm.getAttribute("value");
     }
 
@@ -87,12 +87,13 @@ public class AddUserDialog extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+
     @Step("Fill profile form {name},{surname},{date},{phone}")
     public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -107,12 +108,13 @@ public class AddUserDialog extends BasePage {
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).perform();
             birthDateForm.sendKeys(date);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
 
         phoneInput.sendKeys(phone);
     }
+
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();
