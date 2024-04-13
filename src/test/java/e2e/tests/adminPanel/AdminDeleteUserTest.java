@@ -12,10 +12,12 @@ public class AdminDeleteUserTest extends TestBase {
     AdminPanelPage adminPanelPage;
     @Test
     public void deleteAccount(){
+        //TODO:need create new user
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 
         String emailAccount = "tatar@abv.bg";
+
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();

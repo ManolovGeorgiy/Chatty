@@ -1,30 +1,31 @@
 package integration.tests;
 
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
+import static io.restassured.RestAssured.baseURI;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
-public class ContactUsApiTest {
-
+public class ContactUsApiTest extends UserRegistrationApiTest {
     @Test
     public void testSendMessageFeedbackViaApi() {
 
         RestAssured.baseURI = "http://chatty.telran-edu.de:8989/api/feedback";
-        String userName = "Feedback";
-        String userEmail = "newtest@gmail.com";
-        String userMessage = "Text message feedback";
+        String name = "Nata";
+        String email = "string1@gmail.com";
+        String content = "asdfgzhjwsedrftgzhujwsedrftgzhuj";
 
-        given().
-                contentType(ContentType.JSON).
-                body("{ \"userName\": \"" + userName + "\", \"userEmail\": \"" + userEmail + "\", \"userMessage\": \"" + userMessage + "\" }").
-                when().
-                post("/api/feedback").
-                then().
-                assertThat().
-                statusCode(201).
-                body("message", equalTo("Feedback submitted successfully!"));
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body("{ \"name\": \"" + name + "\", \"email\": \"" + email + "\", \"content\": \"" + content + "\" }")
+                .when()
+                .log().all()
+                .post(baseURI)
+                .then().log().all()
+                .extract().response();
+                response.then().assertThat().statusCode(201);
     }
 }
+

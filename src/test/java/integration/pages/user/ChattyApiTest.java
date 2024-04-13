@@ -15,14 +15,10 @@ public class ChattyApiTest {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "путь_к_вашему_драйверу_chrome");
         driver = new ChromeDriver();
-
         }
         @AfterClass
     public void tearDown(){
         driver.quit();
         }
-
-
-
     }
 

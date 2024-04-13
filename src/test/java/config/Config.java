@@ -37,4 +37,5 @@ public class Config {
     public Integer getWindowHeight() {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
+    public String getBrowser(){return properties.getProperty("browser");}
 }

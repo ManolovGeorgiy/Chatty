@@ -1,4 +1,7 @@
 package integration.pages.registration;
 
-public class RegistrationApi {
+import integration.ApiBase;
+
+public class RegistrationApi extends ApiBase {
+
 }

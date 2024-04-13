@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added Api Test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/SelenideTestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPageNatalie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserNatalieTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/LoginApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/getLoginReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/getLoginReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserLoginApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/UserRegistrationApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/AddUserDataProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,27 +111,24 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsApiTest.testSendMessageFeedbackViaApi">
-    <configuration name="Chatty [TestApiSmoke]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="TestApiSmoke" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+  <component name="RunManager" selected="TestNG.AdminProfileTest.testGetAdminProfile">
+    <configuration name="AdminProfileTest.testGetAdminProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.pages.adminPanel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.pages.adminPanel" />
+      <option name="MAIN_CLASS_NAME" value="integration.pages.adminPanel.AdminProfileTest" />
+      <option name="METHOD_NAME" value="testGetAdminProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ContactUsApiTest.testSendMessageFeedbackViaApi" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
@@ -134,17 +148,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationWithoutInvalidEmailAndPasswordUserAndAdminTest.UserCannotRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactUsApiTest.testUserLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.admin.*" />
+          <option name="PATTERN" value="integration.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.admin" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.admin.RegistrationWithoutInvalidEmailAndPasswordUserAndAdminTest" />
-      <option name="METHOD_NAME" value="UserCannotRegistration" />
+      <option name="PACKAGE_NAME" value="integration.tests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.ContactUsApiTest" />
+      <option name="METHOD_NAME" value="testUserLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -152,35 +166,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginApiTest.testUserLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.*" />
+          <option name="PATTERN" value="integration.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration" />
-      <option name="MAIN_CLASS_NAME" value="integration.UserApiTest" />
+      <option name="PACKAGE_NAME" value="integration.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.LoginApiTest" />
+      <option name="METHOD_NAME" value="testUserLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRegistrationApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.UserRegistrationApiTest" />
       <option name="METHOD_NAME" value="testNewUserRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserApiTest.userCanRegistrationAsUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration" />
-      <option name="MAIN_CLASS_NAME" value="integration.UserApiTest" />
-      <option name="METHOD_NAME" value="userCanRegistrationAsUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -190,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdminProfileTest.testGetAdminProfile" />
+        <item itemvalue="TestNG.LoginApiTest.testUserLogin" />
         <item itemvalue="TestNG.ContactUsApiTest.testSendMessageFeedbackViaApi" />
-        <item itemvalue="Gradle.Chatty [TestApiSmoke]" />
-        <item itemvalue="TestNG.UserApiTest.userCanRegistrationAsUser" />
-        <item itemvalue="TestNG.UserApiTest.testNewUserRegistration" />
-        <item itemvalue="TestNG.RegistrationWithoutInvalidEmailAndPasswordUserAndAdminTest.UserCannotRegistration" />
+        <item itemvalue="TestNG.UserRegistrationApiTest.testNewUserRegistration" />
+        <item itemvalue="TestNG.ContactUsApiTest.testUserLogin" />
       </list>
     </recent_temporary>
   </component>

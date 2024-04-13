@@ -3,7 +3,7 @@
 <suite name="testApi" verbose="1">
     <test name="SmokeApiTest">
         <classes>
-            <class name="integration.tests.UserApiTest">
+            <class name="integration.tests.UserRegistrationApiTest">
             </class>
         </classes>
     </test>

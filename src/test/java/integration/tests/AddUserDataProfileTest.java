@@ -1,4 +1,4 @@
-package integration.tests.profile;
+package integration.tests;
 
 public class AddUserDataProfileTest {
 }
