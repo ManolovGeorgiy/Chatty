@@ -54,7 +54,7 @@ public class EditUserDataProfileTest extends TestBase {
         LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
 
         String editPhone = "+49157310789";
-        String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
+        String editImageAvatar = "src/test/java/resources/userCanAddEditDate_Avatar.jpg";
 
         String oldPassword = "Manowar333246";
         String newPassword = "Manowar33246";
