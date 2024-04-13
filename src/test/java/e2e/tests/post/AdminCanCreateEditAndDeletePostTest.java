@@ -43,7 +43,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
     @Test
-    public void adminCanCreateAPost() {
+    public void adminCanCreateAPost() throws InterruptedException {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
         String title = faker.lorem().sentence(1);
@@ -69,14 +69,13 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         createAPostForm = new CreateAPostForm(app.driver);
         createAPostForm.userCanCreateAPost(title, description, content,imagePath);
         createAPostForm.waitForLoading();
-        //createAPostForm.tumblerSwitchClick();
         createAPostForm.imageLoading(imagePath);
         createAPostForm.waitForLoading();
 
         checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
-
+        Thread.sleep(3000);
         header = new Header(app.driver);
         header.clickHome();
         header.myPostClick();

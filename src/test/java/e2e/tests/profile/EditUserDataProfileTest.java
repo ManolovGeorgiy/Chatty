@@ -6,10 +6,13 @@ import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
 
 import e2e.pages.Header;
+import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
+import e2e.pages.profile.AddUserDialog;
 import e2e.pages.profile.EditPasswordForm;
 import e2e.pages.profile.EditUserForm;
+import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,12 +23,25 @@ import java.time.format.DateTimeFormatter;
 public class EditUserDataProfileTest extends TestBase {
 
     Faker faker = new Faker();
+    RegistrationPage registrationPage;
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
+    AddUserDialog addUserDialog;
     EditUserForm editUserForm;
     EditPasswordForm editPasswordForm;
+    AdminPanelPage adminPanelPage;
 
+    private void checkUserData(AddUserDialog page, String name, String surname, String date, String phone) {
+        String actualName = page.getName();
+        String actualSurname = page.getSurname();
+        String actualDate = page.getDate();
+        String actualPhone = page.getPhone();
+        Assert.assertEquals(actualName, name, actualName + " is not equal " + name);
+        Assert.assertEquals(actualSurname, surname, actualSurname + " is not equal " + surname);
+        Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
+        Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
+    }
     private void checkEditUserData(EditUserForm page, String name, String surname, String date, String phone) {
         String actualName = page.getName();
         String actualSurname = page.getSurname();
@@ -44,15 +60,24 @@ public class EditUserDataProfileTest extends TestBase {
     @Test(description = "CHATTY-30")
     public void userCanEditProfile() {
 
-        String email = "tatar@abv.bg";
+        String email = "edit.user.dataprofile@gmail.com";
         String password = "Manowar333246";
+        String confirmPassword = "Manowar333246";
+
+        String name = "Georg";
+        String surname = "Man";
+        String date = "08-01-1984";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDate birthDate = LocalDate.parse(date, formatter);
+        String phone = "+4915777777";
+        String imageAvatar = "./src/test/java/resources/userCanAddDate_Avatra.jpg";
+
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
         String editFormattedDate = "1985-01-03";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
-
+        DateTimeFormatter editFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate editBirthDate = LocalDate.parse(editFormattedDate, editFormatter);
         String editPhone = "+49157310789";
         String editImageAvatar = "src/test/java/resources/userCanAddEditDate_Avatar.jpg";
 
@@ -60,13 +85,49 @@ public class EditUserDataProfileTest extends TestBase {
         String newPassword = "Manowar33246";
         String confirmNewPassword = "Manowar33246";
 
+        String emailLogin = "g.power@gmail.com";
+        String passwordLogin = "GPower3333";
+
+        String emailAccount = "edit.user.dataprofile@gmail.com";
+
         loginPage = new LoginPage(app.driver);
-        loginPage.login(email, password);
+        loginPage.waitForLoading();
+        loginPage.signUp();
+
+        registrationPage = new RegistrationPage(app.driver);
+        registrationPage.waitForLoading();
+        registrationPage.optionUser();
+        registrationPage.registration(email,password,confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
 
         header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
+
+        loginPage = new LoginPage(app.driver);
+        loginPage.waitForLoading();
+        loginPage.login(email,password);
+
+        homeBlogPage = new HomeBlogPage(app.driver);
+        homeBlogPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.USERPROFILE);
+
+        addUserDialog = new AddUserDialog(app.driver);
+        addUserDialog.waitForLoading();
+        addUserDialog.imageAvatarLoading(imageAvatar);
+        addUserDialog.clickAddUserForm();
+        addUserDialog.waitForLoading();
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.waitForLoading();
+        addUserDialog.saveButtonClick();
+        addUserDialog.waitForLoading();
+        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
+
+        header = new Header(app.driver);
+        header.clickHome();
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
 
         editUserForm = new EditUserForm(app.driver);
@@ -76,7 +137,7 @@ public class EditUserDataProfileTest extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), editPhone);
+        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editBirthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
@@ -95,5 +156,22 @@ public class EditUserDataProfileTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
+
+        loginPage = new LoginPage(app.driver);
+        loginPage.waitForLoading();
+        loginPage.login(emailLogin,passwordLogin);
+
+        adminPanelPage = new AdminPanelPage(app.driver);
+        adminPanelPage.waitForLoading();
+        adminPanelPage.searchAccount(emailAccount);
+        adminPanelPage.waitForLoading();
+        adminPanelPage.clickDeleteAccount();
+        adminPanelPage.searchAccount(emailAccount);
+
+        header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
     }
 }

@@ -56,6 +56,7 @@ public class AddUserDataProfileTest extends TestBase {
         String phone = "+4915777777";
         String imageAvatar = "./src/test/java/resources/userCanAddDate_Avatra.jpg";
 
+
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 

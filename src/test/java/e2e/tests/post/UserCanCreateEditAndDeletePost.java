@@ -51,14 +51,14 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         String confirmPassword = "RedBul1234";
 
         String title = "My first post";
-        String description = "Pice";
+        String description = "My World";
         String content = faker.lorem().sentence(20);
         String imagePath = "src/test/java/resources/userCanCreateAPost_MyPost.jpg";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String editImagePath = "/var/jenkins_home/workspace/Chatty/GPowerE2e/src/test/java/resources/userCanCreateAPost_MyPost.jpg";
+        String editImagePath = "src/test/java/resources/userCanEditPost_MyPost.jpg";
 
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";

@@ -67,6 +67,7 @@ public class ContactUsPositiveTest extends TestBase {
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
+
         header = new Header(app.driver);
         header.clickContact();
 
