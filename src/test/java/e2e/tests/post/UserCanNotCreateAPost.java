@@ -39,8 +39,7 @@ public class UserCanNotCreateAPost extends TestBase {
     @Feature(value = "User not created post")
     @Description(value = "User can not create a post")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("15")
-    @Test(description = "CHATTY-22")
+    @Test(description = "User can not create a post with invalid data")
     public void userCanNotCreateAPost() throws InterruptedException {
         String email = "user.can.notCreateAPost@gmail.com";
         String password = "RedBul1234";

@@ -15,7 +15,6 @@ public class LoginApiTest {
     @Feature(value = "admin logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "Admin can login")
     public void adminCanLogin() {
         String email = "g.power@gmail.com";
@@ -32,7 +31,6 @@ public class LoginApiTest {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "Admin can login wit invalid password")
     public void adminCannotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
@@ -45,7 +43,6 @@ public class LoginApiTest {
     @Feature(value = "admin can not login")
     @Description(value = "admin can not login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "Admin can login wit invalid email")
     public void adminCannotLoginWithInvalidEmail() {
         String email = "g.powerr@gmail.com";
@@ -59,7 +56,6 @@ public class LoginApiTest {
     @Feature(value = "admin is not logged in")
     @Description(value = "admin can not login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "Admin can login without email and Password ")
     public void adminCanNotLoginWithoutEmailAndPassword() {
         String email = "";

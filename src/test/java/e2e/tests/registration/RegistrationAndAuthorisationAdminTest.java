@@ -23,9 +23,8 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     @Feature(value = "The administrator has registered and logged in")
     @Description(value = "adminPanel can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("1")
-    @Test(description = "CHATTY-04")
-    public void AdminCanRegistration(){
+    @Test(description = "admin can registration")
+    public void adminCanRegistration(){
 
         String email = "RegistrationAdmin@gmail.com";
         String password = "Admin3333";
@@ -62,7 +61,6 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     @Feature(value = "The administrator has not registered")
     @Description(value = "adminPanel can not registration ")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "CHATTY-50")
     public void AdminCanNotRegistrationWithValidEmail() {
 

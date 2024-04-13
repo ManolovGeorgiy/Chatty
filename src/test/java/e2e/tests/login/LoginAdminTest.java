@@ -36,7 +36,6 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "CHATTY-14")
     public void adminCanNotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
@@ -49,7 +48,6 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "CHATTY-14")
     public void adminCanNotLoginWithoutAEmailAndPassword() {
         String email = "";
@@ -63,7 +61,6 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "CHATTY-49")
     public void adminCanNotLoginWiInvalidEmailAndPassword() {
         String email = "gpower@gmail.com";
@@ -77,7 +74,6 @@ public class LoginAdminTest extends TestBase {
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "All negative Test",dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
     public void adminCanNotLoginWithInvalidData(String email, String password,String caseName) {
         loginPage = new LoginPage(app.driver);

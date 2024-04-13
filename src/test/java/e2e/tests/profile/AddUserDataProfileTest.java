@@ -40,8 +40,7 @@ public class AddUserDataProfileTest extends TestBase {
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
-    @AllureId("")
-    @Test(description = "CHATTY-29")
+    @Test(description = "user can add data to profile")
     public void userCanAddDataProfile() {
 
         String email = "add.user.dataprofile@gmail.com";

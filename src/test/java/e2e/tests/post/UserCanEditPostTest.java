@@ -32,8 +32,7 @@ public class UserCanEditPostTest extends TestBase {
     @Feature(value = "User edited post")
     @Description(value = "User can edit post")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("16")
-    @Test(description = "CHATTY-40")
+    @Test(description = "User can edit existing post")
     public void userCanEditAPost() {
 
         String email = faker.internet().emailAddress();
