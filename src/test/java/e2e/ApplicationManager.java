@@ -57,8 +57,6 @@ public class ApplicationManager {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions options = new EdgeOptions();
                 if (config.getHeadless()) {
-                    // Edge не поддерживает headless режим
-                    // Вы можете добавить любые другие опции, если необходимо
                 }
                 driver = new EdgeDriver(options);
             } else {

@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added e2e Test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,12 +52,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ManolovGeorgiy"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ManolovGeorgiy&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -118,18 +115,18 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddUserDataProfileTest.userCanAddDataProfile">
-    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ContactUsNegativeTest.userCanNotSendMessage">
+    <configuration name="ContactUsNegativeTest.userCanNotSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="PATTERN" value="e2e.tests.contactUs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
-      <option name="METHOD_NAME" value="userCanAddDataProfile" />
+      <option name="PACKAGE_NAME" value="e2e.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.contactUs.ContactUsNegativeTest" />
+      <option name="METHOD_NAME" value="userCanNotSendMessage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -210,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
-        <item itemvalue="TestNG.ContactUsPositiveTest.userCanSendMessage" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
+        <item itemvalue="TestNG.ContactUsNegativeTest.userCanNotSendMessage" />
         <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
         <item itemvalue="TestNG.RegistrationApiTest" />
+        <item itemvalue="TestNG.ContactUsPositiveTest.userCanSendMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -883,6 +880,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/integration/tests/myTests/RegistrationApiTest.java</url>
           <line>10</line>
           <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="260" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
