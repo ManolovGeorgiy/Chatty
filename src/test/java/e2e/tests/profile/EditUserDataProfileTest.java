@@ -66,18 +66,14 @@ public class EditUserDataProfileTest extends TestBase {
 
         String name = "Georg";
         String surname = "Man";
-        String date = "08-01-1984";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDate birthDate = LocalDate.parse(date, formatter);
+        String date = "1984-08-01";
         String phone = "+4915777777";
         String imageAvatar = "uploadReferences/userCanAddDate_Avatra.jpg";
 
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
-        String editFormattedDate = "1985-01-03";
-        DateTimeFormatter editFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate editBirthDate = LocalDate.parse(editFormattedDate, editFormatter);
+        String editFormattedDate = "03-01-1985";
         String editPhone = "+49157310789";
         String editImageAvatar = "uploadReferences/userCanAddEditDate_Avatar.jpg";
 
@@ -120,11 +116,11 @@ public class EditUserDataProfileTest extends TestBase {
         addUserDialog.uploadImageAvatar(imageAvatar);
         addUserDialog.clickAddUserFormButton();
         addUserDialog.waitForLoading();
-        addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.fillProfileFormLocal(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
-        checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
+        checkUserData(addUserDialog, name, surname, date, phone);
 
         header = new Header(app.driver);
         header.clickHome();
@@ -132,12 +128,11 @@ public class EditUserDataProfileTest extends TestBase {
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
-        editUserForm.imageAvatarLoading(editImageAvatar);
+        editUserForm.uploadEditImageAvatar(editImageAvatar);
         editUserForm.waitForLoading();
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
-
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editBirthDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), editPhone);
+        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, editFormattedDate, editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();

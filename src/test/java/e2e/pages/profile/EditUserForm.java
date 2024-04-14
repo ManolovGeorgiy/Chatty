@@ -3,10 +3,8 @@ package e2e.pages.profile;
 import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -73,13 +71,14 @@ public class EditUserForm extends BasePage {
         return phoneInput.getAttribute("value");
     }
 
-    @Step("upload avatar image {imagePath}")
-    public void imageAvatarLoading(String imagePath) {
+    @Step("Upload image: {imagePath}")
+    public void uploadEditImageAvatar(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);;
+            fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
-            e.printStackTrace();
+            Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
     @Step("fill profile form")
@@ -97,9 +96,15 @@ public class EditUserForm extends BasePage {
         getWait().forVisibility(option);
         option.click();
         try {
-            birthDateForm.clear();
+            String[] dateParts = date.split("-");
+            //birthDateForm.click();
+            birthDateForm.sendKeys(Keys.CONTROL, "a");
+            birthDateForm.isDisplayed();
             birthDateForm.sendKeys(date);
-        } catch (StaleElementReferenceException e){
+            birthDateForm.sendKeys(dateParts[2]); //day
+            birthDateForm.sendKeys(dateParts[1]); //month
+            birthDateForm.sendKeys(dateParts[0]); //year
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         phoneInput.clear();

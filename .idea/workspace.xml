@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e9c6032-12b0-44a2-a3a1-ed3bb237ed27" name="Changes" comment="edited e2e and api">
+      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUndEditUserDataProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTestCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTestCopy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +92,24 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile">
+  <component name="RunManager" selected="TestNG.EditUserDataProfileTest.userCanEditProfile">
+    <configuration name="AddUserDataProfileTestLocale" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTestLocale" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddUserDataProfileTestLocale.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -108,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EditUserDataProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -117,25 +137,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
-      <option name="METHOD_NAME" value="userCanAddDataProfile" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EditUserDataProfileTestCopy" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTestCopy" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -181,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
         <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.AddUserDataProfileTestLocale" />
+        <item itemvalue="TestNG.EditUserDataProfileTest" />
+        <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
         <item itemvalue="TestNG.EditUserDataProfileTestCopy.userCanEditProfile" />
-        <item itemvalue="TestNG.EditUserDataProfileTestCopy" />
-        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -528,7 +530,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713105926970</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713106863354</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713106863354</updated>
+    </task>
+    <task id="LOCAL-00044" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713107262658</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1713107262658</updated>
+    </task>
+    <task id="LOCAL-00045" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713107694858</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1713107694858</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -860,7 +886,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java</url>
-          <line>63</line>
+          <line>61</line>
           <option name="timeStamp" value="260" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
