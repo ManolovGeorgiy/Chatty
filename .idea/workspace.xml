@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e9c6032-12b0-44a2-a3a1-ed3bb237ed27" name="Changes" comment="edited e2e and api">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTestLocale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTestCopy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +89,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.EditUserDataProfileTestCopy.userCanEditProfile">
+  <component name="RunManager" selected="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile">
     <configuration name="AddUserDataProfileTestLocale.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -184,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
+        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
         <item itemvalue="TestNG.EditUserDataProfileTestCopy.userCanEditProfile" />
         <item itemvalue="TestNG.EditUserDataProfileTestCopy" />
-        <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
         <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
-        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -443,7 +440,95 @@
       <option name="project" value="LOCAL" />
       <updated>1713102477720</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104384173</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104384173</updated>
+    </task>
+    <task id="LOCAL-00033" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104412860</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104412860</updated>
+    </task>
+    <task id="LOCAL-00034" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104531806</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104531806</updated>
+    </task>
+    <task id="LOCAL-00035" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104895279</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104895279</updated>
+    </task>
+    <task id="LOCAL-00036" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105134337</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105134337</updated>
+    </task>
+    <task id="LOCAL-00037" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105292341</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105292341</updated>
+    </task>
+    <task id="LOCAL-00038" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105315471</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105315471</updated>
+    </task>
+    <task id="LOCAL-00039" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105450559</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105450559</updated>
+    </task>
+    <task id="LOCAL-00040" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105577425</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105577425</updated>
+    </task>
+    <task id="LOCAL-00041" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105694567</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105694567</updated>
+    </task>
+    <task id="LOCAL-00042" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105926970</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105926970</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -104,7 +104,6 @@ public class AddUserDialog extends BasePage {
         option.click();
         try {
             String[] dateParts = date.split("-");
-            //birthDateForm.click();
             birthDateForm.sendKeys(Keys.CONTROL, "a");
             birthDateForm.isDisplayed();
             birthDateForm.sendKeys(date);
@@ -116,15 +115,6 @@ public class AddUserDialog extends BasePage {
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
-//        try {
-//            birthDateForm.isDisplayed();
-//            birthDateForm.sendKeys(date);
-//            Actions actions = new Actions(driver);
-//            actions.sendKeys(Keys.TAB).perform();
-//            birthDateForm.sendKeys(date);
-//        } catch (StaleElementReferenceException e){
-//            e.printStackTrace();
-//        }
         phoneInput.sendKeys(phone);
     }
 
