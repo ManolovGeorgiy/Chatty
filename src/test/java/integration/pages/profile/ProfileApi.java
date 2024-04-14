@@ -1,6 +1,8 @@
 package integration.pages.profile;
 
-public class ProfileApi {
+import integration.ApiBase;
+
+public class ProfileApi extends ApiBase {
 
     public class Profile {
 
