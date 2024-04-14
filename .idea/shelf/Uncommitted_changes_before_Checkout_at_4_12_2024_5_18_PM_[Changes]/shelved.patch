@@ -1,0 +1,22 @@
+Index: src/test/java/integration/user/UserApiTest_2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package integration.user;\r\n\r\nimport org.testng.annotations.Test;\r\n\r\nimport static io.restassured.RestAssured.given;\r\nimport static org.hamcrest.Matchers.greaterThan;\r\n\r\npublic class UserApiTest_2 extends UserApi_2 {\r\n    @Test\r\n    public void testGetAllUsers() {\r\n        given().\r\n                when().\r\n                get(\"/api/users\").\r\n                then().\r\n                assertThat().\r\n                statusCode(200).\r\n                body(\"size()\", greaterThan(0));\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/integration/user/UserApiTest_2.java b/src/test/java/integration/user/UserApiTest_2.java
+--- a/src/test/java/integration/user/UserApiTest_2.java	
++++ b/src/test/java/integration/user/UserApiTest_2.java	
+@@ -1,11 +1,12 @@
+ package integration.user;
+ 
++import integration.ApiBase;
+ import org.testng.annotations.Test;
+ 
+ import static io.restassured.RestAssured.given;
+ import static org.hamcrest.Matchers.greaterThan;
+ 
+-public class UserApiTest_2 extends UserApi_2 {
++public class UserApiTest_2 extends ApiBase {
+     @Test
+     public void testGetAllUsers() {
+         given().

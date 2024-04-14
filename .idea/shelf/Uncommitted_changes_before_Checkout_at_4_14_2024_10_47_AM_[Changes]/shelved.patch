@@ -1,0 +1,784 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e5cc04c9-2e2d-445e-8122-810ff6848930\" name=\"Changes\" comment=\"Registration,Login,Post,Contact Us\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiBase.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/Admin/AdminPostTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/schemas/ErrorRes.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/schemas/PasswordUpdateReq.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest_2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/UserApi_2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/UserLogin_2.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/UserPostTest.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand />\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"package-info\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"dev\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2dbRMPjRf3fRiwYltbX5qD5VUEa\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/Selenide-300523-e-qa&quot;,\r\n    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\PC\\Chatty\\reference\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"TestNG.ChattyApiTest_2\">\r\n    <configuration name=\"UserLogin\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.user.UserLogin\" />\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.user.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"com.soywiz.korge.intellij.UpdateResourceBeforeRunTask\" enabled=\"false\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AdminPostTest\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.Admin.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"integration.Admin\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.Admin.AdminPostTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"com.soywiz.korge.intellij.UpdateResourceBeforeRunTask\" enabled=\"false\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ChattyApiTest_2\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.user.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"integration.user\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.user.ChattyApiTest_2\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"com.soywiz.korge.intellij.UpdateResourceBeforeRunTask\" enabled=\"false\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"UserApiTest_2.TestGetAllUsers\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"integration.user.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"integration.user\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"integration.user.UserApiTest_2\" />\r\n      <option name=\"METHOD_NAME\" value=\"TestGetAllUsers\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"com.soywiz.korge.intellij.UpdateResourceBeforeRunTask\" enabled=\"false\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"UserCanCreateAPostTest.userCanCreateAPost\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.Georgiy.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.Georgiy.UserCanCreateAPostTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"userCanCreateAPost\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"TestNG.ChattyApiTest_2\" />\r\n        <item itemvalue=\"TestNG.AdminPostTest\" />\r\n        <item itemvalue=\"TestNG.UserApiTest_2.TestGetAllUsers\" />\r\n        <item itemvalue=\"Application.UserLogin\" />\r\n        <item itemvalue=\"TestNG.UserCanCreateAPostTest.userCanCreateAPost\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e5cc04c9-2e2d-445e-8122-810ff6848930\" name=\"Changes\" comment=\"\" />\r\n      <created>1710274744017</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710274744017</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711370136449</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711370136449</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711385939570</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711385939570</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711386153761</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711386153761</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711528350961</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711528350961</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711535105707</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711535105707</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711551832253</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711551832253</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711556229247</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711556229247</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711562947418</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711562947418</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Registration,Login,Post,Contact Us\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Registration,Login,Post,Contact Us\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java</url>\r\n          <line>10</line>\r\n          <option name=\"timeStamp\" value=\"6\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"19\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>17</line>\r\n          <option name=\"timeStamp\" value=\"20\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>16</line>\r\n          <option name=\"timeStamp\" value=\"21\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"22\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"23\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"24\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>23</line>\r\n          <option name=\"timeStamp\" value=\"25\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"26\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>21</line>\r\n          <option name=\"timeStamp\" value=\"27\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>20</line>\r\n          <option name=\"timeStamp\" value=\"28\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>34</line>\r\n          <option name=\"timeStamp\" value=\"29\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>33</line>\r\n          <option name=\"timeStamp\" value=\"30\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"31\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>37</line>\r\n          <option name=\"timeStamp\" value=\"32\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"33\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>39</line>\r\n          <option name=\"timeStamp\" value=\"34\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>40</line>\r\n          <option name=\"timeStamp\" value=\"35\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"36\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"37\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>43</line>\r\n          <option name=\"timeStamp\" value=\"38\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>44</line>\r\n          <option name=\"timeStamp\" value=\"39\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>47</line>\r\n          <option name=\"timeStamp\" value=\"40\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>46</line>\r\n          <option name=\"timeStamp\" value=\"42\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/integration/ApiBase.java</url>\r\n          <line>111</line>\r\n          <option name=\"timeStamp\" value=\"43\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>21</line>\r\n          <option name=\"timeStamp\" value=\"65\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"66\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>24</line>\r\n          <option name=\"timeStamp\" value=\"67\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"68\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"69\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"70\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>27</line>\r\n          <option name=\"timeStamp\" value=\"71\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>30</line>\r\n          <option name=\"timeStamp\" value=\"74\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>31</line>\r\n          <option name=\"timeStamp\" value=\"75\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>33</line>\r\n          <option name=\"timeStamp\" value=\"76\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"78\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>37</line>\r\n          <option name=\"timeStamp\" value=\"79\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"80\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"151\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>20</line>\r\n          <option name=\"timeStamp\" value=\"152\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"153\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>39</line>\r\n          <option name=\"timeStamp\" value=\"154\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"155\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>36</line>\r\n          <option name=\"timeStamp\" value=\"156\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"158\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>34</line>\r\n          <option name=\"timeStamp\" value=\"159\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"160\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"162\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"163\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java</url>\r\n          <line>11</line>\r\n          <properties class=\"e2e.tests.Georgiy.LoginUserTest\" method=\"userCanLogin\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"7\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>19</line>\r\n          <properties class=\"e2e.tests.Georgiy.UserCanCreateAPostTest\" method=\"userCanCreateAPost\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"64\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>17</line>\r\n          <properties class=\"e2e.tests.Georgiy.EditUserProfileTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"164\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>\r\n          <line>22</line>\r\n          <properties class=\"e2e.tests.Georgiy.AdminPanelTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"172\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4b38a9937ec4556cf0fd025c44f70a0ad333fb72)
++++ b/.idea/workspace.xml	(date 1713106027098)
+@@ -4,22 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiBase.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminApiTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/Admin/AdminPostTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/ErrorRes.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PasswordUpdateReq.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/PostUpdateReq.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/ChattyApiTest_2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest_2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApi_2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserLogin_2.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserPostTest.java" afterDir="false" />
++    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Assert na ContactUsPage">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserApiTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -57,10 +43,14 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="dev" />
++        <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/AssertJUnit.java" root0="SKIP_INSPECTION" />
++    <setting file="jar://$USER_HOME$/.jdks/graalvm-jdk-17.0.10/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
+   </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+@@ -76,87 +66,101 @@
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/Selenide-300523-e-qa&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty&quot;,
+     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+   }
+ }</component>
+   <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\PC\Chatty\src\test\resources" />
++    </key>
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\PC\Chatty\src\test\java\resources" />
++      <recent name="C:\Users\PC\Chatty\src\test\java" />
+       <recent name="C:\Users\PC\Chatty\reference" />
+     </key>
+     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+       <recent name="" />
+     </key>
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="e2e.tests.user" />
++    </key>
+   </component>
+-  <component name="RunManager" selected="TestNG.ChattyApiTest_2">
+-    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="integration.user.UserLogin" />
++  <component name="RunManager" selected="TestNG.UserCanCreateAPostTest.userCanCreateAPost">
++    <configuration name="AdminPanelTest.deleteAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="Chatty.test" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="integration.user.*" />
++          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
++      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
++      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.AdminPanelTest" />
++      <option name="METHOD_NAME" value="deleteAccount" />
++      <option name="TEST_OBJECT" value="METHOD" />
++      <properties />
++      <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+       </method>
+     </configuration>
+-    <configuration name="AdminPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="EditUserProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="Chatty.test" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="integration.Admin.*" />
++          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="integration.Admin" />
+-      <option name="MAIN_CLASS_NAME" value="integration.Admin.AdminPostTest" />
+-      <option name="TEST_OBJECT" value="CLASS" />
++      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
++      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.EditUserProfileTest" />
++      <option name="METHOD_NAME" value="userCanEditProfile" />
++      <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+       </method>
+     </configuration>
+-    <configuration name="ChattyApiTest_2" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="FullTest.userCanCreateAPostAndFeedback" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="Chatty.test" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="integration.user.*" />
++          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="integration.user" />
+-      <option name="MAIN_CLASS_NAME" value="integration.user.ChattyApiTest_2" />
+-      <option name="TEST_OBJECT" value="CLASS" />
++      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
++      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.FullTest" />
++      <option name="METHOD_NAME" value="userCanCreateAPostAndFeedback" />
++      <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+       </method>
+     </configuration>
+-    <configuration name="UserApiTest_2.TestGetAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
++    <configuration name="ProbTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+       <module name="Chatty.test" />
+       <extension name="coverage">
+         <pattern>
+-          <option name="PATTERN" value="integration.user.*" />
++          <option name="PATTERN" value="e2e.tests.Georgiy.*" />
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="integration.user" />
+-      <option name="MAIN_CLASS_NAME" value="integration.user.UserApiTest_2" />
+-      <option name="METHOD_NAME" value="TestGetAllUsers" />
++      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
++      <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.ProbTest" />
++      <option name="METHOD_NAME" value="userCanLogin" />
+       <option name="TEST_OBJECT" value="METHOD" />
+       <properties />
+       <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+       </method>
+     </configuration>
+     <configuration name="UserCanCreateAPostTest.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+@@ -167,7 +171,7 @@
+           <option name="ENABLED" value="true" />
+         </pattern>
+       </extension>
+-      <option name="PACKAGE_NAME" value="e2e.tests" />
++      <option name="PACKAGE_NAME" value="e2e.tests.Georgiy" />
+       <option name="MAIN_CLASS_NAME" value="e2e.tests.Georgiy.UserCanCreateAPostTest" />
+       <option name="METHOD_NAME" value="userCanCreateAPost" />
+       <option name="TEST_OBJECT" value="METHOD" />
+@@ -179,11 +183,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="TestNG.ChattyApiTest_2" />
+-        <item itemvalue="TestNG.AdminPostTest" />
+-        <item itemvalue="TestNG.UserApiTest_2.TestGetAllUsers" />
+-        <item itemvalue="Application.UserLogin" />
+         <item itemvalue="TestNG.UserCanCreateAPostTest.userCanCreateAPost" />
++        <item itemvalue="TestNG.ProbTest.userCanLogin" />
++        <item itemvalue="TestNG.FullTest.userCanCreateAPostAndFeedback" />
++        <item itemvalue="TestNG.EditUserProfileTest.userCanEditProfile" />
++        <item itemvalue="TestNG.AdminPanelTest.deleteAccount" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -196,22 +200,6 @@
+       <option name="presentableId" value="Default" />
+       <updated>1710274744017</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711370136449</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711370136449</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711385939570</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711385939570</updated>
+-    </task>
+     <task id="LOCAL-00003" summary="Registration,Login,Post,Contact Us">
+       <option name="closed" value="true" />
+       <created>1711386153761</created>
+@@ -260,12 +248,367 @@
+       <option name="project" value="LOCAL" />
+       <updated>1711562947418</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712467526206</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1712467526206</updated>
++    </task>
++    <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712479153697</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1712479153697</updated>
++    </task>
++    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712480907976</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1712480907976</updated>
++    </task>
++    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712483963242</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1712483963242</updated>
++    </task>
++    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712486300060</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1712486300060</updated>
++    </task>
++    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712486335209</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1712486335209</updated>
++    </task>
++    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712486510758</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1712486510758</updated>
++    </task>
++    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712503317452</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1712503317453</updated>
++    </task>
++    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712503708401</created>
++      <option name="number" value="00017" />
++      <option name="presentableId" value="LOCAL-00017" />
++      <option name="project" value="LOCAL" />
++      <updated>1712503708401</updated>
++    </task>
++    <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712511425023</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1712511425023</updated>
++    </task>
++    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712511475487</created>
++      <option name="number" value="00019" />
++      <option name="presentableId" value="LOCAL-00019" />
++      <option name="project" value="LOCAL" />
++      <updated>1712511475487</updated>
++    </task>
++    <task id="LOCAL-00020" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712511868220</created>
++      <option name="number" value="00020" />
++      <option name="presentableId" value="LOCAL-00020" />
++      <option name="project" value="LOCAL" />
++      <updated>1712511868220</updated>
++    </task>
++    <task id="LOCAL-00021" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712512528397</created>
++      <option name="number" value="00021" />
++      <option name="presentableId" value="LOCAL-00021" />
++      <option name="project" value="LOCAL" />
++      <updated>1712512528397</updated>
++    </task>
++    <task id="LOCAL-00022" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712512776609</created>
++      <option name="number" value="00022" />
++      <option name="presentableId" value="LOCAL-00022" />
++      <option name="project" value="LOCAL" />
++      <updated>1712512776609</updated>
++    </task>
++    <task id="LOCAL-00023" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712592027283</created>
++      <option name="number" value="00023" />
++      <option name="presentableId" value="LOCAL-00023" />
++      <option name="project" value="LOCAL" />
++      <updated>1712592027283</updated>
++    </task>
++    <task id="LOCAL-00024" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712592504868</created>
++      <option name="number" value="00024" />
++      <option name="presentableId" value="LOCAL-00024" />
++      <option name="project" value="LOCAL" />
++      <updated>1712592504868</updated>
++    </task>
++    <task id="LOCAL-00025" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712592960776</created>
++      <option name="number" value="00025" />
++      <option name="presentableId" value="LOCAL-00025" />
++      <option name="project" value="LOCAL" />
++      <updated>1712592960776</updated>
++    </task>
++    <task id="LOCAL-00026" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712593667582</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1712593667582</updated>
++    </task>
++    <task id="LOCAL-00027" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712593693397</created>
++      <option name="number" value="00027" />
++      <option name="presentableId" value="LOCAL-00027" />
++      <option name="project" value="LOCAL" />
++      <updated>1712593693397</updated>
++    </task>
++    <task id="LOCAL-00028" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712594118451</created>
++      <option name="number" value="00028" />
++      <option name="presentableId" value="LOCAL-00028" />
++      <option name="project" value="LOCAL" />
++      <updated>1712594118451</updated>
++    </task>
++    <task id="LOCAL-00029" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712594138417</created>
++      <option name="number" value="00029" />
++      <option name="presentableId" value="LOCAL-00029" />
++      <option name="project" value="LOCAL" />
++      <updated>1712594138417</updated>
++    </task>
++    <task id="LOCAL-00030" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712594540817</created>
++      <option name="number" value="00030" />
++      <option name="presentableId" value="LOCAL-00030" />
++      <option name="project" value="LOCAL" />
++      <updated>1712594540817</updated>
++    </task>
++    <task id="LOCAL-00031" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712599303030</created>
++      <option name="number" value="00031" />
++      <option name="presentableId" value="LOCAL-00031" />
++      <option name="project" value="LOCAL" />
++      <updated>1712599303030</updated>
++    </task>
++    <task id="LOCAL-00032" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712599685704</created>
++      <option name="number" value="00032" />
++      <option name="presentableId" value="LOCAL-00032" />
++      <option name="project" value="LOCAL" />
++      <updated>1712599685704</updated>
++    </task>
++    <task id="LOCAL-00033" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712600025230</created>
++      <option name="number" value="00033" />
++      <option name="presentableId" value="LOCAL-00033" />
++      <option name="project" value="LOCAL" />
++      <updated>1712600025231</updated>
++    </task>
++    <task id="LOCAL-00034" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712600432737</created>
++      <option name="number" value="00034" />
++      <option name="presentableId" value="LOCAL-00034" />
++      <option name="project" value="LOCAL" />
++      <updated>1712600432737</updated>
++    </task>
++    <task id="LOCAL-00035" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712601058184</created>
++      <option name="number" value="00035" />
++      <option name="presentableId" value="LOCAL-00035" />
++      <option name="project" value="LOCAL" />
++      <updated>1712601058184</updated>
++    </task>
++    <task id="LOCAL-00036" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712606745047</created>
++      <option name="number" value="00036" />
++      <option name="presentableId" value="LOCAL-00036" />
++      <option name="project" value="LOCAL" />
++      <updated>1712606745047</updated>
++    </task>
++    <task id="LOCAL-00037" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712609077108</created>
++      <option name="number" value="00037" />
++      <option name="presentableId" value="LOCAL-00037" />
++      <option name="project" value="LOCAL" />
++      <updated>1712609077108</updated>
++    </task>
++    <task id="LOCAL-00038" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712609589154</created>
++      <option name="number" value="00038" />
++      <option name="presentableId" value="LOCAL-00038" />
++      <option name="project" value="LOCAL" />
++      <updated>1712609589154</updated>
++    </task>
++    <task id="LOCAL-00039" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712679174835</created>
++      <option name="number" value="00039" />
++      <option name="presentableId" value="LOCAL-00039" />
++      <option name="project" value="LOCAL" />
++      <updated>1712679174835</updated>
++    </task>
++    <task id="LOCAL-00040" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712679776917</created>
++      <option name="number" value="00040" />
++      <option name="presentableId" value="LOCAL-00040" />
++      <option name="project" value="LOCAL" />
++      <updated>1712679776917</updated>
++    </task>
++    <task id="LOCAL-00041" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712681431269</created>
++      <option name="number" value="00041" />
++      <option name="presentableId" value="LOCAL-00041" />
++      <option name="project" value="LOCAL" />
++      <updated>1712681431269</updated>
++    </task>
++    <task id="LOCAL-00042" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712681840870</created>
++      <option name="number" value="00042" />
++      <option name="presentableId" value="LOCAL-00042" />
++      <option name="project" value="LOCAL" />
++      <updated>1712681840870</updated>
++    </task>
++    <task id="LOCAL-00043" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712682850179</created>
++      <option name="number" value="00043" />
++      <option name="presentableId" value="LOCAL-00043" />
++      <option name="project" value="LOCAL" />
++      <updated>1712682850179</updated>
++    </task>
++    <task id="LOCAL-00044" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712682884199</created>
++      <option name="number" value="00044" />
++      <option name="presentableId" value="LOCAL-00044" />
++      <option name="project" value="LOCAL" />
++      <updated>1712682884199</updated>
++    </task>
++    <task id="LOCAL-00045" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712688000249</created>
++      <option name="number" value="00045" />
++      <option name="presentableId" value="LOCAL-00045" />
++      <option name="project" value="LOCAL" />
++      <updated>1712688000250</updated>
++    </task>
++    <task id="LOCAL-00046" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712722749751</created>
++      <option name="number" value="00046" />
++      <option name="presentableId" value="LOCAL-00046" />
++      <option name="project" value="LOCAL" />
++      <updated>1712722749751</updated>
++    </task>
++    <task id="LOCAL-00047" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712722833606</created>
++      <option name="number" value="00047" />
++      <option name="presentableId" value="LOCAL-00047" />
++      <option name="project" value="LOCAL" />
++      <updated>1712722833606</updated>
++    </task>
++    <task id="LOCAL-00048" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712723142917</created>
++      <option name="number" value="00048" />
++      <option name="presentableId" value="LOCAL-00048" />
++      <option name="project" value="LOCAL" />
++      <updated>1712723142917</updated>
++    </task>
++    <task id="LOCAL-00049" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712764013473</created>
++      <option name="number" value="00049" />
++      <option name="presentableId" value="LOCAL-00049" />
++      <option name="project" value="LOCAL" />
++      <updated>1712764013473</updated>
++    </task>
++    <task id="LOCAL-00050" summary="Registration,Login,Post,Contact Us">
++      <option name="closed" value="true" />
++      <created>1712768147972</created>
++      <option name="number" value="00050" />
++      <option name="presentableId" value="LOCAL-00050" />
++      <option name="project" value="LOCAL" />
++      <updated>1712768147974</updated>
++    </task>
++    <task id="LOCAL-00051" summary="Assert na ContactUsPage">
++      <created>1712845327151</created>
++      <option name="number" value="00051" />
++      <option name="presentableId" value="LOCAL-00051" />
++      <option name="project" value="LOCAL" />
++      <updated>1712845327151</updated>
++    </task>
++    <option name="localTasksCounter" value="52" />
+     <servers />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Registration,Login,Post,Contact Us" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Registration,Login,Post,Contact Us" />
++    <MESSAGE value="Assert na ContactUsPage" />
++    <option name="LAST_COMMIT_MESSAGE" value="Assert na ContactUsPage" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -402,70 +745,10 @@
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>21</line>
++          <line>23</line>
+           <option name="timeStamp" value="65" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>22</line>
+-          <option name="timeStamp" value="66" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>24</line>
+-          <option name="timeStamp" value="67" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>25</line>
+-          <option name="timeStamp" value="68" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>26</line>
+-          <option name="timeStamp" value="69" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>28</line>
+-          <option name="timeStamp" value="70" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>27</line>
+-          <option name="timeStamp" value="71" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>30</line>
+-          <option name="timeStamp" value="74" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>31</line>
+-          <option name="timeStamp" value="75" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>33</line>
+-          <option name="timeStamp" value="76" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>35</line>
+-          <option name="timeStamp" value="78" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>37</line>
+-          <option name="timeStamp" value="79" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>38</line>
+-          <option name="timeStamp" value="80" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+           <line>19</line>
+           <option name="timeStamp" value="151" />
+@@ -520,6 +803,76 @@
+           <line>28</line>
+           <option name="timeStamp" value="163" />
+         </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>30</line>
++          <option name="timeStamp" value="173" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>21</line>
++          <option name="timeStamp" value="174" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>44</line>
++          <option name="timeStamp" value="175" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>43</line>
++          <option name="timeStamp" value="176" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>41</line>
++          <option name="timeStamp" value="177" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>38</line>
++          <option name="timeStamp" value="178" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>35</line>
++          <option name="timeStamp" value="179" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>32</line>
++          <option name="timeStamp" value="180" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>24</line>
++          <option name="timeStamp" value="182" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>25</line>
++          <option name="timeStamp" value="183" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>45</line>
++          <option name="timeStamp" value="184" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>39</line>
++          <option name="timeStamp" value="185" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>40</line>
++          <option name="timeStamp" value="186" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
++          <line>36</line>
++          <option name="timeStamp" value="187" />
++        </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-method">
+           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/LoginUserTest.java</url>
+           <line>11</line>
+@@ -528,15 +881,6 @@
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+           <option name="timeStamp" value="7" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>19</line>
+-          <properties class="e2e.tests.Georgiy.UserCanCreateAPostTest" method="userCanCreateAPost">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="64" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-method">
+           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+@@ -549,8 +893,8 @@
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-method">
+           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/AdminPanelTest.java</url>
+-          <line>22</line>
+-          <properties class="e2e.tests.Georgiy.AdminPanelTest">
++          <line>26</line>
++          <properties class="e2e.tests.Georgiy.AdminPanelTest" method="deleteAccount">
+             <option name="EMULATED" value="true" />
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+@@ -559,4 +903,12 @@
+       </breakpoints>
+     </breakpoint-manager>
+   </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest.ic" NAME="LoginAdminTest Coverage Results" MODIFIED="1712092384546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>e2e.tests.Georgiy.*</FILTER>
++    </SUITE>
++    <SUITE FILE_PATH="coverage/Chatty$LoginAdminTest_adminCanNotLoginWithoutInvalidEmailAndPassword.ic" NAME="LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword Coverage Results" MODIFIED="1712091402972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>e2e.tests.Georgiy.*</FILTER>
++    </SUITE>
++  </component>
+ </project>
+\ No newline at end of file

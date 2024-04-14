@@ -1,0 +1,117 @@
+Index: src/test/java/integration/tests/profile/EditUserProfileApiTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package integration.tests.profile;\r\n\r\npublic class EditUserProfileApiTest {\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/integration/tests/profile/EditUserProfileApiTest.java b/src/test/java/integration/tests/profile/EditUserProfileApiTest.java
+--- a/src/test/java/integration/tests/profile/EditUserProfileApiTest.java	
++++ b/src/test/java/integration/tests/profile/EditUserProfileApiTest.java	
+@@ -1,4 +1,108 @@
+ package integration.tests.profile;
+ 
+ public class EditUserProfileApiTest {
++    private WebDriver driver;
++    private WebDriverWait wait;
++
++    @Before
++    public void setUp() {
++        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
++        driver = new ChromeDriver();
++        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
++    }
++
++    @After
++    public void tearDown() {
++        driver.quit();
++    }
++
++    @Test
++    public void testEditUserProfile() {
++        // Вход в систему
++        login("your_username", "your_password");
++
++        // Переход на страницу редактирования профиля
++        driver.get("http://chatty.telran-edu.de:8089/profile/edit");
++
++        // Изменение полей профиля
++        WebElement nameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("name")));
++        nameField.clear();
++        nameField.sendKeys("John");
++
++        WebElement surnameField = driver.findElement(By.id("surname"));
++        surnameField.clear();
++        surnameField.sendKeys("Doe");
++
++        WebElement genderField = driver.findElement(By.id("gender"));
++        genderField.clear();
++        genderField.sendKeys("Male");
++
++        WebElement birthdayField = driver.findElement(By.id("birthday"));
++        birthdayField.clear();
++        birthdayField.sendKeys("1990-01-01");
++
++        WebElement phoneField = driver.findElement(By.id("phone"));
++        phoneField.clear();
++        phoneField.sendKeys("+1234567890");
++
++        WebElement passwordField = driver.findElement(By.id("password"));
++        passwordField.sendKeys("newPassword");
++
++        WebElement avatarUploadField = driver.findElement(By.id("avatar_upload"));
++        avatarUploadField.sendKeys("/path/to/avatar.jpg");
++
++        WebElement backgroundUploadField = driver.findElement(By.id("background_upload"));
++        backgroundUploadField.sendKeys("/path/to/background.jpg");
++
++        // Сохранение изменений
++        WebElement saveButton = driver.findElement(By.id("save_profile"));
++        saveButton.click();
++
++        // Переход на страницу профиля
++        driver.get("http://chatty.telran-edu.de:8089/profile");
++
++        // Проверка обновленной информации профиля
++        String profileName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("profile_name"))).getText();
++        assertEquals("John Doe", profileName);
++
++        String profileGender = driver.findElement(By.id("profile_gender")).getText();
++        assertEquals("Male", profileGender);
++
++        String profileBirthday = driver.findElement(By.id("profile_birthday")).getText();
++        assertEquals("1990-01-01", profileBirthday);
++
++        String profilePhone = driver.findElement(By.id("profile_phone")).getText();
++        assertEquals("+1234567890", profilePhone);
++
++        String avatarUrl = driver.findElement(By.id("profile_avatar")).getAttribute("src");
++        assertEquals("http://chatty.telran-edu.de:8089/avatar.jpg", avatarUrl);
++
++        String backgroundUrl = driver.findElement(By.id("profile_background")).getAttribute("src");
++        assertEquals("http://chatty.telran-edu.de:8089/background.jpg", backgroundUrl);
++
++        // Выход из системы
++        logout();
++    }
++
++    private void login(String username, String password) {
++        // Открытие страницы входа
++        driver.get("http://chatty.telran-edu.de:8089/");
++
++        // Вводим имя пользователя и пароль
++        WebElement usernameField = driver.findElement(By.id("username"));
++        usernameField.sendKeys(username);
++
++        WebElement passwordField = driver.findElement(By.id("password"));
++        passwordField.sendKeys(password);
++
++        // Отправляем форму
++        passwordField.submit();
++    }
++
++    private void logout() {
++        // Нажимаем кнопку выхода
++        WebElement logoutButton = driver.findElement(By.id("logout"));
++        logoutButton.click();
++    }
++}
+ }
