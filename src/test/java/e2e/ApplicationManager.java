@@ -18,10 +18,10 @@ public class ApplicationManager {
     public WebDriver driver;
 
 
-    protected void init() {
+    protected void init(String browser) {
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setBrowserName("chrome");
+            capabilities.setBrowserName(browser);
             capabilities.setVersion("120.0");
             Map<String, Object> selenoidOptions = new HashMap<>();
             selenoidOptions.put("enableVNC", false);
@@ -37,7 +37,7 @@ public class ApplicationManager {
             }
         } else {
             WebDriverManager.chromedriver().clearResolutionCache().setup();
-            //WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
         driver.get(config.getProjectUrl());

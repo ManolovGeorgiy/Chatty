@@ -18,6 +18,9 @@ public class Config {
     public String getProjectUrl() {
         return properties.getProperty("project.url");
     }
+    public String getProjectApiUrl() {
+        return properties.getProperty("project.api.url");
+    }
 
     public String getSelenoidUrl() {
         return properties.getProperty("selenoid.url");
@@ -34,4 +37,5 @@ public class Config {
     public Integer getWindowHeight() {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
+    public String getBrowser(){return properties.getProperty("browser");}
 }

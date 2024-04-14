@@ -12,14 +12,11 @@ public class EditPostPage extends BasePage {
     public EditPostPage(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(xpath = "//*[@data-test='edit-button']")
     WebElement editPostButton;
 
     @FindBy(xpath = "//*[@data-test='delete-button']")
     WebElement deletePostButton;
-
-
     @Step("Wait for loading edit a post")
     public void waitForLoading() {
         try {
@@ -28,7 +25,6 @@ public class EditPostPage extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
-
     public void editPostButtonClick(){
         editPostButton.click();
     }

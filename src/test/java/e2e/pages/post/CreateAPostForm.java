@@ -17,7 +17,6 @@ public class CreateAPostForm extends BasePage {
         super(driver);
     }
 
-
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
 
@@ -41,7 +40,6 @@ public class CreateAPostForm extends BasePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
-
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
@@ -74,16 +72,15 @@ public class CreateAPostForm extends BasePage {
     public String getContent() {
         return contentInput.getAttribute("value");
     }
-
     public void tumblerSwitchClick() {
-        //tumblerSwitchDraft.sendKeys();
         tumblerSwitchDraft.click();
     }
     @Step("Upload image: {imagePath}")
-    public void imageLoading(String imagePath) {
+    public void imageLoading(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);
+            fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }

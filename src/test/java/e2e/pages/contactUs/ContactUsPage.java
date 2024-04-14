@@ -72,13 +72,12 @@ public class ContactUsPage extends BasePage {
     @Step("check after sending")
     public boolean isMessageSent() {
         Duration timeout = Duration.ofSeconds(1);
-        // Добавляем ожидание появления подтверждения успешной отправки сообщения
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='success-message']")));
         try {
             return driver.findElement(By.xpath("//div[@class='success-message']")).isDisplayed();
         } catch (NoSuchElementException e) {
-            return false; // Возвращаем false, если элемент не найден
+            return false;
         }
     }
 

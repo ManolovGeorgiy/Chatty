@@ -22,7 +22,7 @@ public class AdminPanelPage extends BasePage {
 
     @FindBy(xpath = "//*[@class='svg-inline--fa fa-trash ']")
     WebElement deleteAccount;
-    @Step("Wait for loading Admin panel")
+    @Step("Wait for loading adminPanel panel")
     public void waitForLoading() {
         try {
             getWait().forVisibility(searchEmailInput);
@@ -43,7 +43,7 @@ public class AdminPanelPage extends BasePage {
     public void clickEditAccount(){
         editAccount.click();
     }
-    @Step("click delete account button")
+    @Step("click deleterrr account button")
     public void clickDeleteAccount(){
         deleteAccount.click();
     }

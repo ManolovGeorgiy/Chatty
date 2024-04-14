@@ -35,8 +35,6 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//*[@class='registration-btn']")
     WebElement registrationButton;
 
-
-
     @Step("Wait for loading Login page")
     public void waitForLoading(){
         try {
