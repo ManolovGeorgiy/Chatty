@@ -23,7 +23,7 @@ public class AdminPanelTest extends TestBase {
     EditPasswordForm editPasswordForm;
 
     @Test
-    public void deleteAccount(){
+    public void deleteAccount() {
 
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
@@ -49,7 +49,7 @@ public class AdminPanelTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -59,7 +59,7 @@ public class AdminPanelTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();

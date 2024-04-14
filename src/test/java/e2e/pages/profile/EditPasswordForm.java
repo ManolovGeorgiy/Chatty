@@ -42,18 +42,21 @@ public class EditPasswordForm extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     @Step("Fill out password forms")
-    public void changePassword(String oldPassword,String newPassword,String confirmNewPassword){
+    public void changePassword(String oldPassword, String newPassword, String confirmNewPassword) {
         changePasswordButton.click();
         oldPasswordInput.sendKeys(oldPassword);
         newPasswordInput.sendKeys(newPassword);
         confirmNewPasswordInput.sendKeys(confirmNewPassword);
     }
+
     @Step("click change password button")
     public void saveChangePasswordButton() {
         saveChangeButton.click();
         getWait().forClickable(changePasswordButton);
     }
+
     public boolean isPasswordChanged() {
         return !saveChangeButton.isEnabled();
     }

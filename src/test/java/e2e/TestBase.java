@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeMethod;
 import java.util.Properties;
 
 public class TestBase {
-
     protected static ApplicationManager app = new ApplicationManager();
 
     @BeforeMethod
@@ -19,5 +18,4 @@ public class TestBase {
     public void tearDown() {
         app.stop();
     }
-
 }

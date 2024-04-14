@@ -31,6 +31,7 @@ public class ContactUsNegativeTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
+
     @Feature(value = "User can not sent a message")
     @Description(value = "User can not send feedback")
     @Severity(SeverityLevel.CRITICAL)
@@ -57,7 +58,7 @@ public class ContactUsNegativeTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text);
-        checkFeedbackData(contactUsPage,name,emailContact,text);
+        checkFeedbackData(contactUsPage, name, emailContact, text);
         contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();
         assertTrue("Invalid email format", contactUsPage.error());

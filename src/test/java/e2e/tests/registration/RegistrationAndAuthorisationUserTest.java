@@ -12,19 +12,17 @@ import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class RegistrationAndAuthorisationUserTest extends TestBase {
-
-LoginPage loginPage;
-RegistrationPage registrationPage;
-HomeBlogPage homeBlogPage;
-Header header;
+    LoginPage loginPage;
+    RegistrationPage registrationPage;
+    HomeBlogPage homeBlogPage;
+    Header header;
 
     @Epic(value = "User can registration and authorisation")
     @Feature(value = "The user has registered and logged in")
     @Description(value = "User can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("14")
     @Test(description = "CHATTY-16")
-    public void UserCanRegistration(){
+    public void UserCanRegistration() {
 
         String email = "tatar@abv.bg";
         String password = "Manowar333246";
@@ -38,7 +36,7 @@ Header header;
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -48,7 +46,7 @@ Header header;
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(email,password);
+        loginPage.login(email, password);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();

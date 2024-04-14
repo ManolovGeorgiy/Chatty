@@ -13,6 +13,7 @@ public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -54,6 +55,7 @@ public class EditAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     public void editPost(String editTitle, String editDescription, String editContent) {
         titleInput.clear();
         titleInput.sendKeys(editTitle);
@@ -62,6 +64,7 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
+
     public void imageLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -70,9 +73,11 @@ public class EditAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     public void draftTumblerSwitch() {
         //tumblerSwitch.click();
     }
+
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }

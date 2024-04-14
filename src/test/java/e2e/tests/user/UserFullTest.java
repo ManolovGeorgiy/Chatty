@@ -12,7 +12,6 @@ import e2e.pages.registration.RegistrationPage;
 import org.testng.annotations.Test;
 
 public class UserFullTest extends TestBase {
-
     LoginPage loginPage;
     RegistrationPage registrationPage;
     HomeBlogPage homeBlogPage;
@@ -57,12 +56,12 @@ public class UserFullTest extends TestBase {
         addUserDialog = new AddUserDialog(app.driver);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
 
         editPasswordForm = new EditPasswordForm(app.driver);
-        editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
+        editPasswordForm.changePassword(oldPassword, newPassword, confirmNewPassword);
         editPasswordForm.saveChangePasswordButton();
 
 
@@ -72,7 +71,6 @@ public class UserFullTest extends TestBase {
         //header.waitForLoading();
 
         loginPage = new LoginPage(app.driver);
-        loginPage.login(emailLogin,changePassword);
-
+        loginPage.login(emailLogin, changePassword);
     }
 }

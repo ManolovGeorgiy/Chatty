@@ -17,7 +17,6 @@ public class ApplicationManager {
     private final Config config = new Config();
     public WebDriver driver;
 
-
     protected void init(String browser) {
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();

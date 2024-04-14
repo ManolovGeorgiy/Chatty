@@ -23,6 +23,7 @@ public class ContactUsPositiveTest extends TestBase {
     Header header;
     HomeBlogPage homeBlogPage;
     ContactUsPage contactUsPage;
+
     private void checkFeedbackData(ContactUsPage page, String userName, String userEmail, String userContent) {
         String actualUserName = page.getUserName();
         String actualUserEmail = page.getUserEmail();
@@ -31,6 +32,7 @@ public class ContactUsPositiveTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
+
     @Feature(value = "User can sent a message")
     @Description(value = "User can send feedback")
     @Severity(SeverityLevel.CRITICAL)
@@ -58,7 +60,7 @@ public class ContactUsPositiveTest extends TestBase {
         contactUsPage.waitForLoading();
         contactUsPage.feedback(userName, emailContact, text);
         contactUsPage.waitForLoading();
-        checkFeedbackData(contactUsPage,userName,emailContact,text);
+        checkFeedbackData(contactUsPage, userName, emailContact, text);
         contactUsPage.sendMessageButtonClick();
         assertTrue("Feedback submitted successfully!", contactUsPage.isMessageSent());
         contactUsPage.waitForLoading();

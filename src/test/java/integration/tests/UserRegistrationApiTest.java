@@ -21,6 +21,6 @@ public class UserRegistrationApiTest {
         userApi = new UserApi();
 
         userApi.registration(email, password, confirmPassword, role, 201);
-        userApi.login(email,password,200);
+        userApi.login(email, password, 200);
     }
 }

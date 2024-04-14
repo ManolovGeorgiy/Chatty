@@ -11,14 +11,16 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class ChattyApiTest {
     private WebDriver driver;
+
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         System.setProperty("webdriver.chrome.driver", "путь_к_вашему_драйверу_chrome");
         driver = new ChromeDriver();
-        }
-        @AfterClass
-    public void tearDown(){
-        driver.quit();
-        }
     }
+
+    @AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
+}
 

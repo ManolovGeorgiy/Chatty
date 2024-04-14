@@ -56,19 +56,24 @@ public class EditUserForm extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     @Step("click edit button")
     public void clickEditUserForm() {
         editButton.click();
     }
+
     public String getName() {
         return nameInput.getAttribute("value");
     }
+
     public String getSurname() {
         return surnameInput.getAttribute("value");
     }
+
     public String getDate() {
         return birthDateForm.getAttribute("value");
     }
+
     public String getPhone() {
         return phoneInput.getAttribute("value");
     }
@@ -77,17 +82,19 @@ public class EditUserForm extends BasePage {
     public void imageAvatarLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);;
+            fileInput.sendKeys(imagePath);
+            ;
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     @Step("fill profile form")
     public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -99,12 +106,13 @@ public class EditUserForm extends BasePage {
         try {
             birthDateForm.clear();
             birthDateForm.sendKeys(date);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         phoneInput.clear();
         phoneInput.sendKeys(phone);
     }
+
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();

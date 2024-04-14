@@ -11,6 +11,7 @@ import java.util.Map;
 public class UserApi extends ApiBase {
 
     Response response;
+
     @Step("Registration user")
     public String registration(String email, String password, String confirmPassword, String role, int expectedStatusCode) {
         String endPoint = "/api/auth/register";
@@ -58,7 +59,8 @@ public class UserApi extends ApiBase {
         Response response = postRequest(endpoint, expectedStatusCode, body);
         return response.getBody().asString();
     }
-    public String userInfo(){
+
+    public String userInfo() {
         String endpoint = "/api/me";
         return endpoint;
     }

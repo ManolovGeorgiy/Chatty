@@ -16,8 +16,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class AddUserDataProfileTest extends TestBase {
-
-
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
@@ -65,11 +63,11 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.imageAvatarLoading(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
+        checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
 
         header = new Header(app.driver);
         header.clickHome();

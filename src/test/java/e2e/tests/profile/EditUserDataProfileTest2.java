@@ -17,7 +17,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class EditUserDataProfileTest2 extends TestBase {
-
     Faker faker = new Faker();
     LoginPage loginPage;
     Header header;

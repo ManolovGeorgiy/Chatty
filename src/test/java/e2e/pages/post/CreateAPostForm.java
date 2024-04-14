@@ -40,6 +40,7 @@ public class CreateAPostForm extends BasePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
+
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
@@ -56,6 +57,7 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("Fill form {title},{description},{content}")
     public void userCanCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
@@ -63,18 +65,23 @@ public class CreateAPostForm extends BasePage {
         contentInput.sendKeys(content);
         imageInput.click();
     }
+
     public String getTitle() {
         return titleInput.getAttribute("value");
     }
+
     public String getDescriptionText() {
         return descriptionInput.getAttribute("value");
     }
+
     public String getContent() {
         return contentInput.getAttribute("value");
     }
+
     public void tumblerSwitchClick() {
         tumblerSwitchDraft.click();
     }
+
     @Step("Upload image: {imagePath}")
     public void imageLoading(String relativeImagePath) {
         try {
@@ -85,10 +92,12 @@ public class CreateAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+
     @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();
     }
+
     @Step("check after sending")
     public boolean errorText() {
         Duration timeout = Duration.ofSeconds(10);
@@ -100,8 +109,9 @@ public class CreateAPostForm extends BasePage {
             return false;
         }
     }
+
     @Step("Screenshot {actualScreenshotName}")
-    public void takePostPageScreenshot(String actualScreenshotName){
+    public void takePostPageScreenshot(String actualScreenshotName) {
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
@@ -109,6 +119,7 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("Fill form {title},{description},{content}")
     public void userCanNotCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);

@@ -43,6 +43,5 @@ public class UserCanDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
-
     }
 }

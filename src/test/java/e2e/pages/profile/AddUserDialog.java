@@ -13,8 +13,6 @@ public class AddUserDialog extends BasePage {
         super(driver);
     }
 
-
-
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
@@ -58,13 +56,16 @@ public class AddUserDialog extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     @Step("click edit button profile")
     public void clickAddUserForm() {
         editButton.click();
     }
+
     public String getName() {
         return nameInput.getAttribute("value");
     }
+
     public String getSurname() {
         return surnameInput.getAttribute("value");
     }
@@ -81,17 +82,19 @@ public class AddUserDialog extends BasePage {
     public void imageAvatarLoading(String imagePath) {
         try {
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);;
+            fileInput.sendKeys(imagePath);
+            ;
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
     }
+
     @Step("Fill profile form {name},{surname},{date},{phone}")
     public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -106,12 +109,13 @@ public class AddUserDialog extends BasePage {
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).perform();
             birthDateForm.sendKeys(date);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
 
         phoneInput.sendKeys(phone);
     }
+
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();

@@ -22,7 +22,7 @@ public class DraftPostTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @AllureId("2")
     @Test(description = "CHATTY-47")
-    public void editDraftPost(){
+    public void editDraftPost() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
 
