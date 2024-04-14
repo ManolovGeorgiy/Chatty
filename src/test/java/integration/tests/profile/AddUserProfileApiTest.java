@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 public class AddUserProfileApiTest {
-    public class ProfileCreationTest {
+    public class ProfileCreationTest1 {
         public static void main(String[] args) {
             WebDriver driver = new ChromeDriver();
             driver.get("http://example.com");
@@ -30,6 +30,7 @@ public class AddUserProfileApiTest {
             Assert.assertTrue(profilePage.isProfileCreated());
 
             driver.quit();
+        }
 
 
             public class ProfileCreationTest {
@@ -80,4 +81,3 @@ public class AddUserProfileApiTest {
             }
         }
     }
-}
