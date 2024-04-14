@@ -102,10 +102,12 @@ public class AddUserDialog extends BasePage {
         getWait().forVisibility(option);
         option.click();
         try {
+            String[] dateParts = date.split("-");
+            birthDateForm.click();
             birthDateForm.sendKeys(Keys.CONTROL, "a");
-            birthDateForm.sendKeys(Keys.DELETE);
-            birthDateForm.sendKeys(Keys.CONTROL, "a");
-            birthDateForm.sendKeys(date);
+            birthDateForm.sendKeys(dateParts[2]); //day
+            birthDateForm.sendKeys(dateParts[1]); //month
+            birthDateForm.sendKeys(dateParts[0]); //year
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }

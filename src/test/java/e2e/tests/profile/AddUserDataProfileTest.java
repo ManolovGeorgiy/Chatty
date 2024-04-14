@@ -36,6 +36,7 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
+
     @Epic(value = "User can add data to the profile")
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
@@ -68,7 +69,7 @@ public class AddUserDataProfileTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -78,7 +79,7 @@ public class AddUserDataProfileTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(email,password);
+        loginPage.login(email, password);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -90,11 +91,11 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.imageAvatarLoading(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
+        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
+        checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
 
         header = new Header(app.driver);
         header.clickHome();
@@ -107,7 +108,7 @@ public class AddUserDataProfileTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
