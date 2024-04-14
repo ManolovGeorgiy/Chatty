@@ -62,13 +62,13 @@ public class UserCanCreateANewPost extends TestBase {
     }
 
     @Test(description = "User can create a post")
-    public void userCanCreateAPost() {
-        String email = "tatar@abv.bg";
+    public void userCanCreateNewPost() {
+        String email = "usercreatepost@abv.bg";
         String password = "Manowar33246";
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources";
+        String folderPath = "/var/jenkins_home/workspace/Chatty/GPower/src/test/java/resources/5204092180870848359_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -82,11 +82,11 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.createAPost(title, description, content,folderPath);
 
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {
-            createAPostForm.imageLoading(randomImagePath);
+            createAPostForm.uploadImage(randomImagePath);
             createAPostForm.waitForLoading();
         } else {
             System.err.println("Failed to select an image to publish.");
@@ -95,5 +95,7 @@ public class UserCanCreateANewPost extends TestBase {
         checkPostData(createAPostForm, title, description, content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
+
+
     }
 }

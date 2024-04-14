@@ -43,19 +43,19 @@ public class ApiBase {
     }
 
 
+    protected Response getRequest(String endpoint, int code) {
+        Response response = RestAssured.given()
+                .spec(spec)
+                .when()
+                .log().all()
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
+        return response;
+    }
 
-    protected Response getRequest(String endpoint, int code){
-        Response response = RestAssured.given()
-                .spec(spec)
-                .when()
-                .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
-        response.then().assertThat().statusCode(code);
-        return response;
-    }
-    protected Response getRequestWhitParam(String endpoint,int code,String paramName,String id){
+    protected Response getRequestWhitParam(String endpoint, int code, String paramName, int paramValue) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
@@ -67,11 +67,12 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response getRequestWhitParamString(String endpoint,int code,String paramName,String id){
+
+    protected Response getRequestWhitParamString(String endpoint, int code, String paramName, String paramValue) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
-                .pathParam(paramName,id)
+                .pathParam(paramName,paramValue)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -79,7 +80,8 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response postRequest(String endpoint,int code,Object body){
+
+    protected Response postRequest(String endpoint, int code, Object body) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -91,7 +93,9 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response putRequest(String endpoint, int code, Object body,String paramName,String id){
+
+
+    protected Response putRequest(String endpoint, int code, Object body) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
@@ -104,19 +108,20 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response deleteRequest(String endpoint,int code,String id){
+
+    protected Response deleteRequest(String endpoint, int code) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
                 .pathParam("id",id)
                 .log().all()
-
                 .delete(endpoint)
                 .then().log().all()
                 .extract().response();
         response.then().assertThat().statusCode(code);
         return response;
     }
+
     public Response uploadImageRequest(String endpoint, File imageFile, int code) {
         Response response = RestAssured.given()
                 .spec(spec)

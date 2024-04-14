@@ -61,6 +61,7 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
+    @Step("Upload image: {imagePath}")
     public void imageLoading(String relativeImagePath) {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;

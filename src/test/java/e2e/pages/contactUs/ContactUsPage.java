@@ -29,7 +29,6 @@ public class ContactUsPage extends BasePage {
     public String getUserName() {
         return nameUserInput.getAttribute("value");
     }
-
     public String getUserEmail() {
         return emailUserInput.getAttribute("value");
     }
@@ -37,11 +36,9 @@ public class ContactUsPage extends BasePage {
     public String getUserContent() {
         return contentUserInput.getAttribute("value");
     }
-
     public String getNewContent() {
         return contentUserInput.getAttribute("value");
     }
-
     @Step("Wait for loading Contact Us")
     public void waitForLoading() {
         try {
@@ -55,7 +52,7 @@ public class ContactUsPage extends BasePage {
     }
 
     @Step("Screenshot {actualScreenshotName}")
-    public void takeFeedbackFormPageScreenshot(String actualScreenshotName) {
+    public void takeFeedbackFormPageScreenshot(String actualScreenshotName){
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
@@ -63,18 +60,15 @@ public class ContactUsPage extends BasePage {
             e.printStackTrace();
         }
     }
-
-    @Step("Fill out the feedback form {name},{emailContact},{text}")
-    public void feedback(String name, String emailContact, String text) {
+    @Step("Fill out the setFeedbackForm form {name},{emailContact},{text}")
+    public void setFeedbackForm(String name, String emailContact, String text) {
         nameUserInput.sendKeys(name);
         emailUserInput.sendKeys(emailContact);
         contentUserInput.sendKeys(text);
     }
-
-    public void sendMessageButtonClick() {
+    public void sendMessageButtonClick(){
         sendMessageButton.click();
     }
-
     @Step("check after sending")
     public boolean isMessageSent() {
         Duration timeout = Duration.ofSeconds(1);
@@ -86,7 +80,8 @@ public class ContactUsPage extends BasePage {
             return false;
         }
     }
-    public boolean error() {
+
+    public boolean isErrorDisplayed() {
         Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));

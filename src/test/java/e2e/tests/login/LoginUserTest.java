@@ -1,5 +1,6 @@
 package e2e.tests.login;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.login.LoginPage;
 import e2e.utils.DataProviders;
@@ -10,6 +11,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class LoginUserTest extends TestBase {
 
+    Faker faker = new Faker();
     LoginPage loginPage;
 
     @Feature(value = "User has been logged in")
@@ -17,7 +19,7 @@ public class LoginUserTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-3")
     public void userCanLogin() {
-        String email = "tatar@abv.bg";
+        String email = faker.internet().emailAddress();
         String password = "Manowar333246";
 
         loginPage = new LoginPage(app.driver);

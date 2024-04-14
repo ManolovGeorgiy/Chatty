@@ -10,10 +10,8 @@ public class AdminDeleteUserTest extends TestBase {
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
-
     @Test
-    public void deleteAccount() {
-        //TODO:need create new user
+    public void deleteAccount(){
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 

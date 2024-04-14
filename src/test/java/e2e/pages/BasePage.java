@@ -28,24 +28,6 @@ public class BasePage {
         return new Wait(driver);
     }
 
-    public Select getSelect(WebElement element){
-        return new Select(element);
-    }
-
-    protected boolean isElementDisplayed(WebElement element) {
-        try {
-            return element.isDisplayed();
-        }catch (NoSuchElementException e){
-            return false;
-        }
-    }
-
-    protected void setInput(WebElement input,String value){
-        input.click();
-        input.clear();
-        input.sendKeys(value);
-    }
-
     private File takeScreenshot(WebElement element){
         File tmp;
         if (element == null){
