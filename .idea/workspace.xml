@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added e2e Test">
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="edited e2e and api">
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/login/LoginApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserAuthLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserAuthLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/login/LoginApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/myTests/RegistrationApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +119,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsNegativeTest.userCanNotSendMessage">
+  <component name="RunManager" selected="TestNG.UserCanCreateEditAndDeletePost.userCanCreatePost">
     <configuration name="ContactUsNegativeTest.userCanNotSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -134,35 +138,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactUsPositiveTest.userCanSendMessage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginApiTest.adminCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.contactUs.*" />
+          <option name="PATTERN" value="integration.pages.login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.contactUs" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.contactUs.ContactUsPositiveTest" />
-      <option name="METHOD_NAME" value="userCanSendMessage" />
+      <option name="PACKAGE_NAME" value="integration.pages.login" />
+      <option name="MAIN_CLASS_NAME" value="integration.pages.login.LoginApiTest" />
+      <option name="METHOD_NAME" value="adminCanLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.myTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.myTests" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.myTests.RegistrationApiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -180,6 +167,24 @@
       <option name="PACKAGE_NAME" value="e2e.tests.post" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateEditAndDeletePost" />
       <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCanCreateEditAndDeletePost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.myTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.myTests" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.myTests.UserCanCreateEditAndDeletePost" />
+      <option name="METHOD_NAME" value="userCanCreatePost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -207,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreatePost" />
+        <item itemvalue="TestNG.LoginApiTest.adminCanLogin" />
         <item itemvalue="TestNG.ContactUsNegativeTest.userCanNotSendMessage" />
         <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
-        <item itemvalue="TestNG.RegistrationApiTest" />
-        <item itemvalue="TestNG.ContactUsPositiveTest.userCanSendMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -546,7 +551,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713077489521</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713089261863</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713089261863</updated>
+    </task>
+    <task id="LOCAL-00043" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713089338884</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713089338884</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -571,7 +592,8 @@
     <MESSAGE value="Fixed tests related to user profile" />
     <MESSAGE value="Added headless state and updated method addProfileForm" />
     <MESSAGE value="Added e2e Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added e2e Test" />
+    <MESSAGE value="edited e2e and api" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited e2e and api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -872,12 +894,12 @@
           <option name="timeStamp" value="242" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/myTests/RegistrationApiTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApiTest.java</url>
           <line>20</line>
           <option name="timeStamp" value="257" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/myTests/RegistrationApiTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/integration/pages/registration/RegistrationApiTest.java</url>
           <line>10</line>
           <option name="timeStamp" value="258" />
         </line-breakpoint>
@@ -957,6 +979,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsNegativeTest.java</url>
+          <line>44</line>
+          <properties class="e2e.tests.contactUs.ContactUsNegativeTest" method="userCanNotSendMessage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="262" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

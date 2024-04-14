@@ -3,9 +3,9 @@
 <suite name="testApi" verbose="1">
     <test name="ApiTest">
         <classes>
-            <class name="integration.tests.myTests.LoginApiTest">
+            <class name="integration.pages.login.LoginApiTest">
             </class>
-            <class name="integration.tests.myTests.RegistrationApiTest">
+            <class name="integration.pages.registration.RegistrationApiTest">
             </class>
             <class name="integration.tests.myTests.UserCanCreateEditAndDeletePost">
             </class>

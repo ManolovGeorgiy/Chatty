@@ -1,4 +1,4 @@
-package integration.tests.myTests;
+package integration.pages.login;
 
 
 import integration.pages.user.GetUser;
@@ -15,10 +15,9 @@ public class LoginApiTest {
     UserApi userApi;
     GetUser getUser;
 
-    @Feature(value = "admin logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can login")
+    @Test(description = "Admin can login with valid data")
     public void adminCanLogin() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
@@ -31,10 +30,9 @@ public class LoginApiTest {
         System.out.println(userId);
     }
 
-    @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can login wit invalid password")
+    @Test(description = "Admin can login with invalid password")
     public void adminCannotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
         String password = "GPower3334";
@@ -43,10 +41,9 @@ public class LoginApiTest {
         getUser = new GetUser(token);
     }
 
-    @Feature(value = "admin can not login")
     @Description(value = "admin can not login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can login wit invalid email")
+    @Test(description = "Admin can login with invalid email")
     public void adminCannotLoginWithInvalidEmail() {
         String email = "g.powerr@gmail.com";
         String password = "GPower3333";
@@ -54,7 +51,6 @@ public class LoginApiTest {
         String token = userApi.login(email, password, 404);
         getUser = new GetUser(token);
     }
-
 
     @Feature(value = "admin is not logged in")
     @Description(value = "admin can not login")
