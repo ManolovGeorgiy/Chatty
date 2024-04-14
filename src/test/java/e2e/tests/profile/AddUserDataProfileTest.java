@@ -11,7 +11,6 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.profile.AddUserDialog;
 import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
@@ -40,7 +39,7 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
 
-    @Feature(value = "User added data to the profile")
+
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "user can add data to profile")
