@@ -1,7 +1,6 @@
 package e2e.tests.post;
 
 import com.github.javafaker.Faker;
-
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
@@ -24,6 +23,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
     Header header;
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
+
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
         String actualDescription = page.getDescriptionText();
@@ -32,6 +32,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
     }
+
     private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
         String actualTitle = page.getEditTitle();
         String actualDescription = page.getEditDescriptionText();
@@ -40,6 +41,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
         Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
+
     @Test
     public void adminCanCreateAPost() throws InterruptedException {
         String email = "g.power@gmail.com";
@@ -65,12 +67,12 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         header.clickHome();
         header.createAPostClick();
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.setPostForm(title, description, content,imagePath);
+        createAPostForm.setPostForm(title, description, content, imagePath);
         createAPostForm.waitForLoading();
         createAPostForm.uploadImage(imagePath);
         createAPostForm.waitForLoading();
 
-        checkPostData(createAPostForm, title,description,content);
+        checkPostData(createAPostForm, title, description, content);
         createAPostForm.clickSubmitButton();
         createAPostForm.waitForLoading();
         Thread.sleep(3000);
@@ -88,8 +90,8 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
         createAPostForm.uploadImage(editImagePath);
-        editAPostForm.editPost(editTitle,editDescription,editContent);
-        checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
+        editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
+        checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();
 
         editPostPage = new EditPostPage(app.driver);

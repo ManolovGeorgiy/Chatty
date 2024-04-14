@@ -5,7 +5,6 @@ import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
-import e2e.pages.post.CreateAPostForm;
 import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
 import io.qameta.allure.*;
@@ -20,6 +19,7 @@ public class UserCanEditPostTest extends TestBase {
     Header header;
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
+
     private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
         String actualTitle = page.getEditTitle();
         String actualDescription = page.getEditDescriptionText();
@@ -28,6 +28,7 @@ public class UserCanEditPostTest extends TestBase {
         Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
         Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
+
     @Epic(value = "User can edit post")
     @Feature(value = "User edited post")
     @Description(value = "User can edit post")
@@ -35,9 +36,8 @@ public class UserCanEditPostTest extends TestBase {
     @Test(description = "User can edit existing post")
     public void userCanEditAPost() {
 
-        String email = faker.internet().emailAddress();
+        String email = "user.can.edit.post@abv.bg";
         String password = "RedBull1234";
-        String confirmPassword = "RedBull1234";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
@@ -64,8 +64,8 @@ public class UserCanEditPostTest extends TestBase {
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
         editAPostForm.imageLoading(imagePath);
-        editAPostForm.editPost(editTitle,editDescription,editContent);
-        checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
+        editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
+        checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();
 
         editPostPage = new EditPostPage(app.driver);

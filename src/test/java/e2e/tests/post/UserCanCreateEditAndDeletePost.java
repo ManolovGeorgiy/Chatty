@@ -8,13 +8,13 @@ import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
-import java.util.Locale;
-
 import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
 import e2e.pages.registration.RegistrationPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Locale;
 
 public class UserCanCreateEditAndDeletePost extends TestBase {
 
@@ -28,6 +28,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
     AdminPanelPage adminPanelPage;
+
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
         String actualDescription = page.getDescriptionText();
@@ -36,6 +37,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
     }
+
     private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
         String actualTitle = page.getEditTitle();
         String actualDescription = page.getEditDescriptionText();
@@ -44,6 +46,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
         Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
+
     @Test(description = "User can create a post")
     public void userCanCreateAPost() throws InterruptedException {
         String email = "user.create.post@gmail.com";
@@ -72,7 +75,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -82,7 +85,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.setPostForm(title, description, content,imagePath);
+        createAPostForm.setPostForm(title, description, content, imagePath);
         createAPostForm.uploadImage(imagePath);
         createAPostForm.waitForLoading();
 
@@ -107,8 +110,8 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
         editAPostForm.imageLoading(editImagePath);
-        editAPostForm.editPost(editTitle,editDescription,editContent);
-        checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
+        editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
+        checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();
 
         Assert.assertTrue(editAPostForm.editIsPostDisplayed(title), "Post with title: " + title + " is not displayed.");
@@ -128,7 +131,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
