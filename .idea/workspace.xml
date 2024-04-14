@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="">
+    <list default="true" id="8e9c6032-12b0-44a2-a3a1-ed3bb237ed27" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,13 +17,39 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="dev_Manolov" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -36,18 +62,29 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ACER/IdeaProjects/Chatty/src/test/resources&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ACER\IdeaProjects\Chatty\src\test\resources" />
+      <recent name="C:\Users\PC\Chatty\src\test\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\Users\PC\Chatty\reference" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="e2e.tests.profile" />
+      <recent name="e2e.tests.user" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.UserCanCreateANewPost.userCanCreateAPost">
@@ -156,7 +193,398 @@
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
     </task>
+    <task id="LOCAL-00001" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711370136449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711370136449</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711385939570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711385939570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711386153761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711386153761</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711528350961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711528350961</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711535105707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711535105707</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711551832253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711551832253</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711556229247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711556229247</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711562947418</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711562947418</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712467526206</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712467526206</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712479153697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712479153697</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712480907976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712480907976</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712483963242</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712483963242</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712486300060</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486300060</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712486335209</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486335209</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712486510758</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486510758</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712503317452</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712503317453</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712503708401</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712503708401</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712511425023</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712511425023</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712511475487</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712511475487</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712511868220</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712511868220</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712512528397</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712512528397</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added e2e Test">
+      <created>1712513586417</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712513586417</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added Api Test">
+      <created>1712519297892</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712519297892</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added Api Test">
+      <created>1712519993588</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712519993588</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added Api Test">
+      <created>1712521379227</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712521379227</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added Api Test">
+      <created>1712769623602</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712769623602</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added ContactUsApiTest">
+      <created>1712986830444</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712986830444</updated>
+    </task>
+    <task id="LOCAL-00028" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713098246527</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713098246527</updated>
+    </task>
+    <task id="LOCAL-00029" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713102022651</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713102022651</updated>
+    </task>
+    <task id="LOCAL-00030" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713102232426</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713102232426</updated>
+    </task>
+    <task id="LOCAL-00031" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713102477720</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1713102477720</updated>
+    </task>
+    <task id="LOCAL-00032" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104384173</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104384173</updated>
+    </task>
+    <task id="LOCAL-00033" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104412860</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104412860</updated>
+    </task>
+    <task id="LOCAL-00034" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104531806</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104531806</updated>
+    </task>
+    <task id="LOCAL-00035" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713104895279</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1713104895279</updated>
+    </task>
+    <task id="LOCAL-00036" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105134337</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105134337</updated>
+    </task>
+    <task id="LOCAL-00037" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105292341</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105292341</updated>
+    </task>
+    <task id="LOCAL-00038" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105315471</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105315471</updated>
+    </task>
+    <task id="LOCAL-00039" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105450559</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105450559</updated>
+    </task>
+    <task id="LOCAL-00040" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105577425</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105577425</updated>
+    </task>
+    <task id="LOCAL-00041" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105694567</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105694567</updated>
+    </task>
+    <task id="LOCAL-00042" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713105926970</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713105926970</updated>
+    </task>
+    <task id="LOCAL-00043" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713106863354</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713106863354</updated>
+    </task>
+    <task id="LOCAL-00044" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713107262658</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1713107262658</updated>
+    </task>
+    <task id="LOCAL-00045" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713107694858</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1713107694858</updated>
+    </task>
+    <task id="LOCAL-00046" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713110545486</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1713110545486</updated>
+    </task>
+    <task id="LOCAL-00047" summary="edited e2e and api">
+      <option name="closed" value="true" />
+      <created>1713111212625</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1713111212625</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Registration,Login,Post,Contact Us" />
+    <MESSAGE value="Added e2e Test" />
+    <MESSAGE value="Added Api Test" />
+    <MESSAGE value="Added ContactUsApiTest" />
+    <MESSAGE value="Assert na ContactUsPage" />
+    <MESSAGE value="edited e2e and api" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited e2e and api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -512,7 +940,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java</url>
           <line>44</line>
-          <properties class="e2e.tests.profile.EditUserDataProfileTest" method="userCanEditProfile">
+          <properties class="e2e.tests.profile.EditUserDataProfileTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

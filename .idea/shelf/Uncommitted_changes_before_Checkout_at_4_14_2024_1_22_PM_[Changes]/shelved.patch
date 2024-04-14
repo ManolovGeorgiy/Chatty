@@ -1,0 +1,98 @@
+Index: src/test/java/integration/pages/profile/ProfileApi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package integration.pages.profile;\r\n\r\nimport integration.ApiBase;\r\n\r\npublic class ProfileApi extends ApiBase {\r\n\r\n    public class Profile {\r\n\r\n\r\n        public String avatarUrl;\r\n        public String name;\r\n        public String surname;\r\n        public String birthDate;\r\n        public String phone;\r\n        public String gender;\r\n        public String backgroundUrl;\r\n        public boolean blocked;\r\n\r\n        public Profile createProfile() {\r\n            Profile profile = new Profile();\r\n            profile.avatarUrl = \"https://example.com/avatar.jpg\";\r\n            profile.name = \"John\";\r\n            profile.surname = \"Doe\";\r\n            profile.birthDate = \"1990-01-01\";\r\n            profile.phone = \"+1234567890\";\r\n            profile.gender = \"Male\";\r\n            //profile.backgroundUrl = \"https://example.com/background.jpg\";\r\n            profile.blocked = false;\r\n\r\n            return profile;\r\n        }\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/integration/pages/profile/ProfileApi.java b/src/test/java/integration/pages/profile/ProfileApi.java
+--- a/src/test/java/integration/pages/profile/ProfileApi.java	
++++ b/src/test/java/integration/pages/profile/ProfileApi.java	
+@@ -1,34 +1,67 @@
+ package integration.pages.profile;
+ 
++
++import com.github.javafaker.Faker;
+ import integration.ApiBase;
++import integration.schemas.UserUpdateReq;
++import org.openqa.selenium.devtools.v117.network.model.Response;
+ 
+ public class ProfileApi extends ApiBase {
+ 
+-    public class Profile {
++
++        public void CreateProfile(String token) {
++            super(token);
++        }
++
++        Response response;
++        Faker faker = new Faker();
++        UserUpdateReq userUpdateReq;
+ 
++        String name= "er";
++        String surname = "er";
++        String birthDate = "";
++        String phone = "";
++        String gender = "";
++        String backgroundUrl = "";
++        String blocked = "";
+ 
+-        public String avatarUrl;
+-        public String name;
+-        public String surname;
+-        public String birthDate;
+-        public String phone;
+-        public String gender;
+-        public String backgroundUrl;
+-        public boolean blocked;
+ 
+-        public Profile createProfile() {
+-            Profile profile = new Profile();
+-            profile.avatarUrl = "https://example.com/avatar.jpg";
+-            profile.name = "John";
+-            profile.surname = "Doe";
+-            profile.birthDate = "1990-01-01";
+-            profile.phone = "+1234567890";
+-            profile.gender = "Male";
+-            //profile.backgroundUrl = "https://example.com/background.jpg";
+-            profile.blocked = false;
+ 
+-            return profile;
++        public UserUpdateReq createUserProfileForm (String userUpdateReq){
++            this.userUpdateReq = new UserUpdateReq();
++            this.userUpdateReq.setName(name);
++            this.userUpdateReq.setSurname(surname);
++            this.userUpdateReq.setBirthDate(birthDate);
++            this.userUpdateReq.setPhone(phone);
++            this.userUpdateReq.setGender(gender);
++            this.userUpdateReq.getBackgroundUrl(backgroundUrl);
++            this.userUpdateReq.setBlocked(blocked);
++
++            return this.postCreateReq;
+         }
+-
+-    }
++        public Response createAPostRoleUser(int code,String postCreateReq) {
++            String endpoint = "/api/posts";
++            Object body = createUserPostForm(postCreateReq);
++            response = postRequest(endpoint, code, body);
++            return response;
++        }
++        @Step("Create post")
++        public String createPost(int code,PostCreateReq postCreateReg) throws JsonProcessingException {
++            String endpoint = "/api/posts";
++            ObjectMapper objectMapper = new ObjectMapper();
++            String jsonRequestBody = objectMapper.writeValueAsString(postCreateReg);
++            response = postRequest(endpoint,code,jsonRequestBody);
++            switch (response.getStatusCode()) {
++                case 201:
++                    return  response.asString();
++                case 400:
++                    return "Bad Request: " + response.jsonPath().getString("message");
++                case 401:
++                    return "Unauthorized: " + response.jsonPath().getString("message");
++                case 404:
++                    return "Not Found: " + response.jsonPath().getString("message");
++                default:
++                    return "Unexpected status code: " + response.getStatusCode() + ". Response: " + response.asString();
++            }
++        }
+ }
