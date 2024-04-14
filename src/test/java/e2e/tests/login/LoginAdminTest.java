@@ -11,9 +11,6 @@ import static org.testng.AssertJUnit.assertTrue;
 public class LoginAdminTest extends TestBase {
 
     LoginPage loginPage;
-
-    @Epic(value = "adminPanel can login with valid Email and Password")
-    @Feature(value = "admin has been logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-47")
@@ -24,8 +21,6 @@ public class LoginAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
-
-    @Epic(value = "adminPanel can't login with invalid email")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
@@ -38,8 +33,6 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());
     }
-
-    @Epic(value = "adminPanel can't login with invalid password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
@@ -51,7 +44,6 @@ public class LoginAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
-
     @Epic(value = "adminPanel can't login without a email and password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
@@ -65,7 +57,6 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         loginPage.takeLoginPageScreenshot("adminCanNotLoginWithoutAEmailAndPassword");
     }
-
     @Epic(value = "adminPanel can't login with invalid email and password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
@@ -79,13 +70,12 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());
     }
-
     @Epic(value = "adminPanel can' login with invalid data")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "All negative Test", dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
-    public void adminCanNotLoginWithInvalidData(String email, String password, String caseName) {
+    @Test(description = "All negative Test",dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
+    public void adminCanNotLoginWithInvalidData(String email, String password,String caseName) {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
         loginPage.waitForLoading();

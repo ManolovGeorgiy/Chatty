@@ -1,5 +1,6 @@
 package e2e.tests.registration;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 
 import e2e.enums.SideBarInfo;
@@ -12,19 +13,21 @@ import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 public class RegistrationAndAuthorisationUserTest extends TestBase {
-    LoginPage loginPage;
-    RegistrationPage registrationPage;
-    HomeBlogPage homeBlogPage;
-    Header header;
+
+    Faker faker = new Faker();
+LoginPage loginPage;
+RegistrationPage registrationPage;
+HomeBlogPage homeBlogPage;
+Header header;
 
     @Epic(value = "User can registration and authorisation")
     @Feature(value = "The user has registered and logged in")
     @Description(value = "User can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "CHATTY-16")
-    public void UserCanRegistration() {
+    @Test(description = "User can registration")
+    public void userCanRegistration(){
 
-        String email = "tatar@abv.bg";
+        String email = faker.internet().emailAddress();
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 
@@ -36,7 +39,7 @@ public class RegistrationAndAuthorisationUserTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email, password, confirmPassword);
+        registrationPage.registration(email,password,confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -46,7 +49,7 @@ public class RegistrationAndAuthorisationUserTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(email, password);
+        loginPage.login(email,password);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();

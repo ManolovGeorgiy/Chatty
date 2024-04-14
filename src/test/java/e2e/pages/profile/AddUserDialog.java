@@ -4,7 +4,6 @@ import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -12,6 +11,7 @@ public class AddUserDialog extends BasePage {
     public AddUserDialog(WebDriver driver) {
         super(driver);
     }
+
 
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
@@ -63,14 +63,17 @@ public class AddUserDialog extends BasePage {
     }
 
     public String getName() {
+        getWait().forAttributeNotEmpty(nameInput);
         return nameInput.getAttribute("value");
     }
 
     public String getSurname() {
+        getWait().forAttributeNotEmpty(surnameInput);
         return surnameInput.getAttribute("value");
     }
 
     public String getDate() {
+        getWait().forAttributeNotEmpty(birthDateForm);
         return birthDateForm.getAttribute("value");
     }
 
@@ -78,14 +81,14 @@ public class AddUserDialog extends BasePage {
         return phoneInput.getAttribute("value");
     }
 
-    @Step("upload avatar image {imagePath}")
-    public void imageAvatarLoading(String imagePath) {
+    @Step("Upload image: {imagePath}")
+    public void imageAvatarLoading(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(imagePath);
-            ;
-        } catch (StaleElementReferenceException e) {
-            e.printStackTrace();
+            fileInput.sendKeys(absoluteImagePath);
+        } catch (Exception e) {
+            Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
 
@@ -94,7 +97,7 @@ public class AddUserDialog extends BasePage {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e) {
+        } catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -109,13 +112,12 @@ public class AddUserDialog extends BasePage {
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).perform();
             birthDateForm.sendKeys(date);
-        } catch (StaleElementReferenceException e) {
+        } catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
 
         phoneInput.sendKeys(phone);
     }
-
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();

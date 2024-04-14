@@ -32,6 +32,10 @@ public class Config {
         return Boolean.parseBoolean(properties.getProperty("selenoid.state"));
     }
 
+    public Boolean getHeadless() {
+        return Boolean.parseBoolean(properties.getProperty("headless.state"));
+    }
+
     public Integer getWindowWight() {
         return Integer.parseInt(properties.getProperty("window.width"));
     }

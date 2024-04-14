@@ -19,7 +19,6 @@ public class UserCanDeletePostTest extends TestBase {
     @Feature(value = "User deleted post")
     @Description(value = "User can delete post")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("17")
     @Test(description = "CHATTY-8")
     public void userCanDeletePost() {
 

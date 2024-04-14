@@ -1,13 +1,15 @@
-package e2e.tests.profile;
+package e2e.tests.user;
 
 
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
+import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.profile.AddUserDialog;
+import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,6 +18,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class AddUserDataProfileTest extends TestBase {
+
+    RegistrationPage registrationPage;
     LoginPage loginPage;
     Header header;
     HomeBlogPage homeBlogPage;
@@ -31,10 +35,11 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualDate, date, actualDate + " is not equal " + date);
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
-
+    @Epic(value = "User can add data to the profile")
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
+    @AllureId("")
     @Test(description = "CHATTY-29")
     public void userCanAddDataProfile() {
 
@@ -63,11 +68,11 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.imageAvatarLoading(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
         addUserDialog.waitForLoading();
         addUserDialog.saveButtonClick();
         addUserDialog.waitForLoading();
-        checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
+        checkUserData(addUserDialog,name,surname,birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")),phone);
 
         header = new Header(app.driver);
         header.clickHome();

@@ -86,7 +86,6 @@ public class ContactUsPage extends BasePage {
             return false;
         }
     }
-
     public boolean error() {
         Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);

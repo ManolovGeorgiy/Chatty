@@ -20,7 +20,6 @@ public class DraftPostTest extends TestBase {
     @Feature(value = "admin has been logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("2")
     @Test(description = "CHATTY-47")
     public void editDraftPost() {
         String email = "g.power@gmail.com";
