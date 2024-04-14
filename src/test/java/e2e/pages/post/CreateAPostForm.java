@@ -123,7 +123,6 @@ public class CreateAPostForm extends BasePage {
     public boolean isPostDisplayed(String postTitle) {
         try {
             Duration timeout = Duration.ofSeconds(1);
-            // Используйте метод findElement для поиска элемента, содержащего заголовок поста
             WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
             // Если элемент найден, возвращаем true
             return postElement.isDisplayed();

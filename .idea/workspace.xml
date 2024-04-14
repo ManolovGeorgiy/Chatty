@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel">
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/deleteuser/DeleteUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/edituser/EditUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/util/UserInfoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/admin/AdminCanCreateEditAndDeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/admin/AdminCanCreateEditAndDeleteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/ContactUsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/EditUserDataProfileTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/tests/Georgiy/UserCanEditPostTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +43,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chatty" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chatty" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chatty" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -65,19 +98,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/PC/Chatty",
+    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
@@ -94,71 +127,76 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeleteUser.adminCanEditUser">
-    <configuration name="AdminCanCreateEditAndDeleteUser.adminCanCreateUser" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DeleteUser.userCanLogin">
+    <configuration name="Chatty [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Chatty [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="DeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.admin.*" />
+          <option name="PATTERN" value="integration.tests.deleteuser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.admin" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.admin.AdminCanCreateEditAndDeleteUser" />
-      <option name="METHOD_NAME" value="adminCanCreateUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="integration.tests.deleteuser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.deleteuser.DeleteUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminCanCreateEditAndDeleteUser.adminCanEditUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DeleteUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.admin.*" />
+          <option name="PATTERN" value="integration.tests.deleteuser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.admin" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.admin.AdminCanCreateEditAndDeleteUser" />
-      <option name="METHOD_NAME" value="adminCanEditUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginApiTest.adminCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.login.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
-      <option name="METHOD_NAME" value="adminCanLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginApiTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.login.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
+      <option name="PACKAGE_NAME" value="integration.tests.deleteuser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.deleteuser.DeleteUser" />
       <option name="METHOD_NAME" value="userCanLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -167,17 +205,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginApiTest.userCanNotLoginWitInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EditUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.login.*" />
+          <option name="PATTERN" value="integration.tests.edituser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
-      <option name="METHOD_NAME" value="userCanNotLoginWitInvalidEmail" />
+      <option name="PACKAGE_NAME" value="integration.tests.edituser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.edituser.EditUser" />
+      <option name="METHOD_NAME" value="userCanLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -187,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminCanCreateEditAndDeleteUser.adminCanEditUser" />
-        <item itemvalue="TestNG.AdminCanCreateEditAndDeleteUser.adminCanCreateUser" />
-        <item itemvalue="TestNG.LoginApiTest.adminCanLogin" />
-        <item itemvalue="TestNG.LoginApiTest.userCanLogin" />
-        <item itemvalue="TestNG.LoginApiTest.userCanNotLoginWitInvalidEmail" />
+        <item itemvalue="TestNG.DeleteUser.userCanLogin" />
+        <item itemvalue="TestNG.EditUser.userCanLogin" />
+        <item itemvalue="TestNG.DeleteUser" />
+        <item itemvalue="Gradle.Chatty [build]" />
+        <item itemvalue="Gradle.Chatty [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -203,14 +241,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1711551832253</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1711551832253</updated>
     </task>
     <task id="LOCAL-00007" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -592,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713110554150</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="AdminPanel">
+      <created>1713112779559</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1713112779559</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -910,6 +947,11 @@
           <line>106</line>
           <option name="timeStamp" value="228" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/deleteuser/DeleteUser.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
           <line>19</line>
@@ -931,7 +973,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java</url>
           <line>26</line>
-          <properties class="e2e.tests.registration.RegistrationAndAuthorisationUserTest" method="userCanRegistration">
+          <properties class="e2e.tests.registration.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -967,7 +1009,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java</url>
           <line>44</line>
-          <properties class="e2e.tests.profile.EditUserDataProfileTest">
+          <properties class="e2e.tests.profile.EditUserDataProfileTest" method="userCanEditProfile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
