@@ -9,7 +9,7 @@
             </class>
             <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
             </class>
-            <class name="e2e.tests.profile.EditUserDataProfileTest">
+            <class name="e2e.tests.profile.AddUserDataProfileTest">
             </class>
             <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
