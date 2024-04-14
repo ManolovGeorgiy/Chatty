@@ -16,10 +16,7 @@ import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-public class AddUserDataProfileTest extends TestBase {
+public class AddUserDataProfileTestLocale extends TestBase {
 
     RegistrationPage registrationPage;
     LoginPage loginPage;
@@ -52,8 +49,6 @@ public class AddUserDataProfileTest extends TestBase {
         String name = "Georg";
         String surname = "Man";
         String date = "1984-08-01";
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-//        LocalDate birthDate = LocalDate.parse(date, formatter);
         String phone = "+4915777777";
         String imageAvatar = "uploadReferences/userCanAddDate_Avatra.jpg";
 
@@ -92,7 +87,7 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.uploadImageAvatar(imageAvatar);
         addUserDialog.clickAddUserFormButton();
         addUserDialog.waitForLoading();
-        addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.fillProfileFormLocal(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
