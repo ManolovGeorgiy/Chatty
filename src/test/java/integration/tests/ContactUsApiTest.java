@@ -6,7 +6,6 @@ import integration.pages.user.UserApi;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.baseURI;
@@ -14,29 +13,22 @@ import static io.restassured.RestAssured.baseURI;
 public class ContactUsApiTest extends ApiBase {
     UserApi userApi;
 
-    public static String generateRandomString(int length) {
-        return RandomStringUtils.randomAlphanumeric(length);
-    }
-    //private String email = generateRandomString(10) + "@gmail.com";
-    private String password = "Qer123w999";
-    private String role = "user";
-
     @Test
     public void testNewUserRegistration() {
-        // email = generateRandomString(10) + "@gmail.com";
-        //String email = faker.internet().emailAddress();
         String email = "string12324@gmail.com";
-        //String password = "Qer123w999";
-        //String confirmPassword = "Qer123w999";
+        String password = "Qer123w999";
+        String confirmPassword = "Qer123w999";
+        String role = "user";
+
         userApi = new UserApi();
-        userApi.registration(email, password, password, role, 201);
+        userApi.registration(email, password, confirmPassword, role, 201);
         userApi.login(email, password, 200);
     }
 
     @Test(dependsOnMethods = "testNewUserRegistration")
     public void testUserLogin() {
-        //String email = "string12324@gmail.com";
-        //String password = "Qer123w999";
+        String email = "string12324@gmail.com";
+        String password = "Qer123w999";
         userApi = new UserApi();
         userApi.login(email, password, 200);
     }
@@ -45,8 +37,8 @@ public class ContactUsApiTest extends ApiBase {
     public void testSendMessageFeedbackViaApi() {
         RestAssured.baseURI = "http://chatty.telran-edu.de:8989/api/feedback";
         String name = "Nata";
-        content = "asderfgtzhjsdrfghjk";
-        //email = "string1@gmail.com";
+        String email = "string1@gmail.com";
+        String content = "asderfgtzhjsdrfghjk";
 
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)

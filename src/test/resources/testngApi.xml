@@ -9,6 +9,8 @@
             </class>
             <class name="integration.tests.myTests.UserCanCreateEditAndDeletePost">
             </class>
+            <class name="integration.tests.ContactUsApiTest">
+            </class>
         </classes>
     </test>
 </suite>
