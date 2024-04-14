@@ -8,10 +8,10 @@ public class YourProfilePage {
     private WebDriver driver;
 
     // Конструктор класса, принимающий WebDriver
-    public YourProfilePage(WebDriver driver) {
-
-        this.driver = driver;
-    }
+    //public YourProfilePage(WebDriver driver) {
+//
+    //    this.driver = driver;
+    //}
 
     // Метод для заполнения формы создания профиля
     public void fillProfileForm(String avatarUrl, String name, String surname, String birthDate, String phone, String gender, String backgroundUrl) {

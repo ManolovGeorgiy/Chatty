@@ -7,14 +7,14 @@ public class ProfileApi extends ApiBase {
     public class Profile {
 
 
-        private String avatarUrl;
-        private String name;
-        private String surname;
-        private String birthDate;
-        private String phone;
-        private String gender;
-        private String backgroundUrl;
-        private boolean blocked;
+        public String avatarUrl;
+        public String name;
+        public String surname;
+        public String birthDate;
+        public String phone;
+        public String gender;
+        public String backgroundUrl;
+        public boolean blocked;
 
         public Profile createProfile() {
             Profile profile = new Profile();
@@ -24,7 +24,7 @@ public class ProfileApi extends ApiBase {
             profile.birthDate = "1990-01-01";
             profile.phone = "+1234567890";
             profile.gender = "Male";
-            profile.backgroundUrl = "https://example.com/background.jpg";
+            //profile.backgroundUrl = "https://example.com/background.jpg";
             profile.blocked = false;
 
             return profile;
