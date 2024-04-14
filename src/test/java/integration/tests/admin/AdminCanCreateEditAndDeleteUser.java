@@ -1,12 +1,9 @@
 package integration.tests.admin;
 import integration.ApiBase;
 import integration.pages.adminPanel.AdminApi;
-import integration.pages.adminPanel.AdminCreateUser;
-import integration.pages.adminPanel.AdminEditUser;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.Test;
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+
 
 public class AdminCanCreateEditAndDeleteUser extends ApiBase {
 
@@ -24,17 +21,5 @@ public class AdminCanCreateEditAndDeleteUser extends ApiBase {
         adminApi = new AdminApi();
     String token = adminApi.loginAdmin(email,password,200);
 
-
-
-
-//    @Test(description = "Admin can delete a user")
-//    public void adminCanDeleteUser() {
-//        given()
-//                .contentType("application/json")
-//                .header("Authorization", "Bearer " + authToken)
-//                .when()
-//                .delete(baseURL + "/users/{userId}", userId)
-//                .then()
-//                .statusCode(204);
     }
 }
