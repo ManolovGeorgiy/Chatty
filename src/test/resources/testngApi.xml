@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TestLogin" verbose="1">
-    <test name="LoginUserNatalieTest">
+<suite name="testApi" verbose="1">
+    <test name="SmokeApiTest">
         <classes>
-            <class name="e2e.tests.login.LoginUserNatalieTest">
+            <class name="integration.tests.UserRegistrationApiTest">
             </class>
         </classes>
     </test>

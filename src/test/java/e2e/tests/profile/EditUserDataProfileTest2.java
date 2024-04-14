@@ -53,6 +53,7 @@ public class EditUserDataProfileTest2 extends TestBase {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate birthDate = LocalDate.parse(editFormattedDate, formatter);
 
+
         String editPhone = "+4915731078";
         String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
 

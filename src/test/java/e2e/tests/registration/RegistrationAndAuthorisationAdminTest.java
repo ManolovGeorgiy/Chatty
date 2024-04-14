@@ -1,5 +1,6 @@
 package e2e.tests.registration;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
@@ -14,6 +15,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class RegistrationAndAuthorisationAdminTest extends TestBase {
 
+    Faker faker = new Faker();
     LoginPage loginPage;
     RegistrationPage registrationPage;
     HomeBlogPage homeBlogPage;
@@ -27,7 +29,7 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     @Test(description = "CHATTY-04")
     public void AdminCanRegistration(){
 
-        String email = "RegistrationAdmin@gmail.com";
+        String email = faker.internet().emailAddress();
         String password = "Admin3333";
         String confirmPassword = "Admin3333";
 

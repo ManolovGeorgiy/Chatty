@@ -59,13 +59,13 @@ public class UserCanCreateANewPost extends TestBase {
     }
 
     @Test(description = "User can create a post")
-    public void userCanCreateAPost() {
-        String email = "Biba10@mail.ru";
-        String password = "Biba1234";
+    public void userCanCreateNewPost() {
+        String email = "usercreatepost@abv.bg";
+        String password = "Manowar33246";
         String title = "My first post";
         String description = "Pice";
         String content = faker.lorem().sentence(20);
-        String folderPath = "src/test/java/resources";
+        String folderPath = "/var/jenkins_home/workspace/Chatty/GPower/src/test/java/resources/5204092180870848359_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -79,11 +79,11 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content,folderPath);
+        createAPostForm.createAPost(title, description, content,folderPath);
 
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {
-            createAPostForm.imageLoading(randomImagePath);
+            createAPostForm.uploadImage(randomImagePath);
             createAPostForm.waitForLoading();
         } else {
             System.err.println("Не удалось выбрать изображение для публикации.");

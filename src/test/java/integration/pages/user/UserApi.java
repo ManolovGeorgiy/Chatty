@@ -2,6 +2,7 @@ package integration.pages.user;
 
 import integration.ApiBase;
 import io.qameta.allure.Step;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
@@ -20,7 +21,7 @@ public class UserApi extends ApiBase {
         body.put("confirmPassword", confirmPassword);
         body.put("role", role);
 
-        Response response = postRequest(endPoint, expectedStatusCode, body);
+        response = postRequest(endPoint, expectedStatusCode, body);
         int statusCode = response.statusCode();
 
         if (statusCode == expectedStatusCode) {
@@ -30,7 +31,6 @@ public class UserApi extends ApiBase {
             return "Failed to register user: " + errorMessage;
         }
     }
-
     @Step("Вход через API: {email}")
     public String login(String email, String password, int expectedStatusCode) {
         String endpoint = "/api/auth/login";
@@ -38,15 +38,15 @@ public class UserApi extends ApiBase {
         body.put("email", email);
         body.put("password", password);
 
-        Response response = postRequest(endpoint, expectedStatusCode, body);
+        response = postRequest(endpoint, expectedStatusCode, body);
         int code = response.statusCode();
 
         if (code == expectedStatusCode) {
             String refreshToken = response.jsonPath().getString("refreshToken");
-            return "Токен обновления: " + refreshToken;
+            return "refreshToken: " + refreshToken;
         } else {
             String errorMessage = response.getBody().asString();
-            return "Не удалось войти: " + errorMessage;
+            return "Failed to login: " + errorMessage;
         }
     }
 
@@ -55,13 +55,7 @@ public class UserApi extends ApiBase {
         String endpoint = "/api/auth/refresh";
         Map<String, String> body = new HashMap<>();
         body.put("refreshToken", token);
-        Response response = postRequest(endpoint, expectedStatusCode, body);
+        response = postRequest(endpoint, expectedStatusCode, body);
         return response.getBody().asString();
     }
-    public String userInfo(){
-        String endpoint = "/api/me";
-        return endpoint;
-    }
-
-
 }
