@@ -132,6 +132,18 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
+    public String getAuthToken(String username, String password) {
+        Response response = RestAssured.given()
+                .spec(spec)
+                .contentType(ContentType.JSON)
+                .body("{ \"username\": \"" + username + "\", \"password\": \"" + password + "\" }")
+                .when()
+                .post("/auth/login")
+                .then()
+                .extract().response();
+
+        return response.jsonPath().getString("token");
+    }
 
 
     @BeforeClass
