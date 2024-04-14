@@ -15,7 +15,7 @@ public class ContactUsApiTest extends ApiBase {
 
     @Test
     public void testNewUserRegistration() {
-        String email = "W12trieng12324@gmail.com";
+        String email = "wWw12trieng12324@gmail.com";
         String password = "Qer123w999";
         String confirmPassword = "Qer123w999";
         String role = "user";
@@ -27,7 +27,7 @@ public class ContactUsApiTest extends ApiBase {
 
     @Test(dependsOnMethods = "testNewUserRegistration")
     public void testUserLogin() {
-        String email = "W12trieng12324@gmail.com";
+        String email = "wWw12trieng12324@gmail.com";
         String password = "Qer123w999";
         userApi = new UserApi();
         userApi.login(email, password, 200);
@@ -37,7 +37,7 @@ public class ContactUsApiTest extends ApiBase {
     public void testSendMessageFeedbackViaApi() {
         RestAssured.baseURI = "http://chatty.telran-edu.de:8989/api/feedback";
         String name = "Nata";
-        String email = "W1s1trieng12324@gmail.com";
+        String email = "wWw1s1trieng12324@gmail.com";
         String content = "sdfgvhbjnkmlsdfcgvhbnjklasderfgtzhjsdrfghjk";
 
         Response response = RestAssured.given()
@@ -50,5 +50,18 @@ public class ContactUsApiTest extends ApiBase {
                 .extract().response();
         response.then().assertThat().statusCode(201);
     }
+
+    /*@Test(dependsOnMethods = "testSendMessageFeedbackViaApi")
+    public void testDeleteUser() {
+        String email = "wWw12trieng12324@gmail.com";
+
+        RestAssured.given()
+                .contentType(ContentType.JSON)
+                .pathParam("email", email)
+                .when()
+                .delete(baseURI + "/api/users/{email}")
+                .then()
+                .statusCode(200);
+    }*/
 }
 
