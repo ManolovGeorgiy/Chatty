@@ -121,11 +121,7 @@ public class EditUserDataProfileTestCopy extends TestBase {
         addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog, name, surname,date, phone);
-
-        header = new Header(app.driver);
-        header.clickHome();
-        header.tabDropdownMenu(SideBarInfo.USERPROFILE);
-
+        addUserDialog.clickAddUserFormButton();
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
         editUserForm.imageAvatarLoading(editImageAvatar);

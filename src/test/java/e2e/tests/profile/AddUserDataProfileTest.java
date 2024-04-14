@@ -52,8 +52,6 @@ public class AddUserDataProfileTest extends TestBase {
         String name = "Georg";
         String surname = "Man";
         String date = "1984-08-01";
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-//        LocalDate birthDate = LocalDate.parse(date, formatter);
         String phone = "+4915777777";
         String imageAvatar = "uploadReferences/userCanAddDate_Avatra.jpg";
 
