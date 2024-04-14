@@ -55,11 +55,11 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response getRequestWhitParam(String endpoint,int code,String paramName,int paramValue){
+    protected Response getRequestWhitParam(String endpoint,int code,String paramName,String id){
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
-                .pathParam(paramName,paramValue)
+                .pathParam(paramName,id)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -67,11 +67,11 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response getRequestWhitParamString(String endpoint,int code,String paramName,String paramValue){
+    protected Response getRequestWhitParamString(String endpoint,int code,String paramName,String id){
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
-                .pathParam(paramName,paramValue)
+                .pathParam(paramName,id)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -91,11 +91,12 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response putRequest(String endpoint,int code,Object body){
+    protected Response putRequest(String endpoint, int code, Object body,String paramName,String id){
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
                 .when()
+                .pathParam(paramName,id)
                 .log().all()
                 .put(endpoint)
                 .then().log().all()
@@ -103,11 +104,13 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response deleteRequest(String endpoint,int code){
+    protected Response deleteRequest(String endpoint,int code,String id){
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
+                .pathParam("id",id)
                 .log().all()
+
                 .delete(endpoint)
                 .then().log().all()
                 .extract().response();
@@ -131,12 +134,8 @@ public class ApiBase {
     }
 
 
-        @BeforeClass
-        public void setUp() {
-            // Установка базового URI для API
-            RestAssured.baseURI = "http://your_api_base_url";
-            // Если требуется авторизация, установите здесь заголовок авторизации
-            // RestAssured.authentication = basic("username", "password");
-        }
+    @BeforeClass
+    public void setUp() {
+        RestAssured.baseURI = "http://your_api_base_url";
     }
-
+}
