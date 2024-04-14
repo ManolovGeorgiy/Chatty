@@ -55,7 +55,7 @@ public class UserFullTest extends TestBase {
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
 
         addUserDialog = new AddUserDialog(app.driver);
-        addUserDialog.clickAddUserForm();
+        addUserDialog.clickAddUserFormButton();
         addUserDialog.waitForLoading();
         addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.clickSaveButton();

@@ -31,7 +31,6 @@ public class BasePage {
     public Select getSelect(WebElement element){
         return new Select(element);
     }
-
     protected boolean isElementDisplayed(WebElement element) {
         try {
             return element.isDisplayed();
@@ -39,13 +38,11 @@ public class BasePage {
             return false;
         }
     }
-
     protected void setInput(WebElement input,String value){
         input.click();
         input.clear();
         input.sendKeys(value);
     }
-
     private File takeScreenshot(WebElement element){
         File tmp;
         if (element == null){

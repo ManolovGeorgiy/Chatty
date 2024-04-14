@@ -118,7 +118,7 @@ public class EditUserDataProfileTest extends TestBase {
         addUserDialog = new AddUserDialog(app.driver);
         addUserDialog.waitForLoading();
         addUserDialog.uploadImageAvatar(imageAvatar);
-        addUserDialog.clickAddUserForm();
+        addUserDialog.clickAddUserFormButton();
         addUserDialog.waitForLoading();
         addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
