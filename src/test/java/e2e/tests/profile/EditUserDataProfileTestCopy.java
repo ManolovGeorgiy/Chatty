@@ -106,7 +106,7 @@ public class EditUserDataProfileTestCopy extends TestBase {
         loginPage.login(email, password);
 
         homeBlogPage = new HomeBlogPage(app.driver);
-        homeBlogPage.waitForLoading();
+        //homeBlogPage.waitForLoading();
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERPROFILE);
