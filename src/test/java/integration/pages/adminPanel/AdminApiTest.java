@@ -18,8 +18,6 @@ public class AdminApiTest extends ApiBase {
                 body("username", equalTo("admin")).
                 body("role", equalTo("administrator"));
     }
-
-    // Продолжайте добавлять другие тесты здесь
 }
 
 

@@ -13,7 +13,7 @@ public class UserRegistrationApiTest {
     @Test
     public void testNewUserRegistration() {
         //String email = faker.internet().emailAddress();
-        String email = "string12@gmail.com";
+        String email = "strineg123@gmail.com";
         String password = "Qer123w999";
         String confirmPassword = "Qer123w999";
         String role = "user";

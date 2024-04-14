@@ -25,21 +25,20 @@ public class AdminPostTest extends ApiBase {
 
     @Test
     public void testEditPost() {
-        // Предположим, что для редактирования поста требуется передать идентификатор поста
+
         int postId = 1;
 
-        // Новые данные для редактирования поста
         String updatedTitle = "Updated Title";
         String updatedBody = "Updated Body";
 
-        // Формируем тело запроса для редактирования поста
+
         String requestBody = String.format("{\"title\": \"%s\", \"body\": \"%s\"}", updatedTitle, updatedBody);
 
         given().
                 contentType("application/json").
                 body(requestBody).
                 when().
-                put("/api/admin/posts/{postId}", postId). // Здесь {postId} будет заменен на фактический идентификатор поста
+                put("/api/admin/posts/{postId}", postId).
                 then().
                 assertThat().
                 statusCode(200).
@@ -49,16 +48,14 @@ public class AdminPostTest extends ApiBase {
 
     @Test
     public void testDeletePost() {
-        // Предположим, что для удаления поста требуется передать идентификатор поста
+
         int postId = 1;
 
         given().
                 when().
-                delete("/api/admin/posts/{postId}", postId). // Здесь {postId} будет заменен на фактический идентификатор поста
+                delete("/api/admin/posts/{postId}", postId).
                 then().
                 assertThat().
-                statusCode(204); // Предположим, что успешное удаление возвращает статус код 204
+                statusCode(204);
     }
-
-
 }

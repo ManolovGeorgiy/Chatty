@@ -44,10 +44,10 @@ public class UserApi extends ApiBase {
 
         if (code == expectedStatusCode) {
             String refreshToken = response.jsonPath().getString("refreshToken");
-            return "Токен обновления: " + refreshToken;
+            return "Refresh token: " + refreshToken;
         } else {
             String errorMessage = response.getBody().asString();
-            return "Не удалось войти: " + errorMessage;
+            return "Failed to login:" + errorMessage;
         }
     }
 

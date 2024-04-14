@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class AdminProfileTest extends ApiBase {
     @BeforeClass
     public void setUp() {
-        super.setUp(); // Вызываем метод setUp() базового класса для настройки базового URI
+        super.setUp();
     }
 
     @Test

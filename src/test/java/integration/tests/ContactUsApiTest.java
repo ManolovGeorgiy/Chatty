@@ -17,7 +17,7 @@ public class ContactUsApiTest extends ApiBase {
     public static String generateRandomString(int length) {
         return RandomStringUtils.randomAlphanumeric(length);
     }
-    private String email = generateRandomString(10) + "@gmail.com";
+    //private String email = generateRandomString(10) + "@gmail.com";
     private String password = "Qer123w999";
     private String role = "user";
 
@@ -25,7 +25,7 @@ public class ContactUsApiTest extends ApiBase {
     public void testNewUserRegistration() {
         // email = generateRandomString(10) + "@gmail.com";
         //String email = faker.internet().emailAddress();
-        //String email = "string12324@gmail.com";
+        String email = "string12324@gmail.com";
         //String password = "Qer123w999";
         //String confirmPassword = "Qer123w999";
         userApi = new UserApi();
@@ -45,11 +45,12 @@ public class ContactUsApiTest extends ApiBase {
     public void testSendMessageFeedbackViaApi() {
         RestAssured.baseURI = "http://chatty.telran-edu.de:8989/api/feedback";
         String name = "Nata";
+        content = "asderfgtzhjsdrfghjk";
         //email = "string1@gmail.com";
 
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)
-                .body("{ \"name\": \"" + name + "\", \"email\": \"" + email + "\", \"content\": \"" + generateRandomString(20) + "\" }")
+                .body("{ \"name\": \"" + name + "\", \"email\": \"" + email + "\", \"content\": \"" + content + "\" }")
                 .when()
                 .log().all()
                 .post(baseURI)
