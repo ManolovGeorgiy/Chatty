@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Api for Post">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminCreateUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminDeleteUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminEditUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/admin/AdminCanCreateEditAndDeleteUser.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/admin/AdminCanCreateEditAndDeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/admin/AdminCanCreateEditAndDeleteUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +94,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginApiTest.adminCanLogin">
+  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeleteUser.adminCanEditUser">
     <configuration name="AdminCanCreateEditAndDeleteUser.adminCanCreateUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -112,6 +106,24 @@
       <option name="PACKAGE_NAME" value="integration.tests.admin" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.admin.AdminCanCreateEditAndDeleteUser" />
       <option name="METHOD_NAME" value="adminCanCreateUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminCanCreateEditAndDeleteUser.adminCanEditUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.admin" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.admin.AdminCanCreateEditAndDeleteUser" />
+      <option name="METHOD_NAME" value="adminCanEditUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -173,31 +185,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostApi.rndDataForCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.pages.post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.pages.post" />
-      <option name="MAIN_CLASS_NAME" value="integration.pages.post.PostApi" />
-      <option name="METHOD_NAME" value="rndDataForCreatePost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginApiTest.adminCanLogin" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeleteUser.adminCanEditUser" />
         <item itemvalue="TestNG.AdminCanCreateEditAndDeleteUser.adminCanCreateUser" />
+        <item itemvalue="TestNG.LoginApiTest.adminCanLogin" />
         <item itemvalue="TestNG.LoginApiTest.userCanLogin" />
         <item itemvalue="TestNG.LoginApiTest.userCanNotLoginWitInvalidEmail" />
-        <item itemvalue="TestNG.PostApi.rndDataForCreatePost" />
       </list>
     </recent_temporary>
   </component>
@@ -209,14 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1711528350961</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1711528350961</updated>
     </task>
     <task id="LOCAL-00005" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -600,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713081163843</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="AdminPanel">
+      <created>1713091376616</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1713091376616</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -617,7 +610,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
     <MESSAGE value="Api for Post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api for Post" />
+    <MESSAGE value="AdminPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminPanel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
