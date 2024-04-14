@@ -141,14 +141,5 @@ public class ApiBase {
 
     protected void setUp() {
     }
-
-//
-    // @BeforeClass
-    // public void setUp() {
-    // Установка базового URI для API
-    // RestAssured.baseURI = "http://your_api_base_url";
-    // Если требуется авторизация, установите здесь заголовок авторизации
-    // RestAssured.authentication = basic("username", "password");
-    // }
 }
 

@@ -43,11 +43,11 @@ public class UserCanCreateANewPost extends TestBase {
                 Random random = new Random();
                 return imagePaths.get(random.nextInt(imagePaths.size()));
             } else {
-                System.err.println("Folder " + folderPath + " не содержит изображений формата .jpg.");
+                System.err.println("Folder " + folderPath + " does not contain .jpg images.");
                 return null;
             }
         } else {
-            System.err.println("Folder " + folderPath + " не существует или не содержит файлов.");
+            System.err.println("Folder " + folderPath + " does not exist or does not contain files.");
             return null;
         }
     }
@@ -89,7 +89,7 @@ public class UserCanCreateANewPost extends TestBase {
             createAPostForm.imageLoading(randomImagePath);
             createAPostForm.waitForLoading();
         } else {
-            System.err.println("Не удалось выбрать изображение для публикации.");
+            System.err.println("Failed to select an image to publish.");
         }
 
         checkPostData(createAPostForm, title, description, content);
