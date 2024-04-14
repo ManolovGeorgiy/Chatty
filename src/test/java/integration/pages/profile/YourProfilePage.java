@@ -9,6 +9,7 @@ public class YourProfilePage {
 
     // Конструктор класса, принимающий WebDriver
     public YourProfilePage(WebDriver driver) {
+
         this.driver = driver;
     }
 
