@@ -3,7 +3,10 @@ package integration.tests.myTests;
 
 import integration.pages.user.GetUser;
 import integration.pages.user.UserApi;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
@@ -52,7 +55,7 @@ public class LoginApiTest {
         getUser = new GetUser(token);
     }
 
-    @Epic(value = "admin can not login without email and password")
+
     @Feature(value = "admin is not logged in")
     @Description(value = "admin can not login")
     @Severity(SeverityLevel.BLOCKER)

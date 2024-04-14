@@ -9,7 +9,9 @@ import e2e.pages.contactUs.ContactUsPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -36,15 +38,16 @@ public class ContactUsNegativeTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
-    @Feature(value = "User can not sent a message")
+
     @Description(value = "User can not send feedback")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "CHATTY-38")
+    @Test(description = "User can not send message")
     public void userCanNotSendMessage() {
 
         String email = "user.can.feedBack@gmail.com";
         String password = "RedBul1234";
-        String confirmPassword = "RedBul1234";;
+        String confirmPassword = "RedBul1234";
+        ;
 
         String name = faker.name().fullName();
         String emailContact = "user.can.feedBackgmail.com";
@@ -62,7 +65,7 @@ public class ContactUsNegativeTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -73,7 +76,7 @@ public class ContactUsNegativeTest extends TestBase {
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
         contactUsPage.feedback(name, emailContact, text);
-        checkFeedbackData(contactUsPage,name,emailContact,text);
+        checkFeedbackData(contactUsPage, name, emailContact, text);
         contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();
         assertTrue("Invalid email format", contactUsPage.error());
@@ -85,7 +88,7 @@ public class ContactUsNegativeTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
