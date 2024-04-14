@@ -43,7 +43,7 @@ public class PostCreateReq {
         this.body = body;
     }
 
-    public String getImageUrl() {
+    public String getImageUrl(String image) {
         return imageUrl;
     }
 

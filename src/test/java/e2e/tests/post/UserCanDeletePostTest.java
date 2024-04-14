@@ -22,9 +22,10 @@ public class UserCanDeletePostTest extends TestBase {
     @AllureId("17")
     @Test(description = "CHATTY-8")
     public void userCanDeletePost() {
-
-        String email = "tatar@abv.bg";
+        // TODO: Need to add , creating post via api
+        String email = "userdeletepost@abv.bg";
         String password = "Manowar33246";
+        // TODO: Need to add , creating post via api
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();

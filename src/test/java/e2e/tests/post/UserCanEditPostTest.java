@@ -40,7 +40,7 @@ public class UserCanEditPostTest extends TestBase {
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String imagePath = "src/test/java/resources/5204092180870848366_121.jpg";
+        String imagePath = "C:\\Users\\PC\\Chatty\\src\\test\\java\\resources\\userCanEditPost.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();

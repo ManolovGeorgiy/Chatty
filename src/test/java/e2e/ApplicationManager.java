@@ -18,10 +18,10 @@ public class ApplicationManager {
     public WebDriver driver;
 
 
-    protected void init(String browser) {
+    protected void init() {
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setBrowserName(browser);
+            capabilities.setBrowserName("chrome");
             capabilities.setVersion("120.0");
             Map<String, Object> selenoidOptions = new HashMap<>();
             selenoidOptions.put("enableVNC", false);
