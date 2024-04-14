@@ -1,5 +1,6 @@
 package e2e.pages.post;
 
+import config.Config;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
@@ -17,9 +18,11 @@ import java.time.Duration;
 public class CreateAPostForm extends BasePage {
     public CreateAPostForm(WebDriver driver) {
         super(driver);
+
+        config = new Config();
     }
 
-    private final Config config = new Config();
+    private final Config config;
 
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
@@ -94,8 +97,6 @@ public class CreateAPostForm extends BasePage {
     @Step("Upload image: {imagePath}")
     public void uploadImage(String relativeImagePath) {
         try {
-//            String absoluteImagePath = Paths.get(relativeImagePath).toAbsolutePath().toString();
-//            System.out.println(absoluteImagePath);
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
             fileInput.sendKeys(relativeImagePath);
         } catch (Exception e) {
@@ -107,6 +108,7 @@ public class CreateAPostForm extends BasePage {
     public void clickSubmitButton() {
         submitButton.click();
     }
+
     @Step("check after sending")
     public boolean errorText() {
         Duration timeout = Duration.ofSeconds(10);
@@ -128,6 +130,7 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("Fill form {title},{description},{content}")
     public void userCanNotCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
@@ -138,21 +141,15 @@ public class CreateAPostForm extends BasePage {
 
     public boolean isPostDisplayed(String postTitle) {
         try {
-            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));
+            ;
             return postElement.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
-//    public boolean isMessageSent() {
-//        Duration timeout = Duration.ofSeconds(1);
-//        // Добавляем ожидание появления подтверждения успешной отправки сообщения
-//        WebDriverWait wait = new WebDriverWait(driver, timeout);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='post-content__top']")));
-//        try {
-//            return driver.findElement(By.xpath("//div[@class='post-content__top']")).isDisplayed();
-//        } catch (NoSuchElementException e) {
-//            return false; // Возвращаем false, если элемент не найден
-//        }
-//    }
+
+    public void setPostForm(String title, String description, String content, String imagePath) {
+    }
+
 }

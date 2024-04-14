@@ -48,4 +48,7 @@ public class Wait {
             throw new TimeoutException(element.getAccessibleName() + "is not clickable more than " + TIMEOUT.toString());
         }
     }
+
+    public void forAttributeNotEmpty(WebElement nameInput) {
+    }
 }

@@ -55,11 +55,12 @@ public class ApiBase {
         return response;
     }
 
-    protected Response getRequestWhitParam(String endpoint, int code, String paramName, int paramValue) {
+    protected Response getRequestWhitParam(String endpoint, int code, String paramName, String paramValue) {
+
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
-                .pathParam(paramName,id)
+                .pathParam(paramName,paramValue)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -95,12 +96,12 @@ public class ApiBase {
     }
 
 
-    protected Response putRequest(String endpoint, int code, Object body) {
+    protected Response putRequest(String endpoint, int code, Object body, String id, String postId) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .body(body)
                 .when()
-                .pathParam(paramName,id)
+                .pathParam(endpoint,code)
                 .log().all()
                 .put(endpoint)
                 .then().log().all()
@@ -109,11 +110,11 @@ public class ApiBase {
         return response;
     }
 
-    protected Response deleteRequest(String endpoint, int code) {
+    protected Response deleteRequest(String endpoint, int code, String postId) {
         Response response = RestAssured.given()
                 .spec(spec)
                 .when()
-                .pathParam("id",id)
+                .pathParam("id",code)
                 .log().all()
                 .delete(endpoint)
                 .then().log().all()

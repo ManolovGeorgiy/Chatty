@@ -27,11 +27,8 @@ Header header;
     @AllureId("14")
     @Test(description = "CHATTY-16")
     public void userCanRegistration(){
-    @Test(description = "User can registration")
-    public void userCanRegistration(){
 
         String email = "userdeletepost@abv.bg";
-        String email = faker.internet().emailAddress();
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 

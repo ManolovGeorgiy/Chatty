@@ -3,12 +3,6 @@
 <suite name="testApi" verbose="1">
     <test name="ApiTest">
         <classes>
-            <class name="integration.tests.myTests.LoginApiTest">
-            </class>
-            <class name="integration.tests.myTests.RegistrationApiTest">
-            </class>
-            <class name="integration.tests.myTests.UserCanCreateEditAndDeletePost">
-            </class>
             <class name="integration.tests.ContactUsApiTest">
             </class>
         </classes>

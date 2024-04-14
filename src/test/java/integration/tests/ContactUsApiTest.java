@@ -15,7 +15,7 @@ public class ContactUsApiTest extends ApiBase {
 
     @Test
     public void testNewUserRegistration() {
-        String email = "string12324@gmail.com";
+        String email = "W12trieng12324@gmail.com";
         String password = "Qer123w999";
         String confirmPassword = "Qer123w999";
         String role = "user";
@@ -27,7 +27,7 @@ public class ContactUsApiTest extends ApiBase {
 
     @Test(dependsOnMethods = "testNewUserRegistration")
     public void testUserLogin() {
-        String email = "string12324@gmail.com";
+        String email = "W12trieng12324@gmail.com";
         String password = "Qer123w999";
         userApi = new UserApi();
         userApi.login(email, password, 200);
@@ -37,8 +37,8 @@ public class ContactUsApiTest extends ApiBase {
     public void testSendMessageFeedbackViaApi() {
         RestAssured.baseURI = "http://chatty.telran-edu.de:8989/api/feedback";
         String name = "Nata";
-        String email = "string1@gmail.com";
-        String content = "asderfgtzhjsdrfghjk";
+        String email = "W1s1trieng12324@gmail.com";
+        String content = "sdfgvhbjnkmlsdfcgvhbnjklasderfgtzhjsdrfghjk";
 
         Response response = RestAssured.given()
                 .contentType(ContentType.JSON)

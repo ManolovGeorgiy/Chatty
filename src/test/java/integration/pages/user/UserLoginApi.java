@@ -3,11 +3,7 @@ package integration.pages.user;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-<<<<<<<< HEAD:src/test/java/integration/pages/user/UserLoginApi.java
 public class UserLoginApi {
-========
-public class UserAuthLogin {
->>>>>>>> dev_Manolov:src/test/java/integration/pages/user/UserAuthLogin.java
 
     public static void main(String[] args) {
         String baseUrl = "http://chatty.telran-edu.de:8989";

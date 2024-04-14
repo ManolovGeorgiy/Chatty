@@ -1,5 +1,6 @@
 package e2e;
 
+import config.Config;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -8,7 +9,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setApp() {
-        app.init();
+        app.init(new Config().getBrowser());
     }
 
     @AfterMethod
