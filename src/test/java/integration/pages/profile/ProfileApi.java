@@ -42,7 +42,7 @@ public class ProfileApi  extends ApiBase{
 
         return this.userUpdateReq;
     }
-    public Response createAUserUpdateReq(int code,String postCreateReq) {
+    public Response createUserUpdateReq(int code,String userUpdateReq) {
         String endpoint = "/api/users/{id}";
         Object body = createUserProfileForm(String.valueOf(userUpdateReq));
         response = postRequest(endpoint, code, body);
