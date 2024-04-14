@@ -8,14 +8,14 @@ import integration.schemas.UserUpdateReq;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-public class ProfileApi extends ApiBase {
+public class ProfileApi  extends ApiBase{
 
-    //private String token;
+    //public String token;
 
-    public void CreateProfile(String token) {
+    public void CreateProfile(String token){
         super(token);
-
     }
+
 
     Response response;
     Faker faker = new Faker();
