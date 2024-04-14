@@ -110,8 +110,8 @@ public class AddUserDialog extends BasePage {
             birthDateForm.sendKeys(date);
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).perform();
-            birthDateForm.sendKeys(dateParts[2]); //day
-            birthDateForm.sendKeys(dateParts[1]); //month
+            birthDateForm.sendKeys(dateParts[1]); //day
+            birthDateForm.sendKeys(dateParts[2]); //month
             birthDateForm.sendKeys(dateParts[0]); //year
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
