@@ -10,9 +10,9 @@ import io.restassured.response.Response;
 
 public class ProfileApi  extends ApiBase{
 
-    //public String token;
 
-    public void CreateProfile(String token){
+
+    public ProfileApi(String token){
         super(token);
     }
 
