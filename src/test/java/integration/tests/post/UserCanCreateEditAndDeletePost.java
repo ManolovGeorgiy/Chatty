@@ -1,4 +1,4 @@
-package integration.tests.myTests;
+package integration.tests.post;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
@@ -34,6 +34,21 @@ public class UserCanCreateEditAndDeletePost {
         postObjects.put(actualObjects.getString("title"),postCreateReq.getTitle());
         postObjects.put(actualObjects.getString("description"),postCreateReq.getDescription());
         postObjects.put(actualObjects.getString("body"),postCreateReq.getBody());
+
+        for (Map.Entry<String,String> postObject:postObjects.entrySet()){
+            String actualResult = postObject.getKey();
+            String expectedResult =postObject.getValue();
+            Assert.assertEquals(actualResult,expectedResult, actualResult + " is not equals " + expectedResult);
+        }
+    }
+
+    private void checkEditPostData(String postId, PostUpdateReq postUpdateReq){
+
+        JsonPath actualObjects = JsonPath.given(getPostByPostId.getPostId(postId,200));
+        LinkedHashMap<String,String> postObjects = new LinkedHashMap<>();
+        postObjects.put(actualObjects.getString("title"),postUpdateReq.getTitle());
+        postObjects.put(actualObjects.getString("description"),postUpdateReq.getDescription());
+        postObjects.put(actualObjects.getString("body"),postUpdateReq.getBody());
 
         for (Map.Entry<String,String> postObject:postObjects.entrySet()){
             String actualResult = postObject.getKey();
@@ -87,6 +102,9 @@ public class UserCanCreateEditAndDeletePost {
         String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
         JsonPath jsonPathEdit = new JsonPath(responseEdit);
         String editPostId = jsonPathEdit.getString("id");
+
+        getPostByPostId = new GetPostByPostId(token);
+        checkEditPostData(postId,postUpdateReq);
 
         deletePost = new DeletePost(token);
         deletePost.deleteUserPost(editPostId, 204);

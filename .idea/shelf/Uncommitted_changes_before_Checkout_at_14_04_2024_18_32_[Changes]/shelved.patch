@@ -1,0 +1,1966 @@
+Index: src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java
+===================================================================
+diff --git a/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java b/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java
+deleted file mode 100644
+--- a/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ /dev/null	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
+@@ -1,143 +0,0 @@
+-package e2e.tests.post;
+-
+-import com.github.javafaker.Faker;
+-import e2e.TestBase;
+-import e2e.enums.SideBarInfo;
+-import e2e.pages.Header;
+-import e2e.pages.adminPanel.AdminPanelPage;
+-import e2e.pages.homeBlog.HomeBlogPage;
+-import e2e.pages.login.LoginPage;
+-import e2e.pages.post.CreateAPostForm;
+-import java.util.Locale;
+-
+-import e2e.pages.post.EditAPostForm;
+-import e2e.pages.post.EditPostPage;
+-import e2e.pages.registration.RegistrationPage;
+-import org.testng.Assert;
+-import org.testng.annotations.Test;
+-
+-public class UserCanCreateEditAndDeletePost extends TestBase {
+-
+-    Faker faker = new Faker(new Locale("ENGLISH"));
+-
+-    LoginPage loginPage;
+-    RegistrationPage registrationPage;
+-    HomeBlogPage homeBlogPage;
+-    CreateAPostForm createAPostForm;
+-    Header header;
+-    EditPostPage editPostPage;
+-    EditAPostForm editAPostForm;
+-    AdminPanelPage adminPanelPage;
+-    private void checkPostData(CreateAPostForm page, String title, String description, String content) {
+-        String actualTitle = page.getTitle();
+-        String actualDescription = page.getDescriptionText();
+-        String actualContent = page.getContent();
+-        Assert.assertEquals(actualTitle, title, actualTitle + " is not equal " + title);
+-        Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
+-        Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
+-    }
+-    private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
+-        String actualTitle = page.getEditTitle();
+-        String actualDescription = page.getEditDescriptionText();
+-        String actualContent = page.getEditContent();
+-        Assert.assertEquals(actualTitle, editTitle, actualTitle + " is not equal " + editTitle);
+-        Assert.assertEquals(actualDescription, editDescription, actualDescription + " is not equal " + editDescription);
+-        Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
+-    }
+-    @Test(description = "User can create a post")
+-    public void userCanCreateAPost() throws InterruptedException {
+-        String email = "user.create.post@gmail.com";
+-        String password = "RedBul1234";
+-        String confirmPassword = "RedBul1234";
+-
+-        String title = "My first post";
+-        String description = "My World";
+-        String content = faker.lorem().sentence(20);
+-        String imagePath = "uploadReferences/userCanCreateAPost_MyPost.jpg";
+-
+-        String editTitle = "IT";
+-        String editDescription = "QA Engineer";
+-        String editContent = "HALLO WORLD";
+-        String editImagePath = "uploadReferences/userCanEditPost_MyPost.jpg";
+-
+-        String emailLogin = "g.power@gmail.com";
+-        String passwordLogin = "GPower3333";
+-
+-        String emailAccount = "user.create.post@gmail.com";
+-
+-        loginPage = new LoginPage(app.driver);
+-        loginPage.waitForLoading();
+-        loginPage.signUp();
+-
+-        registrationPage = new RegistrationPage(app.driver);
+-        registrationPage.waitForLoading();
+-        registrationPage.optionUser();
+-        registrationPage.registration(email,password,confirmPassword);
+-
+-        homeBlogPage = new HomeBlogPage(app.driver);
+-        homeBlogPage.waitForLoading();
+-
+-        header = new Header(app.driver);
+-        header.createAPostClick();
+-        header.waitForLoading();
+-
+-        createAPostForm = new CreateAPostForm(app.driver);
+-        createAPostForm.setPostForm(title, description, content,imagePath);
+-        createAPostForm.uploadImage(imagePath);
+-        createAPostForm.waitForLoading();
+-
+-        checkPostData(createAPostForm, title, description, content);
+-        createAPostForm.clickSubmitButton();
+-        createAPostForm.waitForLoading();
+-        Thread.sleep(3000);
+-        header = new Header(app.driver);
+-        header.myPostClick();
+-        header.waitForLoading();
+-        header.setMyPostTab();
+-        editPostPage = new EditPostPage(app.driver);
+-        editPostPage.waitForLoading();
+-
+-        Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+-
+-        editPostPage = new EditPostPage(app.driver);
+-        editPostPage.waitForLoading();
+-        editPostPage.editPostButtonClick();
+-        editPostPage.waitForLoading();
+-
+-        editAPostForm = new EditAPostForm(app.driver);
+-        editAPostForm.waitForLoading();
+-        editAPostForm.imageLoading(editImagePath);
+-        editAPostForm.editPost(editTitle,editDescription,editContent);
+-        checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
+-        editAPostForm.clickEditSubmitButton();
+-
+-        Assert.assertTrue(editAPostForm.editIsPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+-
+-        editPostPage = new EditPostPage(app.driver);
+-        editPostPage.waitForLoading();
+-        editPostPage = new EditPostPage(app.driver);
+-        editPostPage.waitForLoading();
+-        editPostPage.deletePostButtonClick();
+-
+-
+-        homeBlogPage = new HomeBlogPage(app.driver);
+-        homeBlogPage.waitForLoading();
+-
+-        header = new Header(app.driver);
+-        header.tabDropdownMenu(SideBarInfo.LOGIN);
+-
+-        loginPage = new LoginPage(app.driver);
+-        loginPage.waitForLoading();
+-        loginPage.login(emailLogin,passwordLogin);
+-
+-        adminPanelPage = new AdminPanelPage(app.driver);
+-        adminPanelPage.waitForLoading();
+-        adminPanelPage.searchAccount(emailAccount);
+-        adminPanelPage.waitForLoading();
+-        adminPanelPage.clickDeleteAccount();
+-        adminPanelPage.searchAccount(emailAccount);
+-
+-        header = new Header(app.driver);
+-        header.tabDropdownMenu(SideBarInfo.LOGIN);
+-    }
+-}
+Index: src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java
+===================================================================
+diff --git a/src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java b/src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java
+deleted file mode 100644
+--- a/src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ /dev/null	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
+@@ -1,79 +0,0 @@
+-package e2e.tests.Daniel;
+-
+-import com.github.javafaker.Faker;
+-import e2e.TestBase;
+-import e2e.pages.Header;
+-import e2e.pages.homeBlog.HomeBlogPage;
+-import e2e.pages.login.LoginPage;
+-import e2e.pages.post.CreateAPostForm;
+-import e2e.pages.post.EditPostPage;
+-import org.testng.Assert;
+-import org.testng.annotations.Test;
+-
+-import java.util.Locale;
+-
+-
+-public class UserCanCreateANewPost extends TestBase {
+-
+-    Faker faker = new Faker(new Locale("ENGLISH"));
+-
+-    LoginPage loginPage;
+-    HomeBlogPage homeBlogPage;
+-    CreateAPostForm createAPostForm;
+-    Header header;
+-    EditPostPage editPostPage;
+-
+-
+-
+-    private void checkPostData(CreateAPostForm page, String title, String description, String content) {
+-        String actualTitle = page.getTitle();
+-        String actualDescription = page.getDescriptionText();
+-        String actualContent = page.getContent();
+-        Assert.assertEquals(actualTitle, title, actualTitle + " is not equal " + title);
+-        Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
+-        Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
+-    }
+-
+-    @Test(description = "User can create a post")
+-    public void userCanCreateAPost() throws InterruptedException {
+-        String email = "Biba10@mail.ru";
+-        String password = "Biba1234";
+-        String title = "My first post";
+-        String description = "Pice";
+-        String content = faker.lorem().sentence(20);
+-        String imagePath = "uploadReferences/5204092180870848057_121.jpg";
+-
+-        loginPage = new LoginPage(app.driver);
+-        loginPage.waitForLoading();
+-        loginPage.login(email, password);
+-
+-        homeBlogPage = new HomeBlogPage(app.driver);
+-        homeBlogPage.waitForLoading();
+-
+-        header = new Header(app.driver);
+-        header.createAPostClick();
+-        header.waitForLoading();
+-
+-        createAPostForm = new CreateAPostForm(app.driver);
+-        createAPostForm.setPostForm(title, description, content,imagePath);
+-        createAPostForm.waitForLoading();
+-        createAPostForm.uploadImage(imagePath);
+-        createAPostForm.waitForLoading();
+-        checkPostData(createAPostForm, title, description, content);
+-        createAPostForm.waitForLoading();
+-        createAPostForm.clickSubmitButton();
+-        Thread.sleep(3000);
+-        header = new Header(app.driver);
+-        header.myPostClick();
+-        header.waitForLoading();
+-        header.setMyPostTab();
+-        editPostPage = new EditPostPage(app.driver);
+-        editPostPage.waitForLoading();
+-
+-
+-        Assert.assertTrue(createAPostForm.isPostDisplayed(title), "Post with title: " + title + " is not displayed.");
+-
+-
+-
+-    }
+-}
+Index: src/test/java/integration/pages/user/UserAuthLogin.java
+===================================================================
+diff --git a/src/test/java/integration/pages/user/UserAuthLogin.java b/src/test/java/integration/pages/user/UserAuthLogin.java
+deleted file mode 100644
+--- a/src/test/java/integration/pages/user/UserAuthLogin.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ /dev/null	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
+@@ -1,47 +0,0 @@
+-package integration.pages.user;
+-
+-import io.restassured.RestAssured;
+-import io.restassured.response.Response;
+-
+-<<<<<<<< HEAD:src/test/java/integration/pages/user/UserAuthLogin.java
+-public class UserAuthLogin {
+-========
+-public class UserLoginApi {
+->>>>>>>> origin/dev:src/test/java/integration/pages/user/UserLoginApi.java
+-
+-    public static void main(String[] args) {
+-        String baseUrl = "http://chatty.telran-edu.de:8989";
+-        String endpoint = "/api/auth/login";
+-
+-        // Подготовка данных для запроса
+-        String email = "tatar@abv.bg";
+-        String password = "Manowar33246";
+-
+-        // Выполнение запроса
+-        Response response = RestAssured.given()
+-                .baseUri(baseUrl)
+-                .basePath(endpoint)
+-                .header("accept", "*/*")
+-                .header("Content-Type", "application/json")
+-                .body("{ \"email\": \"" + email + "\", \"password\": \"" + password + "\" }")
+-                .post();
+-
+-        // Получение ответа
+-        int statusCode = response.getStatusCode();
+-        System.out.println("Response Code: " + statusCode);
+-
+-        // Печать тела ответа
+-        String responseBody = response.getBody().asString();
+-        System.out.println("Response Body: " + responseBody);
+-
+-        // Если код ответа 200 OK, получаем токены доступа и обновления
+-        if (statusCode == 200) {
+-            String accessToken = response.jsonPath().getString("accessToken");
+-            String refreshToken = response.jsonPath().getString("refreshToken");
+-            long expiration = response.jsonPath().getLong("expiration");
+-            System.out.println("Access Token: " + accessToken);
+-            System.out.println("Refresh Token: " + refreshToken);
+-            System.out.println("Expiration: " + expiration);
+-        }
+-    }
+-}
+Index: src/test/java/e2e/ApplicationManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e;\r\n\r\nimport config.Config;\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport io.qameta.allure.Allure;\r\nimport org.openqa.selenium.Dimension;\r\nimport org.openqa.selenium.OutputType;\r\nimport org.openqa.selenium.TakesScreenshot;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.chrome.ChromeOptions;\r\nimport org.openqa.selenium.remote.DesiredCapabilities;\r\nimport org.openqa.selenium.remote.LocalFileDetector;\r\nimport org.openqa.selenium.remote.RemoteWebDriver;\r\n\r\nimport java.io.ByteArrayInputStream;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URI;\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\npublic class ApplicationManager {\r\n    private final Config config = new Config();\r\n    public WebDriver driver;\r\n\r\n    protected void init() {\r\n        if (config.getSelenoidState()) {\r\n            DesiredCapabilities capabilities = new DesiredCapabilities();\r\n            capabilities.setBrowserName(\"chrome\");\r\n            capabilities.setVersion(\"120.0\");\r\n            Map<String, Object> selenoidOptions = new HashMap<>();\r\n            selenoidOptions.put(\"enableVNC\", false);\r\n\r\n            capabilities.setCapability(\"selenoid:options\", selenoidOptions);\r\n            try {\r\n                driver = new RemoteWebDriver(\r\n                        URI.create(config.getSelenoidUrl()).toURL(),\r\n                        capabilities\r\n                );\r\n                ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());\r\n            } catch (MalformedURLException e) {\r\n                e.printStackTrace();\r\n            }\r\n        } else {\r\n            WebDriverManager.chromedriver().clearResolutionCache().setup();\r\n            ChromeOptions options = new ChromeOptions();\r\n            if (config.getHeadless()) {\r\n                options.addArguments(\"--headless\");\r\n            }\r\n            options.addArguments(\"--no-sandbox\", \"--disable-dev-shm-usage\");\r\n            driver = new ChromeDriver(options);\r\n        }\r\n        driver.get(config.getProjectUrl());\r\n        driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));\r\n    }\r\n\r\n    protected void stop(boolean testPassed) {\r\n        if (!testPassed) {\r\n            byte[] screenshotData = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);\r\n            Allure.addAttachment(\"Screenshot on failure\", new ByteArrayInputStream(screenshotData));\r\n        }\r\n        driver.quit();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/ApplicationManager.java b/src/test/java/e2e/ApplicationManager.java
+--- a/src/test/java/e2e/ApplicationManager.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/e2e/ApplicationManager.java	(date 1713112306357)
+@@ -2,18 +2,12 @@
+ 
+ import config.Config;
+ import io.github.bonigarcia.wdm.WebDriverManager;
+-import io.qameta.allure.Allure;
+ import org.openqa.selenium.Dimension;
+-import org.openqa.selenium.OutputType;
+-import org.openqa.selenium.TakesScreenshot;
+ import org.openqa.selenium.WebDriver;
+ import org.openqa.selenium.chrome.ChromeDriver;
+-import org.openqa.selenium.chrome.ChromeOptions;
+ import org.openqa.selenium.remote.DesiredCapabilities;
+-import org.openqa.selenium.remote.LocalFileDetector;
+ import org.openqa.selenium.remote.RemoteWebDriver;
+ 
+-import java.io.ByteArrayInputStream;
+ import java.net.MalformedURLException;
+ import java.net.URI;
+ import java.util.HashMap;
+@@ -23,6 +17,7 @@
+     private final Config config = new Config();
+     public WebDriver driver;
+ 
++
+     protected void init() {
+         if (config.getSelenoidState()) {
+             DesiredCapabilities capabilities = new DesiredCapabilities();
+@@ -37,28 +32,19 @@
+                         URI.create(config.getSelenoidUrl()).toURL(),
+                         capabilities
+                 );
+-                ((RemoteWebDriver) driver).setFileDetector(new LocalFileDetector());
+             } catch (MalformedURLException e) {
+                 e.printStackTrace();
+             }
+         } else {
+             WebDriverManager.chromedriver().clearResolutionCache().setup();
+-            ChromeOptions options = new ChromeOptions();
+-            if (config.getHeadless()) {
+-                options.addArguments("--headless");
+-            }
+-            options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+-            driver = new ChromeDriver(options);
++            WebDriverManager.chromedriver().setup();
++            driver = new ChromeDriver();
+         }
+         driver.get(config.getProjectUrl());
+         driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));
+     }
+ 
+-    protected void stop(boolean testPassed) {
+-        if (!testPassed) {
+-            byte[] screenshotData = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+-            Allure.addAttachment("Screenshot on failure", new ByteArrayInputStream(screenshotData));
+-        }
++    protected void stop() {
+         driver.quit();
+     }
+ }
+\ No newline at end of file
+Index: src/test/java/e2e/pages/adminPanel/AdminPanelPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e.pages.adminPanel;\r\n\r\nimport e2e.pages.BasePage;\r\nimport io.qameta.allure.Step;\r\nimport org.openqa.selenium.StaleElementReferenceException;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.support.FindBy;\r\npublic class AdminPanelPage extends BasePage {\r\n    public AdminPanelPage(WebDriver driver) {\r\n        super(driver);\r\n    }\r\n\r\n    @FindBy(xpath = \"//*[@type='text']\")\r\n    WebElement searchEmailInput;\r\n\r\n    @FindBy(xpath = \"//*[@class='email-btn']\")\r\n    WebElement emailButton;\r\n\r\n    @FindBy(xpath = \"//*[@class='svg-inline--fa fa-pen-to-square ']\")\r\n    WebElement editAccount;\r\n\r\n    @FindBy(xpath = \"//*[@class='svg-inline--fa fa-trash ']\")\r\n    WebElement deleteAccount;\r\n    @Step(\"Wait for loading adminPanel panel\")\r\n    public void waitForLoading() {\r\n        try {\r\n            getWait().forVisibility(searchEmailInput);\r\n            getWait().forVisibility(emailButton);\r\n            getWait().forVisibility(editAccount);\r\n            getWait().forVisibility(deleteAccount);\r\n        } catch (StaleElementReferenceException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    @Step(\"search account\")\r\n    public void searchAccount(String emailAccount){\r\n        searchEmailInput.clear();\r\n        searchEmailInput.sendKeys(emailAccount);\r\n        emailButton.click();\r\n    }\r\n    @Step(\"click edit account button\")\r\n    public void clickEditAccount(){\r\n        editAccount.click();\r\n    }\r\n    @Step(\"click delete account button\")\r\n    public void clickDeleteAccount(){\r\n        deleteAccount.click();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java b/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java
+--- a/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java	(date 1713112305866)
+@@ -43,7 +43,7 @@
+     public void clickEditAccount(){
+         editAccount.click();
+     }
+-    @Step("click delete account button")
++    @Step("click deleterrr account button")
+     public void clickDeleteAccount(){
+         deleteAccount.click();
+     }
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.gradle\r\nbuild/\r\n!gradle/wrapper/gradle-wrapper.jar\r\n!**/src/main/**/build/\r\n!**/src/test/**/build/\r\nallure-results\r\n\r\n\r\n### IntelliJ IDEA ###\r\n.idea/modules.xml\r\n.idea/jarRepositories.xml\r\n.idea/compiler.xml\r\n.idea/libraries/\r\n*.iws\r\n*.iml\r\n*.ipr\r\nout/\r\n!**/src/main/**/out/\r\n!**/src/test/**/out/\r\n\r\n### Eclipse ###\r\n.apt_generated\r\n.classpath\r\n.factorypath\r\n.project\r\n.settings\r\n.springBeans\r\n.sts4-cache\r\nbin/\r\n!**/src/main/**/bin/\r\n!**/src/test/**/bin/\r\n\r\n### NetBeans ###\r\n/nbproject/private/\r\n/nbbuild/\r\n/dist/\r\n/nbdist/\r\n/.nb-gradle/\r\n\r\n### VS Code ###\r\n.vscode/\r\n\r\n### Mac OS ###\r\n.DS_Store
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+--- a/.gitignore	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/.gitignore	(date 1713112302744)
+@@ -5,7 +5,6 @@
+ !**/src/test/**/build/
+ allure-results
+ 
+-
+ ### IntelliJ IDEA ###
+ .idea/modules.xml
+ .idea/jarRepositories.xml
+Index: build/resources/test/testngE2eSmoke.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<!DOCTYPE suite SYSTEM \"https://testng.org/testng-1.0.dtd\">\r\n<suite name=\"testE2eSmoke\" verbose=\"1\">\r\n    <test name=\"SmokeTestE2e\">\r\n        <classes>\r\n            <class name=\"e2e.tests.registration.RegistrationAndAuthorisationUserTest\">\r\n            </class>\r\n            <class name=\"e2e.tests.profile.AddUserDataProfileTest\">\r\n            </class>\r\n        </classes>\r\n    </test>\r\n</suite>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build/resources/test/testngE2eSmoke.xml b/build/resources/test/testngE2eSmoke.xml
+--- a/build/resources/test/testngE2eSmoke.xml	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/build/resources/test/testngE2eSmoke.xml	(date 1713112311242)
+@@ -7,6 +7,20 @@
+             </class>
+             <class name="e2e.tests.profile.AddUserDataProfileTest">
+             </class>
++            <class name="e2e.tests.profile.EditUserDataProfileTest">
++            </class>
++            <class name="e2e.tests.contactUs.ContactUsPositiveTest">
++            </class>
++            <class name="e2e.tests.about.AboutPageTest">
++            </class>
++            <class name="e2e.tests.post.UserCanCreateANewPost">
++            </class>
++            <class name="e2e.tests.post.UserCanEditPostTest">
++            </class>
++            <class name="e2e.tests.post.UserCanDeletePostTest">
++            </class>
++            <class name="e2e.tests.adminPanel.AdminDeleteUserTest">
++            </class>
+         </classes>
+     </test>
+ </suite>
+\ No newline at end of file
+Index: src/test/resources/testngE2eSmoke.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<!DOCTYPE suite SYSTEM \"https://testng.org/testng-1.0.dtd\">\r\n<suite name=\"testE2eSmoke\" verbose=\"1\">\r\n    <test name=\"SmokeTestE2e\">\r\n        <classes>\r\n            <class name=\"e2e.tests.post.AdminCanCreateEditAndDeletePostTest\">\r\n            </class>\r\n            <class name=\"e2e.tests.contactUs.ContactUsPositiveTest\">\r\n            </class>\r\n            <class name=\"e2e.tests.contactUs.ContactUsNegativeTest\">\r\n            </class>\r\n            <class name=\"e2e.tests.profile.AddUserDataProfileTest\">\r\n            </class>\r\n            <class name=\"e2e.tests.profile.EditUserDataProfileTest\">\r\n            </class>\r\n        </classes>\r\n    </test>\r\n</suite>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/testngE2eSmoke.xml b/src/test/resources/testngE2eSmoke.xml
+--- a/src/test/resources/testngE2eSmoke.xml	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/resources/testngE2eSmoke.xml	(date 1713112310905)
+@@ -3,15 +3,29 @@
+ <suite name="testE2eSmoke" verbose="1">
+     <test name="SmokeTestE2e">
+         <classes>
++<!--            <class name="e2e.tests.registration.RegistrationAndAuthorisationAdminTest">-->
++<!--            </class>-->
++<!--            <class name="e2e.tests.login.LoginAdminTest">-->
++<!--            </class>-->
+             <class name="e2e.tests.post.AdminCanCreateEditAndDeletePostTest">
+             </class>
++            <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
++            </class>
++            <class name="e2e.tests.profile.AddUserDataProfileTest">
++            </class>
++            <class name="e2e.tests.profile.EditUserDataProfileTest">
++            </class>
+             <class name="e2e.tests.contactUs.ContactUsPositiveTest">
+             </class>
+-            <class name="e2e.tests.contactUs.ContactUsNegativeTest">
++            <class name="e2e.tests.about.AboutPageTest">
+             </class>
+-            <class name="e2e.tests.profile.AddUserDataProfileTest">
++            <class name="e2e.tests.post.UserCanCreateANewPost">
+             </class>
+-            <class name="e2e.tests.profile.EditUserDataProfileTest">
++            <class name="e2e.tests.post.UserCanEditPostTest">
++            </class>
++            <class name="e2e.tests.post.UserCanDeletePostTest">
++            </class>
++            <class name="e2e.tests.adminPanel.AdminDeleteUserTest">
+             </class>
+         </classes>
+     </test>
+Index: src/test/java/wait/Wait.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package wait;\r\n\r\nimport org.openqa.selenium.TimeoutException;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.support.ui.ExpectedConditions;\r\nimport org.openqa.selenium.support.ui.WebDriverWait;\r\n\r\nimport java.time.Duration;\r\nimport java.util.List;\r\n\r\npublic class Wait {\r\n    public WebDriver driver;\r\n\r\n    Duration TIMEOUT = Duration.ofSeconds(10);\r\n\r\n    public Wait(WebDriver driver) {\r\n        this.driver = driver;\r\n    }\r\n\r\n    public WebDriverWait setWait() {\r\n        return new WebDriverWait(driver, TIMEOUT);\r\n    }\r\n\r\n    public void forVisibility(WebElement element) {\r\n        try {\r\n            setWait().until(ExpectedConditions.visibilityOf(element));\r\n        } catch (TimeoutException e) {\r\n            throw new TimeoutException(element.getAccessibleName() + \"is not visible more than \" + TIMEOUT.toString());\r\n        }\r\n    }\r\n\r\n    public void forAllVisibility(List<WebElement> elements) {\r\n        try {\r\n            setWait().until(ExpectedConditions.visibilityOfAllElements(elements));\r\n        } catch (TimeoutException e) {\r\n            throw new TimeoutException(elements.size() + \" are not visible more than \" + TIMEOUT.toString());\r\n        }\r\n    }\r\n\r\n    public void forInvisibility(WebElement element) {\r\n        try {\r\n            setWait().until(ExpectedConditions.invisibilityOf(element));\r\n        } catch (TimeoutException e) {\r\n            throw new TimeoutException(element.getAccessibleName() + \"is visible more than \" + TIMEOUT.toString());\r\n        }\r\n    }\r\n\r\n    public void forClickable(WebElement element) {\r\n        try {\r\n            setWait().until(ExpectedConditions.elementToBeClickable(element));\r\n        } catch (TimeoutException e) {\r\n            throw new TimeoutException(element.getAccessibleName() + \"is not clickable more than \" + TIMEOUT.toString());\r\n        }\r\n    }\r\n\r\n    public void forAttributeNotEmpty(WebElement element) {\r\n        try {\r\n            setWait().until(ExpectedConditions.attributeToBeNotEmpty(element, \"value\"));\r\n        } catch (TimeoutException e) {\r\n            throw new TimeoutException(element.getAccessibleName() + \" attribute is empty after \" + TIMEOUT.toString());\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/wait/Wait.java b/src/test/java/wait/Wait.java
+--- a/src/test/java/wait/Wait.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/wait/Wait.java	(date 1713112313876)
+@@ -13,52 +13,39 @@
+     public WebDriver driver;
+ 
+     Duration TIMEOUT = Duration.ofSeconds(10);
+-
+-    public Wait(WebDriver driver) {
++    public Wait(WebDriver driver){
+         this.driver = driver;
+     }
+ 
+-    public WebDriverWait setWait() {
++    public  WebDriverWait setWait(){
+         return new WebDriverWait(driver, TIMEOUT);
+     }
+ 
+-    public void forVisibility(WebElement element) {
++    public void forVisibility(WebElement element){
+         try {
+             setWait().until(ExpectedConditions.visibilityOf(element));
+-        } catch (TimeoutException e) {
+-            throw new TimeoutException(element.getAccessibleName() + "is not visible more than " + TIMEOUT.toString());
++        }catch (TimeoutException e){throw new TimeoutException(element.getAccessibleName() + "is not visible more than " + TIMEOUT.toString());
+         }
+     }
+-
+-    public void forAllVisibility(List<WebElement> elements) {
++    public void forAllVisibility(List<WebElement> elements){
+         try {
+             setWait().until(ExpectedConditions.visibilityOfAllElements(elements));
+-        } catch (TimeoutException e) {
++        }catch (TimeoutException e){
+             throw new TimeoutException(elements.size() + " are not visible more than " + TIMEOUT.toString());
+         }
+     }
+-
+-    public void forInvisibility(WebElement element) {
++    public void forInvisibility(WebElement element){
+         try {
+             setWait().until(ExpectedConditions.invisibilityOf(element));
+-        } catch (TimeoutException e) {
++        }catch (TimeoutException e){
+             throw new TimeoutException(element.getAccessibleName() + "is visible more than " + TIMEOUT.toString());
+         }
+     }
+-
+-    public void forClickable(WebElement element) {
++    public void forClickable(WebElement element){
+         try {
+             setWait().until(ExpectedConditions.elementToBeClickable(element));
+-        } catch (TimeoutException e) {
++        }catch (TimeoutException e){
+             throw new TimeoutException(element.getAccessibleName() + "is not clickable more than " + TIMEOUT.toString());
+         }
+     }
+-
+-    public void forAttributeNotEmpty(WebElement element) {
+-        try {
+-            setWait().until(ExpectedConditions.attributeToBeNotEmpty(element, "value"));
+-        } catch (TimeoutException e) {
+-            throw new TimeoutException(element.getAccessibleName() + " attribute is empty after " + TIMEOUT.toString());
+-        }
+-    }
+ }
+Index: src/test/resources/config.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>project.url=http://chatty.telran-edu.de:8089\r\nproject.api.url=http://chatty.telran-edu.de:8989\r\nselenoid.url=http://165.227.145.48:4444/wd/hub\r\nselenoid.state=false\r\nheadless.state=true\r\nwindow.width=1920\r\nwindow.height=1080
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/test/resources/config.properties b/src/test/resources/config.properties
+--- a/src/test/resources/config.properties	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/resources/config.properties	(date 1713112308147)
+@@ -1,7 +1,6 @@
+ project.url=http://chatty.telran-edu.de:8089
+ project.api.url=http://chatty.telran-edu.de:8989
+ selenoid.url=http://165.227.145.48:4444/wd/hub
+-selenoid.state=false
+-headless.state=true
++selenoid.state=true
+ window.width=1920
+-window.height=1080
+\ No newline at end of file
++window.height=1080
+Index: src/test/java/e2e/pages/contactUs/ContactUsPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e.pages.contactUs;\r\n\r\nimport e2e.pages.BasePage;\r\nimport io.qameta.allure.Step;\r\nimport org.openqa.selenium.*;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.openqa.selenium.support.ui.ExpectedConditions;\r\nimport org.openqa.selenium.support.ui.WebDriverWait;\r\n\r\nimport java.time.Duration;\r\n\r\npublic class ContactUsPage extends BasePage {\r\n    public ContactUsPage(WebDriver driver) {\r\n        super(driver);\r\n    }\r\n\r\n    @FindBy(xpath = \"//*[@id='name']\")\r\n    WebElement nameUserInput;\r\n\r\n    @FindBy(xpath = \"//*[@id='email']\")\r\n    WebElement emailUserInput;\r\n\r\n    @FindBy(xpath = \"//*[@id='content']\")\r\n    WebElement contentUserInput;\r\n\r\n    @FindBy(xpath = \"//*[@type='submit']\")\r\n    WebElement sendMessageButton;\r\n\r\n    public String getUserName() {\r\n        return nameUserInput.getAttribute(\"value\");\r\n    }\r\n    public String getUserEmail() {\r\n        return emailUserInput.getAttribute(\"value\");\r\n    }\r\n\r\n    public String getUserContent() {\r\n        return contentUserInput.getAttribute(\"value\");\r\n    }\r\n    public String getNewContent() {\r\n        return contentUserInput.getAttribute(\"value\");\r\n    }\r\n    @Step(\"Wait for loading Contact Us\")\r\n    public void waitForLoading() {\r\n        try {\r\n            getWait().forVisibility(nameUserInput);\r\n            getWait().forVisibility(emailUserInput);\r\n            getWait().forVisibility(contentUserInput);\r\n            getWait().forVisibility(sendMessageButton);\r\n        } catch (StaleElementReferenceException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    @Step(\"Screenshot {actualScreenshotName}\")\r\n    public void takeFeedbackFormPageScreenshot(String actualScreenshotName){\r\n        try {\r\n            waitForLoading();\r\n            takeAndCompareScreenshot(actualScreenshotName, null);\r\n        } catch (StaleElementReferenceException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    @Step(\"Fill out the feedback form {name},{emailContact},{text}\")\r\n    public void feedback(String name, String emailContact, String text) {\r\n        nameUserInput.sendKeys(name);\r\n        emailUserInput.sendKeys(emailContact);\r\n        contentUserInput.sendKeys(text);\r\n    }\r\n    public void sendMessageButtonClick(){\r\n        sendMessageButton.click();\r\n    }\r\n    @Step(\"check after sending\")\r\n    public boolean isMessageSent() {\r\n        Duration timeout = Duration.ofSeconds(1);\r\n        WebDriverWait wait = new WebDriverWait(driver, timeout);\r\n        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//div[@class='success-message']\")));\r\n        try {\r\n            return driver.findElement(By.xpath(\"//div[@class='success-message']\")).isDisplayed();\r\n        } catch (NoSuchElementException e) {\r\n            return false;\r\n        }\r\n    }\r\n    public boolean error() {\r\n        Duration timeout = Duration.ofSeconds(5);\r\n        WebDriverWait wait = new WebDriverWait(driver, timeout);\r\n        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//*[@class='error']\")));\r\n        try {\r\n            return driver.findElement(By.xpath(\"//*[@class='error']\")).isDisplayed();\r\n        } catch (NoSuchElementException e) {\r\n            return false;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/pages/contactUs/ContactUsPage.java b/src/test/java/e2e/pages/contactUs/ContactUsPage.java
+--- a/src/test/java/e2e/pages/contactUs/ContactUsPage.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/e2e/pages/contactUs/ContactUsPage.java	(date 1713112308613)
+@@ -60,8 +60,8 @@
+             e.printStackTrace();
+         }
+     }
+-    @Step("Fill out the feedback form {name},{emailContact},{text}")
+-    public void feedback(String name, String emailContact, String text) {
++    @Step("Fill out the setFeedbackForm form {name},{emailContact},{text}")
++    public void setFeedbackForm(String name, String emailContact, String text) {
+         nameUserInput.sendKeys(name);
+         emailUserInput.sendKeys(emailContact);
+         contentUserInput.sendKeys(text);
+@@ -72,15 +72,17 @@
+     @Step("check after sending")
+     public boolean isMessageSent() {
+         Duration timeout = Duration.ofSeconds(1);
++        // Добавляем ожидание появления подтверждения успешной отправки сообщения
+         WebDriverWait wait = new WebDriverWait(driver, timeout);
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='success-message']")));
+         try {
+             return driver.findElement(By.xpath("//div[@class='success-message']")).isDisplayed();
+         } catch (NoSuchElementException e) {
+-            return false;
++            return false; // Возвращаем false, если элемент не найден
+         }
+     }
+-    public boolean error() {
++
++    public boolean isErrorDisplayed() {
+         Duration timeout = Duration.ofSeconds(5);
+         WebDriverWait wait = new WebDriverWait(driver, timeout);
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));
+Index: src/test/resources/testngApi.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<!DOCTYPE suite SYSTEM \"https://testng.org/testng-1.0.dtd\">\r\n<suite name=\"testApi\" verbose=\"1\">\r\n    <test name=\"ApiTest\">\r\n        <classes>\r\n            <class name=\"integration.tests.myTests.LoginApiTest\">\r\n            </class>\r\n            <class name=\"integration.tests.myTests.RegistrationApiTest\">\r\n            </class>\r\n            <class name=\"integration.tests.myTests.UserCanCreateEditAndDeletePost\">\r\n            </class>\r\n        </classes>\r\n    </test>\r\n</suite>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/testngApi.xml b/src/test/resources/testngApi.xml
+--- a/src/test/resources/testngApi.xml	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/resources/testngApi.xml	(date 1713112310466)
+@@ -1,13 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+ <suite name="testApi" verbose="1">
+-    <test name="ApiTest">
++    <test name="SmokeApiTest">
+         <classes>
+-            <class name="integration.tests.myTests.LoginApiTest">
+-            </class>
+-            <class name="integration.tests.myTests.RegistrationApiTest">
+-            </class>
+-            <class name="integration.tests.myTests.UserCanCreateEditAndDeletePost">
++            <class name="integration.tests.UserRegistrationApiTest">
+             </class>
+         </classes>
+     </test>
+Index: src/test/java/config/Config.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package config;\r\n\r\nimport java.io.IOException;\r\nimport java.io.InputStream;\r\nimport java.util.Properties;\r\n\r\npublic class Config {\r\n    private final Properties properties;\r\n\r\n    public Config() {\r\n        properties = new Properties();\r\n        try (InputStream input = getClass().getClassLoader().getResourceAsStream(\"config.properties\")) {\r\n            properties.load(input);\r\n        } catch (IOException e) {\r\n            throw new RuntimeException(\"Failed to read config.properties\", e);\r\n        }\r\n    }\r\n\r\n    public String getProjectUrl() {\r\n        return properties.getProperty(\"project.url\");\r\n    }\r\n\r\n    public String getProjectApiUrl() {\r\n        return properties.getProperty(\"project.api.url\");\r\n    }\r\n\r\n    public String getSelenoidUrl() {\r\n        return properties.getProperty(\"selenoid.url\");\r\n    }\r\n\r\n    public Boolean getSelenoidState() {\r\n        return Boolean.parseBoolean(properties.getProperty(\"selenoid.state\"));\r\n    }\r\n\r\n    public Boolean getHeadless() {\r\n        return Boolean.parseBoolean(properties.getProperty(\"headless.state\"));\r\n    }\r\n\r\n    public Integer getWindowWight() {\r\n        return Integer.parseInt(properties.getProperty(\"window.width\"));\r\n    }\r\n\r\n    public Integer getWindowHeight() {\r\n        return Integer.parseInt(properties.getProperty(\"window.height\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/config/Config.java b/src/test/java/config/Config.java
+--- a/src/test/java/config/Config.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/config/Config.java	(date 1713112307838)
+@@ -15,11 +15,9 @@
+             throw new RuntimeException("Failed to read config.properties", e);
+         }
+     }
+-
+     public String getProjectUrl() {
+         return properties.getProperty("project.url");
+     }
+-
+     public String getProjectApiUrl() {
+         return properties.getProperty("project.api.url");
+     }
+@@ -32,10 +30,6 @@
+         return Boolean.parseBoolean(properties.getProperty("selenoid.state"));
+     }
+ 
+-    public Boolean getHeadless() {
+-        return Boolean.parseBoolean(properties.getProperty("headless.state"));
+-    }
+-
+     public Integer getWindowWight() {
+         return Integer.parseInt(properties.getProperty("window.width"));
+     }
+Index: src/test/java/e2e/pages/post/CreateAPostForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e.pages.post;\r\n\r\nimport com.google.common.net.MediaType;\r\nimport config.Config;\r\nimport e2e.pages.BasePage;\r\nimport io.qameta.allure.Step;\r\nimport okhttp3.MultipartBody;\r\nimport okhttp3.OkHttpClient;\r\nimport okhttp3.Request;\r\nimport okhttp3.RequestBody;\r\nimport okhttp3.Response;\r\nimport org.openqa.selenium.*;\r\nimport org.openqa.selenium.remote.*;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.openqa.selenium.support.ui.ExpectedConditions;\r\nimport org.openqa.selenium.support.ui.WebDriverWait;\r\nimport org.testng.Assert;\r\n\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.net.URL;\r\nimport java.time.Duration;\r\n\r\npublic class CreateAPostForm extends BasePage {\r\n    public CreateAPostForm(WebDriver driver) {\r\n        super(driver);\r\n    }\r\n\r\n    private final Config config = new Config();\r\n\r\n    @FindBy(xpath = \"//*[@class='post-header']\")\r\n    public WebElement header;\r\n\r\n    @FindBy(xpath = \"//*[@name='title']\")\r\n    WebElement titleInput;\r\n\r\n    @FindBy(xpath = \"//*[@data-test='description-input']\")\r\n    WebElement descriptionInput;\r\n\r\n    @FindBy(xpath = \"//*[@name='content']\")\r\n    WebElement contentInput;\r\n\r\n    @FindBy(xpath = \"//*[@class='post_uploaded_image__7qSWV']\")\r\n    WebElement imageInput;\r\n\r\n    @FindBy(xpath = \"//*[@id='publishDate']\")\r\n    WebElement publishData;\r\n\r\n    @FindBy(xpath = \"//*[@for='draftCheckbox']\")\r\n    WebElement tumblerSwitchDraft;\r\n\r\n    @FindBy(xpath = \"//*[@type='submit']\")\r\n    WebElement submitButton;\r\n    @Step(\"Wait for loading Create a post\")\r\n    public void waitForLoading() {\r\n        try {\r\n            getWait().forVisibility(header);\r\n            getWait().forVisibility(titleInput);\r\n            getWait().forVisibility(descriptionInput);\r\n            getWait().forVisibility(contentInput);\r\n            getWait().forVisibility(imageInput);\r\n            getWait().forVisibility(publishData);\r\n            getWait().forClickable(tumblerSwitchDraft);\r\n            getWait().forVisibility(submitButton);\r\n            Assert.assertTrue(submitButton.isDisplayed());\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n\r\n    @Step(\"Fill form {title},{description},{content},{path}\")\r\n    public void setPostForm(String title, String description, String content, String path) {\r\n        titleInput.sendKeys(title);\r\n        descriptionInput.sendKeys(description);\r\n        contentInput.sendKeys(content);\r\n    }\r\n\r\n    public String getTitle() {\r\n        return titleInput.getAttribute(\"value\");\r\n    }\r\n\r\n    public String getDescriptionText() {\r\n        return descriptionInput.getAttribute(\"value\");\r\n    }\r\n\r\n    public String getContent() {\r\n        return contentInput.getAttribute(\"value\");\r\n    }\r\n\r\n    public void tumblerSwitchClick() {\r\n        tumblerSwitchDraft.click();\r\n    }\r\n\r\n    @Step(\"Upload image: {relativeImagePath}\")\r\n    public void uploadImage(String relativeImagePath) {\r\n        try {\r\n            String absoluteImagePath = System.getProperty(\"user.dir\") + \"/\" + relativeImagePath;\r\n            WebElement fileInput = driver.findElement(By.xpath(\"//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']\"));\r\n            ((JavascriptExecutor) driver).executeScript(\"arguments[0].style.display = 'block';\", fileInput);\r\n            fileInput.sendKeys(absoluteImagePath);\r\n            Thread.sleep(5000);\r\n        } catch (Exception e) {\r\n            Assert.fail(\"Failed to upload image: \" + e.getMessage());\r\n        }\r\n    }\r\n    \r\n    @Step(\"Click Submit Button\")\r\n    public void clickSubmitButton() {\r\n        submitButton.click();\r\n    }\r\n    @Step(\"check after sending\")\r\n    public boolean errorText() {\r\n        Duration timeout = Duration.ofSeconds(10);\r\n        WebDriverWait wait = new WebDriverWait(driver, timeout);\r\n        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//*[@class='error']\")));\r\n        try {\r\n            return driver.findElement(By.xpath(\"//*[@class='error']\")).isDisplayed();\r\n        } catch (NoSuchElementException e) {\r\n            return false;\r\n        }\r\n    }\r\n    @Step(\"Screenshot {actualScreenshotName}\")\r\n    public void takePostPageScreenshot(String actualScreenshotName){\r\n        try {\r\n            waitForLoading();\r\n            takeAndCompareScreenshot(actualScreenshotName, null);\r\n        } catch (StaleElementReferenceException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    @Step(\"Fill form {title},{description},{content}\")\r\n    public void userCanNotCreateAPost(String title, String description, String content) {\r\n        titleInput.sendKeys(title);\r\n        descriptionInput.sendKeys(description);\r\n        contentInput.sendKeys(content);\r\n        submitButton.click();\r\n    }\r\n\r\n    public boolean isPostDisplayed(String postTitle) {\r\n        try {\r\n            WebElement postElement = driver.findElement(By.xpath(\"//*[@class='post-content__top' and .//h3[text()='\" + postTitle + \"']]\"));;\r\n            return postElement.isDisplayed();\r\n        } catch (NoSuchElementException e) {\r\n            return false;\r\n        }\r\n    }\r\n//    public boolean isMessageSent() {\r\n//        Duration timeout = Duration.ofSeconds(1);\r\n//        // Добавляем ожидание появления подтверждения успешной отправки сообщения\r\n//        WebDriverWait wait = new WebDriverWait(driver, timeout);\r\n//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//div[@class='post-content__top']\")));\r\n//        try {\r\n//            return driver.findElement(By.xpath(\"//div[@class='post-content__top']\")).isDisplayed();\r\n//        } catch (NoSuchElementException e) {\r\n//            return false; // Возвращаем false, если элемент не найден\r\n//        }\r\n//    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/pages/post/CreateAPostForm.java b/src/test/java/e2e/pages/post/CreateAPostForm.java
+--- a/src/test/java/e2e/pages/post/CreateAPostForm.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/e2e/pages/post/CreateAPostForm.java	(date 1713112309116)
+@@ -1,24 +1,13 @@
+ package e2e.pages.post;
+ 
+-import com.google.common.net.MediaType;
+-import config.Config;
+ import e2e.pages.BasePage;
+ import io.qameta.allure.Step;
+-import okhttp3.MultipartBody;
+-import okhttp3.OkHttpClient;
+-import okhttp3.Request;
+-import okhttp3.RequestBody;
+-import okhttp3.Response;
+ import org.openqa.selenium.*;
+-import org.openqa.selenium.remote.*;
+ import org.openqa.selenium.support.FindBy;
+ import org.openqa.selenium.support.ui.ExpectedConditions;
+ import org.openqa.selenium.support.ui.WebDriverWait;
+ import org.testng.Assert;
+ 
+-import java.io.File;
+-import java.io.IOException;
+-import java.net.URL;
+ import java.time.Duration;
+ 
+ public class CreateAPostForm extends BasePage {
+@@ -26,8 +15,6 @@
+         super(driver);
+     }
+ 
+-    private final Config config = new Config();
+-
+     @FindBy(xpath = "//*[@class='post-header']")
+     public WebElement header;
+ 
+@@ -51,6 +38,7 @@
+ 
+     @FindBy(xpath = "//*[@type='submit']")
+     WebElement submitButton;
++
+     @Step("Wait for loading Create a post")
+     public void waitForLoading() {
+         try {
+@@ -68,12 +56,17 @@
+         }
+     }
+ 
+-
+     @Step("Fill form {title},{description},{content},{path}")
+-    public void setPostForm(String title, String description, String content, String path) {
++    public void createAPost(String title, String description, String content, String path) {
+         titleInput.sendKeys(title);
+         descriptionInput.sendKeys(description);
+         contentInput.sendKeys(content);
++        imageInput.click();
++        if (
++                path != null
++        ) {
++            uploadImage(path);
++        }
+     }
+ 
+     public String getTitle() {
+@@ -88,27 +81,27 @@
+         return contentInput.getAttribute("value");
+     }
+ 
+-    public void tumblerSwitchClick() {
++    public void clickToSwitchAsDraft() {
+         tumblerSwitchDraft.click();
+     }
+ 
+-    @Step("Upload image: {relativeImagePath}")
++    @Step("Upload image: {imagePath}")
+     public void uploadImage(String relativeImagePath) {
+         try {
+-            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
++//            String absoluteImagePath = Paths.get(relativeImagePath).toAbsolutePath().toString();
++//            System.out.println(absoluteImagePath);
+             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+-            ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'block';", fileInput);
+-            fileInput.sendKeys(absoluteImagePath);
+-            Thread.sleep(5000);
++            fileInput.sendKeys(relativeImagePath);
+         } catch (Exception e) {
+             Assert.fail("Failed to upload image: " + e.getMessage());
+         }
+     }
+-    
++
+     @Step("Click Submit Button")
+     public void clickSubmitButton() {
+         submitButton.click();
+     }
++
+     @Step("check after sending")
+     public boolean errorText() {
+         Duration timeout = Duration.ofSeconds(10);
+@@ -120,8 +113,9 @@
+             return false;
+         }
+     }
++
+     @Step("Screenshot {actualScreenshotName}")
+-    public void takePostPageScreenshot(String actualScreenshotName){
++    public void takePostPageScreenshot(String actualScreenshotName) {
+         try {
+             waitForLoading();
+             takeAndCompareScreenshot(actualScreenshotName, null);
+@@ -129,32 +123,4 @@
+             e.printStackTrace();
+         }
+     }
+-    @Step("Fill form {title},{description},{content}")
+-    public void userCanNotCreateAPost(String title, String description, String content) {
+-        titleInput.sendKeys(title);
+-        descriptionInput.sendKeys(description);
+-        contentInput.sendKeys(content);
+-        submitButton.click();
+-    }
+-
+-    public boolean isPostDisplayed(String postTitle) {
+-        try {
+-            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
+-            return postElement.isDisplayed();
+-        } catch (NoSuchElementException e) {
+-            return false;
+-        }
+-    }
+-//    public boolean isMessageSent() {
+-//        Duration timeout = Duration.ofSeconds(1);
+-//        // Добавляем ожидание появления подтверждения успешной отправки сообщения
+-//        WebDriverWait wait = new WebDriverWait(driver, timeout);
+-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='post-content__top']")));
+-//        try {
+-//            return driver.findElement(By.xpath("//div[@class='post-content__top']")).isDisplayed();
+-//        } catch (NoSuchElementException e) {
+-//            return false; // Возвращаем false, если элемент не найден
+-//        }
+-//    }
+ }
+-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e5cc04c9-2e2d-445e-8122-810ff6848930\" name=\"Changes\" comment=\"Added headless state and updated method addProfileForm\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/resources/config.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/resources/config.properties\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand />\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"package-info\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"FormatOnSaveOptions\">\r\n    <option name=\"myRunOnSave\" value=\"true\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"dev_Pislaru\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"OptimizeOnSaveOptions\">\r\n    <option name=\"myRunOnSave\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2dbRMPjRf3fRiwYltbX5qD5VUEa\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;TestNG.AddUserDataProfileTest.userCanAddDataProfile.executor&quot;: &quot;Debug&quot;,\r\n    &quot;TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost.executor&quot;: &quot;Run&quot;,\r\n    &quot;TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost.executor&quot;: &quot;Run&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;dev__Manolov&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/ACER/IdeaProjects/Chatty/src/test/resources&quot;,\r\n    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\ACER\\IdeaProjects\\Chatty\\src\\test\\resources\" />\r\n      <recent name=\"C:\\Users\\PC\\Chatty\\src\\test\\resources\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\PC\\Chatty\\reference\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"e2e.tests.user\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost\">\r\n    <configuration name=\"AddUserDataProfileTest\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.profile.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.profile\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.profile.AddUserDataProfileTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AddUserDataProfileTest.userCanAddDataProfile\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.profile.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.profile\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.profile.AddUserDataProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"userCanAddDataProfile\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.post.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.post\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.post.AdminCanCreateEditAndDeletePostTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"adminCanCreateAPost\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"EditUserDataProfileTest.userCanEditProfile\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.profile.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.profile\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.profile.EditUserDataProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"userCanEditProfile\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"UserCanCreateEditAndDeletePost.userCanCreateAPost\" type=\"TestNG\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Chatty.test\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"e2e.tests.post.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"e2e.tests.post\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"e2e.tests.post.UserCanCreateEditAndDeletePost\" />\r\n      <option name=\"METHOD_NAME\" value=\"userCanCreateAPost\" />\r\n      <option name=\"TEST_OBJECT\" value=\"METHOD\" />\r\n      <properties />\r\n      <listeners />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost\" />\r\n        <item itemvalue=\"TestNG.AddUserDataProfileTest.userCanAddDataProfile\" />\r\n        <item itemvalue=\"TestNG.AddUserDataProfileTest\" />\r\n        <item itemvalue=\"TestNG.EditUserDataProfileTest.userCanEditProfile\" />\r\n        <item itemvalue=\"TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e5cc04c9-2e2d-445e-8122-810ff6848930\" name=\"Changes\" comment=\"\" />\r\n      <created>1710274744017</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710274744017</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711370136449</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711370136449</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711385939570</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711385939570</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711386153761</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711386153761</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711528350961</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711528350961</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711535105707</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711535105707</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711551832253</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711551832253</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711556229247</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711556229247</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1711562947418</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1711562947418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712467526206</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712467526206</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712479153697</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712479153697</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712480907976</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712480907976</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712483963242</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712483963242</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712486300060</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712486300060</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712486335209</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712486335209</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712486510758</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712486510758</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712503317452</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712503317453</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712503708401</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712503708401</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712511425023</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712511425023</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712511475487</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712511475487</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712511868220</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712511868220</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Registration,Login,Post,Contact Us\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1712512528397</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712512528397</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Added e2e Test\">\r\n      <created>1712513586417</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712513586417</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Added Api Test\">\r\n      <created>1712519297892</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712519297892</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"Added Api Test\">\r\n      <created>1712519993588</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712519993588</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"Added Api Test\">\r\n      <created>1712521379227</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712521379227</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"Added Api Test\">\r\n      <created>1712769623602</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712769623602</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"Added ContactUsApiTest\">\r\n      <created>1712986830444</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1712986830444</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"Removed allureId\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713037048547</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713037048547</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00029\" summary=\"Updated a lot of things\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713042079998</created>\r\n      <option name=\"number\" value=\"00029\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713042079998</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00030\" summary=\"Updated a lot of things\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713042288593</created>\r\n      <option name=\"number\" value=\"00030\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713042288593</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00031\" summary=\"Updated a lot of things\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713044350532</created>\r\n      <option name=\"number\" value=\"00031\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713044350532</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00032\" summary=\"Updated a lot of things\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713046112464</created>\r\n      <option name=\"number\" value=\"00032\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713046112464</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00033\" summary=\"Updated a lot of things\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713046384142</created>\r\n      <option name=\"number\" value=\"00033\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713046384142</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00034\" summary=\"Updated a lot of things\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713048219677</created>\r\n      <option name=\"number\" value=\"00034\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713048219677</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00035\" summary=\"Updated ApplicationManager\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713048693025</created>\r\n      <option name=\"number\" value=\"00035\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713048693025</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00036\" summary=\"Added attach allure screenshot after fail test\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713049991805</created>\r\n      <option name=\"number\" value=\"00036\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713049991805</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00037\" summary=\"Fixed tests related to user profile\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713050505643</created>\r\n      <option name=\"number\" value=\"00037\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713050505643</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00038\" summary=\"Fixed tests related to user profile\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713051078113</created>\r\n      <option name=\"number\" value=\"00038\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713051078113</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00039\" summary=\"Added headless state and updated method addProfileForm\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713052178838</created>\r\n      <option name=\"number\" value=\"00039\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713052178838</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"40\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Registration,Login,Post,Contact Us\" />\r\n    <MESSAGE value=\"Added Api Test\" />\r\n    <MESSAGE value=\"Added ContactUsApiTest\" />\r\n    <MESSAGE value=\"Added e2e Test\" />\r\n    <MESSAGE value=\"Removed allureId\" />\r\n    <MESSAGE value=\"Updated a lot of things\" />\r\n    <MESSAGE value=\"Updated ApplicationManager\" />\r\n    <MESSAGE value=\"Added attach allure screenshot after fail test\" />\r\n    <MESSAGE value=\"Fixed tests related to user profile\" />\r\n    <MESSAGE value=\"Added headless state and updated method addProfileForm\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Added headless state and updated method addProfileForm\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"19\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>17</line>\r\n          <option name=\"timeStamp\" value=\"20\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>16</line>\r\n          <option name=\"timeStamp\" value=\"21\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"22\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"23\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"24\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>23</line>\r\n          <option name=\"timeStamp\" value=\"25\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"26\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>21</line>\r\n          <option name=\"timeStamp\" value=\"27\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>20</line>\r\n          <option name=\"timeStamp\" value=\"28\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>34</line>\r\n          <option name=\"timeStamp\" value=\"29\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>33</line>\r\n          <option name=\"timeStamp\" value=\"30\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"31\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>37</line>\r\n          <option name=\"timeStamp\" value=\"32\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"33\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>39</line>\r\n          <option name=\"timeStamp\" value=\"34\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>40</line>\r\n          <option name=\"timeStamp\" value=\"35\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"36\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>42</line>\r\n          <option name=\"timeStamp\" value=\"37\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>43</line>\r\n          <option name=\"timeStamp\" value=\"38\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>44</line>\r\n          <option name=\"timeStamp\" value=\"39\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>47</line>\r\n          <option name=\"timeStamp\" value=\"40\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>\r\n          <line>46</line>\r\n          <option name=\"timeStamp\" value=\"42\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>21</line>\r\n          <option name=\"timeStamp\" value=\"65\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"66\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>24</line>\r\n          <option name=\"timeStamp\" value=\"67\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"68\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"69\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"70\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>27</line>\r\n          <option name=\"timeStamp\" value=\"71\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>30</line>\r\n          <option name=\"timeStamp\" value=\"74\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>31</line>\r\n          <option name=\"timeStamp\" value=\"75\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>33</line>\r\n          <option name=\"timeStamp\" value=\"76\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"78\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>37</line>\r\n          <option name=\"timeStamp\" value=\"79\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"80\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"151\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>20</line>\r\n          <option name=\"timeStamp\" value=\"152\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"153\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>39</line>\r\n          <option name=\"timeStamp\" value=\"154\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>38</line>\r\n          <option name=\"timeStamp\" value=\"155\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>36</line>\r\n          <option name=\"timeStamp\" value=\"156\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>35</line>\r\n          <option name=\"timeStamp\" value=\"158\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>34</line>\r\n          <option name=\"timeStamp\" value=\"159\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>29</line>\r\n          <option name=\"timeStamp\" value=\"160\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>26</line>\r\n          <option name=\"timeStamp\" value=\"162\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"163\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>10</line>\r\n          <option name=\"timeStamp\" value=\"178\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>46</line>\r\n          <option name=\"timeStamp\" value=\"179\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>44</line>\r\n          <option name=\"timeStamp\" value=\"180\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>41</line>\r\n          <option name=\"timeStamp\" value=\"181\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>25</line>\r\n          <option name=\"timeStamp\" value=\"183\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>28</line>\r\n          <option name=\"timeStamp\" value=\"184\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>\r\n          <line>36</line>\r\n          <option name=\"timeStamp\" value=\"185\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/EditUserDataProfileTest.java</url>\r\n          <line>47</line>\r\n          <option name=\"timeStamp\" value=\"219\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"222\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java</url>\r\n          <line>89</line>\r\n          <option name=\"timeStamp\" value=\"239\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>\r\n          <line>88</line>\r\n          <option name=\"timeStamp\" value=\"242\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>108</line>\r\n          <option name=\"timeStamp\" value=\"245\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>110</line>\r\n          <option name=\"timeStamp\" value=\"246\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>112</line>\r\n          <option name=\"timeStamp\" value=\"247\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>109</line>\r\n          <option name=\"timeStamp\" value=\"248\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>106</line>\r\n          <option name=\"timeStamp\" value=\"249\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>111</line>\r\n          <option name=\"timeStamp\" value=\"250\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>\r\n          <line>105</line>\r\n          <option name=\"timeStamp\" value=\"251\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>\r\n          <line>19</line>\r\n          <properties class=\"e2e.tests.Georgiy.UserCanCreateAPostTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"64\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>\r\n          <line>17</line>\r\n          <properties class=\"e2e.tests.Georgiy.EditUserProfileTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"164\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/RegistrationAndAuthorisationUserTest.java</url>\r\n          <line>26</line>\r\n          <properties class=\"e2e.tests.user.RegistrationAndAuthorisationUserTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"198\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>\r\n          <line>13</line>\r\n          <properties class=\"integration.UserApiTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"213\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/LoginAdminTest.java</url>\r\n          <line>32</line>\r\n          <properties class=\"e2e.tests.admin.LoginAdminTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"218\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java</url>\r\n          <line>38</line>\r\n          <properties class=\"e2e.tests.user.UserCanNotCreateAPost\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"220\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/DraftPostTest.java</url>\r\n          <line>24</line>\r\n          <properties class=\"e2e.tests.admin.DraftPostTest\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"221\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/Chatty$LoginAdminTest.ic\" NAME=\"LoginAdminTest Coverage Results\" MODIFIED=\"1712092384546\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>e2e.tests.Georgiy.*</FILTER>\r\n    </SUITE>\r\n    <SUITE FILE_PATH=\"coverage/Chatty$LoginAdminTest_adminCanNotLoginWithoutInvalidEmailAndPassword.ic\" NAME=\"LoginAdminTest.adminCanNotLoginWithoutInvalidEmailAndPassword Coverage Results\" MODIFIED=\"1712091402972\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>e2e.tests.Georgiy.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/.idea/workspace.xml	(date 1713112323287)
+@@ -4,26 +4,53 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added headless state and updated method addProfileForm">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_22_29__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_04_2024_23_02__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_29__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_17_37__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_14__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_47__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_14_43__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_03_2024_14_34__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_19_15__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_30__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_03_2024_11_31__Changes_.xml" afterDir="false" />
++    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest2.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke2.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/test/resources/testngRegistration.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_04_2024_11_46_[Changes]/UserCanEditPostTest.class" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/reference/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848353_121.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/reference/path/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reference/path/5204092180870848376_121.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/BasePage.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Daniel/UserCanCreateANewPost.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserAuthLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserLoginApi.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/integration/user/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/user/UserLogin.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/wait/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wait/Wait.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngE2eSmoke.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/adminCanCreateAPost_IT.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848057_121.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848353_121.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848355_121.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848356_121.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848359_121.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848366_121.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848376_121.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/adminCanCreateAPost_edit.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/userCanCreateAPost_MyPost.jpg" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/uploadReferences/userCanEditPost_MyPost.jpg" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,9 +65,6 @@
+   <component name="ExternalProjectsManager">
+     <system id="GRADLE">
+       <state>
+-        <task path="$PROJECT_DIR$">
+-          <activation />
+-        </task>
+         <projects_view>
+           <tree_state>
+             <expand />
+@@ -49,31 +73,9 @@
+         </projects_view>
+       </state>
+     </system>
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="package-info" />
+-        <option value="Class" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="FormatOnSaveOptions">
+-    <option name="myRunOnSave" value="true" />
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
+-      </map>
+-    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="MarkdownSettingsMigration">
+-    <option name="stateVersion" value="1" />
+-  </component>
+-  <component name="OptimizeOnSaveOptions">
+-    <option name="myRunOnSave" value="true" />
+   </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+@@ -86,133 +88,19 @@
+   </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;TestNG.AddUserDataProfileTest.userCanAddDataProfile.executor&quot;: &quot;Debug&quot;,
+-    &quot;TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost.executor&quot;: &quot;Run&quot;,
+-    &quot;TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost.executor&quot;: &quot;Run&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;dev__Manolov&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ACER/IdeaProjects/Chatty/src/test/resources&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+   }
+ }</component>
+   <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\ACER\IdeaProjects\Chatty\src\test\resources" />
+-      <recent name="C:\Users\PC\Chatty\src\test\resources" />
+-    </key>
+     <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\PC\Chatty\reference" />
++      <recent name="$PROJECT_DIR$" />
+     </key>
+-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+-      <recent name="" />
+-    </key>
+-    <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="e2e.tests.user" />
+-    </key>
+-  </component>
+-  <component name="RunManager" selected="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost">
+-    <configuration name="AddUserDataProfileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+-      <module name="Chatty.test" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="e2e.tests.profile.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
+-      <option name="TEST_OBJECT" value="CLASS" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="AddUserDataProfileTest.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+-      <module name="Chatty.test" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="e2e.tests.profile.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTest" />
+-      <option name="METHOD_NAME" value="userCanAddDataProfile" />
+-      <option name="TEST_OBJECT" value="METHOD" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+-      <module name="Chatty.test" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="e2e.tests.post.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.AdminCanCreateEditAndDeletePostTest" />
+-      <option name="METHOD_NAME" value="adminCanCreateAPost" />
+-      <option name="TEST_OBJECT" value="METHOD" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="EditUserDataProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+-      <module name="Chatty.test" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="e2e.tests.profile.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTest" />
+-      <option name="METHOD_NAME" value="userCanEditProfile" />
+-      <option name="TEST_OBJECT" value="METHOD" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <configuration name="UserCanCreateEditAndDeletePost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+-      <module name="Chatty.test" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="e2e.tests.post.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateEditAndDeletePost" />
+-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+-      <option name="TEST_OBJECT" value="METHOD" />
+-      <properties />
+-      <listeners />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
+-        <item itemvalue="TestNG.AddUserDataProfileTest.userCanAddDataProfile" />
+-        <item itemvalue="TestNG.AddUserDataProfileTest" />
+-        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+-        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+-      </list>
+-    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -223,338 +111,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1710274744017</updated>
+     </task>
+-    <task id="LOCAL-00001" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711370136449</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711370136449</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711385939570</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711385939570</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711386153761</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711386153761</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711528350961</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711528350961</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711535105707</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711535105707</updated>
+-    </task>
+-    <task id="LOCAL-00006" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711551832253</created>
+-      <option name="number" value="00006" />
+-      <option name="presentableId" value="LOCAL-00006" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711551832253</updated>
+-    </task>
+-    <task id="LOCAL-00007" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711556229247</created>
+-      <option name="number" value="00007" />
+-      <option name="presentableId" value="LOCAL-00007" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711556229247</updated>
+-    </task>
+-    <task id="LOCAL-00008" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1711562947418</created>
+-      <option name="number" value="00008" />
+-      <option name="presentableId" value="LOCAL-00008" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1711562947418</updated>
+-    </task>
+-    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712467526206</created>
+-      <option name="number" value="00009" />
+-      <option name="presentableId" value="LOCAL-00009" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712467526206</updated>
+-    </task>
+-    <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712479153697</created>
+-      <option name="number" value="00010" />
+-      <option name="presentableId" value="LOCAL-00010" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712479153697</updated>
+-    </task>
+-    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712480907976</created>
+-      <option name="number" value="00011" />
+-      <option name="presentableId" value="LOCAL-00011" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712480907976</updated>
+-    </task>
+-    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712483963242</created>
+-      <option name="number" value="00012" />
+-      <option name="presentableId" value="LOCAL-00012" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712483963242</updated>
+-    </task>
+-    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712486300060</created>
+-      <option name="number" value="00013" />
+-      <option name="presentableId" value="LOCAL-00013" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712486300060</updated>
+-    </task>
+-    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712486335209</created>
+-      <option name="number" value="00014" />
+-      <option name="presentableId" value="LOCAL-00014" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712486335209</updated>
+-    </task>
+-    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712486510758</created>
+-      <option name="number" value="00015" />
+-      <option name="presentableId" value="LOCAL-00015" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712486510758</updated>
+-    </task>
+-    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712503317452</created>
+-      <option name="number" value="00016" />
+-      <option name="presentableId" value="LOCAL-00016" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712503317453</updated>
+-    </task>
+-    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712503708401</created>
+-      <option name="number" value="00017" />
+-      <option name="presentableId" value="LOCAL-00017" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712503708401</updated>
+-    </task>
+-    <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712511425023</created>
+-      <option name="number" value="00018" />
+-      <option name="presentableId" value="LOCAL-00018" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712511425023</updated>
+-    </task>
+-    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712511475487</created>
+-      <option name="number" value="00019" />
+-      <option name="presentableId" value="LOCAL-00019" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712511475487</updated>
+-    </task>
+-    <task id="LOCAL-00020" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712511868220</created>
+-      <option name="number" value="00020" />
+-      <option name="presentableId" value="LOCAL-00020" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712511868220</updated>
+-    </task>
+-    <task id="LOCAL-00021" summary="Registration,Login,Post,Contact Us">
+-      <option name="closed" value="true" />
+-      <created>1712512528397</created>
+-      <option name="number" value="00021" />
+-      <option name="presentableId" value="LOCAL-00021" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712512528397</updated>
+-    </task>
+-    <task id="LOCAL-00022" summary="Added e2e Test">
+-      <created>1712513586417</created>
+-      <option name="number" value="00022" />
+-      <option name="presentableId" value="LOCAL-00022" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712513586417</updated>
+-    </task>
+-    <task id="LOCAL-00023" summary="Added Api Test">
+-      <created>1712519297892</created>
+-      <option name="number" value="00023" />
+-      <option name="presentableId" value="LOCAL-00023" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712519297892</updated>
+-    </task>
+-    <task id="LOCAL-00024" summary="Added Api Test">
+-      <created>1712519993588</created>
+-      <option name="number" value="00024" />
+-      <option name="presentableId" value="LOCAL-00024" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712519993588</updated>
+-    </task>
+-    <task id="LOCAL-00025" summary="Added Api Test">
+-      <created>1712521379227</created>
+-      <option name="number" value="00025" />
+-      <option name="presentableId" value="LOCAL-00025" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712521379227</updated>
+-    </task>
+-    <task id="LOCAL-00026" summary="Added Api Test">
+-      <created>1712769623602</created>
+-      <option name="number" value="00026" />
+-      <option name="presentableId" value="LOCAL-00026" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712769623602</updated>
+-    </task>
+-    <task id="LOCAL-00027" summary="Added ContactUsApiTest">
+-      <created>1712986830444</created>
+-      <option name="number" value="00027" />
+-      <option name="presentableId" value="LOCAL-00027" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1712986830444</updated>
+-    </task>
+-    <task id="LOCAL-00028" summary="Removed allureId">
+-      <option name="closed" value="true" />
+-      <created>1713037048547</created>
+-      <option name="number" value="00028" />
+-      <option name="presentableId" value="LOCAL-00028" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713037048547</updated>
+-    </task>
+-    <task id="LOCAL-00029" summary="Updated a lot of things">
+-      <option name="closed" value="true" />
+-      <created>1713042079998</created>
+-      <option name="number" value="00029" />
+-      <option name="presentableId" value="LOCAL-00029" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713042079998</updated>
+-    </task>
+-    <task id="LOCAL-00030" summary="Updated a lot of things">
+-      <option name="closed" value="true" />
+-      <created>1713042288593</created>
+-      <option name="number" value="00030" />
+-      <option name="presentableId" value="LOCAL-00030" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713042288593</updated>
+-    </task>
+-    <task id="LOCAL-00031" summary="Updated a lot of things">
+-      <option name="closed" value="true" />
+-      <created>1713044350532</created>
+-      <option name="number" value="00031" />
+-      <option name="presentableId" value="LOCAL-00031" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713044350532</updated>
+-    </task>
+-    <task id="LOCAL-00032" summary="Updated a lot of things">
+-      <option name="closed" value="true" />
+-      <created>1713046112464</created>
+-      <option name="number" value="00032" />
+-      <option name="presentableId" value="LOCAL-00032" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713046112464</updated>
+-    </task>
+-    <task id="LOCAL-00033" summary="Updated a lot of things">
+-      <option name="closed" value="true" />
+-      <created>1713046384142</created>
+-      <option name="number" value="00033" />
+-      <option name="presentableId" value="LOCAL-00033" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713046384142</updated>
+-    </task>
+-    <task id="LOCAL-00034" summary="Updated a lot of things">
+-      <option name="closed" value="true" />
+-      <created>1713048219677</created>
+-      <option name="number" value="00034" />
+-      <option name="presentableId" value="LOCAL-00034" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713048219677</updated>
+-    </task>
+-    <task id="LOCAL-00035" summary="Updated ApplicationManager">
+-      <option name="closed" value="true" />
+-      <created>1713048693025</created>
+-      <option name="number" value="00035" />
+-      <option name="presentableId" value="LOCAL-00035" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713048693025</updated>
+-    </task>
+-    <task id="LOCAL-00036" summary="Added attach allure screenshot after fail test">
+-      <option name="closed" value="true" />
+-      <created>1713049991805</created>
+-      <option name="number" value="00036" />
+-      <option name="presentableId" value="LOCAL-00036" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713049991805</updated>
+-    </task>
+-    <task id="LOCAL-00037" summary="Fixed tests related to user profile">
+-      <option name="closed" value="true" />
+-      <created>1713050505643</created>
+-      <option name="number" value="00037" />
+-      <option name="presentableId" value="LOCAL-00037" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713050505643</updated>
+-    </task>
+-    <task id="LOCAL-00038" summary="Fixed tests related to user profile">
+-      <option name="closed" value="true" />
+-      <created>1713051078113</created>
+-      <option name="number" value="00038" />
+-      <option name="presentableId" value="LOCAL-00038" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713051078113</updated>
+-    </task>
+-    <task id="LOCAL-00039" summary="Added headless state and updated method addProfileForm">
+-      <option name="closed" value="true" />
+-      <created>1713052178838</created>
+-      <option name="number" value="00039" />
+-      <option name="presentableId" value="LOCAL-00039" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1713052178838</updated>
+-    </task>
+-    <option name="localTasksCounter" value="40" />
+     <servers />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Registration,Login,Post,Contact Us" />
+-    <MESSAGE value="Added Api Test" />
+-    <MESSAGE value="Added ContactUsApiTest" />
+-    <MESSAGE value="Added e2e Test" />
+-    <MESSAGE value="Removed allureId" />
+-    <MESSAGE value="Updated a lot of things" />
+-    <MESSAGE value="Updated ApplicationManager" />
+-    <MESSAGE value="Added attach allure screenshot after fail test" />
+-    <MESSAGE value="Fixed tests related to user profile" />
+-    <MESSAGE value="Added headless state and updated method addProfileForm" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Added headless state and updated method addProfileForm" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -563,394 +120,6 @@
+           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+           <line>15</line>
+           <option name="timeStamp" value="1" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>15</line>
+-          <option name="timeStamp" value="19" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>17</line>
+-          <option name="timeStamp" value="20" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>16</line>
+-          <option name="timeStamp" value="21" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>19</line>
+-          <option name="timeStamp" value="22" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>28</line>
+-          <option name="timeStamp" value="23" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>25</line>
+-          <option name="timeStamp" value="24" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>23</line>
+-          <option name="timeStamp" value="25" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>22</line>
+-          <option name="timeStamp" value="26" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>21</line>
+-          <option name="timeStamp" value="27" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>20</line>
+-          <option name="timeStamp" value="28" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>34</line>
+-          <option name="timeStamp" value="29" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>33</line>
+-          <option name="timeStamp" value="30" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>35</line>
+-          <option name="timeStamp" value="31" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>37</line>
+-          <option name="timeStamp" value="32" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>38</line>
+-          <option name="timeStamp" value="33" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>39</line>
+-          <option name="timeStamp" value="34" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>40</line>
+-          <option name="timeStamp" value="35" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>41</line>
+-          <option name="timeStamp" value="36" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>42</line>
+-          <option name="timeStamp" value="37" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>43</line>
+-          <option name="timeStamp" value="38" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>44</line>
+-          <option name="timeStamp" value="39" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>47</line>
+-          <option name="timeStamp" value="40" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/RegistrationUserTest.java</url>
+-          <line>46</line>
+-          <option name="timeStamp" value="42" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>21</line>
+-          <option name="timeStamp" value="65" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>22</line>
+-          <option name="timeStamp" value="66" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>24</line>
+-          <option name="timeStamp" value="67" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>25</line>
+-          <option name="timeStamp" value="68" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>26</line>
+-          <option name="timeStamp" value="69" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>28</line>
+-          <option name="timeStamp" value="70" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>27</line>
+-          <option name="timeStamp" value="71" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>30</line>
+-          <option name="timeStamp" value="74" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>31</line>
+-          <option name="timeStamp" value="75" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>33</line>
+-          <option name="timeStamp" value="76" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>35</line>
+-          <option name="timeStamp" value="78" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>37</line>
+-          <option name="timeStamp" value="79" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>38</line>
+-          <option name="timeStamp" value="80" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>19</line>
+-          <option name="timeStamp" value="151" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>20</line>
+-          <option name="timeStamp" value="152" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>22</line>
+-          <option name="timeStamp" value="153" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>39</line>
+-          <option name="timeStamp" value="154" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>38</line>
+-          <option name="timeStamp" value="155" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>36</line>
+-          <option name="timeStamp" value="156" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>35</line>
+-          <option name="timeStamp" value="158" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>34</line>
+-          <option name="timeStamp" value="159" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>29</line>
+-          <option name="timeStamp" value="160" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>26</line>
+-          <option name="timeStamp" value="162" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>28</line>
+-          <option name="timeStamp" value="163" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>10</line>
+-          <option name="timeStamp" value="178" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>46</line>
+-          <option name="timeStamp" value="179" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>44</line>
+-          <option name="timeStamp" value="180" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>41</line>
+-          <option name="timeStamp" value="181" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>25</line>
+-          <option name="timeStamp" value="183" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>28</line>
+-          <option name="timeStamp" value="184" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
+-          <line>36</line>
+-          <option name="timeStamp" value="185" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/EditUserDataProfileTest.java</url>
+-          <line>47</line>
+-          <option name="timeStamp" value="219" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
+-          <line>22</line>
+-          <option name="timeStamp" value="222" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateEditAndDeletePost.java</url>
+-          <line>89</line>
+-          <option name="timeStamp" value="239" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+-          <line>88</line>
+-          <option name="timeStamp" value="242" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>108</line>
+-          <option name="timeStamp" value="245" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>110</line>
+-          <option name="timeStamp" value="246" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>112</line>
+-          <option name="timeStamp" value="247" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>109</line>
+-          <option name="timeStamp" value="248" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>106</line>
+-          <option name="timeStamp" value="249" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>111</line>
+-          <option name="timeStamp" value="250" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java</url>
+-          <line>105</line>
+-          <option name="timeStamp" value="251" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
+-          <line>19</line>
+-          <properties class="e2e.tests.Georgiy.UserCanCreateAPostTest">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="64" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/EditUserProfileTest.java</url>
+-          <line>17</line>
+-          <properties class="e2e.tests.Georgiy.EditUserProfileTest">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="164" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/RegistrationAndAuthorisationUserTest.java</url>
+-          <line>26</line>
+-          <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="198" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
+-          <line>13</line>
+-          <properties class="integration.UserApiTest">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="213" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/LoginAdminTest.java</url>
+-          <line>32</line>
+-          <properties class="e2e.tests.admin.LoginAdminTest">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="218" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java</url>
+-          <line>38</line>
+-          <properties class="e2e.tests.user.UserCanNotCreateAPost">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="220" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/DraftPostTest.java</url>
+-          <line>24</line>
+-          <properties class="e2e.tests.admin.DraftPostTest">
+-            <option name="EMULATED" value="true" />
+-            <option name="WATCH_EXIT" value="false" />
+-          </properties>
+-          <option name="timeStamp" value="221" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: src/test/java/e2e/pages/post/EditAPostForm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e.pages.post;\r\n\r\nimport e2e.pages.BasePage;\r\nimport io.qameta.allure.Step;\r\nimport org.openqa.selenium.*;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.testng.Assert;\r\n\r\nimport java.time.Duration;\r\n\r\npublic class EditAPostForm extends BasePage {\r\n    public EditAPostForm(WebDriver driver) {\r\n        super(driver);\r\n    }\r\n    @FindBy(xpath = \"//*[@data-test='title-input']\")\r\n    WebElement titleInput;\r\n\r\n    @FindBy(xpath = \"//*[@data-test='description-input']\")\r\n    WebElement descriptionInput;\r\n\r\n    @FindBy(xpath = \"//*[@data-test='textarea']\")\r\n    WebElement contentInput;\r\n\r\n    @FindBy(xpath = \"//*[@type='submit']\")\r\n    WebElement submitEditButton;\r\n\r\n    @FindBy(xpath = \"//*[@class='close']\")\r\n    WebElement closeButton;\r\n\r\n    public String getEditTitle() {\r\n        return titleInput.getAttribute(\"value\");\r\n    }\r\n\r\n    public String getEditDescriptionText() {\r\n        return descriptionInput.getAttribute(\"value\");\r\n    }\r\n\r\n    public String getEditContent() {\r\n        return contentInput.getAttribute(\"value\");\r\n    }\r\n\r\n    @Step(\"Wait for loading edit a post\")\r\n    public void waitForLoading() {\r\n        try {\r\n            getWait().forVisibility(titleInput);\r\n            getWait().forVisibility(descriptionInput);\r\n            getWait().forVisibility(contentInput);\r\n            getWait().forVisibility(submitEditButton);\r\n            //getWait().forVisibility(tumblerSwitch);\r\n            getWait().forVisibility(closeButton);\r\n        } catch (Exception e) {\r\n            Assert.fail(\"Failed to load Create a post form: \" + e.getMessage());\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    public void editPost(String editTitle, String editDescription, String editContent) {\r\n        titleInput.clear();\r\n        titleInput.sendKeys(editTitle);\r\n        descriptionInput.clear();\r\n        descriptionInput.sendKeys(editDescription);\r\n        contentInput.clear();\r\n        contentInput.sendKeys(editContent);\r\n    }\r\n    public void imageLoading(String relativeImagePath) {\r\n        try {\r\n            String absoluteImagePath = System.getProperty(\"user.dir\") + \"/\" + relativeImagePath;\r\n            WebElement fileInput = driver.findElement(By.xpath(\"//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']\"));\r\n            fileInput.sendKeys(absoluteImagePath);\r\n        } catch (Exception e) {\r\n            Assert.fail(\"Failed to upload image: \" + e.getMessage());\r\n        }\r\n    }\r\n    public void draftTumblerSwitch() {\r\n        //tumblerSwitch.click();\r\n    }\r\n    public void clickEditSubmitButton() {\r\n        submitEditButton.click();\r\n    }\r\n\r\n    public boolean editIsPostDisplayed(String postTitle) {\r\n        try {\r\n            Duration timeout = Duration.ofSeconds(1);\r\n            // Используйте метод findElement для поиска элемента, содержащего заголовок поста\r\n            WebElement postElement = driver.findElement(By.xpath(\"//*[@class='post-content__top' and .//h3[text()='\" + postTitle + \"']]\"));;\r\n            // Если элемент найден, возвращаем true\r\n            return postElement.isDisplayed();\r\n        } catch (NoSuchElementException e) {\r\n            // Если элемент не найден, возвращаем false\r\n            return false;\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/pages/post/EditAPostForm.java b/src/test/java/e2e/pages/post/EditAPostForm.java
+--- a/src/test/java/e2e/pages/post/EditAPostForm.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/e2e/pages/post/EditAPostForm.java	(date 1713112309784)
+@@ -2,12 +2,13 @@
+ 
+ import e2e.pages.BasePage;
+ import io.qameta.allure.Step;
+-import org.openqa.selenium.*;
++import org.openqa.selenium.By;
++import org.openqa.selenium.StaleElementReferenceException;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
+ import org.openqa.selenium.support.FindBy;
+ import org.testng.Assert;
+ 
+-import java.time.Duration;
+-
+ public class EditAPostForm extends BasePage {
+     public EditAPostForm(WebDriver driver) {
+         super(driver);
+@@ -61,6 +62,7 @@
+         contentInput.clear();
+         contentInput.sendKeys(editContent);
+     }
++    @Step("Upload image: {imagePath}")
+     public void imageLoading(String relativeImagePath) {
+         try {
+             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
+@@ -76,17 +78,4 @@
+     public void clickEditSubmitButton() {
+         submitEditButton.click();
+     }
+-
+-    public boolean editIsPostDisplayed(String postTitle) {
+-        try {
+-            Duration timeout = Duration.ofSeconds(1);
+-            // Используйте метод findElement для поиска элемента, содержащего заголовок поста
+-            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
+-            // Если элемент найден, возвращаем true
+-            return postElement.isDisplayed();
+-        } catch (NoSuchElementException e) {
+-            // Если элемент не найден, возвращаем false
+-            return false;
+-        }
+-    }
+ }
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'java'\r\n    id \"io.qameta.allure\" version \"2.9.6\"\r\n    id \"org.gradle.test-retry\" version \"1.5.3\"\r\n}\r\n\r\n\r\ngroup = 'org.example'\r\nversion = '1.0-SNAPSHOT'\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\nallure {\r\n    autoconfigure = true\r\n}\r\n\r\n\r\ndependencies {\r\n    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.3'\r\n    implementation 'org.testng:testng:7.1.0'\r\n    runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.7'\r\n    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.4.0'\r\n    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'\r\n    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.15.0'\r\n    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.2'\r\n    implementation group: 'org.testng', name: 'testng', version: '7.8.0'\r\n    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'\r\n    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'\r\n    implementation 'com.squareup.okhttp3:okhttp:4.9.1'\r\n}\r\n\r\n\r\ntest {\r\n    useTestNG()\r\n}\r\ntask SmokeTestE2e(type: Test) {\r\n    useTestNG() {\r\n        testLogging {\r\n            events \"passed\", \"skipped\", \"failed\", \"standardOut\", \"standardError\"\r\n            exceptionFormat \"full\"\r\n        }\r\n        suites 'src/test/resources/testngE2eSmoke.xml'\r\n    }\r\n    systemProperty 'allure.results.directory', 'build/allure-results'\r\n}\r\n\r\ntest {\r\n    useTestNG()\r\n}\r\ntask ApiTest(type: Test) {\r\n    useTestNG() {\r\n        testLogging {\r\n            events \"passed\", \"skipped\", \"failed\", \"standardOut\", \"standardError\"\r\n            exceptionFormat \"full\"\r\n        }\r\n        suites 'src/test/resources/testngApi.xml'\r\n    }\r\n    systemProperty 'allure.results.directory', 'build/allure-results'\r\n}\r\ntest {\r\n    useTestNG()\r\n}\r\ntask ProbeTest(type: Test) {\r\n    useTestNG() {\r\n        testLogging {\r\n            events \"passed\", \"skipped\", \"failed\", \"standardOut\", \"standardError\"\r\n            exceptionFormat \"full\"\r\n        }\r\n        suites 'src/test/resources/testngE2eSmokeTesting.xml'\r\n    }\r\n    systemProperty 'allure.results.directory', 'build/allure-results'\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/build.gradle	(date 1713112307350)
+@@ -28,7 +28,7 @@
+     implementation group: 'org.testng', name: 'testng', version: '7.8.0'
+     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+     implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
++
+ }
+ 
+ 
+@@ -45,30 +45,3 @@
+     }
+     systemProperty 'allure.results.directory', 'build/allure-results'
+ }
+-
+-test {
+-    useTestNG()
+-}
+-task ApiTest(type: Test) {
+-    useTestNG() {
+-        testLogging {
+-            events "passed", "skipped", "failed", "standardOut", "standardError"
+-            exceptionFormat "full"
+-        }
+-        suites 'src/test/resources/testngApi.xml'
+-    }
+-    systemProperty 'allure.results.directory', 'build/allure-results'
+-}
+-test {
+-    useTestNG()
+-}
+-task ProbeTest(type: Test) {
+-    useTestNG() {
+-        testLogging {
+-            events "passed", "skipped", "failed", "standardOut", "standardError"
+-            exceptionFormat "full"
+-        }
+-        suites 'src/test/resources/testngE2eSmokeTesting.xml'
+-    }
+-    systemProperty 'allure.results.directory', 'build/allure-results'
+-}
+Index: src/test/java/e2e/pages/BasePage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package e2e.pages;\r\n\r\n\r\n\r\nimport wait.Wait;\r\nimport io.qameta.allure.Attachment;\r\nimport io.qameta.allure.Step;\r\nimport org.openqa.selenium.*;\r\nimport org.openqa.selenium.support.PageFactory;\r\nimport org.openqa.selenium.support.ui.Select;\r\n\r\nimport java.io.BufferedReader;\r\nimport java.io.File;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.StandardCopyOption;\r\n\r\npublic class BasePage {\r\n    public WebDriver driver;\r\n\r\n    public BasePage(WebDriver driver){\r\n        this.driver = driver;\r\n        PageFactory.initElements(driver, this);\r\n    }\r\n\r\n    public Wait getWait(){\r\n        return new Wait(driver);\r\n    }\r\n\r\n<<<<<<< HEAD\r\n    public Select getSelect(WebElement element){\r\n        return new Select(element);\r\n    }\r\n\r\n    protected boolean isElementDisplayed(WebElement element) {\r\n        try {\r\n            return element.isDisplayed();\r\n        }catch (NoSuchElementException e){\r\n            return false;\r\n        }\r\n    }\r\n\r\n    protected void setInput(WebElement input,String value){\r\n        input.click();\r\n        input.clear();\r\n        input.sendKeys(value);\r\n    }\r\n\r\n=======\r\n>>>>>>> origin/dev\r\n    private File takeScreenshot(WebElement element){\r\n        File tmp;\r\n        if (element == null){\r\n            tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);\r\n            System.out.println(\"Take screenshot page\");\r\n        }else {\r\n            tmp = element.getScreenshotAs(OutputType.FILE);\r\n            System.out.println(\"Take screenshot element\");\r\n        }\r\n\r\n        return tmp;\r\n    }\r\n\r\n    private double calculateMaxDifferentPercentRation(){\r\n        Dimension windowSize = driver.manage().window().getSize();\r\n        int width = windowSize.width;\r\n        int height = windowSize.height;\r\n\r\n        return  0.01 * width * height;\r\n    }\r\n\r\n    private Process setCompareCommandToTerminal(String refImgFilePath, String tmpFilePath) throws IOException {\r\n        ProcessBuilder pb = new ProcessBuilder(\"compare\", \"-metric\", \"AE\", refImgFilePath, tmpFilePath, \"null:\");\r\n        System.out.println(\"Set compare command to terminal\");\r\n        return pb.start();\r\n    }\r\n\r\n    private double getDifferenceFromLogs(BufferedReader reader) throws IOException {\r\n        String line;\r\n        double difference= 0;\r\n        while ((line=reader.readLine()) != null){\r\n            difference = Integer.parseInt(line.trim());\r\n        }\r\n\r\n        return  difference;\r\n    }\r\n\r\n\r\n    @Attachment(value = \"Screenshot\", type = \"image/png\")\r\n    public byte[] saveScreenshot(byte[] screenShot){\r\n        return screenShot;\r\n    }\r\n\r\n    @Step(\"Take and compare screenshot name: {actualScreenshotName}\")\r\n    protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element){\r\n        String referenceImageFilePath = \"compareScreenshotReferences/\" + actualScreenshotName + \".png\";\r\n        String tmpFilePath = \"compareScreenshotReferences/tmp_\" + actualScreenshotName + \".png\";\r\n        File tmp = takeScreenshot(element);\r\n        try {\r\n            saveScreenshot(Files.readAllBytes(tmp.toPath()));\r\n            Files.copy(tmp.toPath(), new File(tmpFilePath).toPath(), StandardCopyOption.REPLACE_EXISTING);\r\n\r\n            File referenceImageFile = new File(referenceImageFilePath);\r\n            if (!referenceImageFile.exists()) {\r\n                throw new RuntimeException(\"Reference image file does not exist, but there is tmp file, need remove tmp_ from name file\" + tmpFilePath);\r\n            }\r\n            double maxDiffPercent = calculateMaxDifferentPercentRation();\r\n            Process process = setCompareCommandToTerminal(referenceImageFilePath, tmpFilePath);\r\n            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getErrorStream()));\r\n            double difference = getDifferenceFromLogs(reader);\r\n            reader.close();\r\n            process.destroy();\r\n\r\n            if (difference > maxDiffPercent) {\r\n                throw new RuntimeException(referenceImageFilePath + \" not equal \" + tmpFilePath + \" difference: \" + difference);\r\n            }\r\n\r\n            Files.deleteIfExists(new File(tmpFilePath).toPath());\r\n        } catch (IOException e){\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/e2e/pages/BasePage.java b/src/test/java/e2e/pages/BasePage.java
+--- a/src/test/java/e2e/pages/BasePage.java	(revision 6a7aca7f603ae4d5ed09e87d3406517cc22bfaf6)
++++ b/src/test/java/e2e/pages/BasePage.java	(date 1713112306781)
+@@ -28,27 +28,6 @@
+         return new Wait(driver);
+     }
+ 
+-<<<<<<< HEAD
+-    public Select getSelect(WebElement element){
+-        return new Select(element);
+-    }
+-
+-    protected boolean isElementDisplayed(WebElement element) {
+-        try {
+-            return element.isDisplayed();
+-        }catch (NoSuchElementException e){
+-            return false;
+-        }
+-    }
+-
+-    protected void setInput(WebElement input,String value){
+-        input.click();
+-        input.clear();
+-        input.sendKeys(value);
+-    }
+-
+-=======
+->>>>>>> origin/dev
+     private File takeScreenshot(WebElement element){
+         File tmp;
+         if (element == null){
+@@ -94,8 +73,8 @@
+ 
+     @Step("Take and compare screenshot name: {actualScreenshotName}")
+     protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element){
+-        String referenceImageFilePath = "compareScreenshotReferences/" + actualScreenshotName + ".png";
+-        String tmpFilePath = "compareScreenshotReferences/tmp_" + actualScreenshotName + ".png";
++        String referenceImageFilePath = "reference/" + actualScreenshotName + ".png";
++        String tmpFilePath = "reference/tmp_" + actualScreenshotName + ".png";
+         File tmp = takeScreenshot(element);
+         try {
+             saveScreenshot(Files.readAllBytes(tmp.toPath()));

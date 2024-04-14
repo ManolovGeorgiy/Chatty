@@ -1,4 +1,4 @@
-package integration.pages.login;
+package integration.tests.login;
 
 
 import integration.pages.user.GetUser;

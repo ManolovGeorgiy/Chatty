@@ -3,11 +3,11 @@
 <suite name="testApi" verbose="1">
     <test name="ApiTest">
         <classes>
-            <class name="integration.pages.login.LoginApiTest">
+            <class name="integration.tests.registration.RegistrationApiTest">
             </class>
-            <class name="integration.pages.registration.RegistrationApiTest">
+            <class name="integration.tests.login.LoginApiTest">
             </class>
-            <class name="integration.tests.myTests.UserCanCreateEditAndDeletePost">
+            <class name="integration.tests.post.UserCanCreateEditAndDeletePost">
             </class>
         </classes>
     </test>

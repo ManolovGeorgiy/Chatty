@@ -1,4 +1,4 @@
-package integration.pages.registration;
+package integration.tests.registration;
 
 import com.github.javafaker.Faker;
 import integration.pages.user.UserApi;
