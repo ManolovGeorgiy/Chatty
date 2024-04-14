@@ -7,9 +7,11 @@
             </class>
             <class name="e2e.tests.contactUs.ContactUsPositiveTest">
             </class>
-            <class name="e2e.tests.contactUs.ContactUsNegativeTest">
-            </class>
             <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
+            </class>
+            <class name="e2e.tests.profile.EditUserDataProfileTest">
+            </class>
+            <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
         </classes>
     </test>

@@ -10,7 +10,10 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.profile.AddUserDialog;
 import e2e.pages.registration.RegistrationPage;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -37,7 +40,7 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
 
-    @Epic(value = "User can add data to the profile")
+
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
@@ -88,12 +91,12 @@ public class AddUserDataProfileTest extends TestBase {
 
         addUserDialog = new AddUserDialog(app.driver);
         addUserDialog.waitForLoading();
-        addUserDialog.imageAvatarLoading(imageAvatar);
+        addUserDialog.uploadImageAvatar(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
-        addUserDialog.saveButtonClick();
+        addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
 

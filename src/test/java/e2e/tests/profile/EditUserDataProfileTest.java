@@ -117,12 +117,12 @@ public class EditUserDataProfileTest extends TestBase {
 
         addUserDialog = new AddUserDialog(app.driver);
         addUserDialog.waitForLoading();
-        addUserDialog.imageAvatarLoading(imageAvatar);
+        addUserDialog.uploadImageAvatar(imageAvatar);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
-        addUserDialog.saveButtonClick();
+        addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog, name, surname, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), phone);
 
@@ -144,8 +144,8 @@ public class EditUserDataProfileTest extends TestBase {
         checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
 
         editPasswordForm = new EditPasswordForm(app.driver);
-        editPasswordForm.changePassword(oldPassword, newPassword, confirmNewPassword);
-        editPasswordForm.saveChangePasswordButton();
+        editPasswordForm.fillChangePasswordForm(oldPassword, newPassword, confirmNewPassword);
+        editPasswordForm.clickSaveChangePasswordButton();
 
         header = new Header(app.driver);
         header.clickHome();

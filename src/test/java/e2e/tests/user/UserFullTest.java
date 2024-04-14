@@ -57,13 +57,13 @@ public class UserFullTest extends TestBase {
         addUserDialog = new AddUserDialog(app.driver);
         addUserDialog.clickAddUserForm();
         addUserDialog.waitForLoading();
-        addUserDialog.addProfileForm(name,surname,GenderInfo.MALE,date,phone);
-        addUserDialog.saveButtonClick();
+        addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
 
         editPasswordForm = new EditPasswordForm(app.driver);
-        editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
-        editPasswordForm.saveChangePasswordButton();
+        editPasswordForm.fillChangePasswordForm(oldPassword, newPassword, confirmNewPassword);
+        editPasswordForm.clickSaveChangePasswordButton();
 
 
         header = new Header(app.driver);
@@ -72,7 +72,7 @@ public class UserFullTest extends TestBase {
         //header.waitForLoading();
 
         loginPage = new LoginPage(app.driver);
-        loginPage.login(emailLogin,changePassword);
+        loginPage.login(emailLogin, changePassword);
 
     }
 }

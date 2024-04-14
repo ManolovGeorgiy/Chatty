@@ -77,7 +77,7 @@ public class AddUserDialog extends BasePage {
     }
 
     @Step("Upload image: {imagePath}")
-    public void imageAvatarLoading(String relativeImagePath) {
+    public void uploadImageAvatar(String relativeImagePath) {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -88,7 +88,7 @@ public class AddUserDialog extends BasePage {
     }
 
     @Step("Fill profile form {name},{surname},{date},{phone}")
-    public void addProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
+    public void fillProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
@@ -111,12 +111,20 @@ public class AddUserDialog extends BasePage {
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
-
+//        try {
+//            birthDateForm.isDisplayed();
+//            birthDateForm.sendKeys(date);
+//            Actions actions = new Actions(driver);
+//            actions.sendKeys(Keys.TAB).perform();
+//            birthDateForm.sendKeys(date);
+//        } catch (StaleElementReferenceException e){
+//            e.printStackTrace();
+//        }
         phoneInput.sendKeys(phone);
     }
 
     @Step("click save button")
-    public void saveButtonClick() {
+    public void clickSaveButton() {
         saveButton.click();
     }
 }
