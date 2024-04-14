@@ -116,7 +116,7 @@ public class EditUserDataProfileTestCopy extends TestBase {
         addUserDialog.uploadImageAvatar(imageAvatar);
         addUserDialog.clickAddUserFormButton();
         addUserDialog.waitForLoading();
-        addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        addUserDialog.fillProfileFormLocal(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.clickSaveButton();
         checkUserData(addUserDialog, name, surname,date, phone);
