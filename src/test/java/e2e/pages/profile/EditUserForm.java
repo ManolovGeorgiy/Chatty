@@ -4,7 +4,6 @@ import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -82,7 +81,7 @@ public class EditUserForm extends BasePage {
         }
     }
     @Step("fill profile form")
-    public void setProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
+    public void setEditProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
@@ -97,13 +96,12 @@ public class EditUserForm extends BasePage {
         option.click();
         try {
             String[] dateParts = date.split("-");
-            //birthDateForm.click();
             birthDateForm.sendKeys(Keys.CONTROL, "a");
-            birthDateForm.isDisplayed();
+            birthDateForm.sendKeys(Keys.DELETE);
             birthDateForm.sendKeys(date);
-            birthDateForm.sendKeys(dateParts[2]); //day
-            birthDateForm.sendKeys(dateParts[1]); //month
-            birthDateForm.sendKeys(dateParts[0]); //year
+            birthDateForm.sendKeys(dateParts[0]); //day
+            birthDateForm.sendKeys(dateParts[2]); //month
+            birthDateForm.sendKeys(dateParts[1]); //year
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }

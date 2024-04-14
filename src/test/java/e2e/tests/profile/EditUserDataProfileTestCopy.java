@@ -16,9 +16,6 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 public class EditUserDataProfileTestCopy extends TestBase {
 
     Faker faker = new Faker();
@@ -120,8 +117,9 @@ public class EditUserDataProfileTestCopy extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
-        checkUserData(addUserDialog, name, surname,date, phone);
         addUserDialog.clickAddUserFormButton();
+        checkUserData(addUserDialog, name, surname,date, phone);
+
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
         editUserForm.uploadEditImageAvatar(editImageAvatar);
@@ -129,7 +127,7 @@ public class EditUserDataProfileTestCopy extends TestBase {
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE,editFormattedDate, editPhone);
+        editUserForm.setEditProfileForm(editName, editSurname, GenderInfo.MALE,editFormattedDate, editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
