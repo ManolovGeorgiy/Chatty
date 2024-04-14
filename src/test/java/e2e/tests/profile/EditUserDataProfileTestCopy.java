@@ -53,11 +53,11 @@ public class EditUserDataProfileTestCopy extends TestBase {
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
 
-    @Epic(value = "User can edit data to the profile")
+
     @Feature(value = "User edited data to the profile")
     @Description(value = "User can edit data")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "CHATTY-30")
+    @Test(description = "User can add and edit data to the profile")
     public void userCanEditProfile() {
 
         String email = "edit.user.dataprofile@gmail.com";
@@ -119,6 +119,7 @@ public class EditUserDataProfileTestCopy extends TestBase {
         addUserDialog.fillProfileFormLocal(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
         addUserDialog.clickSaveButton();
+        addUserDialog.waitForLoading();
         checkUserData(addUserDialog, name, surname,date, phone);
 
         header = new Header(app.driver);
