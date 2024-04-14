@@ -9,6 +9,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -42,16 +46,33 @@ public class ApplicationManager {
                 e.printStackTrace();
             }
         } else {
-            WebDriverManager.chromedriver().clearResolutionCache().setup();
-            ChromeOptions options = new ChromeOptions();
-            if (config.getHeadless()) {
-                options.addArguments("--headless");
+            if (config.getUseFirefox()) {
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions options = new FirefoxOptions();
+                if (config.getHeadless()) {
+                    options.addArguments("--headless");
+                }
+                driver = new FirefoxDriver(options);
+            } else if (config.getUseEdge()) {
+                WebDriverManager.edgedriver().setup();
+                EdgeOptions options = new EdgeOptions();
+                if (config.getHeadless()) {
+                    // Edge не поддерживает headless режим
+                    // Вы можете добавить любые другие опции, если необходимо
+                }
+                driver = new EdgeDriver(options);
+            } else {
+                WebDriverManager.chromedriver().clearResolutionCache().setup();
+                ChromeOptions options = new ChromeOptions();
+                if (config.getHeadless()) {
+                    options.addArguments("--headless");
+                }
+                options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+                driver = new ChromeDriver(options);
             }
-            options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
-            driver = new ChromeDriver(options);
         }
         driver.get(config.getProjectUrl());
-        driver.manage().window().setSize(new Dimension(config.getWindowWight(), config.getWindowHeight()));
+        driver.manage().window().setSize(new Dimension(config.getWindowWidth(), config.getWindowHeight()));
     }
 
     protected void stop(boolean testPassed) {

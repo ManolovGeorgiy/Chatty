@@ -40,7 +40,6 @@ public class AddUserDataProfileTest extends TestBase {
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
 
-
     @Feature(value = "User added data to the profile")
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
