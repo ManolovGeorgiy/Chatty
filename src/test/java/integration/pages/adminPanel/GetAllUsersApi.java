@@ -4,10 +4,10 @@ import integration.ApiBase;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-public class GetAllUsers extends ApiBase {
+public class GetAllUsersApi extends ApiBase {
 
     Response response;
-    public GetAllUsers(String token) {
+    public GetAllUsersApi(String token) {
         super(token);
     }
     @Step("Get all users")
@@ -25,4 +25,6 @@ public class GetAllUsers extends ApiBase {
                 return "Unexpected status code: " + response.getStatusCode() + ". Message: " + response.asString();
         }
     }
+
+
 }

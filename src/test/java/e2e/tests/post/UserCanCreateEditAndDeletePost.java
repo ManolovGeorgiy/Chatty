@@ -109,7 +109,7 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
-        editAPostForm.imageLoading(editImagePath);
+        editAPostForm.uploadImageLoading(editImagePath);
         editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
         checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();

@@ -32,7 +32,6 @@ public class PostApi extends ApiBase {
         postCreateReq.setBody(body);
         postCreateReq.setPublishDate(publishDate);
         postCreateReq.setImageUrl(imageUrl);
-
         return this.postCreateReq;
     }
     public Response createAPostRoleUser(int code) {

@@ -11,12 +11,12 @@ public class ContactUsApi extends ApiBase {
     public  ContactUsApi(String token) {
         super(token);
     }
-        @Step("Send message to the feedback :{name},{email},{content}")
-        public String setDataToTheFeedback(FeedbackReq feedbackReq, int expectedStatusCode) throws JsonProcessingException {
-            String endpoint = "/api/feedback";
+        @Step("Send message to the setFeedbackForm :{name},{email},{content}")
+        public String setDataToTheFeedback(FeedbackReq feedbackReq, int code) throws JsonProcessingException {
+            String endpoint = "/api/setFeedbackForm";
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonRequestBody = objectMapper.writeValueAsString(feedbackReq);
-            Response response = postRequest(endpoint,expectedStatusCode,jsonRequestBody);
+            Response response = postRequest(endpoint,code,jsonRequestBody);
             switch (response.getStatusCode()) {
                 case 200:
                     return response.asString();

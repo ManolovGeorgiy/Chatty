@@ -60,8 +60,8 @@ public class ContactUsPage extends BasePage {
             e.printStackTrace();
         }
     }
-    @Step("Fill out the feedback form {name},{emailContact},{text}")
-    public void feedback(String name, String emailContact, String text) {
+    @Step("Fill out the setFeedbackForm form {name},{emailContact},{text}")
+    public void setFeedbackForm(String name, String emailContact, String text) {
         nameUserInput.sendKeys(name);
         emailUserInput.sendKeys(emailContact);
         contentUserInput.sendKeys(text);
@@ -80,7 +80,7 @@ public class ContactUsPage extends BasePage {
             return false;
         }
     }
-    public boolean error() {
+    public boolean istErrorDisplayed() {
         Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));

@@ -48,7 +48,6 @@ public class EditAPostForm extends BasePage {
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
             getWait().forVisibility(submitEditButton);
-            //getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(closeButton);
         } catch (Exception e) {
             Assert.fail("Failed to load Create a post form: " + e.getMessage());
@@ -65,9 +64,8 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-
     @Step("upload image {relativeImagePath}")
-    public void imageLoading(String relativeImagePath) {
+    public void uploadImageLoading(String relativeImagePath) {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -76,12 +74,10 @@ public class EditAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
-
     @Step("click button")
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }
-
     public boolean editIsPostDisplayed(String postTitle) {
         try {
 

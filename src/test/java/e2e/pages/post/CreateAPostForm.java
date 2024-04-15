@@ -67,13 +67,14 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-
-
     @Step("Fill form {title},{description},{content},{path}")
     public void setPostForm(String title, String description, String content, String path) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
+        if (
+                path!= null
+        ){uploadImage(path);}
     }
 
     public String getTitle() {
@@ -88,7 +89,7 @@ public class CreateAPostForm extends BasePage {
         return contentInput.getAttribute("value");
     }
 
-    public void tumblerSwitchClick() {
+    public void clickToDraftCheckBox() {
         tumblerSwitchDraft.click();
     }
 
@@ -145,16 +146,6 @@ public class CreateAPostForm extends BasePage {
             return false;
         }
     }
-//    public boolean isMessageSent() {
-//        Duration timeout = Duration.ofSeconds(1);
-//        // Добавляем ожидание появления подтверждения успешной отправки сообщения
-//        WebDriverWait wait = new WebDriverWait(driver, timeout);
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='post-content__top']")));
-//        try {
-//            return driver.findElement(By.xpath("//div[@class='post-content__top']")).isDisplayed();
-//        } catch (NoSuchElementException e) {
-//            return false; // Возвращаем false, если элемент не найден
-//        }
-//    }
+
 }
 

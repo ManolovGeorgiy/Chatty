@@ -77,7 +77,7 @@ public class UserCanNotCreateAPost extends TestBase {
         createAPostForm.clickSubmitButton();
 
         checkPostData(createAPostForm, title, description, content);
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
 
         homeBlogPage = new HomeBlogPage(app.driver);
 
