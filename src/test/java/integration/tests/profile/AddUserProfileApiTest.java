@@ -21,7 +21,7 @@ import java.util.Map;
 import static org.openqa.selenium.devtools.v117.accessibility.model.AXValueType.TOKEN;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class AddUserProfileApiTest  {
+public class AddUserProfileApiTest<ProfileUserUpdateReq> {
     private static final AXValueType BASE_URL = TOKEN;
 
     Faker faker = new Faker();
@@ -99,15 +99,14 @@ public class AddUserProfileApiTest  {
        profileApi = new ProfileApi(token);
        String response = profileApi.createProfile(200,userUpdateReq);
        JsonPath jsonPath = new JsonPath(response);
-       //String profileId = jsonPath.getString("id");
+       String profileId = jsonPath.getString("id");
+       //String pr
 
 
 
 
 
-            getProfileByProfileId = new GetProfileByProfileId(token);
-
-        checkProfileData(profileId, userUpdateReq);
+            getProfileByProfileId = new GetProfileByProfileId(token);checkProfileData(profileId, userUpdateReq);
 
 
         //PostUpdateReq postUpdateReq = new PostUpdateReq();
