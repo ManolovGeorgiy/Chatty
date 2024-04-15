@@ -3,13 +3,9 @@
 <suite name="testProbe" verbose="1">
     <test name="probeTest">
         <classes>
-            <class name="e2e.tests.login.LoginAdminTest">
+            <class name="e2e.tests.profile.AddUserDataProfileTest">
             </class>
-            <class name="e2e.tests.contactUs.ContactUsPositiveTest">
-            </class>
-            <class name="e2e.tests.contactUs.ContactUsNegativeTest">
-            </class>
-            <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
+            <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
         </classes>
     </test>

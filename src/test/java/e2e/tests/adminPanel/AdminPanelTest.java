@@ -72,7 +72,7 @@ public class AdminPanelTest extends TestBase {
 
 
         editUserForm.clickEditUserForm();
-        editUserForm.setProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        editUserForm.setEditProfileForm(name, surname, GenderInfo.MALE, date, phone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();

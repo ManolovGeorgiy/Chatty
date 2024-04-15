@@ -1,8 +1,14 @@
 package e2e.pages.post;
 
+import com.google.common.net.MediaType;
 import config.Config;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.*;
 import org.openqa.selenium.support.FindBy;
@@ -18,11 +24,9 @@ import java.time.Duration;
 public class CreateAPostForm extends BasePage {
     public CreateAPostForm(WebDriver driver) {
         super(driver);
-
-        config = new Config();
     }
 
-    private final Config config;
+    private final Config config = new Config();
 
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
@@ -47,7 +51,6 @@ public class CreateAPostForm extends BasePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
-
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
@@ -65,17 +68,12 @@ public class CreateAPostForm extends BasePage {
         }
     }
 
+
     @Step("Fill form {title},{description},{content},{path}")
-    public void createAPost(String title, String description, String content, String path) {
+    public void setPostForm(String title, String description, String content, String path) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
-        imageInput.click();
-        if (
-                path != null
-        ) {
-            uploadImage(path);
-        }
     }
 
     public String getTitle() {
@@ -90,25 +88,27 @@ public class CreateAPostForm extends BasePage {
         return contentInput.getAttribute("value");
     }
 
-    public void clickToSwitchAsDraft() {
+    public void tumblerSwitchClick() {
         tumblerSwitchDraft.click();
     }
 
-    @Step("Upload image: {imagePath}")
+    @Step("Upload image: {relativeImagePath}")
     public void uploadImage(String relativeImagePath) {
         try {
+            String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-            fileInput.sendKeys(relativeImagePath);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'block';", fileInput);
+            fileInput.sendKeys(absoluteImagePath);
+            Thread.sleep(5000);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
-
+    
     @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();
     }
-
     @Step("check after sending")
     public boolean errorText() {
         Duration timeout = Duration.ofSeconds(10);
@@ -120,9 +120,8 @@ public class CreateAPostForm extends BasePage {
             return false;
         }
     }
-
     @Step("Screenshot {actualScreenshotName}")
-    public void takePostPageScreenshot(String actualScreenshotName) {
+    public void takePostPageScreenshot(String actualScreenshotName){
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
@@ -130,7 +129,6 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-
     @Step("Fill form {title},{description},{content}")
     public void userCanNotCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);
@@ -141,15 +139,12 @@ public class CreateAPostForm extends BasePage {
 
     public boolean isPostDisplayed(String postTitle) {
         try {
-            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));
-            ;
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
             return postElement.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
 
-    public void setPostForm(String title, String description, String content, String imagePath) {
-    }
-
 }
+

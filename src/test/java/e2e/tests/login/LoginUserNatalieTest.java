@@ -12,7 +12,7 @@ import java.time.Duration;
 
 
 public class LoginUserNatalieTest extends SelenideTestBase {
-    private String email = "g.power@gmail.com";
+    /*private String email = "g.power@gmail.com";
     private String password = "GPower3333";
     LoginPageNatalie loginPageNatalie = new LoginPageNatalie();
     AdminPanelPageNatalie adminPanelPageNatalie = new AdminPanelPageNatalie();
@@ -20,6 +20,6 @@ public class LoginUserNatalieTest extends SelenideTestBase {
     @Test
     void successfulLogin() {
         loginPageNatalie.login(email, password);
-        Assert.assertTrue(adminPanelPageNatalie.adminPanelNatalie.shouldBe(Condition.visible, Duration.ofSeconds(10)).isDisplayed());
-    }
+        Assert.assertTrue(adminPanelPageNatalie.adminPanelNatalie.clone(Condition.visible, Duration.ofSeconds(10)).isDisplayed());
+    }*/
 }

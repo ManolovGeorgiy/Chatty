@@ -34,6 +34,4 @@ public class LoginReq {
     public void setPassword(String password) {
         this.password = password;
     }
-
-
 }

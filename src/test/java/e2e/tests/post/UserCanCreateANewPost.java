@@ -82,7 +82,7 @@ public class UserCanCreateANewPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.createAPost(title, description, content,folderPath);
+        createAPostForm.setPostForm(title, description, content,folderPath);
 
         String randomImagePath = selectRandomImagePath(folderPath);
         if (randomImagePath != null) {

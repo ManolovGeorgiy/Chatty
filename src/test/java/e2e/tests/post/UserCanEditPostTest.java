@@ -1,10 +1,10 @@
 package e2e.tests.post;
 
+import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
-import e2e.pages.post.CreateAPostForm;
 import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
 import io.qameta.allure.*;
@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 public class UserCanEditPostTest extends TestBase {
 
+    Faker faker = new Faker();
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
@@ -32,17 +33,16 @@ public class UserCanEditPostTest extends TestBase {
     @Feature(value = "User edited post")
     @Description(value = "User can edit post")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("16")
-    @Test(description = "CHATTY-40")
+    @Test(description = "User can edit existing post")
     public void userCanEditAPost() {
 
-        String email = "tatar@abv.bg";
-        String password = "Manowar33246";
+        String email = "user.can.edit.post@abv.bg";
+        String password = "RedBull1234";
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
-        String imagePath = "C:\\Users\\PC\\Chatty\\src\\test\\java\\resources\\userCanEditPost.jpg";
+        String imagePath = "uploadReferences/5204092180870848366_121.jpg";
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -64,7 +64,7 @@ public class UserCanEditPostTest extends TestBase {
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
         editAPostForm.imageLoading(imagePath);
-        editAPostForm.editPost(editTitle, editDescription, editContent);
+        editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
         checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();
 

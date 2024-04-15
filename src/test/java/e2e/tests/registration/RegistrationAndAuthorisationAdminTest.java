@@ -1,6 +1,5 @@
 package e2e.tests.registration;
 
-import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
@@ -15,21 +14,19 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class RegistrationAndAuthorisationAdminTest extends TestBase {
 
-    Faker faker = new Faker();
     LoginPage loginPage;
     RegistrationPage registrationPage;
     HomeBlogPage homeBlogPage;
     Header header;
     AdminPanelPage adminPanelPage;
-
     @Epic(value = "adminPanel can registration and authorisation")
     @Feature(value = "The administrator has registered and logged in")
     @Description(value = "adminPanel can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "CHATTY-04")
-    public void AdminCanRegistration(){
+    @Test(description = "admin can registration")
+    public void adminCanRegistration(){
 
-        String email = faker.internet().emailAddress();
+        String email = "RegistrationAdmin@gmail.com";
         String password = "Admin3333";
         String confirmPassword = "Admin3333";
 
@@ -64,7 +61,6 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     @Feature(value = "The administrator has not registered")
     @Description(value = "adminPanel can not registration ")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("")
     @Test(description = "CHATTY-50")
     public void AdminCanNotRegistrationWithValidEmail() {
 

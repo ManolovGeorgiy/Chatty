@@ -2,16 +2,18 @@ package e2e.pages.post;
 
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
-import java.time.Duration;
 
 public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -53,7 +55,9 @@ public class EditAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
-    public void editPost(String editTitle, String editDescription, String editContent) {
+
+    @Step("fill edit post form {editTitle},{editDescription},{editContent}")
+    public void fillEditPostForm(String editTitle, String editDescription, String editContent) {
         titleInput.clear();
         titleInput.sendKeys(editTitle);
         descriptionInput.clear();
@@ -61,7 +65,8 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-    @Step("Upload image: {imagePath}")
+
+    @Step("upload image {relativeImagePath}")
     public void imageLoading(String relativeImagePath) {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
@@ -71,17 +76,17 @@ public class EditAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
-    public void draftTumblerSwitch() {
-        //tumblerSwitch.click();
-    }
+
+    @Step("click button")
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }
 
     public boolean editIsPostDisplayed(String postTitle) {
         try {
-            Duration timeout = Duration.ofSeconds(1);
-            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));;
+
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));
+            ;
             return postElement.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;

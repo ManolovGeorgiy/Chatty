@@ -3,7 +3,9 @@
 <suite name="testApi" verbose="1">
     <test name="ApiTest">
         <classes>
-            <class name="integration.tests.contactUs.ContactUsApiTest">
+            <class name="integration.tests.registration.RegistrationApiTest">
+            </class>
+            <class name="integration.tests.login.LoginApiTest">
             </class>
         </classes>
     </test>

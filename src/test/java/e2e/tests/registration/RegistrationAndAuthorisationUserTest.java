@@ -24,11 +24,10 @@ Header header;
     @Feature(value = "The user has registered and logged in")
     @Description(value = "User can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("14")
-    @Test(description = "CHATTY-16")
+    @Test(description = "User can registration")
     public void userCanRegistration(){
 
-        String email = "userdeletepost@abv.bg";
+        String email = faker.internet().emailAddress();
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 

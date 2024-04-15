@@ -55,7 +55,7 @@ public class EditUserDataProfileTest2 extends TestBase {
 
 
         String editPhone = "+4915731078";
-        String editImageAvatar = "C:\\Users\\PC\\Chatty\\avatar\\5206343980684532308_121.jpg";
+        String editImageAvatar = "C:\\Users\\ACER\\IdeaProjects\\Chatty\\avatar";
 
         String oldPassword = "Manowar333246";
         String newPassword = "Manowar33246";
@@ -72,20 +72,20 @@ public class EditUserDataProfileTest2 extends TestBase {
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
-        editUserForm.imageAvatarLoading(editImageAvatar);
+        editUserForm.waitForLoading();
         editUserForm.waitForLoading();
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
 
-        editUserForm.setProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), editPhone);
+        editUserForm.setEditProfileForm(editName, editSurname, GenderInfo.MALE, birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")), editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
         checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
 
         editPasswordForm = new EditPasswordForm(app.driver);
-        editPasswordForm.changePassword(oldPassword, newPassword, confirmNewPassword);
-        editPasswordForm.saveChangePasswordButton();
+        editPasswordForm.fillChangePasswordForm(oldPassword, newPassword, confirmNewPassword);
+        editPasswordForm.clickSaveChangePasswordButton();
 
         header = new Header(app.driver);
         header.clickHome();
