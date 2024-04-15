@@ -3,6 +3,7 @@ package integration.tests.deleteuser;
 import config.Config;
 import integration.ApiBase;
 import integration.pages.user.UserApi;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -20,7 +21,11 @@ public class DeleteUserViaAdmin extends ApiBase {
             .build();
     UserApi userApi;
 
-    @Test
+    @Feature(value = "Delete User")
+    @Story(value = "Admin can Delete User")
+    @Description(value = "Admin can Delete User")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "Admin can Delete new User")
     public void adminCanLoginAndDeleteUser() {
         String email = generateRandomEmail();
         String password = "Boba9876";

@@ -4,6 +4,7 @@ import config.Config;
 import integration.ApiBase;
 import integration.pages.user.UserApi;
 
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -23,7 +24,11 @@ public class EditUserViaAdmin extends ApiBase {
             .build();
     UserApi userApi;
 
-    @Test
+    @Feature(value = "Edit User")
+    @Story(value = "Admin can edit User")
+    @Description(value = "Admin can edit User")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "Admin can Edit new User")
     public void userCanLogin() {
 
         String email = generateRandomEmail();
