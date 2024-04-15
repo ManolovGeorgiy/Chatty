@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,9 +39,10 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,19 +63,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/PC/Desktop/PB300523-e-qa",
-    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/PB300523-e-qa&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
@@ -93,26 +94,25 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs">
-    <configuration name="RegistrationApiTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddUserDataProfileTestLocale">
+    <configuration name="AddUserDataProfileTestLocale" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.registration.*" />
+          <option name="PATTERN" value="e2e.tests.profile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.registration" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.registration.RegistrationApiTest" />
-      <option name="METHOD_NAME" value="UserCanRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTestLocale" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateEditAndDeleteNewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanCreateEditAndDeleteNewPost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -122,7 +122,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.post" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.post.UserCanCreateEditAndDeleteNewPost" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="userCanCreatePost" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -185,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddUserDataProfileTestLocale" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs" />
-        <item itemvalue="TestNG.UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNotSendMessageToTheContactUs" />
-        <item itemvalue="TestNG.RegistrationApiTest.UserCanRegistration" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost" />
+        <item itemvalue="TestNG.UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" />
       </list>
     </recent_temporary>
   </component>
@@ -201,14 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712467526206</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1712467526206</updated>
     </task>
     <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -588,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713197144640</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713201740000</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1713201740000</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -607,7 +608,8 @@
     <MESSAGE value="Api for Post" />
     <MESSAGE value="Admin panel. Edit user, Delete user" />
     <MESSAGE value="AdminPanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminPanel" />
+    <MESSAGE value="AdminPanel test" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminPanel test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
