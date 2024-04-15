@@ -101,17 +101,17 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddUserDataProfileTestLocale">
-    <configuration name="AddUserDataProfileTestLocale" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ContactUsApiTest">
+    <configuration name="ContactUsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTestLocale" />
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.ContactUsApiTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -193,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactUsApiTest" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNotSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
-        <item itemvalue="TestNG.AddUserDataProfileTestLocale" />
       </list>
     </recent_temporary>
   </component>
