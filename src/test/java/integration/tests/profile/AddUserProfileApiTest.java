@@ -2,22 +2,28 @@ package integration.tests.profile;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.JsonToken;
 import com.github.javafaker.Faker;
 import integration.pages.profile.ProfileApi;
 import integration.pages.profile.UpdateProfile;
 import integration.pages.user.UserApi;
-import integration.schemas.PostCreateReq;
-import integration.schemas.PostUpdateReq;
 import integration.schemas.UserUpdateReq;
+import io.opentelemetry.api.trace.StatusCode;
 import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
+import org.openqa.selenium.devtools.v117.accessibility.model.AXValueType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import static org.openqa.selenium.devtools.v117.accessibility.model.AXValueType.TOKEN;
+import static org.testng.AssertJUnit.assertNotNull;
+
 public class AddUserProfileApiTest  {
+    private static final AXValueType BASE_URL = TOKEN;
+
     Faker faker = new Faker();
     UserApi userApi;
     ProfileApi profileApi;
@@ -25,6 +31,12 @@ public class AddUserProfileApiTest  {
     GetProfileByProfileId getProfileByProfileId;
 
     UpdateProfile updateProfile;
+    UserUpdateReq userUpdateReq;
+    JsonPath jsonPath;
+    StatusCode getStatusCode;
+    String token;
+    String profileId;
+
 
     //DeleteProfile deleteProfile;
 
@@ -62,7 +74,7 @@ public class AddUserProfileApiTest  {
         String password = "doggy888";
 
         String name = "Bob";
-        String surname= "Bobby";
+        String surname = "Bobby";
         String birthDate = "05-06-1999";
         //String imageURL = ("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg");
         String phone = "+38099483284";
@@ -80,36 +92,43 @@ public class AddUserProfileApiTest  {
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
 
-        UserUpdateReq userUpdateReq = new UserUpdateReq();
-        userUpdateReq.setName(name);
-        userUpdateReq.setSurname(surname);
-        userUpdateReq.setBirthDate(birthDate);
-        userUpdateReq.setPhone(phone);
-        userUpdateReq.setGender(gender);
 
-        profileApi = new ProfileApi(token);
-        String response = profileApi.createProfile(200,userUpdateReq);
-        JsonPath jsonPath = new JsonPath(response);
-        String profileId = jsonPath.getString("id");
+        userUpdateReq = new UserUpdateReq(token);
+      userUpdateReq.setName(name);
+      userUpdateReq.setSurname(surname);
+      userUpdateReq.setBirthDate(birthDate);
+     userUpdateReq.setPhone(phone);
+      userUpdateReq.setGender(gender);
 
-        getProfileByProfileId = new GetProfileByProfileId(token);
-        checkProfileData(profileId,userUpdateReq);
+       profileApi = new ProfileApi(token);
+       String response = profileApi.createProfile(200,userUpdateReq);
+       JsonPath jsonPath = new JsonPath(response);
+       //String profileId = jsonPath.getString("id");
+
+        //public void testCreateProfile() {
 
 
 
-       //PostUpdateReq postUpdateReq = new PostUpdateReq();
-       //postUpdateReq.setTitle(editTitle);
-       //postUpdateReq.setDescription(editDescription);
-       //postUpdateReq.setBody(editBody);
-       //postUpdateReq.setImageUrl(editImageURL);
+            //getProfileByProfileId = new GetProfileByProfileId(token);
+//
+            //checkProfileData(profileId, userUpdateReq);
 
-       //updatePost = new UpdatePost(token);
-       //String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
-       //JsonPath jsonPathEdit = new JsonPath(responseEdit);
-       //String editPostId = jsonPathEdit.getString("id");
 
-       //deletePost = new DeletePost(token);
-       //deletePost.deleteUserPost(editPostId, 204);
+        //PostUpdateReq postUpdateReq = new PostUpdateReq();
+        //postUpdateReq.setTitle(editTitle);
+        //postUpdateReq.setDescription(editDescription);
+        //postUpdateReq.setBody(editBody);
+        //postUpdateReq.setImageUrl(editImageURL);
+
+        //updatePost = new UpdatePost(token);
+        //String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
+        //JsonPath jsonPathEdit = new JsonPath(responseEdit);
+        //String editPostId = jsonPathEdit.getString("id");
+
+        //deletePost = new DeletePost(token);
+        //deletePost.deleteUserPost(editPostId, 204);
     }
+
+
 }
 

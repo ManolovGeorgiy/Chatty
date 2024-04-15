@@ -9,26 +9,31 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeClass;
 
+import static io.restassured.RestAssured.given;
+
 public class ApiBase {
     private final Config config = new Config();
     protected final String BASE_URL = config.getProjectApiUrl();
     protected final RequestSpecification spec;
-    public ApiBase(){
+
+    public ApiBase() {
         this.spec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
                 .setContentType(ContentType.JSON)
                 .build();
 
     }
-    public ApiBase(String token){
+
+    public ApiBase(String token) {
         this.spec = new RequestSpecBuilder()
                 .setBaseUri(BASE_URL)
                 .setContentType(ContentType.JSON)
                 .addHeader("Authorization", "Bearer " + token)
                 .build();
     }
+
     public Response getAllPosts(int skip, int limit, int expectedStatusCode, String endpoint) {
-        Response response = RestAssured.given()
+        Response response = given()
                 .spec(spec)
                 .queryParam("skip", skip)
                 .queryParam("limit", limit)
@@ -43,11 +48,23 @@ public class ApiBase {
     }
 
 
+    protected Response getRequest(String endpoint, int code) {
+        Response response = given()
+                .spec(spec)
+                .when()
+                .log().all()
+                .get(endpoint)
+                .then().log().all()
+                .extract().response();
+        response.then().assertThat().statusCode(code);
+        return response;
+    }
 
-    protected Response getRequest(String endpoint, int code){
-        Response response = RestAssured.given()
+    protected Response getRequestWhitParam(String endpoint, int code, String paramName, int paramValue) {
+        Response response = given()
                 .spec(spec)
                 .when()
+                .pathParam(paramName, paramValue)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -55,23 +72,12 @@ public class ApiBase {
         response.then().assertThat().statusCode(code);
         return response;
     }
-    protected Response getRequestWhitParam(String endpoint,int code,String paramName,int paramValue){
-        Response response = RestAssured.given()
+
+    protected Response getRequestWhitParamString(String endpoint, int code, String paramName, String paramValue) {
+        Response response = given()
                 .spec(spec)
                 .when()
-                .pathParam(paramName,paramValue)
-                .log().all()
-                .get(endpoint)
-                .then().log().all()
-                .extract().response();
-        response.then().assertThat().statusCode(code);
-        return response;
-    }
-    protected Response getRequestWhitParamString(String endpoint,int code,String paramName,String paramValue){
-        Response response = RestAssured.given()
-                .spec(spec)
-                .when()
-                .pathParam(paramName,paramValue)
+                .pathParam(paramName, paramValue)
                 .log().all()
                 .get(endpoint)
                 .then().log().all()
@@ -80,7 +86,8 @@ public class ApiBase {
         return response;
     }
     protected Response postRequest(String endpoint,int code,Object body){
-        Response response = RestAssured.given()
+        Response response;
+        response = RestAssured.given()
                 .spec(spec)
                 .body(body)
                 .when()
@@ -126,19 +133,52 @@ public class ApiBase {
                 .extract()
                 .response();
 
-        response.then().assertThat().statusCode(code);
-        return response;
-    }
+            response.then().assertThat().statusCode(code);
+            return response;
+        }
 
 
         @BeforeClass
-        public void setUp() {
+        public void setUp () {
             // Установка базового URI для API
             RestAssured.baseURI = "http://your_api_base_url";
             // Если требуется авторизация, установите здесь заголовок авторизации
             // RestAssured.authentication = basic("username", "password");
         }
 
+        //protected Response profileRequest(String endpoint, int code, Object body, String method) {
+        //    Response response = null;
+        //    switch (method.toUpperCase()) {
+        //        case "GET":
+        //            response = spec.get(endpoint).then().statusCode(code).extract().response();
+        //            break;
+        //        case "POST":
+        //            response = spec.body(body).post(endpoint).then().statusCode(code).extract().response();
+        //            break;
+        //        case "PUT":
+        //            response = spec.body(body).put(endpoint).then().statusCode(code).extract().response();
+        //            break;
+        //        case "DELETE":
+        //            response = spec.delete(endpoint).then().statusCode(code).extract().response();
+        //            break;
+        //        default:
+        //            System.out.println("Unsupported HTTP method: " + method);
+        //    }
 
-}
+
+        //    return response;
+        //}
+    protected Response getProfile (String userId){
+        return given()
+                .spec(spec)
+                .when()
+                .log().all()
+                .get("profile/" + userId)
+                .then()
+                .log().all()
+                .extract().response();
+    }
+
+    }
+
 
