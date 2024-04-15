@@ -7,9 +7,11 @@ import integration.schemas.UserUpdateReq;
 import io.qameta.allure.Step;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+
 import static org.testng.AssertJUnit.assertNotNull;
 
 public class UpdateUser extends ApiBase {
+
     public UpdateUser(String token) {
         super(token);
     }
@@ -20,11 +22,15 @@ public class UpdateUser extends ApiBase {
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonRequest = objectMapper.writeValueAsString(userUpdateReq);
 
-        Response response = putRequest(endpoint,code,jsonRequest,"id",userId);
+        Response response = putRequest(endpoint, code, jsonRequest, "id", userId);
+        validateResponse(response);
+        return handleResponse(response);
+    }
 
+    private void validateResponse(Response response) {
         if (response.getStatusCode() == 200) {
             JsonPath jsonPath = response.jsonPath();
-            assertNotNull("ID is missing", jsonPath.get("id"));
+            assertNotNull("Id is missing", jsonPath.get("id"));
             assertNotNull("Name is missing", jsonPath.get("name"));
             assertNotNull("Surname is missing", jsonPath.get("surname"));
             assertNotNull("Phone is missing", jsonPath.get("phone"));
@@ -32,9 +38,12 @@ public class UpdateUser extends ApiBase {
             assertNotNull("Gender is missing", jsonPath.get("gender"));
             assertNotNull("AvatarUrl is missing", jsonPath.get("avatarUrl"));
         }
+    }
+
+    private String handleResponse(Response response) {
         switch (response.getStatusCode()) {
             case 200:
-                return  response.asString();
+                return response.asString();
             case 400:
                 return "Bad Request: " + response.jsonPath().getString("message");
             case 401:
@@ -44,5 +53,3 @@ public class UpdateUser extends ApiBase {
         }
     }
 }
-
-
