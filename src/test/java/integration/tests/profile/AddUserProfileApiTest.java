@@ -89,7 +89,7 @@ public class AddUserProfileApiTest<ProfileUserUpdateReq> {
         String token = userApi.login(email, password, 200);
 
 
-        userUpdateReq = new UserUpdateReq(token);
+        UpuserUpdateReq upuserUpdateReq = new UserUpdateReq(token);
       userUpdateReq.setName(name);
       userUpdateReq.setSurname(surname);
       userUpdateReq.setBirthDate(birthDate);
@@ -100,13 +100,23 @@ public class AddUserProfileApiTest<ProfileUserUpdateReq> {
        String response = profileApi.createProfile(200,userUpdateReq);
        JsonPath jsonPath = new JsonPath(response);
        String profileId = jsonPath.getString("id");
-       //String pr
+
+
+       getProfileByProfileId = new GetProfileByProfileId(token);
+       checkProfileData(profileId, userUpdateReq);
 
 
 
 
 
-            getProfileByProfileId = new GetProfileByProfileId(token);checkProfileData(profileId, userUpdateReq);
+       //updatePost = new UpdatePost(token);
+       //String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
+       //JsonPath jsonPathEdit = new JsonPath(responseEdit);
+       //String editPostId = jsonPathEdit.getString("id");
+
+       //deletePost = new DeletePost(token);
+       //deletePost.deleteUserPost(editPostId, 204);
+    }
 
 
         //PostUpdateReq postUpdateReq = new PostUpdateReq();
