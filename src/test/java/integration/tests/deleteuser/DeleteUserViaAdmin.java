@@ -1,23 +1,17 @@
 package integration.tests.deleteuser;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import config.Config;
 import integration.ApiBase;
 import integration.pages.user.UserApi;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 import util.UserInfoDto;
-
-import java.util.List;
-import java.util.Random;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class DeleteUser extends ApiBase {
+public class DeleteUserViaAdmin extends ApiBase {
     private final Config config = new Config();
     protected final String BASE_URL = config.getProjectApiUrl();
     protected final RequestSpecification spec = new RequestSpecBuilder()
@@ -27,7 +21,7 @@ public class DeleteUser extends ApiBase {
     UserApi userApi;
 
     @Test
-    public void userCanLogin() {
+    public void adminCanLoginAndDeleteUser() {
         String email = generateRandomEmail();
         String password = "Boba9876";
         String confirmPassword = "Boba9876";
