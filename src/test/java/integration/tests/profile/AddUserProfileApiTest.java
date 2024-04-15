@@ -42,11 +42,7 @@ public class AddUserProfileApiTest  {
 
     private void checkProfileData(String profileId, UserUpdateReq userUpdateReq){
 
-        //JsonPath actualObjects = JsonPath.given(getPostByPostId.getPostId(postId,200));
-        //JsonPath actualObjects;
-        //Object profileId = null;
-//
-        //actualObjects = JsonPath.given(getProfileByProfileId.getProfileId(null,200));
+
         JsonPath actualObjects = JsonPath.given(getProfileByProfileId.getProfileId(null,200));
         LinkedHashMap<String,String> profileObjects = new LinkedHashMap<>();
         profileObjects.put(actualObjects.getString("name"),userUpdateReq.getName());
@@ -56,7 +52,7 @@ public class AddUserProfileApiTest  {
         profileObjects.put(actualObjects.getString("gender"),userUpdateReq.getGender());
         profileObjects.put(actualObjects.getString("backgroundUrl"),userUpdateReq.getBackgroundUrl());
         profileObjects.put(actualObjects.getString("blocked"),userUpdateReq.toString());//вопрос,,.
-        //postObjects.put(actualObjects.getString("birthDate"),userUpdateReq.getBirthDate());
+
 
         for (Map.Entry<String,String> profileObject:profileObjects.entrySet()){
             String actualResult = profileObject.getKey();
@@ -105,13 +101,13 @@ public class AddUserProfileApiTest  {
        JsonPath jsonPath = new JsonPath(response);
        //String profileId = jsonPath.getString("id");
 
-        //public void testCreateProfile() {
 
 
 
-            //getProfileByProfileId = new GetProfileByProfileId(token);
-//
-            //checkProfileData(profileId, userUpdateReq);
+
+            getProfileByProfileId = new GetProfileByProfileId(token);
+
+        checkProfileData(profileId, userUpdateReq);
 
 
         //PostUpdateReq postUpdateReq = new PostUpdateReq();
