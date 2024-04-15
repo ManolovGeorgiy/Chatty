@@ -3,14 +3,12 @@ package e2e.pages.post;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
-import java.util.List;
 
 public class CreateAPostForm extends BasePage {
     public CreateAPostForm(WebDriver driver) {
@@ -57,7 +55,7 @@ public class CreateAPostForm extends BasePage {
         }
     }
     @Step("Fill form {title},{description},{content}")
-    public void userCanCreateAPost(String title, String description, String content) {
+    public void userCanCreateAPost(String title, String description, String content, String imagePath) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
@@ -115,5 +113,16 @@ public class CreateAPostForm extends BasePage {
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
         submitButton.click();
+    }
+
+    public boolean isPostDisplayed(String title) {
+        return false;
+
+    }
+
+    public void createAPost(String title, String description, String content, String folderPath) {
+    }
+
+    public void uploadImage(String randomImagePath) {
     }
 }

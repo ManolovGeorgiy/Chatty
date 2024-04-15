@@ -26,81 +26,90 @@ public class AddUserProfileApiTest  {
 
     UpdateProfile updateProfile;
 
-    DeleteProfile deleteProfile;
+    //DeleteProfile deleteProfile;
 
-    private void checkProfileData(String postId, UserUpdateReq userUpdateReq){
+    private void checkProfileData(String profileId, UserUpdateReq userUpdateReq){
 
         //JsonPath actualObjects = JsonPath.given(getPostByPostId.getPostId(postId,200));
-        JsonPath actualObjects;
-        Object profileId = null;
-
-        actualObjects = JsonPath.given(getProfileByProfileId.getProfileId(null,200));
-        LinkedHashMap<String,String> postObjects = new LinkedHashMap<>();
-        postObjects.put(actualObjects.getString("name"),userUpdateReq.getName());
-        postObjects.put(actualObjects.getString("surname"),userUpdateReq.getSurname());
-        postObjects.put(actualObjects.getString("birthDate"),userUpdateReq.getBirthDate());
-        postObjects.put(actualObjects.getString("phone"),userUpdateReq.getPhone());
-        postObjects.put(actualObjects.getString("gender"),userUpdateReq.getGender());
-        postObjects.put(actualObjects.getString("backgroundUrl"),userUpdateReq.getBackgroundUrl());
-        postObjects.put(actualObjects.getString("blocked"),userUpdateReq.toString());//вопрос,,.
+        //JsonPath actualObjects;
+        //Object profileId = null;
+//
+        //actualObjects = JsonPath.given(getProfileByProfileId.getProfileId(null,200));
+        JsonPath actualObjects = JsonPath.given(getProfileByProfileId.getProfileId(null,200));
+        LinkedHashMap<String,String> profileObjects = new LinkedHashMap<>();
+        profileObjects.put(actualObjects.getString("name"),userUpdateReq.getName());
+        profileObjects.put(actualObjects.getString("surname"),userUpdateReq.getSurname());
+        profileObjects.put(actualObjects.getString("birthDate"),userUpdateReq.getBirthDate());
+        profileObjects.put(actualObjects.getString("phone"),userUpdateReq.getPhone());
+        profileObjects.put(actualObjects.getString("gender"),userUpdateReq.getGender());
+        profileObjects.put(actualObjects.getString("backgroundUrl"),userUpdateReq.getBackgroundUrl());
+        profileObjects.put(actualObjects.getString("blocked"),userUpdateReq.toString());//вопрос,,.
         //postObjects.put(actualObjects.getString("birthDate"),userUpdateReq.getBirthDate());
 
-        for (Map.Entry<String,String> postObject:postObjects.entrySet()){
-            String actualResult = postObject.getKey();
-            String expectedResult =postObject.getValue();
+        for (Map.Entry<String,String> profileObject:profileObjects.entrySet()){
+            String actualResult = profileObject.getKey();
+            String expectedResult =profileObject.getValue();
             Assert.assertEquals(actualResult,expectedResult, actualResult + " is not equals " + expectedResult);
         }
     }
-    @Feature(value = "Creating post")
-    @Story(value = "User can create a post")
-    @Description(value = "User can create a post")
+    @Feature(value = "Creating profile")
+    @Story(value = "User can create a profile")
+    @Description(value = "User can create a profile")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "User Can create post")
-    public void userCanCreatePost() throws JsonProcessingException {
-        String email = "user.can.create.a.post@gmail.com";
-        String password = "Manowar33246";
+    @Test(description = "User Can create profile")
+    public void userCanCreateProfile() throws JsonProcessingException {
+        String email = "jelly.b@gmail.com";
+        String password = "doggy888";
 
-        String title = "Chatty";
-        String description = "GPower";
-        String body = "My first post";
-        String imageURL = ("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg");
+        String name = "Bob";
+        String surname= "Bobby";
+        String birthDate = "05-06-1999";
+        //String imageURL = ("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg");
+        String phone = "+38099483284";
+        String gender = "Female";
 
-        String editTitle = "GPower";
-        String editDescription = "Beautiful";
-        String editBody = "My new post";
-        String editImageURL = ("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+
+        String editName = "Gleb";
+        String editSurname = "Glebby";
+        String editBirthDate = "07-07-2000";
+        String editPhone = "+37745868789";
+        String editedGender = "male";
+        //String editImageURL = ("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+
 
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
 
-        PostCreateReq postCreateReq = new PostCreateReq();
-        postCreateReq.setTitle(title);
-        postCreateReq.setDescription(description);
-        postCreateReq.setBody(body);
-        postCreateReq.setImageUrl(imageURL);
+        UserUpdateReq userUpdateReq = new UserUpdateReq();
+        userUpdateReq.setName(name);
+        userUpdateReq.setSurname(surname);
+        userUpdateReq.setBirthDate(birthDate);
+        userUpdateReq.setPhone(phone);
+        userUpdateReq.setGender(gender);
 
-        createPost = new CreatePost(token);
-        String response = createPost.createPost(201, postCreateReq);
+        profileApi = new ProfileApi(token);
+        String response = profileApi.createProfile(200,userUpdateReq);
         JsonPath jsonPath = new JsonPath(response);
-        String postId = jsonPath.getString("id");
+        String profileId = jsonPath.getString("id");
 
-        getPostByPostId = new GetPostByPostId(token);
-        checkPostData(postId,postCreateReq);
+        getProfileByProfileId = new GetProfileByProfileId(token);
+        checkProfileData(profileId,userUpdateReq);
 
-        PostUpdateReq postUpdateReq = new PostUpdateReq();
-        postUpdateReq.setTitle(editTitle);
-        postUpdateReq.setDescription(editDescription);
-        postUpdateReq.setBody(editBody);
-        postUpdateReq.setImageUrl(editImageURL);
 
-        updatePost = new UpdatePost(token);
-        String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
-        JsonPath jsonPathEdit = new JsonPath(responseEdit);
-        String editPostId = jsonPathEdit.getString("id");
 
-        deletePost = new DeletePost(token);
-        deletePost.deleteUserPost(editPostId, 204);
+       //PostUpdateReq postUpdateReq = new PostUpdateReq();
+       //postUpdateReq.setTitle(editTitle);
+       //postUpdateReq.setDescription(editDescription);
+       //postUpdateReq.setBody(editBody);
+       //postUpdateReq.setImageUrl(editImageURL);
+
+       //updatePost = new UpdatePost(token);
+       //String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
+       //JsonPath jsonPathEdit = new JsonPath(responseEdit);
+       //String editPostId = jsonPathEdit.getString("id");
+
+       //deletePost = new DeletePost(token);
+       //deletePost.deleteUserPost(editPostId, 204);
     }
 }
 
-}

@@ -72,7 +72,7 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         header.clickHome();
         header.createAPostClick();
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.userCanCreateAPost(title, description, content);
+        createAPostForm.userCanCreateAPost(title, description, content, imagePath);
         createAPostForm.waitForLoading();
         createAPostForm.tumblerSwitchClick();
         createAPostForm.imageLoading(imagePath);
