@@ -1,4 +1,4 @@
-package integration.tests.deleteuser;
+package integration.tests.adminapi;
 
 import config.Config;
 import integration.ApiBase;
