@@ -13,7 +13,7 @@ public class ContactUsApi extends ApiBase {
     }
         @Step("Send message to the setFeedbackForm :{name},{email},{content}")
         public String setDataToTheFeedback(FeedbackReq feedbackReq, int code) throws JsonProcessingException {
-            String endpoint = "/api/setFeedbackForm";
+            String endpoint = "/api/feedback";
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonRequestBody = objectMapper.writeValueAsString(feedbackReq);
             Response response = postRequest(endpoint,code,jsonRequestBody);

@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/post/PostApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/post/PostApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +66,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/PB300523-e-qa&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/PC/Desktop/ChattyApi-master",
+    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
@@ -102,8 +98,30 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanEditPostTest.userCanEditAPost">
-    <configuration name="UserCanCreateEditAndDeleteNewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost">
+    <configuration name="Chatty [SmokeTestE2e]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="SmokeTestE2e" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserCanCreateEditAndDeleteNewPost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -113,6 +131,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.post" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.post.UserCanCreateEditAndDeleteNewPost" />
+      <option name="METHOD_NAME" value="userCanCreatePost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCanSendMessageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.UserCanSendMessageTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -120,17 +156,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateEditAndDeletePost.userCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanSendMessageTest.userCanNotSendMessageWithInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanCreateEditAndDeletePost" />
-      <option name="METHOD_NAME" value="userCanCreateAPost" />
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.UserCanSendMessageTest" />
+      <option name="METHOD_NAME" value="userCanNotSendMessageWithInvalidEmail" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -138,53 +174,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanDeletePostTest.userCanDeletePost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanSendMessageTest.userCanSendMessageToTheContactUs" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanDeletePostTest" />
-      <option name="METHOD_NAME" value="userCanDeletePost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanEditPostTest.userCanEditAPost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanEditPostTest" />
-      <option name="METHOD_NAME" value="userCanEditAPost" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanNotCreateAPost.userCanNotCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanNotCreateAPost" />
-      <option name="METHOD_NAME" value="userCanNotCreateAPost" />
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.UserCanSendMessageTest" />
+      <option name="METHOD_NAME" value="userCanSendMessageToTheContactUs" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -194,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
-        <item itemvalue="TestNG.UserCanDeletePostTest.userCanDeletePost" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost" />
-        <item itemvalue="TestNG.UserCanNotCreateAPost.userCanNotCreateAPost" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
+        <item itemvalue="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs" />
+        <item itemvalue="TestNG.UserCanSendMessageTest" />
+        <item itemvalue="TestNG.UserCanSendMessageTest.userCanNotSendMessageWithInvalidEmail" />
+        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
       </list>
     </recent_temporary>
   </component>
@@ -210,38 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712480907976</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1712480907976</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712483963242</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1712483963242</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712486300060</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1712486300060</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712486335209</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1712486335209</updated>
     </task>
     <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -597,7 +565,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713214416565</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713219625528</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1713219625528</updated>
+    </task>
+    <task id="LOCAL-00061" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713219736942</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1713219736942</updated>
+    </task>
+    <task id="LOCAL-00062" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713219930839</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1713219930839</updated>
+    </task>
+    <task id="LOCAL-00063" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713220522502</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1713220522502</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -914,8 +914,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java</url>
-          <line>89</line>
+          <line>90</line>
           <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/build.gradle</url>
+          <line>37</line>
+          <option name="timeStamp" value="285" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
