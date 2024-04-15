@@ -11,7 +11,7 @@
             </class>
             <class name="e2e.tests.contactUs.ContactUsNegativeTest">
             </class>
-            <class name="e2e.tests.profile.AddUserDataProfileTestLocale">
+            <class name="e2e.tests.profile.AddUserDataProfileTest">
             </class>
             <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
