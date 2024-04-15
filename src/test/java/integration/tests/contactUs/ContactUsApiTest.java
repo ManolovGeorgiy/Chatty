@@ -1,4 +1,4 @@
-package integration.tests;
+package integration.tests.contactUs;
 
 
 import integration.ApiBase;
