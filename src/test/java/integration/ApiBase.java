@@ -1,5 +1,7 @@
 package integration;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.File;
 import config.Config;
 import io.restassured.RestAssured;
@@ -8,6 +10,10 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeClass;
+import util.UserInfoDto;
+
+import java.util.List;
+import java.util.Random;
 
 public class ApiBase {
     private final Config config = new Config();
@@ -143,6 +149,58 @@ public class ApiBase {
                 .extract().response();
 
         return response.jsonPath().getString("token");
+    }
+    public  String generateRandomEmail() {
+        String baseEmail = "example"; // Base email address
+        String domain = "example.com"; // Domain name
+        Random random = new Random();
+
+        // Generate a random integer
+        int randomNumber = random.nextInt(Integer.MAX_VALUE);
+
+        // Concatenate the base email, random UUID, and domain
+        String randomEmail = baseEmail + randomNumber + "@" + domain;
+
+        return randomEmail;
+    }
+
+    public void checkUserDelete(String token, String email, int expectedStatusCode) {
+        String endpoint = "/api/users";
+
+        Response response = RestAssured.given()
+                .spec(spec)
+                .queryParam("email", email)
+                .queryParam("limit", 10)
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .log().all()
+                .get(endpoint)
+                .then()
+                .log().all()
+                .statusCode(expectedStatusCode)
+                .extract().response();
+    }
+
+    public List<UserInfoDto> getUserByEmail(String token, String email, int expectedStatusCode) {
+        String endpoint = "/api/users";
+
+        Response response = RestAssured.given()
+                .spec(spec)
+                .queryParam("email", email)
+                .queryParam("limit", 10)
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .log().all()
+                .get(endpoint)
+                .then()
+                .log().all()
+                .statusCode(expectedStatusCode)
+                .extract().response();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<UserInfoDto> userInfoList = objectMapper.convertValue(response.jsonPath().getList(""), new TypeReference<List<UserInfoDto>>() {});
+
+        return userInfoList;
     }
 
 

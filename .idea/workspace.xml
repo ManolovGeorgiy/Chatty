@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Admin panel. Edit user, Delete user" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="new rename Test">
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/adminapi/AdminEditDeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/adminapi/AdminEditDeleteUser.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +110,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DeleteUser.userCanLogin">
+  <component name="RunManager" selected="TestNG.AdminEditDeleteUser.userCanLogin">
     <configuration name="Chatty [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -150,6 +153,24 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AdminEditDeleteUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.edituser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
+      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -185,28 +206,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.edituser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.edituser" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.edituser.EditUser" />
-      <option name="METHOD_NAME" value="userCanLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdminEditDeleteUser.userCanLogin" />
         <item itemvalue="TestNG.DeleteUser.userCanLogin" />
-        <item itemvalue="TestNG.EditUser.userCanLogin" />
         <item itemvalue="TestNG.DeleteUser" />
         <item itemvalue="Gradle.Chatty [build]" />
         <item itemvalue="Gradle.Chatty [clean]" />
@@ -221,14 +224,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712467526206</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1712467526206</updated>
     </task>
     <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -607,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713132049272</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="new rename Test">
+      <created>1713175379827</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1713175379827</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -626,7 +628,8 @@
     <MESSAGE value="Api for Post" />
     <MESSAGE value="AdminPanel" />
     <MESSAGE value="Admin panel. Edit user, Delete user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin panel. Edit user, Delete user" />
+    <MESSAGE value="new rename Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="new rename Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

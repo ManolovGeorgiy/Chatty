@@ -3,6 +3,7 @@ package integration.tests.adminapi;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import config.Config;
+import integration.ApiBase;
 import integration.pages.user.UserApi;
 
 import io.restassured.RestAssured;
@@ -19,7 +20,7 @@ import java.util.Random;
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class AdminEditDeleteUser {
+public class AdminEditDeleteUser extends ApiBase {
 
     private final Config config = new Config();
     protected final String BASE_URL = config.getProjectApiUrl();
@@ -71,39 +72,4 @@ public class AdminEditDeleteUser {
         assertEquals("MALE", userInfo.getGender());
     }
 
-
-    public List<UserInfoDto> getUserByEmail(String token, String email, int expectedStatusCode) {
-        String endpoint = "/api/users";
-
-        Response response = RestAssured.given()
-                .spec(spec)
-                .queryParam("email", email)
-                .queryParam("limit", 10)
-                .header("Authorization", "Bearer " + token)
-                .when()
-                .log().all()
-                .get(endpoint)
-                .then()
-                .log().all()
-                .statusCode(expectedStatusCode)
-                .extract().response();
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<UserInfoDto> userInfoList = objectMapper.convertValue(response.jsonPath().getList(""), new TypeReference<List<UserInfoDto>>() {});
-
-        return userInfoList;
-    }
-    public  String generateRandomEmail() {
-        String baseEmail = "example"; // Base email address
-        String domain = "example.com"; // Domain name
-        Random random = new Random();
-
-        // Generate a random integer
-        int randomNumber = random.nextInt(Integer.MAX_VALUE);
-
-        // Concatenate the base email, random UUID, and domain
-        String randomEmail = baseEmail + randomNumber + "@" + domain;
-
-        return randomEmail;
-    }
 }
