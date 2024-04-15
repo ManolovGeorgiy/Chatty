@@ -1,4 +1,4 @@
-package integration.tests.edituser;
+package integration.tests.adminapi;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,12 +15,11 @@ import util.UserInfoDto;
 
 import java.util.List;
 import java.util.Random;
-import java.util.UUID;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class EditUser {
+public class AdminEditDeleteUser {
 
     private final Config config = new Config();
     protected final String BASE_URL = config.getProjectApiUrl();
