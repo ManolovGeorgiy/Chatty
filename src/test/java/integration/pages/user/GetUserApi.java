@@ -4,9 +4,9 @@ import integration.ApiBase;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class GetUser extends ApiBase {
+public class GetUserApi extends ApiBase {
 
-    public GetUser(String token){
+    public GetUserApi(String token){
         super(token);
     }
     Response response;

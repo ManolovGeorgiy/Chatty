@@ -15,7 +15,7 @@ public class RegistrationApiTest {
     Faker faker = new Faker();
 
 
-    @Feature(value = "The user has registered")
+
     @Description(value = "User can registration")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "New user can registration")
@@ -29,7 +29,6 @@ public class RegistrationApiTest {
         userApi.registration(email, password, confirmPassword, role, 201);
         userApi.login(email, password, 200);
     }
-
     @Feature(value = "The user has not registered")
     @Description(value = "User can not registration with invalid password")
     @Severity(SeverityLevel.BLOCKER)
@@ -56,7 +55,10 @@ public class RegistrationApiTest {
         userApi.registration(email, password, confirmPassword, role, 400);
     }
 
-    @Test
+    @Feature(value = "The user has not registered")
+    @Description(value = "User can not registration without data")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "User can not registration without data")
     public void userCanNotRegistrationWithoutData() {
         String email = "";
         String password = "";

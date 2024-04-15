@@ -1,7 +1,7 @@
 package integration.tests.login;
 
 
-import integration.pages.user.GetUser;
+import integration.pages.user.GetUserApi;
 import integration.pages.user.UserApi;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class LoginApiTest {
 
     UserApi userApi;
-    GetUser getUser;
+    GetUserApi getUserApi;
 
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
@@ -23,8 +23,8 @@ public class LoginApiTest {
         String password = "GPower3333";
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
-        getUser = new GetUser(token);
-        String userJson = getUser.getUser();
+        getUserApi = new GetUserApi(token);
+        String userJson = getUserApi.getUser();
         JsonPath object = new JsonPath(userJson);
         String userId = object.getString("id");
         System.out.println(userId);
@@ -38,7 +38,7 @@ public class LoginApiTest {
         String password = "GPower3334";
         userApi = new UserApi();
         String token = userApi.login(email, password, 401);
-        getUser = new GetUser(token);
+        getUserApi = new GetUserApi(token);
     }
 
     @Description(value = "admin can not login")
@@ -49,7 +49,7 @@ public class LoginApiTest {
         String password = "GPower3333";
         userApi = new UserApi();
         String token = userApi.login(email, password, 404);
-        getUser = new GetUser(token);
+        getUserApi = new GetUserApi(token);
     }
 
     @Feature(value = "admin is not logged in")
@@ -61,6 +61,6 @@ public class LoginApiTest {
         String password = "";
         userApi = new UserApi();
         String token = userApi.login(email, password, 400);
-        getUser = new GetUser(token);
+        getUserApi = new GetUserApi(token);
     }
 }

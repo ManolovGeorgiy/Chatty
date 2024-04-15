@@ -2,14 +2,14 @@ package integration.tests.post;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
-import integration.pages.post.CreatePost;
-import integration.pages.post.DeletePost;
-import integration.pages.post.GetPostByPostId;
-import integration.pages.post.UpdatePost;
+import integration.pages.post.*;
 import integration.pages.user.UserApi;
 import integration.schemas.PostCreateReq;
 import integration.schemas.PostUpdateReq;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,18 +18,17 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-public class UserCanCreateEditAndDeletePost {
+public class UserCanCreateEditAndDeleteNewPost {
 
     Faker faker = new Faker();
     UserApi userApi;
-    CreatePost createPost;
-    GetPostByPostId getPostByPostId;
-    UpdatePost updatePost;
-    DeletePost deletePost;
+    PostApi postApi;
+    PostCreateReq postCreateReq;
+    PostUpdateReq postUpdateReq;
 
     private void checkPostData(String postId, PostCreateReq postCreateReq){
 
-        JsonPath actualObjects = JsonPath.given(getPostByPostId.getPostId(postId,200));
+        JsonPath actualObjects = JsonPath.given(postApi.getPostId(postId,200));
         LinkedHashMap<String,String> postObjects = new LinkedHashMap<>();
         postObjects.put(actualObjects.getString("title"),postCreateReq.getTitle());
         postObjects.put(actualObjects.getString("description"),postCreateReq.getDescription());
@@ -41,10 +40,9 @@ public class UserCanCreateEditAndDeletePost {
             Assert.assertEquals(actualResult,expectedResult, actualResult + " is not equals " + expectedResult);
         }
     }
-
     private void checkEditPostData(String postId, PostUpdateReq postUpdateReq){
 
-        JsonPath actualObjects = JsonPath.given(getPostByPostId.getPostId(postId,200));
+        JsonPath actualObjects = JsonPath.given(postApi.getPostId(postId,200));
         LinkedHashMap<String,String> postObjects = new LinkedHashMap<>();
         postObjects.put(actualObjects.getString("title"),postUpdateReq.getTitle());
         postObjects.put(actualObjects.getString("description"),postUpdateReq.getDescription());
@@ -55,12 +53,10 @@ public class UserCanCreateEditAndDeletePost {
             String expectedResult =postObject.getValue();
             Assert.assertEquals(actualResult,expectedResult, actualResult + " is not equals " + expectedResult);
         }
-    }
-    @Feature(value = "Creating post")
-    @Story(value = "User can create a post")
-    @Description(value = "User can create a post")
+    }@Feature(value = "Creating,editing and deleting post")
+    @Description(value = "New post")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "User Can create post")
+    @Test(description = "User Can create,edit and delete post")
     public void userCanCreatePost() throws JsonProcessingException {
         String email = "user.can.create.a.post@gmail.com";
         String password = "Manowar33246";
@@ -72,41 +68,37 @@ public class UserCanCreateEditAndDeletePost {
 
         String editTitle = "GPower";
         String editDescription = "Beautiful";
-        String editBody = "My new post";
+        String editBody = "My edit and delete post";
         String editImageURL = ("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
 
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
 
-        PostCreateReq postCreateReq = new PostCreateReq();
+        postCreateReq = new PostCreateReq();
         postCreateReq.setTitle(title);
         postCreateReq.setDescription(description);
         postCreateReq.setBody(body);
         postCreateReq.setImageUrl(imageURL);
 
-        createPost = new CreatePost(token);
-        String response = createPost.createPost(201, postCreateReq);
-        JsonPath jsonPath = new JsonPath(response);
-        String postId = jsonPath.getString("id");
-
-        getPostByPostId = new GetPostByPostId(token);
-        checkPostData(postId,postCreateReq);
-
-        PostUpdateReq postUpdateReq = new PostUpdateReq();
+        postUpdateReq = new PostUpdateReq();
         postUpdateReq.setTitle(editTitle);
         postUpdateReq.setDescription(editDescription);
         postUpdateReq.setBody(editBody);
         postUpdateReq.setImageUrl(editImageURL);
 
-        updatePost = new UpdatePost(token);
-        String responseEdit = updatePost.updateUserPost(postId, postUpdateReq, 200);
+        postApi = new PostApi(token);
+        String response = postApi.createPost(201, postCreateReq);
+        JsonPath jsonPath = new JsonPath(response);
+        String postId = jsonPath.getString("id");
+        postApi.getPostId(postId,200);
+        checkPostData(postId,postCreateReq);
+
+        String responseEdit = postApi.updateUserPost(postId, postUpdateReq, 200);
         JsonPath jsonPathEdit = new JsonPath(responseEdit);
         String editPostId = jsonPathEdit.getString("id");
-
-        getPostByPostId = new GetPostByPostId(token);
+        postApi.getPostId(postId,200);
         checkEditPostData(postId,postUpdateReq);
 
-        deletePost = new DeletePost(token);
-        deletePost.deleteUserPost(editPostId, 204);
+        postApi.deleteUserPost(editPostId, 204);
     }
 }

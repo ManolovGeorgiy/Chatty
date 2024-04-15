@@ -1,16 +1,18 @@
-package integration.pages.post;
+package integration.pages.adminPanel;
 
 import integration.ApiBase;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-public class GetPostByPostId extends ApiBase {
-    public GetPostByPostId(String token){
+public class DeleteUserApi extends ApiBase {
+    Response response;
+    public DeleteUserApi(String token){
         super(token);
     }
-    Response response;
-    public String getPostId(String postId,int code){
-        String endPoint = "/api/posts/{id}";
-        response = getRequestWhitParam(endPoint,code,"id",postId);
+    @Step("Delete user: {userId}")
+    public String deleteUser(int code,String userId) {
+        String endpoint = "/api/users/{id}";
+        response = deleteRequest(endpoint, code, userId);
         switch (response.getStatusCode()) {
             case 200:
                 return response.asString();
