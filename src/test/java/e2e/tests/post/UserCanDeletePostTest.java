@@ -12,6 +12,7 @@ import integration.pages.user.UserApi;
 import integration.schemas.PostCreateReq;
 import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UserCanDeletePostTest extends TestBase {
@@ -37,7 +38,7 @@ public class UserCanDeletePostTest extends TestBase {
 
         String title = "Chatty";
         String description = "GPower";
-        String body = faker.lorem().sentence(10);
+        String body = "New World";
         String imageURL = ("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg");
 
 
@@ -55,6 +56,12 @@ public class UserCanDeletePostTest extends TestBase {
         JsonPath jsonPath = new JsonPath(response);
         String postId = jsonPath.getString("id");
         postApi.getPostId(postId,200);
+
+        Assert.assertEquals("Chatty", postCreateReq.getTitle());
+        Assert.assertEquals("GPower", postCreateReq.getDescription());
+        Assert.assertEquals("New World", postCreateReq.getBody());
+        Assert.assertEquals("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg", postCreateReq.getImageUrl());
+
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
