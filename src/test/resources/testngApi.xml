@@ -13,6 +13,12 @@
             </class>
             <class name="e2e.tests.post.UserCanDeletePostTest">
             </class>
+            <class name="integration.tests.adminapi.AdminEditDeleteUser">
+            </class>
+            <class name="integration.tests.profile.UserCanAddData">
+            </class>
+            <class name="integration.tests.contactUs.UserCanSendMessageTest">
+            </class>
         </classes>
     </test>
 </suite>
