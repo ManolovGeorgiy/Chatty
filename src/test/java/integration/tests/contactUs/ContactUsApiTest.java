@@ -1,20 +1,15 @@
 package integration.tests.contactUs;
 
-import com.beust.ah.A;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import integration.pages.contactUs.ContactUsApi;
 import integration.pages.user.UserApi;
 import integration.schemas.FeedbackReq;
-import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import static org.testng.Assert.assertEquals;
 
-public class UserCanSendMessageTest {
+public class ContactUsApiTest {
 
     UserApi userApi;
     ContactUsApi contactUsApi;

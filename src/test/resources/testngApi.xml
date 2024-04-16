@@ -13,7 +13,7 @@
 <!--            </class>-->
             <class name="integration.tests.profile.UserCanAddData">
             </class>
-            <class name="integration.tests.contactUs.UserCanSendMessageTest">
+            <class name="integration.tests.contactUs.ContactUsApiTest">
             </class>
         </classes>
     </test>
