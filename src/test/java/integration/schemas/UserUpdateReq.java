@@ -20,13 +20,14 @@ public class UserUpdateReq {
     @JsonProperty("blocked")
     private boolean blocked;
 
-    public UserUpdateReq(String s) {
 
+    public UserUpdateReq(String name, String surname, String birthDate, String phone, String gender, String  backgroundUrl) {
     }
 
     public String getAvatarUrl() {
         return avatarUrl;
     }
+
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;

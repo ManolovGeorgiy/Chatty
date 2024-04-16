@@ -144,41 +144,42 @@ public class ApiBase {
             RestAssured.baseURI = "http://your_api_base_url";
             // Если требуется авторизация, установите здесь заголовок авторизации
             // RestAssured.authentication = basic("username", "password");
+            }
+
+        protected Response profileRequest(String endpoint, int code, Object body, String method) {
+            Response response = null;
+           switch (method.toUpperCase()) {
+                case "GET":
+                    response = spec.get(endpoint).then().statusCode(code).extract().response();
+                    break;
+                case "POST":           response = spec.body(body).post(endpoint).then().statusCode(code).extract().response();
+                    break;
+                case "PUT":
+                    response = spec.body(body).put(endpoint).then().statusCode(code).extract().response();
+                    break;
+                case "DELETE":
+                    response = spec.delete(endpoint).then().statusCode(code).extract().response();
+                    break;
+                default:
+                    System.out.println("Unsupported HTTP method: " + method);
+            }
+
+
+            return response;
         }
+  protected Response getProfile (String userId){
+      return given()
+              .spec(spec)
+              .when()
+              .log().all()
+              .get("profile/" + userId)
+              .then()
+              .log().all()
+              .extract().response();
+  }
 
-        //protected Response profileRequest(String endpoint, int code, Object body, String method) {
-        //    Response response = null;
-        //    switch (method.toUpperCase()) {
-        //        case "GET":
-        //            response = spec.get(endpoint).then().statusCode(code).extract().response();
-        //            break;
-        //        case "POST":
-        //            response = spec.body(body).post(endpoint).then().statusCode(code).extract().response();
-        //            break;
-        //        case "PUT":
-        //            response = spec.body(body).put(endpoint).then().statusCode(code).extract().response();
-        //            break;
-        //        case "DELETE":
-        //            response = spec.delete(endpoint).then().statusCode(code).extract().response();
-        //            break;
-        //        default:
-        //            System.out.println("Unsupported HTTP method: " + method);
-        //    }
+}
 
 
-        //    return response;
-        //}
-    protected Response getProfile (String userId){
-        return given()
-                .spec(spec)
-                .when()
-                .log().all()
-                .get("profile/" + userId)
-                .then()
-                .log().all()
-                .extract().response();
-    }
-
-    }
 
 
