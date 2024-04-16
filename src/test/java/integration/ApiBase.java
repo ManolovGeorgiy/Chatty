@@ -10,7 +10,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeClass;
-import util.UserInfoDto;
+//import util.UserInfoDto;
 
 import java.util.List;
 import java.util.Random;
@@ -181,27 +181,27 @@ public class ApiBase {
                 .extract().response();
     }
 
-    public List<UserInfoDto> getUserByEmail(String token, String email, int expectedStatusCode) {
-        String endpoint = "/api/users";
-
-        Response response = RestAssured.given()
-                .spec(spec)
-                .queryParam("email", email)
-                .queryParam("limit", 10)
-                .header("Authorization", "Bearer " + token)
-                .when()
-                .log().all()
-                .get(endpoint)
-                .then()
-                .log().all()
-                .statusCode(expectedStatusCode)
-                .extract().response();
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<UserInfoDto> userInfoList = objectMapper.convertValue(response.jsonPath().getList(""), new TypeReference<List<UserInfoDto>>() {});
-
-        return userInfoList;
-    }
+//    public List<UserInfoDto> getUserByEmail(String token, String email, int expectedStatusCode) {
+//        String endpoint = "/api/users";
+//
+//        Response response = RestAssured.given()
+//                .spec(spec)
+//                .queryParam("email", email)
+//                .queryParam("limit", 10)
+//                .header("Authorization", "Bearer " + token)
+//                .when()
+//                .log().all()
+//                .get(endpoint)
+//                .then()
+//                .log().all()
+//                .statusCode(expectedStatusCode)
+//                .extract().response();
+//
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        List<UserInfoDto> userInfoList = objectMapper.convertValue(response.jsonPath().getList(""), new TypeReference<List<UserInfoDto>>() {});
+//
+//        return userInfoList;
+//    }
 
 
     @BeforeClass
