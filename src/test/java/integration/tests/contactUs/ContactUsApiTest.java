@@ -12,6 +12,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import util.UserInfoDto;
 
 import static io.restassured.RestAssured.baseURI;
 import static org.testng.AssertJUnit.assertNotNull;
@@ -21,8 +22,12 @@ public class ContactUsApiTest extends ApiBase {
     FeedbackReq feedbackReq;
     ContactUsApi contactUsApi;
 
+    @Feature(value = "User can send feedback")
+    @Story(value = "User can send feedback with valid values")
+    @Description(value = "User can send feedback with valid values")
+    @Severity(SeverityLevel.BLOCKER)
     @Test(dependsOnMethods = "User can send feedback")
-    public void userCanSendMessageFeedbackViaApi()throws JsonProcessingException {
+    public void userCanSendMessageFeedbackViaApi() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324@gmail.com";
         String password = "Manowar33246";
 
@@ -45,8 +50,13 @@ public class ContactUsApiTest extends ApiBase {
         Assert.assertEquals("wWw1s1trieng12324@gmail.com", feedbackReq.getEmail());
         Assert.assertEquals("Sdsdf sdfg dfgh dfgh f sdfgh", feedbackReq.getContent());
     }
-    @Test(dependsOnMethods = "user can not send feedback with invalid email")
-    public void userCanNotSendFeedbackWithInvalidEmail()throws JsonProcessingException{
+
+    @Feature(value = "User can not send feedback with invalid email")
+    @Story(value = "User can not send feedback with invalid email")
+    @Description(value = "User can not send feedback with invalid email")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(dependsOnMethods = "User can not send feedback with invalid email")
+    public void userCanNotSendFeedbackWithInvalidEmail() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324gmail.com";
         String password = "Manowar33246";
 
@@ -66,8 +76,12 @@ public class ContactUsApiTest extends ApiBase {
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
     }
 
-    @Test(description = "user can not send feedback without name")
-    public void userCanNotSendFeedbackWithoutName()throws JsonProcessingException{
+    @Feature(value = "User can not send feedback")
+    @Story(value = "User can not send feedback without name")
+    @Description(value = "User can not send feedback without name")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "User can not send feedback without name")
+    public void userCanNotSendFeedbackWithoutName() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324@gmail.com";
         String password = "Manowar33246";
 
@@ -86,8 +100,13 @@ public class ContactUsApiTest extends ApiBase {
         contactUsApi = new ContactUsApi(token);
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
     }
-    @Test(description = "user can not send feedback without email")
-    public void userCanNotSendFeedbackWithoutEmail()throws JsonProcessingException{
+
+    @Feature(value = "User can not send feedback")
+    @Story(value = "User can not send feedback without email")
+    @Description(value = "User can not send feedback without email")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "User can not send feedback without email")
+    public void userCanNotSendFeedbackWithoutEmail() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324@gmail.com";
         String password = "Manowar33246";
 
@@ -106,8 +125,13 @@ public class ContactUsApiTest extends ApiBase {
         contactUsApi = new ContactUsApi(token);
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
     }
-    @Test(description = "user can not send feedback without message")
-    public void userCanNotSendFeedbackWithoutMessage()throws JsonProcessingException{
+
+    @Feature(value = "User can not send feedback")
+    @Story(value = "User can not send feedback without message")
+    @Description(value = "User can not send feedback without message")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "User can not send feedback without message")
+    public void userCanNotSendFeedbackWithoutMessage() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324@gmail.com";
         String password = "Manowar33246";
 
@@ -137,7 +161,7 @@ public class ContactUsApiTest extends ApiBase {
         String password = "GPower3333";
 
         userApi = new UserApi();
-        userApi.login(email, password,201);
+        userApi.login(email, password, 201);
 
         String emailLogin = "wWw1s1trieng12324@gmail.com";
         String passwordLogin = "Manowar33246";
@@ -146,7 +170,8 @@ public class ContactUsApiTest extends ApiBase {
         userApi = new UserApi();
         String token = userApi.login(emailLogin, passwordLogin, 200);
 
-       /* UserInfoDto userInfo = getUserByEmail(token, email, 200).get(0);
+        Response userInfo;
+        userInfo = getRequest(email, 200);
         assertNotNull(userInfo);
 
         RestAssured.given()
@@ -155,12 +180,11 @@ public class ContactUsApiTest extends ApiBase {
                 .when()
                 .body(userInfo)
                 .log().all()
-                .delete(deleteUserEndpoint + "/" + userInfo.getId())
+                .delete(deleteUserEndpoint + "/" + userInfo.getClass())
                 .then().log().all()
                 .extract().response();
 
-        checkUserDelete(token, email, 404);*/
-
+        getRequest(token, 204);
     }
 }
 
