@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a96d0ac-b349-40e5-854f-6ad7f973a6b4" name="Changes" comment="Added ContactUsApiTest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/contactUs/ContactUsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/contactUs/ContactUsApiTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="3a96d0ac-b349-40e5-854f-6ad7f973a6b4" name="Changes" comment="Feature and Description." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +42,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Manolov" />
+        <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -189,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactUsApiTest" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNotSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
+        <item itemvalue="TestNG.ContactUsApiTest" />
       </list>
     </recent_temporary>
   </component>

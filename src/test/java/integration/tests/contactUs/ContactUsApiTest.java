@@ -6,6 +6,7 @@ import integration.ApiBase;
 import integration.pages.contactUs.ContactUsApi;
 import integration.pages.user.UserApi;
 import integration.schemas.FeedbackReq;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.baseURI;
+import static org.testng.AssertJUnit.assertNotNull;
 
 public class ContactUsApiTest extends ApiBase {
     UserApi userApi;
@@ -123,6 +125,42 @@ public class ContactUsApiTest extends ApiBase {
 
         contactUsApi = new ContactUsApi(token);
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
+    }
+
+    @Feature(value = "Delete User")
+    @Story(value = "Admin can Delete User")
+    @Description(value = "Admin can Delete User")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "Admin can Delete new User")
+    public void adminCanLoginAndDeleteUser() {
+        String email = "g.power@gmail.com";
+        String password = "GPower3333";
+
+        userApi = new UserApi();
+        userApi.login(email, password,201);
+
+        String emailLogin = "wWw1s1trieng12324@gmail.com";
+        String passwordLogin = "Manowar33246";
+        String deleteUserEndpoint = "/api/users";
+
+        userApi = new UserApi();
+        String token = userApi.login(emailLogin, passwordLogin, 200);
+
+       /* UserInfoDto userInfo = getUserByEmail(token, email, 200).get(0);
+        assertNotNull(userInfo);
+
+        RestAssured.given()
+                .spec(spec)
+                .header("Authorization", "Bearer " + token)
+                .when()
+                .body(userInfo)
+                .log().all()
+                .delete(deleteUserEndpoint + "/" + userInfo.getId())
+                .then().log().all()
+                .extract().response();
+
+        checkUserDelete(token, email, 404);*/
+
     }
 }
 
