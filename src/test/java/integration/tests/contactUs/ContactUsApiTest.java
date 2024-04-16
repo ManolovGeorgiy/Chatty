@@ -143,7 +143,6 @@ public class ContactUsApiTest extends ApiBase {
         contactUsApi = new ContactUsApi(token);
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
     }
-
 }
 
 

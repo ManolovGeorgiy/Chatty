@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest">
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/contactUs/ContactUsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/contactUs/ContactUsApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminEditDeleteUser">
+  <component name="RunManager" selected="TestNG.ContactUsApiTest">
     <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,18 +167,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminEditDeleteUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ContactUsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.edituser" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
-      <option name="METHOD_NAME" value="userCanLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.ContactUsApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -205,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactUsApiTest" />
         <item itemvalue="TestNG.AdminEditDeleteUser" />
         <item itemvalue="Gradle.Chatty [ApiTest]" />
         <item itemvalue="TestNG.AdminEditDeleteUser.adminCanLoginEditUser" />
         <item itemvalue="TestNG.DeleteUserViaAdmin.userCanLogin" />
-        <item itemvalue="TestNG.AdminEditDeleteUser.userCanLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -221,22 +220,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712503317452</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1712503317453</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712503708401</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1712503708401</updated>
     </task>
     <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -600,7 +583,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713288438634</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Added ContactUsApiTest">
+      <created>1713288631052</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1713288631052</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Added ContactUsApiTest">
+      <created>1713288683955</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1713288683955</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
