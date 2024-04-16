@@ -1,6 +1,6 @@
 package e2e.pages.post;
 
-import e2e.TestBase;
+
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.StaleElementReferenceException;
