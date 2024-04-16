@@ -107,4 +107,8 @@ public class ProfileApi  extends ApiBase {
 
         return profileId;
     }
+
+    public String getprofileId(String profileId, int i) {
+        return profileId;
+    }
 }
