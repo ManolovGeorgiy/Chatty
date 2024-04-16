@@ -3,7 +3,12 @@ package integration.schemas;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class FeedbackReq {
-
+    @JsonProperty("email")
+    private String email;
+    @JsonProperty("content")
+    private String content;
+    @JsonProperty("name")
+    private String name;
 
     public String getName() {
         return name;
@@ -14,13 +19,9 @@ public class FeedbackReq {
     }
 
 
-    public String getContent() {
-        return content;
-    }
+    public String getContent() {return content;}
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+    public void setContent(String content) {this.content = content;}
 
 
     public String getEmail() {
@@ -31,10 +32,4 @@ public class FeedbackReq {
         this.email = email;
     }
 
-    @JsonProperty("email")
-    private String email;
-    @JsonProperty("content")
-    private String content;
-    @JsonProperty("name")
-    private String name;
 }
