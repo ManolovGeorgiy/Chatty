@@ -61,7 +61,7 @@ public class UserCanUpdateProfileApiTest {
     @Description(value = "New profile")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "User Can create,edit and delete profile")
-    public void userCanCreateYourProfile() throws JsonProcessingException {
+    public void userCanUpdateYourProfile() throws JsonProcessingException {
         String email = "mylen@gmail.com";
         String password = "mylenmy88";
 
@@ -116,7 +116,9 @@ public class UserCanUpdateProfileApiTest {
         profileApi.getpofileId(profileId,200);
         checkProfileData(profileId,userUpdateReq);
 
-        //postApi.deleteUserPost(editPostId, 204);
+
+
+        profileApi.deleteUserProfile(userRes, 204);
     }
 
     private String getUUID(String id) {

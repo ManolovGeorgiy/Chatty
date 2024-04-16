@@ -111,4 +111,8 @@ public class ProfileApi  extends ApiBase {
     public String getprofileId(String profileId, int i) {
         return profileId;
     }
+
+    public void deleteUserProfile(Object editProfileIdId, int i) {
+    }
 }
+
