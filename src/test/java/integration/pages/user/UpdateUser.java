@@ -17,7 +17,7 @@ public class UpdateUser extends ApiBase {
     }
 
     @Step("Update user with {id}")
-    public String updateUser(String userId, UserUpdateReq userUpdateReq, int code) throws JsonProcessingException {
+    public String updateUserProfile(String userId, UserUpdateReq userUpdateReq, int code) throws JsonProcessingException {
         String endpoint = "/api/users/{id}";
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonRequest = objectMapper.writeValueAsString(userUpdateReq);
@@ -39,7 +39,6 @@ public class UpdateUser extends ApiBase {
             assertNotNull("AvatarUrl is missing", jsonPath.get("avatarUrl"));
         }
     }
-
     private String handleResponse(Response response) {
         switch (response.getStatusCode()) {
             case 200:

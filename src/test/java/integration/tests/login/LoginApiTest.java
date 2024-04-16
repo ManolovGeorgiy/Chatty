@@ -24,7 +24,7 @@ public class LoginApiTest {
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
         getUserApi = new GetUserApi(token);
-        String userJson = getUserApi.getUser();
+        String userJson = getUserApi.getUser(200);
         JsonPath object = new JsonPath(userJson);
         String userId = object.getString("id");
         System.out.println(userId);
