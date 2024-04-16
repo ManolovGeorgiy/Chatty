@@ -106,4 +106,7 @@ public class UserRes {
     }
 
 
+    public String isBlocked() {
+        return null;
+    }
 }

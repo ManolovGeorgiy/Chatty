@@ -102,4 +102,9 @@ public class ProfileApi  extends ApiBase {
             return "Response is null";
         }
     }
+
+    public String getpofileId(String profileId, int i) {
+
+        return profileId;
+    }
 }
