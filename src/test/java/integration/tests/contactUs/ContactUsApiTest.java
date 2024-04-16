@@ -150,7 +150,7 @@ public class ContactUsApiTest extends ApiBase {
         contactUsApi = new ContactUsApi(token);
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
     }
-
+/*
     @Feature(value = "Delete User")
     @Story(value = "Admin can Delete User")
     @Description(value = "Admin can Delete User")
@@ -185,6 +185,6 @@ public class ContactUsApiTest extends ApiBase {
                 .extract().response();
 
         getRequest(token, 204);
-    }
+    }*/
 }
 

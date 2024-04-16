@@ -135,8 +135,8 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsApiTest">
-    <configuration name="ContactUsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ContactUsApiTest.userCanSendMessageFeedbackViaApi">
+    <configuration name="ContactUsApiTest.userCanSendMessageFeedbackViaApi" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +146,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.ContactUsApiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="userCanSendMessageFeedbackViaApi" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -227,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactUsApiTest.userCanSendMessageFeedbackViaApi" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNotSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
-        <item itemvalue="TestNG.ContactUsApiTest" />
       </list>
     </recent_temporary>
   </component>
