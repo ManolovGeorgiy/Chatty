@@ -7,9 +7,6 @@ import integration.pages.contactUs.ContactUsApi;
 import integration.pages.user.UserApi;
 import integration.schemas.FeedbackReq;
 import io.qameta.allure.*;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
