@@ -13,7 +13,10 @@ public class AddUserDialog extends BasePage {
         super(driver);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6962117 (Added ContactUsApiTest)
     @FindBy(xpath = "//*[@data-test='post-header__plus']")
     WebElement editButton;
 
@@ -82,9 +85,16 @@ public class AddUserDialog extends BasePage {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
+<<<<<<< HEAD
             fileInput.sendKeys(absoluteImagePath);
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
+=======
+            fileInput.sendKeys(imagePath);
+            ;
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+>>>>>>> 6962117 (Added ContactUsApiTest)
         }
     }
 
@@ -109,15 +119,20 @@ public class AddUserDialog extends BasePage {
             birthDateForm.sendKeys(date);
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).perform();
+<<<<<<< HEAD
             birthDateForm.sendKeys(dateParts[1]); //day
             birthDateForm.sendKeys(dateParts[2]); //month
             birthDateForm.sendKeys(dateParts[0]); //year
+=======
+            birthDateForm.sendKeys(date);
+>>>>>>> 6962117 (Added ContactUsApiTest)
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         phoneInput.sendKeys(phone);
     }
 
+<<<<<<< HEAD
     @Step("Fill profile form {name},{surname},{date},{phone}")
     public void fillProfileFormLocal(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
@@ -149,6 +164,8 @@ public class AddUserDialog extends BasePage {
         phoneInput.sendKeys(phone);
     }
 
+=======
+>>>>>>> 6962117 (Added ContactUsApiTest)
     @Step("click save button")
     public void clickSaveButton() {
         saveButton.click();

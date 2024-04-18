@@ -1,0 +1,39 @@
+Index: src/test/java/integration/pages/contactUs/ContactUsApi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package integration.pages.contactUs;\r\n\r\nimport com.fasterxml.jackson.core.JsonProcessingException;\r\nimport com.fasterxml.jackson.databind.ObjectMapper;\r\nimport integration.ApiBase;\r\nimport integration.schemas.FeedbackReq;\r\nimport io.qameta.allure.Step;\r\nimport io.restassured.response.Response;\r\n\r\npublic class ContactUsApi extends ApiBase {\r\n    public  ContactUsApi(String token) {\r\n        super(token);\r\n    }\r\n        @Step(\"Send message to the setFeedbackForm :{name},{email},{content}\")\r\n        public String setDataToTheFeedback(FeedbackReq feedbackReq, int code) throws JsonProcessingException {\r\n            String endpoint = \"/api/feedback\";\r\n            ObjectMapper objectMapper = new ObjectMapper();\r\n            String jsonRequestBody = objectMapper.writeValueAsString(feedbackReq);\r\n            Response response = postRequest(endpoint,code,jsonRequestBody);\r\n            switch (response.getStatusCode()) {\r\n                case 200:\r\n                    return response.asString();\r\n                case 400:\r\n                    return \"Bad Request: \" + response.jsonPath().getString(\"message\");\r\n                case 401:\r\n                    return \"Unauthorized: \" + response.jsonPath().getString(\"message\");\r\n                default:\r\n                    return \"Unexpected status code: \" + response.getStatusCode() + \" - \" + response.asString();\r\n            }\r\n            //https://stackoverflow.com/questions/22561527/handling-custom-error-response-in-jax-rs-2-0-client-library\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/integration/pages/contactUs/ContactUsApi.java b/src/test/java/integration/pages/contactUs/ContactUsApi.java
+--- a/src/test/java/integration/pages/contactUs/ContactUsApi.java	
++++ b/src/test/java/integration/pages/contactUs/ContactUsApi.java	
+@@ -7,7 +7,7 @@
+ import io.qameta.allure.Step;
+ import io.restassured.response.Response;
+ 
+-public class ContactUsApi extends ApiBase {
++public class ContactUsApi extends integration.ApiBase {
+     public  ContactUsApi(String token) {
+         super(token);
+     }
+Index: src/test/java/integration/pages/user/GetUserApi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package integration.pages.user;\r\n\r\nimport integration.ApiBase;\r\nimport io.qameta.allure.Step;\r\nimport io.restassured.path.json.JsonPath;\r\nimport io.restassured.response.Response;\r\n\r\npublic class GetUserApi extends ApiBase {\r\n\r\n    public GetUserApi(String token){\r\n        super(token);\r\n    }\r\n    Response response;\r\n    public String getUser(int code){\r\n        String endpoint = \"/api/me\";\r\n        response = getRequest(endpoint, 200);\r\n        switch (response.getStatusCode()) {\r\n            case 200:\r\n                JsonPath jsonPath = response.jsonPath();\r\n                assert jsonPath.getString(\"id\") != null : \"id is missing\";\r\n                assert jsonPath.getString(\"name\") != null : \"name is missing\";\r\n                assert jsonPath.getString(\"surname\") != null : \"surname is missing\";\r\n                assert jsonPath.getString(\"email\") != null : \"email is missing\";\r\n                assert jsonPath.getString(\"gender\") != null : \"gender is missing\";\r\n                assert jsonPath.getString(\"birthDate\") != null : \"birtDate is missing\";\r\n                assert jsonPath.getString(\"role\") != null : \"role is missing\";\r\n                assert jsonPath.getString(\"avatarUrl\") != null : \"role is missing\";\r\n                //assert jsonPath.getString(\"backgroundUrl\") != null : \"backgroundUrl is missing\";\r\n                break;\r\n            case 400:\r\n                System.err.println(\"Bad Request: \" + response.asString());\r\n                break;\r\n            case 401:\r\n                System.err.println(\"UNAUTHORIZED: \" + response.asString());\r\n                break;\r\n            case 404:\r\n                System.err.println(\"NOT_FOUND\" + response.asString());\r\n                break;\r\n            default:\r\n                System.err.println(\"Unexpected status code: \" + response.getStatusCode() + \" Response Body: \" + response.asString());\r\n        }\r\n        return response.asString();\r\n    }\r\n\r\n    @Step(\"Get user\")\r\n    public String getUserInfo(int code) {\r\n        String endPoint = \"/api/me\";\r\n        Response response = getRequest(endPoint,200);\r\n\r\n        switch (response.getStatusCode()) {\r\n            case 200:\r\n                JsonPath jsonPath = response.jsonPath();\r\n                assert jsonPath.getString(\"id\") != null : \"id is missing\";\r\n                assert jsonPath.getString(\"email\") != null : \"Name is missing\";\r\n                assert jsonPath.getString(\"role\") != null : \"Surname is missing\";\r\n                break;\r\n            case 400:\r\n                System.err.println(\"Bad Request: \" + response.asString());\r\n                break;\r\n            case 401:\r\n                System.err.println(\"Unauthorized: \" + response.asString());\r\n                break;\r\n            default:\r\n                System.err.println(\"Unexpected status code: \" + response.getStatusCode() + \" Response Body: \" + response.asString());\r\n        }\r\n        return response.asString();\r\n    }\r\n}\r\n\r\n
+===================================================================
+diff --git a/src/test/java/integration/pages/user/GetUserApi.java b/src/test/java/integration/pages/user/GetUserApi.java
+--- a/src/test/java/integration/pages/user/GetUserApi.java	
++++ b/src/test/java/integration/pages/user/GetUserApi.java	
+@@ -1,11 +1,11 @@
+ package integration.pages.user;
+ 
+-import integration.ApiBase;
++
+ import io.qameta.allure.Step;
+ import io.restassured.path.json.JsonPath;
+ import io.restassured.response.Response;
+ 
+-public class GetUserApi extends ApiBase {
++public class GetUserApi extends integration.ApiBase{
+ 
+     public GetUserApi(String token){
+         super(token);

@@ -54,7 +54,12 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
+<<<<<<< HEAD
         String editImagePath = "uploadReferences/adminCanCreateAPost_edit.jpg";
+=======
+        String editImagePath = "./src/test/java/resources/adminCanCreateAPost_edit.jpg";
+
+>>>>>>> 6962117 (Added ContactUsApiTest)
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -89,8 +94,13 @@ public class AdminCanCreateEditAndDeletePostTest extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
+<<<<<<< HEAD
         createAPostForm.uploadImage(editImagePath);
         editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
+=======
+        editAPostForm.imageLoading(editImagePath);
+        editAPostForm.editPost(editTitle, editDescription, editContent);
+>>>>>>> 6962117 (Added ContactUsApiTest)
         checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();
 

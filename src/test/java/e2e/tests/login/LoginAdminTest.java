@@ -3,10 +3,7 @@ package e2e.tests.login;
 import e2e.TestBase;
 import e2e.pages.login.LoginPage;
 import e2e.utils.DataProviders;
-import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;
@@ -15,9 +12,11 @@ public class LoginAdminTest extends TestBase {
 
     LoginPage loginPage;
 
+    @Epic(value = "adminPanel can login with valid Email and Password")
+    @Feature(value = "admin has been logged in")
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can login")
+    @Test(description = "CHATTY-47")
     public void adminCanLogin() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
@@ -26,10 +25,11 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
     }
 
+    @Epic(value = "adminPanel can't login with invalid email")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can not login with invalid email")
+    @Test(description = "CHATTY-15")
     public void adminCanNotLoginWithInvalidEmail() {
         String email = "gpower@gmail.com";
         String password = "GPower3333";
@@ -39,10 +39,11 @@ public class LoginAdminTest extends TestBase {
         assertTrue("User not found. Please register.", loginPage.textError());
     }
 
+    @Epic(value = "adminPanel can't login with invalid password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can not login with invalid password")
+    @Test(description = "CHATTY-14")
     public void adminCanNotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
         String password = "GPower3334";
@@ -51,10 +52,11 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
     }
 
+    @Epic(value = "adminPanel can't login without a email and password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can not login without email and password")
+    @Test(description = "CHATTY-14")
     public void adminCanNotLoginWithoutAEmailAndPassword() {
         String email = "";
         String password = "";
@@ -64,10 +66,11 @@ public class LoginAdminTest extends TestBase {
         loginPage.takeLoginPageScreenshot("adminCanNotLoginWithoutAEmailAndPassword");
     }
 
+    @Epic(value = "adminPanel can't login with invalid email and password")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can not login wit invalid email and password")
+    @Test(description = "CHATTY-49")
     public void adminCanNotLoginWiInvalidEmailAndPassword() {
         String email = "gpower@gmail.com";
         String password = "GPower3334";
@@ -77,6 +80,7 @@ public class LoginAdminTest extends TestBase {
         assertTrue("User not found. Please register.", loginPage.textError());
     }
 
+    @Epic(value = "adminPanel can' login with invalid data")
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)

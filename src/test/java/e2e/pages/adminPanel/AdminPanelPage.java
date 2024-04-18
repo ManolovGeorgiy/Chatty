@@ -6,6 +6,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 public class AdminPanelPage extends BasePage {
     public AdminPanelPage(WebDriver driver) {
         super(driver);
@@ -22,6 +23,7 @@ public class AdminPanelPage extends BasePage {
 
     @FindBy(xpath = "//*[@class='svg-inline--fa fa-trash ']")
     WebElement deleteAccount;
+
     @Step("Wait for loading adminPanel panel")
     public void waitForLoading() {
         try {
@@ -33,18 +35,26 @@ public class AdminPanelPage extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("search account")
-    public void searchAccount(String emailAccount){
+    public void searchAccount(String emailAccount) {
         searchEmailInput.clear();
         searchEmailInput.sendKeys(emailAccount);
         emailButton.click();
     }
+
     @Step("click edit account button")
-    public void clickEditAccount(){
+    public void clickEditAccount() {
         editAccount.click();
     }
+<<<<<<< HEAD
     @Step("click delete account button")
     public void clickDeleteAccount(){
+=======
+
+    @Step("click deleterrr account button")
+    public void clickDeleteAccount() {
+>>>>>>> 6962117 (Added ContactUsApiTest)
         deleteAccount.click();
     }
 }

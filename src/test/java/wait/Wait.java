@@ -26,7 +26,7 @@ public class Wait {
         try {
             setWait().until(ExpectedConditions.visibilityOf(element));
         } catch (TimeoutException e) {
-            throw new TimeoutException(element.getAccessibleName() + "is not visible more than " + TIMEOUT.toString());
+            throw new TimeoutException(element.getAccessibleName() + "is not visible more thasn " + TIMEOUT.toString());
         }
     }
 
@@ -51,14 +51,6 @@ public class Wait {
             setWait().until(ExpectedConditions.elementToBeClickable(element));
         } catch (TimeoutException e) {
             throw new TimeoutException(element.getAccessibleName() + "is not clickable more than " + TIMEOUT.toString());
-        }
-    }
-
-    public void forAttributeNotEmpty(WebElement element) {
-        try {
-            setWait().until(ExpectedConditions.attributeToBeNotEmpty(element, "value"));
-        } catch (TimeoutException e) {
-            throw new TimeoutException(element.getAccessibleName() + " attribute is empty after " + TIMEOUT.toString());
         }
     }
 }

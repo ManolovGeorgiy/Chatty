@@ -44,7 +44,11 @@ public class EditPasswordForm extends BasePage {
     }
 
     @Step("Fill out password forms")
+<<<<<<< HEAD
     public void fillChangePasswordForm(String oldPassword, String newPassword, String confirmNewPassword) {
+=======
+    public void changePassword(String oldPassword, String newPassword, String confirmNewPassword) {
+>>>>>>> 6962117 (Added ContactUsApiTest)
         changePasswordButton.click();
         oldPasswordInput.sendKeys(oldPassword);
         newPasswordInput.sendKeys(newPassword);

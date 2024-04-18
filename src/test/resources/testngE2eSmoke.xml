@@ -11,7 +11,11 @@
             </class>
             <class name="e2e.tests.contactUs.ContactUsNegativeTest">
             </class>
+<<<<<<< HEAD
             <class name="e2e.tests.profile.AddUserDataProfileTest">
+=======
+            <class name="e2e.tests.user.AboutPageTest">
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
             </class>
             <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>

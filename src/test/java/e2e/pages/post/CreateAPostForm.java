@@ -26,8 +26,11 @@ public class CreateAPostForm extends BasePage {
         super(driver);
     }
 
+<<<<<<< HEAD
     private final Config config = new Config();
 
+=======
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
 
@@ -51,6 +54,7 @@ public class CreateAPostForm extends BasePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     WebElement submitButton;
+
     @Step("Wait for loading Create a post")
     public void waitForLoading() {
         try {
@@ -67,8 +71,14 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
     @Step("Fill form {title},{description},{content},{path}")
     public void setPostForm(String title, String description, String content, String path) {
+=======
+
+    @Step("Fill form {title},{description},{content}")
+    public void userCanCreateAPost(String title, String description, String content) {
+>>>>>>> 6962117 (Added ContactUsApiTest)
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
@@ -88,6 +98,8 @@ public class CreateAPostForm extends BasePage {
     public String getContent() {
         return contentInput.getAttribute("value");
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     public void clickToDraftCheckBox() {
         tumblerSwitchDraft.click();
@@ -95,6 +107,17 @@ public class CreateAPostForm extends BasePage {
 
     @Step("Upload image: {relativeImagePath}")
     public void uploadImage(String relativeImagePath) {
+=======
+=======
+
+>>>>>>> 6962117 (Added ContactUsApiTest)
+    public void tumblerSwitchClick() {
+        tumblerSwitchDraft.click();
+    }
+
+    @Step("Upload image: {imagePath}")
+    public void imageLoading(String relativeImagePath) {
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -105,11 +128,16 @@ public class CreateAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 6962117 (Added ContactUsApiTest)
     @Step("Click Submit Button")
     public void clickSubmitButton() {
         submitButton.click();
     }
+
     @Step("check after sending")
     public boolean errorText() {
         Duration timeout = Duration.ofSeconds(10);
@@ -121,8 +149,9 @@ public class CreateAPostForm extends BasePage {
             return false;
         }
     }
+
     @Step("Screenshot {actualScreenshotName}")
-    public void takePostPageScreenshot(String actualScreenshotName){
+    public void takePostPageScreenshot(String actualScreenshotName) {
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
@@ -130,6 +159,7 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("Fill form {title},{description},{content}")
     public void userCanNotCreateAPost(String title, String description, String content) {
         titleInput.sendKeys(title);

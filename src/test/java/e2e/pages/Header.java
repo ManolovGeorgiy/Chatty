@@ -14,6 +14,7 @@ public class Header extends BasePage {
         super(driver);
 
     }
+
     @FindBy(xpath = "//*[@class='header']")
     WebElement headerElement;
 
@@ -67,15 +68,19 @@ public class Header extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     public void clickLogo() {
         logo.click();
     }
+
     public void clickHome() {
         homeButton.click();
     }
+
     public void clickAbout() {
         aboutButton.click();
     }
+
     public void clickContact() {
         contactButton.click();
     }
@@ -86,12 +91,15 @@ public class Header extends BasePage {
         getWait().forVisibility(option);
         option.click();
     }
+
     public void myPostClick() {
         myPostClickButton.click();
     }
+
     public void setMyPostTab() {
         myPostTab.click();
     }
+
     public void createAPostClick() {
         createAPostButton.click();
     }

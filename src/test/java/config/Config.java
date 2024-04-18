@@ -44,6 +44,7 @@ public class Config {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
 
+<<<<<<< HEAD
 
     public boolean getUseFirefox() {
         return Boolean.parseBoolean(properties.getProperty("use.firefox"));
@@ -51,6 +52,10 @@ public class Config {
 
     public boolean getUseEdge() {
         return Boolean.parseBoolean(properties.getProperty("use.edge"));
+=======
+    public String getBrowser() {
+        return properties.getProperty("browser");
+>>>>>>> 6962117 (Added ContactUsApiTest)
     }
 }
 

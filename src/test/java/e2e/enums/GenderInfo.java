@@ -9,6 +9,7 @@ public enum GenderInfo {
     FEMALE("FEMALE");
 
     public final String value;
+
     GenderInfo(String value) {
         this.value = value;
     }

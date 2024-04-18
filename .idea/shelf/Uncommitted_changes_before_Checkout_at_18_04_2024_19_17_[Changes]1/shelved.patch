@@ -1,0 +1,128 @@
+Index: src/test/java/integration/pages/user/UserApi.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package integration.pages.user;\r\n\r\nimport integration.ApiBase;\r\nimport io.qameta.allure.Step;\r\nimport io.restassured.response.Response;\r\nimport java.util.LinkedHashMap;\r\n\r\npublic class UserApi extends ApiBase {\r\n\r\n\r\n    Response response;\r\n    @Step(\"Registration user : {email}, {password}, {confirmPassword}, {role}\")\r\n    public String registration(String email, String password, String confirmPassword, String role, int code) {\r\n        String endPoint = \"/api/auth/register\";\r\n        LinkedHashMap<String, String> body = new LinkedHashMap<>();\r\n        body.put(\"email\", email);\r\n        body.put(\"password\", password);\r\n        body.put(\"confirmPassword\", confirmPassword);\r\n        body.put(\"role\", role);\r\n\r\n        response = postRequest(endPoint, code, body);\r\n        int statusCode = response.statusCode();\r\n\r\n        if (statusCode == code) {\r\n            return \"User registered successfully\";\r\n        } else {\r\n            String errorMessage = response.jsonPath().getString(\"message\");\r\n            return \"Failed to register user: \" + errorMessage;\r\n        }\r\n    }\r\n    @Step(\"Login by Email and Password : {email},{password}\")\r\n    public String login(String email, String password, int code) {\r\n        String endPoint = \"/api/auth/login\";\r\n        LinkedHashMap<String, String> body = new LinkedHashMap<>();\r\n        body.put(\"email\", email);\r\n        body.put(\"password\", password);\r\n\r\n        response = postRequest(endPoint, code, body);\r\n        int statusCode = response.statusCode();\r\n\r\n        if (statusCode == code) {\r\n            String refreshToken = response.jsonPath().getString(\"refreshToken\");\r\n            return refreshToken;\r\n        } else {\r\n            String errorMessage = response.jsonPath().getString(\"message\");\r\n            return \"Failed to login: \" + errorMessage;\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/integration/pages/user/UserApi.java b/src/test/java/integration/pages/user/UserApi.java
+--- a/src/test/java/integration/pages/user/UserApi.java	
++++ b/src/test/java/integration/pages/user/UserApi.java	
+@@ -1,6 +1,6 @@
+ package integration.pages.user;
+ 
+-import integration.ApiBase;
++
+ import io.qameta.allure.Step;
+ import io.restassured.response.Response;
+ import java.util.LinkedHashMap;
+Index: src/test/java/integration/UserApiTest.java
+===================================================================
+diff --git a/src/test/java/integration/UserApiTest.java b/src/test/java/integration/UserApiTest.java
+deleted file mode 100644
+--- a/src/test/java/integration/UserApiTest.java	
++++ /dev/null	
+@@ -1,30 +0,0 @@
+-package integration;
+-
+-import com.github.javafaker.Faker;
+-import integration.user.UserApi;
+-import org.testng.annotations.Test;
+-
+-public class UserApiTest {
+-
+-    UserApi userApi;
+-
+-    Faker faker = new Faker();
+-
+-    @Test
+-    public void testNewUserRegistration() {
+-        String email = "testtt@example.com";
+-        String password = "TestPassword123";
+-        String confirmPassword = "TestPassword123";
+-        String role = "user";
+-
+-        userApi = new UserApi();
+-
+-
+-        userApi.registration(email, password, confirmPassword, role, 201);
+-        userApi.login(email,password,200);
+-
+-
+-
+-
+-    }
+-}
+\ No newline at end of file
+Index: src/test/java/integration/user/UserApi.java
+===================================================================
+diff --git a/src/test/java/integration/user/UserApi.java b/src/test/java/integration/user/UserApi.java
+deleted file mode 100644
+--- a/src/test/java/integration/user/UserApi.java	
++++ /dev/null	
+@@ -1,64 +0,0 @@
+-package integration.user;
+-
+-import io.qameta.allure.Step;
+-import io.restassured.response.Response;
+-
+-import java.util.HashMap;
+-import java.util.LinkedHashMap;
+-import java.util.Map;
+-
+-public class UserApi extends ApiBase {
+-
+-    Response response;
+-    @Step("Registration user")
+-    public String registration(String email, String password, String confirmPassword, String role, int expectedStatusCode) {
+-        String endPoint = "/api/auth/register";
+-        LinkedHashMap<String, String> body = new LinkedHashMap<>();
+-        body.put("email", email);
+-        body.put("password", password);
+-        body.put("confirmPassword", confirmPassword);
+-        body.put("role", role);
+-
+-        Response response = postRequest(endPoint, expectedStatusCode, body);
+-        int statusCode = response.statusCode();
+-
+-        if (statusCode == expectedStatusCode) {
+-            return "User registered successfully";
+-        } else {
+-            String errorMessage = response.jsonPath().getString("message");
+-            return "Failed to register user: " + errorMessage;
+-        }
+-    }
+-
+-    @Step("Вход через API: {email}")
+-    public String login(String email, String password, int expectedStatusCode) {
+-        String endpoint = "/api/auth/login";
+-        Map<String, String> body = new HashMap<>();
+-        body.put("email", email);
+-        body.put("password", password);
+-
+-        Response response = postRequest(endpoint, expectedStatusCode, body);
+-        int code = response.statusCode();
+-
+-        if (code == expectedStatusCode) {
+-            String refreshToken = response.jsonPath().getString("refreshToken");
+-            return "Токен обновления: " + refreshToken;
+-        } else {
+-            String errorMessage = response.getBody().asString();
+-            return "Не удалось войти: " + errorMessage;
+-        }
+-    }
+-
+-    @Step(": {refreshToken}")
+-    public String refreshToken(String refreshToken, int expectedStatusCode) {
+-        String endpoint = "/api/auth/refresh";
+-        Map<String, String> body = new HashMap<>();
+-        body.put("refreshToken", refreshToken);
+-        Response response = postRequest(endpoint, expectedStatusCode, body);
+-        return response.getBody().asString();
+-    }
+-    public String userInfo(){
+-        String endpoint = "/api/me";
+-        return endpoint;
+-    }
+-}
+\ No newline at end of file
