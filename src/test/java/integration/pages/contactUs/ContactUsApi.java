@@ -27,6 +27,5 @@ public class ContactUsApi extends ApiBase {
                 default:
                     return "Unexpected status code: " + response.getStatusCode() + " - " + response.asString();
             }
-            //https://stackoverflow.com/questions/22561527/handling-custom-error-response-in-jax-rs-2-0-client-library
     }
 }
