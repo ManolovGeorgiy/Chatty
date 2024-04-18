@@ -74,7 +74,9 @@ public class PostApi extends ApiBase {
 
     private String handleResponse(Response response) {
         switch (response.getStatusCode()) {
-            case 200, 201, 204:
+            case 200:
+            case 201:
+            case 204:
                 return response.asString();
             case 400:
                 return "Bad Request: " + response.jsonPath().getString("message");
