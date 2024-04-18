@@ -2,7 +2,6 @@ package integration.tests.adminApi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
-import config.Config;
 
 import integration.pages.adminPanel.DeleteUserApi;
 import integration.pages.profile.AddDataUser;
@@ -12,20 +11,15 @@ import integration.pages.user.UserApi;
 
 
 import integration.schemas.UserRes;
-import integration.schemas.UserResForAdmin;
 import integration.schemas.UserUpdateReq;
 import io.qameta.allure.*;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
-import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
-public class AdminEditDeleteUser  {
+public class AdminDeleteUser {
 
     Faker faker = new Faker();
     UserApi userApi;
