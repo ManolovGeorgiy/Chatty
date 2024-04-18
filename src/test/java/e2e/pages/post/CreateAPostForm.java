@@ -26,8 +26,11 @@ public class CreateAPostForm extends BasePage {
         super(driver);
     }
 
+<<<<<<< HEAD
     private final Config config = new Config();
 
+=======
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
     @FindBy(xpath = "//*[@class='post-header']")
     public WebElement header;
 
@@ -88,6 +91,7 @@ public class CreateAPostForm extends BasePage {
     public String getContent() {
         return contentInput.getAttribute("value");
     }
+<<<<<<< HEAD
 
     public void clickToDraftCheckBox() {
         tumblerSwitchDraft.click();
@@ -95,6 +99,13 @@ public class CreateAPostForm extends BasePage {
 
     @Step("Upload image: {relativeImagePath}")
     public void uploadImage(String relativeImagePath) {
+=======
+    public void tumblerSwitchClick() {
+        tumblerSwitchDraft.click();
+    }
+    @Step("Upload image: {imagePath}")
+    public void imageLoading(String relativeImagePath) {
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));

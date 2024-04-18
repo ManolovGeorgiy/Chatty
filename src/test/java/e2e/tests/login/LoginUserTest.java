@@ -15,7 +15,11 @@ public class LoginUserTest extends TestBase {
     @Feature(value = "User has been logged in")
     @Description(value = "User can login")
     @Severity(SeverityLevel.BLOCKER)
+<<<<<<< HEAD:src/test/java/e2e/tests/login/LoginUserTest.java
     @Test(description = "User can login")
+=======
+    @Test(description = "CHATTY-3")
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us):src/test/java/e2e/tests/user/LoginUserTest.java
     public void userCanLogin() {
         String email = "tatar@abv.bg";
         String password = "Manowar333246";
@@ -26,7 +30,11 @@ public class LoginUserTest extends TestBase {
     @Feature(value = "User is not logged in")
     @Description(value = "User can't login")
     @Severity(SeverityLevel.BLOCKER)
+<<<<<<< HEAD:src/test/java/e2e/tests/login/LoginUserTest.java
     @Test(description = "User can not login with invalid email")
+=======
+    @Test(description = "CHATTY-5")
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us):src/test/java/e2e/tests/user/LoginUserTest.java
     public void userCanNotLoginWithInvalidEmail() {
         String email = "tatara@abv.bg";
         String password = "Manowar33246";
@@ -38,7 +46,11 @@ public class LoginUserTest extends TestBase {
     @Feature(value = "User is not logged in")
     @Description(value = "User can't login")
     @Severity(SeverityLevel.BLOCKER)
+<<<<<<< HEAD:src/test/java/e2e/tests/login/LoginUserTest.java
     @Test(description = "user can not login with invalid password")
+=======
+    @Test(description = "CHATTY-6")
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us):src/test/java/e2e/tests/user/LoginUserTest.java
     public void userCanNotLoginWithInvalidPassword() {
         String email = "tatar@abv.bg";
         String password = "Mannn32";
@@ -59,8 +71,13 @@ public class LoginUserTest extends TestBase {
         loginPage.login(email, password);
         loginPage.takeLoginPageScreenshot("userCanNotLoginWithInvalidEmail");
     }
+<<<<<<< HEAD:src/test/java/e2e/tests/login/LoginUserTest.java
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
+=======
+    @Feature(value = "Admin is not logged in")
+    @Description(value = "Admin can't login")
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us):src/test/java/e2e/tests/user/LoginUserTest.java
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-47")
     public void userCanNotLoginWithoutInvalidEmailAndPassword() {

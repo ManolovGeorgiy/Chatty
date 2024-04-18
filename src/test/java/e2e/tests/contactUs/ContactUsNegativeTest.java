@@ -38,10 +38,17 @@ public class ContactUsNegativeTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
+<<<<<<< HEAD:src/test/java/e2e/tests/contactUs/ContactUsNegativeTest.java
 
     @Description(value = "User can not send setFeedbackForm")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User can not send message")
+=======
+    @Feature(value = "User can not sent a message")
+    @Description(value = "User can not send feedback")
+    @Severity(SeverityLevel.CRITICAL)
+    @Test(description = "CHATTY-23")
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us):src/test/java/e2e/tests/user/ContactUsNegativeTest.java
     public void userCanNotSendMessage() {
 
         String email = "user.can.feedBack@gmail.com";

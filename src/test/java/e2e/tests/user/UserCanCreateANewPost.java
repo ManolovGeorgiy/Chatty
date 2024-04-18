@@ -33,15 +33,12 @@ public class UserCanCreateANewPost extends TestBase {
 
         List<String> imagePaths = new ArrayList<>();
 
-        // Проверяем, что папка существует и содержит файлы
         if (files != null && files.length > 0) {
-            // Фильтруем только файлы с расширением .jpg
             for (File file : files) {
                 if (file.isFile() && file.getName().endsWith(".jpg")) {
                     imagePaths.add(file.getAbsolutePath());
                 }
             }
-            // Если есть хотя бы одно изображение, выбираем случайный путь к нему
             if (!imagePaths.isEmpty()) {
                 Random random = new Random();
                 return imagePaths.get(random.nextInt(imagePaths.size()));

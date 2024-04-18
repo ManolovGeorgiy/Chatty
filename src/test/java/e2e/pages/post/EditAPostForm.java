@@ -13,7 +13,6 @@ public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
-
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -54,9 +53,13 @@ public class EditAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
 
     @Step("fill edit post form {editTitle},{editDescription},{editContent}")
     public void fillEditPostForm(String editTitle, String editDescription, String editContent) {
+=======
+    public void editPost(String editTitle, String editDescription, String editContent) {
+>>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
         titleInput.clear();
         titleInput.sendKeys(editTitle);
         descriptionInput.clear();
