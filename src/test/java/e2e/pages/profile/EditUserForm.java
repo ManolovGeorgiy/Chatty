@@ -53,24 +53,19 @@ public class EditUserForm extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
-
     @Step("click edit button")
     public void clickEditUserForm() {
         editButton.click();
     }
-
     public String getName() {
         return nameInput.getAttribute("value");
     }
-
     public String getSurname() {
         return surnameInput.getAttribute("value");
     }
-
     public String getDate() {
         return birthDateForm.getAttribute("value");
     }
-
     public String getPhone() {
         return phoneInput.getAttribute("value");
     }
@@ -80,23 +75,17 @@ public class EditUserForm extends BasePage {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
-<<<<<<< HEAD
             fileInput.sendKeys(absoluteImagePath);
-=======
-            fileInput.sendKeys(imagePath);
-            ;
->>>>>>> 6962117 (Added ContactUsApiTest)
         } catch (Exception e) {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
-
     @Step("fill profile form")
     public void setEditProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e) {
+        } catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -110,19 +99,15 @@ public class EditUserForm extends BasePage {
             birthDateForm.sendKeys(Keys.CONTROL, "a");
             birthDateForm.sendKeys(Keys.DELETE);
             birthDateForm.sendKeys(date);
-<<<<<<< HEAD
             birthDateForm.sendKeys(dateParts[0]); //day
             birthDateForm.sendKeys(dateParts[2]); //month
             birthDateForm.sendKeys(dateParts[1]); //year
-=======
->>>>>>> 6962117 (Added ContactUsApiTest)
         } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         phoneInput.clear();
         phoneInput.sendKeys(phone);
     }
-
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();
