@@ -4,12 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanAddData.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/delete" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/GetUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/GetUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/login/LoginApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanCreateANewPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848057_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848057_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848344_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848344_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848345_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848345_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848350_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848350_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848353_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848355_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848355_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848356_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848356_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848359_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848359_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848361_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848361_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848366_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848366_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848376_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848382_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848382_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848388_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848388_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848405_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848405_121.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/depositphotos_32011021-stock-photo-information-technology-it.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/path/tree-736885_1280.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/tree-736885_1280.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +64,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/AssertJUnit.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$PROJECT_DIR$/../.jdks/graalvm-jdk-17.0.10/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -68,19 +79,18 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/ChattyApi-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty/src/test/resources&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -88,7 +98,6 @@
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\Chatty\src\test\java\integration\tests" />
       <recent name="C:\Users\PC\Chatty\src\test\java\resources" />
       <recent name="C:\Users\PC\Chatty\src\test\java" />
       <recent name="C:\Users\PC\Chatty\reference" />
@@ -97,40 +106,21 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="integration.tests.post" />
-      <recent name="integration.pages.post" />
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanAddData.userCanUpdateProfile">
-    <configuration name="LoginApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration">
+    <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.login.*" />
+          <option name="PATTERN" value="e2e.tests.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanAddData.userCanUpdateProfile" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanAddData" />
-      <option name="METHOD_NAME" value="userCanUpdateProfile" />
+      <option name="PACKAGE_NAME" value="e2e.tests.admin" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.admin.AdminCanCreateEditAndDeletePostTest" />
+      <option name="METHOD_NAME" value="adminCanCreateAPost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -138,51 +128,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanCreateEditAndDeleteNewPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EditUserDataProfileTest2.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.post.*" />
+          <option name="PATTERN" value="e2e.tests.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.post.UserCanCreateEditAndDeleteNewPost" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.EditUserDataProfileTest2" />
+      <option name="METHOD_NAME" value="userCanEditProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanEditPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EditUserDataProfileTest.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="PATTERN" value="e2e.tests.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanEditPostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.EditUserDataProfileTest" />
+      <option name="METHOD_NAME" value="userCanEditProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserCanEditPostTest.userCanEditAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationAndAuthorisationUserTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="PATTERN" value="e2e.tests.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanEditPostTest" />
-      <option name="METHOD_NAME" value="userCanEditAPost" />
+      <option name="PACKAGE_NAME" value="e2e.tests.user" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.RegistrationAndAuthorisationUserTest" />
+      <option name="METHOD_NAME" value="UserCanRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApiTest.testNewUserRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration" />
+      <option name="MAIN_CLASS_NAME" value="integration.UserApiTest" />
+      <option name="METHOD_NAME" value="testNewUserRegistration" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -192,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanAddData.userCanUpdateProfile" />
-        <item itemvalue="TestNG.LoginApiTest" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost" />
-        <item itemvalue="TestNG.UserCanEditPostTest" />
-        <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+        <item itemvalue="TestNG.UserApiTest.testNewUserRegistration" />
+        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.EditUserDataProfileTest2.userCanEditProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +218,126 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711370136449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711370136449</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711385939570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711385939570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711386153761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711386153761</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711528350961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711528350961</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711535105707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711535105707</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711551832253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711551832253</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711556229247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711556229247</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1711562947418</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711562947418</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712467526206</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712467526206</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712479153697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712479153697</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712480907976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712480907976</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712483963242</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712483963242</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712486300060</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486300060</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712486335209</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486335209</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712486510758</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712486510758</updated>
     </task>
     <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -409,193 +539,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712679776917</updated>
     </task>
-    <task id="LOCAL-00041" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712681431269</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1712681431269</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712681840870</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1712681840870</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712682850179</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1712682850179</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712682884199</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1712682884199</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712688000249</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1712688000250</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712722749751</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1712722749751</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712722833606</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1712722833606</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712723142917</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1712723142917</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712764013473</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1712764013473</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712768147972</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1712768147974</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Registration,Login,Post,Contact Us">
-      <created>1713079033683</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1713079033683</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Api for Post">
-      <created>1713081163843</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1713081163843</updated>
-    </task>
-    <task id="LOCAL-00053" summary="AdminPanel">
-      <created>1713091376616</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1713091376616</updated>
-    </task>
-    <task id="LOCAL-00054" summary="AdminPanel">
-      <created>1713110554149</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1713110554150</updated>
-    </task>
-    <task id="LOCAL-00055" summary="AdminPanel">
-      <created>1713112779559</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1713112779559</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Admin panel. Edit user, Delete user">
-      <created>1713118145977</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1713118145977</updated>
-    </task>
-    <task id="LOCAL-00057" summary="AdminPanel">
-      <option name="closed" value="true" />
-      <created>1713197144640</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1713197144640</updated>
-    </task>
-    <task id="LOCAL-00058" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713201740000</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1713201740000</updated>
-    </task>
-    <task id="LOCAL-00059" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713214416565</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1713214416565</updated>
-    </task>
-    <task id="LOCAL-00060" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713219625528</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1713219625528</updated>
-    </task>
-    <task id="LOCAL-00061" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713219736942</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1713219736942</updated>
-    </task>
-    <task id="LOCAL-00062" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713219930839</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1713219930839</updated>
-    </task>
-    <task id="LOCAL-00063" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713220522502</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1713220522502</updated>
-    </task>
-    <task id="LOCAL-00064" summary="AdminPanel test">
-      <option name="closed" value="true" />
-      <created>1713223911129</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1713223911129</updated>
-    </task>
-    <option name="localTasksCounter" value="65" />
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -611,11 +555,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
-    <MESSAGE value="Api for Post" />
-    <MESSAGE value="Admin panel. Edit user, Delete user" />
-    <MESSAGE value="AdminPanel" />
-    <MESSAGE value="AdminPanel test" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminPanel test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration,Login,Post,Contact Us" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -905,21 +845,6 @@
           <line>22</line>
           <option name="timeStamp" value="222" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/tests/post/UserCanCreateEditAndDeleteNewPost.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="280" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="284" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/build.gradle</url>
-          <line>37</line>
-          <option name="timeStamp" value="285" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
           <line>19</line>
@@ -941,7 +866,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/RegistrationAndAuthorisationUserTest.java</url>
           <line>26</line>
-          <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest">
+          <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -950,7 +875,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
           <line>13</line>
-          <properties class="integration.UserApiTest">
+          <properties class="integration.UserApiTest" method="testNewUserRegistration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -959,7 +884,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/LoginAdminTest.java</url>
           <line>32</line>
-          <properties class="e2e.tests.admin.LoginAdminTest">
+          <properties class="e2e.tests.admin.LoginAdminTest" method="adminCanNotLoginWithInvalidEmail">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -968,7 +893,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java</url>
           <line>38</line>
-          <properties class="e2e.tests.user.UserCanNotCreateAPost">
+          <properties class="e2e.tests.user.UserCanNotCreateAPost" method="userCanNotCreateAPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -977,29 +902,20 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/DraftPostTest.java</url>
           <line>24</line>
-          <properties class="e2e.tests.admin.DraftPostTest">
+          <properties class="e2e.tests.admin.DraftPostTest" method="editDraftPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="221" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/EditUserDataProfileTest.java</url>
           <line>45</line>
-          <properties class="e2e.tests.profile.AddUserDataProfileTest" method="userCanAddDataProfile">
+          <properties class="e2e.tests.user.EditUserDataProfileTest" method="userCanEditProfile">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="279" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/about/AboutPageTest.java</url>
-          <line>21</line>
-          <properties class="e2e.tests.about.AboutPageTest">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="281" />
+          <option name="timeStamp" value="223" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
