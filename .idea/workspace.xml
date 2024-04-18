@@ -4,104 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e9c6032-12b0-44a2-a3a1-ed3bb237ed27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPageNatalie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_04_2024_18_36__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/config/Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/ApplicationManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/TestBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/enums/GenderInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/enums/SideBarInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/BasePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/Header.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/about/AboutPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/adminPanel/AdminPanelPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/contactUs/ContactUsPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/homeBlog/HomeBlogPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/login/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/CreateAPostForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditAPostForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/post/EditPostPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/AddUserDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditPasswordForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/profile/EditUserForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/pages/registration/RegistrationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/e2e/utils/DataProviders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/AuthRes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/ErrorRes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/FeedbackReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/LoginReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PasswordUpdateReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostCreateReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostGetRes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostRes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/PostUpdateReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RefreshTokenReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/RegisterReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UploadFileRes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserRes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserResForAdmin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/schemas/UserUpdateReq.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/wait/Wait.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/testngE2eSmoke.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/SelenideTestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/SelenideTestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/enums/GenderInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/enums/GenderInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/enums/MenuInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/enums/MenuInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/Header.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/about/AboutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/about/AboutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/adminPanel/AdminPanelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/contactUs/ContactUsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/homeBlog/HomeBlogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/homeBlog/HomeBlogPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPageNatalie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/login/LoginPageNatalie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditAPostForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditPostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditPostPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditPasswordForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditPasswordForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/EditUserForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/registration/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/registration/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/about/AboutPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/about/AboutPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminPanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsNegativeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsPositiveTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserNatalieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserNatalieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanCreateANewPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserFullTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserFullTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/utils/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/utils/DataProviders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/AdminPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/ChattyApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/ContactUsApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/LoginApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/UserRegistrationApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/UserRegistrationApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wait/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wait/Wait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngLogin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngLoginNatalie.xml" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Api test">
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/adminApi/AdminEditDeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/adminApi/AdminDeleteUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,28 +25,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -160,10 +43,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Natalie_Pull_Request" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ManolovGeorgiy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d8135366-fa40-4b29-96c8-e843b46099cf" />
+        <option name="url" value="https://github.com/ManolovGeorgiy/Chatty" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -179,21 +76,23 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ACER/IdeaProjects/Chatty/src/test/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ACER\IdeaProjects\Chatty\src\test\resources" />
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Chatty\src\test\java" />
       <recent name="C:\Users\PC\Chatty\reference" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -203,8 +102,8 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/ACER/IdeaProjects/Chatty/src/test/resources/testngLoginNatalie.xml">
-    <configuration name="Chatty [TestApi]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost">
+    <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,7 +114,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="TestApi" />
+            <option value="ApiTest" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,64 +122,74 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Chatty [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="allureReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Chatty [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="C:/Users/ACER/IdeaProjects/Chatty/src/test/resources/testngLoginNatalie.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminDeleteUser.adminCanDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngLoginNatalie.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.adminApi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.adminApi" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminApi.AdminDeleteUser" />
+      <option name="METHOD_NAME" value="adminCanDeleteUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/ACER/IdeaProjects/Chatty/src/test/resources/testngLogin.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminDeleteUser.adminCanLoginEditUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testngLogin.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.adminApi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.adminApi" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminApi.AdminDeleteUser" />
+      <option name="METHOD_NAME" value="adminCanLoginEditUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCanCreateEditAndDeleteNewPost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.post.UserCanCreateEditAndDeleteNewPost" />
+      <option name="METHOD_NAME" value="userCanCreatePost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserCanSendMessageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.UserCanSendMessageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -289,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/ACER/IdeaProjects/Chatty/src/test/resources/testngLoginNatalie.xml" />
-        <item itemvalue="TestNG.C:/Users/ACER/IdeaProjects/Chatty/src/test/resources/testngLogin.xml" />
-        <item itemvalue="Gradle.Chatty [test]" />
-        <item itemvalue="Gradle.Chatty [allureReport]" />
-        <item itemvalue="Gradle.Chatty [TestApi]" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
+        <item itemvalue="TestNG.UserCanSendMessageTest" />
+        <item itemvalue="TestNG.AdminDeleteUser.adminCanDeleteUser" />
+        <item itemvalue="TestNG.AdminDeleteUser.adminCanLoginEditUser" />
+        <item itemvalue="Gradle.Chatty [ApiTest]" />
       </list>
     </recent_temporary>
   </component>
@@ -474,49 +383,183 @@
       <option name="project" value="LOCAL" />
       <updated>1712512528397</updated>
     </task>
-    <task id="LOCAL-00022" summary="Added e2e Test">
-      <created>1712513586417</created>
+    <task id="LOCAL-00022" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712512776609</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1712513586417</updated>
+      <updated>1712512776609</updated>
     </task>
-    <task id="LOCAL-00023" summary="Added Api Test">
-      <created>1712519297892</created>
+    <task id="LOCAL-00023" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712592027283</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1712519297892</updated>
+      <updated>1712592027283</updated>
     </task>
-    <task id="LOCAL-00024" summary="Added Api Test">
-      <created>1712519993588</created>
+    <task id="LOCAL-00024" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712592504868</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1712519993588</updated>
+      <updated>1712592504868</updated>
     </task>
-    <task id="LOCAL-00025" summary="Added Api Test">
-      <created>1712521379227</created>
+    <task id="LOCAL-00025" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712592960776</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1712521379227</updated>
+      <updated>1712592960776</updated>
     </task>
-    <task id="LOCAL-00026" summary="Added Api Test">
-      <created>1712769623602</created>
+    <task id="LOCAL-00026" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712593667582</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1712769623602</updated>
+      <updated>1712593667582</updated>
     </task>
-    <task id="LOCAL-00027" summary="Added ContactUsApiTest">
-      <created>1712986830444</created>
+    <task id="LOCAL-00027" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712593693397</created>
       <option name="number" value="00027" />
       <option name="presentableId" value="LOCAL-00027" />
       <option name="project" value="LOCAL" />
-      <updated>1712986830444</updated>
+      <updated>1712593693397</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712594118451</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712594118451</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712594138417</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712594138417</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712594540817</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712594540817</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712599303030</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712599303030</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712599685704</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712599685704</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712600025230</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712600025231</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712600432737</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1712600432737</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712601058184</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712601058184</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712606745047</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1712606745047</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712609077108</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1712609077108</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712609589154</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1712609589154</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712679174835</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1712679174835</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Api test">
+      <option name="closed" value="true" />
+      <created>1713461771283</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1713461771283</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Api test">
+      <option name="closed" value="true" />
+      <created>1713462490591</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713462490592</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Api test">
+      <option name="closed" value="true" />
+      <created>1713466061039</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1713466061039</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Api test">
+      <option name="closed" value="true" />
+      <created>1713469923885</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713469923885</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -532,10 +575,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
-    <MESSAGE value="Added e2e Test" />
-    <MESSAGE value="Added Api Test" />
-    <MESSAGE value="Added ContactUsApiTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ContactUsApiTest" />
+    <MESSAGE value="Api test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Api test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,7 +896,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
           <line>13</line>
-          <properties class="integration.UserApiTest">
+          <properties class="integration.tests.UserRegistrationApiTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
