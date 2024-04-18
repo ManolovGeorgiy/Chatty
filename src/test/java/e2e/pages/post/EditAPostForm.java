@@ -13,6 +13,7 @@ public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -54,10 +55,14 @@ public class EditAPostForm extends BasePage {
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     @Step("fill edit post form {editTitle},{editDescription},{editContent}")
     public void fillEditPostForm(String editTitle, String editDescription, String editContent) {
 =======
+=======
+
+>>>>>>> 6962117 (Added ContactUsApiTest)
     public void editPost(String editTitle, String editDescription, String editContent) {
 >>>>>>> a93ca49 (Registration,Login,Post,Contact Us)
         titleInput.clear();
@@ -67,8 +72,13 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
+<<<<<<< HEAD
     @Step("upload image {relativeImagePath}")
     public void uploadImageLoading(String relativeImagePath) {
+=======
+
+    public void imageLoading(String imagePath) {
+>>>>>>> 6962117 (Added ContactUsApiTest)
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -77,7 +87,15 @@ public class EditAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+<<<<<<< HEAD
     @Step("click button")
+=======
+
+    public void draftTumblerSwitch() {
+        //tumblerSwitch.click();
+    }
+
+>>>>>>> 6962117 (Added ContactUsApiTest)
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }

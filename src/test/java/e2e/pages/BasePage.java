@@ -1,7 +1,6 @@
 package e2e.pages;
 
 
-
 import wait.Wait;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
@@ -19,36 +18,46 @@ import java.nio.file.StandardCopyOption;
 public class BasePage {
     public WebDriver driver;
 
-    public BasePage(WebDriver driver){
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public Wait getWait(){
+    public Wait getWait() {
         return new Wait(driver);
     }
 
-    public Select getSelect(WebElement element){
+    public Select getSelect(WebElement element) {
         return new Select(element);
     }
     protected boolean isElementDisplayed(WebElement element) {
         try {
             return element.isDisplayed();
-        }catch (NoSuchElementException e){
+        } catch (NoSuchElementException e) {
             return false;
         }
     }
+<<<<<<< HEAD
     protected void setInput(WebElement input,String value){
+=======
+
+    protected void setInput(WebElement input, String value) {
+>>>>>>> 6962117 (Added ContactUsApiTest)
         input.click();
         input.clear();
         input.sendKeys(value);
     }
+<<<<<<< HEAD
     private File takeScreenshot(WebElement element){
+=======
+
+    private File takeScreenshot(WebElement element) {
+>>>>>>> 6962117 (Added ContactUsApiTest)
         File tmp;
-        if (element == null){
+        if (element == null) {
             tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             System.out.println("Take screenshot page");
-        }else {
+        } else {
             tmp = element.getScreenshotAs(OutputType.FILE);
             System.out.println("Take screenshot element");
         }
@@ -56,12 +65,12 @@ public class BasePage {
         return tmp;
     }
 
-    private double calculateMaxDifferentPercentRation(){
+    private double calculateMaxDifferentPercentRation() {
         Dimension windowSize = driver.manage().window().getSize();
         int width = windowSize.width;
         int height = windowSize.height;
 
-        return  0.01 * width * height;
+        return 0.01 * width * height;
     }
 
     private Process setCompareCommandToTerminal(String refImgFilePath, String tmpFilePath) throws IOException {
@@ -72,24 +81,30 @@ public class BasePage {
 
     private double getDifferenceFromLogs(BufferedReader reader) throws IOException {
         String line;
-        double difference= 0;
-        while ((line=reader.readLine()) != null){
+        double difference = 0;
+        while ((line = reader.readLine()) != null) {
             difference = Integer.parseInt(line.trim());
         }
 
-        return  difference;
+        return difference;
     }
 
 
     @Attachment(value = "Screenshot", type = "image/png")
-    public byte[] saveScreenshot(byte[] screenShot){
+    public byte[] saveScreenshot(byte[] screenShot) {
         return screenShot;
     }
 
     @Step("Take and compare screenshot name: {actualScreenshotName}")
+<<<<<<< HEAD
     protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element){
         String referenceImageFilePath = "compareScreenshotReferences/" + actualScreenshotName + ".png";
         String tmpFilePath = "compareScreenshotReferences/tmp_" + actualScreenshotName + ".png";
+=======
+    protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element) {
+        String referenceImageFilePath = "reference/" + actualScreenshotName + ".png";
+        String tmpFilePath = "reference/tmp_" + actualScreenshotName + ".png";
+>>>>>>> 6962117 (Added ContactUsApiTest)
         File tmp = takeScreenshot(element);
         try {
             saveScreenshot(Files.readAllBytes(tmp.toPath()));
@@ -111,7 +126,7 @@ public class BasePage {
             }
 
             Files.deleteIfExists(new File(tmpFilePath).toPath());
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

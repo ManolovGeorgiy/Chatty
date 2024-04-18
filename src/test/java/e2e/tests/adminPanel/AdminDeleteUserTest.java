@@ -10,8 +10,14 @@ public class AdminDeleteUserTest extends TestBase {
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
+
     @Test
+<<<<<<< HEAD
     public void deleteAccount(){
+=======
+    public void deleteAccount() {
+        //TODO:need create new user
+>>>>>>> 6962117 (Added ContactUsApiTest)
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 
@@ -19,7 +25,7 @@ public class AdminDeleteUserTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();

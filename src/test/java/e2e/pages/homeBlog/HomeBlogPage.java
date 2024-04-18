@@ -1,7 +1,6 @@
 package e2e.pages.homeBlog;
 
 
-
 import e2e.enums.MenuInfo;
 import e2e.enums.SideBarInfo;
 import e2e.pages.BasePage;
@@ -32,21 +31,22 @@ public class HomeBlogPage extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     public void tabMenu(MenuInfo tab) {
         WebElement option = driver.findElement(By.xpath("//a[@href='" + tab.value + "']"));
         menu.click();
         getWait().forVisibility(option);
         option.click();
     }
-    public void clickHomeBlogButton(){
+
+    public void clickHomeBlogButton() {
         sectionSidebar.sendKeys();
         //homeBlogButton.click();
     }
 
-    public void clickDraftButton(){
+    public void clickDraftButton() {
         sectionSidebar.sendKeys();
         //draftButton.click();
     }
-
 }
 

@@ -15,4 +15,11 @@
             </class>
         </classes>
     </test>
+
+    <test name="ContactUsApiTest">
+        <classes>
+            <class name="integration.tests.ContactUsApiTest">
+            </class>
+        </classes>
+    </test>
 </suite>

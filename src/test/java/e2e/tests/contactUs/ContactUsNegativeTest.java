@@ -38,12 +38,16 @@ public class ContactUsNegativeTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:src/test/java/e2e/tests/contactUs/ContactUsNegativeTest.java
 
     @Description(value = "User can not send setFeedbackForm")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User can not send message")
 =======
+=======
+
+>>>>>>> 6962117 (Added ContactUsApiTest)
     @Feature(value = "User can not sent a message")
     @Description(value = "User can not send feedback")
     @Severity(SeverityLevel.CRITICAL)
@@ -82,7 +86,11 @@ public class ContactUsNegativeTest extends TestBase {
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
+<<<<<<< HEAD
         contactUsPage.setFeedbackForm(name, emailContact, text);
+=======
+        contactUsPage.feedback(name, emailContact, text);
+>>>>>>> 6962117 (Added ContactUsApiTest)
         checkFeedbackData(contactUsPage, name, emailContact, text);
         contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();

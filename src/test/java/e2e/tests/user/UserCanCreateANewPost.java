@@ -6,10 +6,13 @@ import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.CreateAPostForm;
+
 import java.util.Locale;
 import java.util.Random;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +26,7 @@ public class UserCanCreateANewPost extends TestBase {
     CreateAPostForm createAPostForm;
     Header header;
 
-    // Метод для выбора случайного пути к изображению в указанной папке
+
     public String selectRandomImagePath(String folderPath) {
         File folder = new File(folderPath);
         File[] files = folder.listFiles();

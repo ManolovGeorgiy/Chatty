@@ -22,6 +22,7 @@ public class AdminPostTest extends ApiBase {
                 body("title", equalTo("test title")).
                 body("body", equalTo("test body"));
     }
+
     @Test
     public void testEditPost() {
         // Предположим, что для редактирования поста требуется передать идентификатор поста
@@ -45,6 +46,7 @@ public class AdminPostTest extends ApiBase {
                 body("title", equalTo(updatedTitle)).
                 body("body", equalTo(updatedBody));
     }
+
     @Test
     public void testDeletePost() {
         // Предположим, что для удаления поста требуется передать идентификатор поста
@@ -57,7 +59,6 @@ public class AdminPostTest extends ApiBase {
                 assertThat().
                 statusCode(204); // Предположим, что успешное удаление возвращает статус код 204
     }
-
 
 
 }

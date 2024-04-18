@@ -17,7 +17,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class EditUserDataProfileTest extends TestBase {
-
     Faker faker = new Faker();
     RegistrationPage registrationPage;
     LoginPage loginPage;

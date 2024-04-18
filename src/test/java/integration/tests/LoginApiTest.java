@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 public class LoginApiTest extends ApiBase {
     UserApi userApi;
+
     @Test
     public void testUserLogin() {
         String email = "string12@gmail.com";

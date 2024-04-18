@@ -17,8 +17,12 @@ import org.testng.annotations.Test;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+<<<<<<< HEAD:src/test/java/e2e/tests/user/EditUserDataProfileTest.java
 public class EditUserDataProfileTest extends TestBase {
 
+=======
+public class EditUserDataProfileTest2 extends TestBase {
+>>>>>>> 6962117 (Added ContactUsApiTest):src/test/java/e2e/tests/profile/EditUserDataProfileTest2.java
     Faker faker = new Faker();
     LoginPage loginPage;
     Header header;

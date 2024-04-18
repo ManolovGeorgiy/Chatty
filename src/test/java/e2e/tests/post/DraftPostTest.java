@@ -21,7 +21,7 @@ public class DraftPostTest extends TestBase {
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-47")
-    public void editDraftPost(){
+    public void editDraftPost() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
 
