@@ -1,6 +1,5 @@
 package integration.tests.registration;
 
-import com.github.javafaker.Faker;
 import integration.pages.adminPanel.DeleteUserApi;
 import integration.pages.user.GetUserApi;
 import integration.pages.user.UserApi;
@@ -16,10 +15,6 @@ public class RegistrationApiTest {
     UserApi userApi;
     DeleteUserApi deleteUserApi;
     GetUserApi getUserApi;
-
-    Faker faker = new Faker();
-
-
 
     @Description(value = "User can registration")
     @Severity(SeverityLevel.BLOCKER)
@@ -37,7 +32,6 @@ public class RegistrationApiTest {
         userApi.registration(email, password, confirmPassword, role, 201);
         userApi.login(email, password, 200);
 
-
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
         getUserApi = new GetUserApi(token);
@@ -50,8 +44,9 @@ public class RegistrationApiTest {
         getUserApi = new GetUserApi(tokenAdmin);
 
         deleteUserApi = new DeleteUserApi(tokenAdmin);
-        deleteUserApi.deleteUser(204,userId);
+        deleteUserApi.deleteUser(204, userId);
     }
+
     @Feature(value = "The user has not registered")
     @Description(value = "User can not registration with invalid password")
     @Severity(SeverityLevel.BLOCKER)

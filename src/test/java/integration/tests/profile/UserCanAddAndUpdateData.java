@@ -27,8 +27,6 @@ public class UserCanAddAndUpdateData {
     PasswordUpdateReq passwordUpdateReq;
     UpdatePassword updatePassword;
 
-
-
     @Feature(value= "Profile data adding and updating")
     @Description(value = "User can add and update data to profile")
     @Severity(SeverityLevel.CRITICAL)
@@ -86,9 +84,6 @@ public class UserCanAddAndUpdateData {
         addDataUser = new AddDataUser(token);
         addDataUser.addUserProfile(userId,userRes,200);
 
-
-
-
         userUpdateReq = new UserUpdateReq();
         userUpdateReq.setName(editName);
         userUpdateReq.setSurname(editSurname);
@@ -96,7 +91,6 @@ public class UserCanAddAndUpdateData {
         userUpdateReq.setPhone(editPhone);
         userUpdateReq.setGender(editGender);
         userUpdateReq.setAvatarUrl(editAvatar);
-
 
         updateUser = new UpdateUser(token);
         updateUser.updateUserProfile(userId, userUpdateReq, 200);
@@ -109,8 +103,5 @@ public class UserCanAddAndUpdateData {
 
         deleteUserApi = new DeleteUserApi(tokenAdmin);
         deleteUserApi.deleteUser(204,editUserId);
-
-
-
     }
 }
