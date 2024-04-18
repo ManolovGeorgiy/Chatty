@@ -20,7 +20,8 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
-public class AdminEditDeleteUser  {
+
+public class AdminEditDeleteUser {
 
     Faker faker = new Faker();
     UserApi userApi;
@@ -67,17 +68,15 @@ public class AdminEditDeleteUser  {
         getUserApi = new GetUserApi(tokenAdmin);
 
         deleteUserApi = new DeleteUserApi(tokenAdmin);
-        deleteUserApi.deleteUser(userId, 204);
+        deleteUserApi.deleteUser(204, userId);
 
 
-
-
-//        assertNotNull(userInfoResponse);
-//        assertEquals("testName", userInfo.getName());
-//        assertEquals("testSurname", userInfo.getSurname());
-//        assertEquals("+1234567890", userInfo.getPhone());
-//        assertEquals("MALE", userInfo.getGender());
-//    }
+        // assertNotNull(userInfoResponse);
+        // assertEquals("testName", userInfo.getName());
+        //assertEquals("testSurname", userInfo.getSurname());
+        //assertEquals("+1234567890", userInfo.getPhone());
+        // assertEquals("MALE", userInfo.getGender());
+        // }
 //    @Feature(value = "Delete User")
 //    @Story(value = "Admin can Delete User")
 //    @Description(value = "Admin can Delete User")

@@ -17,7 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class UserCanCreateANewPost extends TestBase {
+public class UserCanCreateANewPost {
 
     Faker faker = new Faker(new Locale("ENGLISH"));
 
