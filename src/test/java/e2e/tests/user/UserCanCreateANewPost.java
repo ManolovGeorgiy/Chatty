@@ -26,31 +26,29 @@ public class UserCanCreateANewPost extends TestBase {
     CreateAPostForm createAPostForm;
     Header header;
 
-    // Метод для выбора случайного пути к изображению в указанной папке
     public String selectRandomImagePath(String folderPath) {
         File folder = new File(folderPath);
         File[] files = folder.listFiles();
 
         List<String> imagePaths = new ArrayList<>();
 
-        // Проверяем, что папка существует и содержит файлы
+
         if (files != null && files.length > 0) {
-            // Фильтруем только файлы с расширением .jpg
             for (File file : files) {
                 if (file.isFile() && file.getName().endsWith(".jpg")) {
                     imagePaths.add(file.getAbsolutePath());
                 }
             }
-            // Если есть хотя бы одно изображение, выбираем случайный путь к нему
+
             if (!imagePaths.isEmpty()) {
                 Random random = new Random();
                 return imagePaths.get(random.nextInt(imagePaths.size()));
             } else {
-                System.err.println("image" + folderPath + " не содержит изображений формата .jpg.");
+                System.err.println("image" + folderPath + " does not contain .jpg images.");
                 return null;
             }
         } else {
-            System.err.println("image" + folderPath + " не существует или не содержит файлов.");
+            System.err.println("image" + folderPath + "does not exist or does not contain files.");
             return null;
         }
     }
@@ -96,7 +94,7 @@ public class UserCanCreateANewPost extends TestBase {
             createAPostForm.uploadImage(randomImagePath);
             createAPostForm.waitForLoading();
         } else {
-            System.err.println("Не удалось выбрать изображение для публикации.");
+            System.err.println("Failed to select an image to publish.");
         }
         checkPostData(createAPostForm, title,description,content);
         createAPostForm.clickSubmitButton();
