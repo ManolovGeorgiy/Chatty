@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Feature and Description.">
       <change afterPath="$PROJECT_DIR$/src/test/java/util/UserInfoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_04_2024_18_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_04_2024_18_19__Changes_.xml" afterDir="false" />
@@ -45,6 +46,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_8_17__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_8_17__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/contactUs/ContactUsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/contactUs/ContactUsApiTest.java" afterDir="false" />
+=======
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditPostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/EditPostPage.java" afterDir="false" />
+>>>>>>> origin/dev_Natalie
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +70,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chatty" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chatty" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Chatty" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -83,7 +105,11 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
+=======
+        <entry key="$PROJECT_DIR$" value="dev_Natalie_K" />
+>>>>>>> origin/dev_Natalie
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -106,10 +132,15 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+<<<<<<< HEAD
     &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/PB300523-e-qa&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty&quot;,
+>>>>>>> origin/dev_Natalie
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
@@ -135,6 +166,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="TestNG.ContactUsApiTest.userCanSendMessageFeedbackViaApi">
     <configuration name="ContactUsApiTest.userCanSendMessageFeedbackViaApi" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
@@ -147,6 +179,58 @@
       <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.ContactUsApiTest" />
       <option name="METHOD_NAME" value="userCanSendMessageFeedbackViaApi" />
+=======
+  <component name="RunManager" selected="TestNG.ContactUsApiTest">
+    <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="ApiTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AdminEditDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminEditDeleteUser.adminCanLoginEditUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
+      <option name="METHOD_NAME" value="adminCanLoginEditUser" />
+>>>>>>> origin/dev_Natalie
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -154,6 +238,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="UserCanCreateEditAndDeleteNewPost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -166,12 +251,26 @@
       <option name="MAIN_CLASS_NAME" value="integration.tests.post.UserCanCreateEditAndDeleteNewPost" />
       <option name="METHOD_NAME" value="userCanCreatePost" />
       <option name="TEST_OBJECT" value="METHOD" />
+=======
+    <configuration name="ContactUsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.contactUs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.ContactUsApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+>>>>>>> origin/dev_Natalie
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -219,6 +318,19 @@
       <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.UserCanSendMessageTest" />
       <option name="METHOD_NAME" value="userCanSendMessageToTheContactUs" />
+=======
+    <configuration name="DeleteUserViaAdmin.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.deleteuser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.deleteuser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.deleteuser.DeleteUserViaAdmin" />
+      <option name="METHOD_NAME" value="userCanLogin" />
+>>>>>>> origin/dev_Natalie
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -228,11 +340,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="TestNG.ContactUsApiTest.userCanSendMessageFeedbackViaApi" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNotSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanSendMessageTest.userCanNOtSendMessageToTheContactUs" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
+=======
+        <item itemvalue="TestNG.ContactUsApiTest" />
+        <item itemvalue="TestNG.AdminEditDeleteUser" />
+        <item itemvalue="Gradle.Chatty [ApiTest]" />
+        <item itemvalue="TestNG.AdminEditDeleteUser.adminCanLoginEditUser" />
+        <item itemvalue="TestNG.DeleteUserViaAdmin.userCanLogin" />
+>>>>>>> origin/dev_Natalie
       </list>
     </recent_temporary>
   </component>
@@ -245,70 +365,147 @@
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
+=======
+    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712479153697</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
+      <created>1712511475487</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1712479153697</updated>
+      <updated>1712511475487</updated>
     </task>
-    <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00020" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712480907976</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
+      <created>1712511868220</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1712480907976</updated>
+      <updated>1712511868220</updated>
     </task>
-    <task id="LOCAL-00012" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00021" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712483963242</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
+      <created>1712512528397</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1712483963242</updated>
+      <updated>1712512528397</updated>
     </task>
-    <task id="LOCAL-00013" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00022" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712486300060</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
+      <created>1712512776609</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1712486300060</updated>
+      <updated>1712512776609</updated>
     </task>
-    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00023" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712486335209</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
+      <created>1712592027283</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1712486335209</updated>
+      <updated>1712592027283</updated>
     </task>
-    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00024" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712486510758</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
+      <created>1712592504868</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1712486510758</updated>
+      <updated>1712592504868</updated>
     </task>
-    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00025" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712503317452</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
+      <created>1712592960776</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1712503317453</updated>
+      <updated>1712592960776</updated>
     </task>
-    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
+    <task id="LOCAL-00026" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
-      <created>1712503708401</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
+      <created>1712593667582</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1712503708401</updated>
+      <updated>1712593667582</updated>
     </task>
+    <task id="LOCAL-00027" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712593693397</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712593693397</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Registration,Login,Post,Contact Us">
+>>>>>>> origin/dev_Natalie
+      <option name="closed" value="true" />
+      <created>1712594118451</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712594118451</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712594138417</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712594138417</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712594540817</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712594540817</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712599303030</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712599303030</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712599685704</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712599685704</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712600025230</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712600025231</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712600432737</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1712600432737</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1712601058184</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712601058184</updated>
+    </task>
+<<<<<<< HEAD
     <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
       <created>1712511425023</created>
@@ -453,6 +650,8 @@
       <option name="project" value="LOCAL" />
       <updated>1712601058184</updated>
     </task>
+=======
+>>>>>>> origin/dev_Natalie
     <task id="LOCAL-00036" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
       <created>1712606745047</created>
@@ -615,6 +814,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713118145977</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00057" summary="AdminPanel">
       <option name="closed" value="true" />
       <created>1713197144640</created>
@@ -632,6 +832,86 @@
       <updated>1713201740000</updated>
     </task>
     <option name="localTasksCounter" value="59" />
+=======
+    <task id="LOCAL-00057" summary="Admin panel. Edit user, Delete user">
+      <created>1713132049272</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1713132049272</updated>
+    </task>
+    <task id="LOCAL-00058" summary="new rename Test">
+      <created>1713175379827</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1713175379827</updated>
+    </task>
+    <task id="LOCAL-00059" summary="more method in ApiBase">
+      <created>1713175758929</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1713175758929</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Feature and Description.">
+      <created>1713177222067</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1713177222068</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Feature and Description.">
+      <created>1713178422664</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1713178422664</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Feature and Description.">
+      <created>1713178476251</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1713178476251</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Added ContactUsApiTest">
+      <created>1713288162207</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1713288162207</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Added ContactUsApiTest">
+      <created>1713288438634</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1713288438634</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Added ContactUsApiTest">
+      <created>1713288631052</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1713288631052</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Added ContactUsApiTest">
+      <created>1713288683955</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1713288683955</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Added ContactUsApiTest">
+      <created>1713289086064</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1713289086064</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
+>>>>>>> origin/dev_Natalie
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -648,9 +928,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
     <MESSAGE value="Api for Post" />
+<<<<<<< HEAD
     <MESSAGE value="Admin panel. Edit user, Delete user" />
     <MESSAGE value="AdminPanel" />
     <MESSAGE value="AdminPanel test" />
+=======
+    <MESSAGE value="AdminPanel" />
+    <MESSAGE value="Admin panel. Edit user, Delete user" />
+    <MESSAGE value="new rename Test" />
+    <MESSAGE value="more method in ApiBase" />
+    <MESSAGE value="Feature and Description." />
+>>>>>>> origin/dev_Natalie
     <MESSAGE value="Added ContactUsApiTest" />
     <option name="LAST_COMMIT_MESSAGE" value="Added ContactUsApiTest" />
   </component>
@@ -898,49 +1186,34 @@
           <option name="timeStamp" value="163" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>10</line>
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java</url>
+          <line>28</line>
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java</url>
+          <line>72</line>
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="184" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanDeletePostTest.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="185" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/EditUserDataProfileTest.java</url>
-          <line>47</line>
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java</url>
+          <line>59</line>
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="222" />
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/AdminCanCreateEditAndDeletePostTest.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="228" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
@@ -961,15 +1234,22 @@
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/RegistrationAndAuthorisationUserTest.java</url>
           <line>26</line>
           <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest">
+=======
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java</url>
+          <line>28</line>
+          <properties class="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
+>>>>>>> origin/dev_Natalie
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
           <line>13</line>
           <properties class="integration.UserApiTest">
@@ -982,28 +1262,54 @@
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/LoginAdminTest.java</url>
           <line>32</line>
           <properties class="e2e.tests.admin.LoginAdminTest">
+=======
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java</url>
+          <line>32</line>
+          <properties class="e2e.tests.login.LoginAdminTest" method="adminCanNotLoginWithInvalidEmail">
+>>>>>>> origin/dev_Natalie
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="218" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java</url>
           <line>38</line>
           <properties class="e2e.tests.user.UserCanNotCreateAPost">
+=======
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java</url>
+          <line>43</line>
+          <properties class="e2e.tests.post.UserCanNotCreateAPost">
+>>>>>>> origin/dev_Natalie
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/DraftPostTest.java</url>
           <line>24</line>
           <properties class="e2e.tests.admin.DraftPostTest">
+=======
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java</url>
+          <line>23</line>
+          <properties class="e2e.tests.post.DraftPostTest" method="editDraftPost">
+>>>>>>> origin/dev_Natalie
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/profile/EditUserDataProfileTest.java</url>
+          <line>57</line>
+          <properties class="e2e.tests.profile.EditUserDataProfileTest" method="userCanEditProfile">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="223" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -57,7 +57,11 @@ public class UserFullTest extends TestBase {
         addUserDialog.clickAddUserFormButton();
         addUserDialog.waitForLoading();
         addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
+<<<<<<< HEAD
         addUserDialog.saveButtonClick();
+=======
+        addUserDialog.clickSaveButton();
+>>>>>>> origin/dev_Natalie
         addUserDialog.waitForLoading();
 
         editPasswordForm = new EditPasswordForm(app.driver);
@@ -72,5 +76,9 @@ public class UserFullTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.login(emailLogin, changePassword);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/dev_Natalie
     }
 }

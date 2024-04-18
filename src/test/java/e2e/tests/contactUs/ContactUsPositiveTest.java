@@ -38,14 +38,18 @@ public class ContactUsPositiveTest extends TestBase {
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
     @Feature(value = "User can sent a message")
-    @Description(value = "User can send feedback")
+    @Description(value = "User can send setFeedbackForm")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "CHATTY-23")
     public void userCanSendMessage() {
 
         String email = "user.can.feedBack@gmail.com";
         String password = "RedBul1234";
+<<<<<<< HEAD
         String confirmPassword = "RedBul1234";;
+=======
+        String confirmPassword = "RedBul1234";
+>>>>>>> origin/dev_Natalie
 
         String userName = faker.name().fullName();
         String emailContact = faker.internet().emailAddress();
@@ -73,7 +77,7 @@ public class ContactUsPositiveTest extends TestBase {
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
-        contactUsPage.feedback(userName, emailContact, text);
+        contactUsPage.setFeedbackForm(userName, emailContact, text);
         contactUsPage.waitForLoading();
         checkFeedbackData(contactUsPage,userName,emailContact,text);
         contactUsPage.sendMessageButtonClick();

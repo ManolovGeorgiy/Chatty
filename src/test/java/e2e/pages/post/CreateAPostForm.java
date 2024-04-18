@@ -67,13 +67,22 @@ public class CreateAPostForm extends BasePage {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/dev_Natalie
     @Step("Fill form {title},{description},{content},{path}")
     public void setPostForm(String title, String description, String content, String path) {
         titleInput.sendKeys(title);
         descriptionInput.sendKeys(description);
         contentInput.sendKeys(content);
+<<<<<<< HEAD
+=======
+        if (
+                path!= null
+        ){uploadImage(path);}
+>>>>>>> origin/dev_Natalie
     }
 
     public String getTitle() {
@@ -88,7 +97,11 @@ public class CreateAPostForm extends BasePage {
         return contentInput.getAttribute("value");
     }
 
+<<<<<<< HEAD
     public void tumblerSwitchClick() {
+=======
+    public void clickToDraftCheckBox() {
+>>>>>>> origin/dev_Natalie
         tumblerSwitchDraft.click();
     }
 

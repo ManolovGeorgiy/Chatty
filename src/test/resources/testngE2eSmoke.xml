@@ -3,6 +3,7 @@
 <suite name="testE2eSmoke" verbose="1">
     <test name="SmokeTestE2e">
         <classes>
+<<<<<<< HEAD
             <class name="e2e.tests.post.AdminCanCreateEditAndDeletePostTest">
             </class>
             <class name="e2e.tests.contactUs.ContactUsPositiveTest">
@@ -10,6 +11,19 @@
             <class name="e2e.tests.contactUs.ContactUsNegativeTest">
             </class>
             <class name="e2e.tests.profile.AddUserDataProfileTest">
+=======
+            <class name="e2e.tests.login.LoginAdminTest">
+            </class>
+            <class name="e2e.tests.contactUs.ContactUsPositiveTest">
+            </class>
+            <class name="e2e.tests.about.AboutPageTest">
+            </class>
+            <class name="e2e.tests.contactUs.ContactUsNegativeTest">
+            </class>
+            <class name="e2e.tests.profile.AddUserDataProfileTest">
+            </class>
+            <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
+>>>>>>> origin/dev_Natalie
             </class>
         </classes>
     </test>

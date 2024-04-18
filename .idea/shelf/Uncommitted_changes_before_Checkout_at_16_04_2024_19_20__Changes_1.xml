@@ -1,0 +1,44 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1" date="1713288062088" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 16.04.2024 19:20 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_adminCanNotLoginWithoutAEmailAndPassword.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_adminCanNotLoginWithoutAEmailAndPassword.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_User_cannot_feedback.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_User_cannot_feedback.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_invalid_email_negative_login_case.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_invalid_email_negative_login_case.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="compareScreenshotReferences/User_cannot_feedback.png" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/User_cannot_feedback.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/User_cannot_feedback.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_User_can_not_create_a_post.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_User_can_not_create_a_post.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_with_invalid_data_negative_login_case.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_with_invalid_data_negative_login_case.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_invalid_password_negative_login_case.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_invalid_password_negative_login_case.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="compareScreenshotReferences/tmp_no_fields_filled_in_negative_login_case.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16_04_2024_19_20_[Changes]1/tmp_no_fields_filled_in_negative_login_case.png" />
+  </binary>
+</changelist>

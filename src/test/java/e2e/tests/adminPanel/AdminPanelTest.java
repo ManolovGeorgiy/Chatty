@@ -3,7 +3,7 @@ package e2e.tests.adminPanel;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
-import e2e.pages.*;
+import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
@@ -79,8 +79,8 @@ public class AdminPanelTest extends TestBase {
 
         // bug
         //editPasswordForm = new EditPasswordForm(app.driver);
-        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
-        //editPasswordForm.saveChangePasswordButton();
+        //editPasswordForm.fillChangePasswordForm(oldPassword,newPassword,confirmNewPassword);
+        //editPasswordForm.clickSaveChangePasswordButton();
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERS);

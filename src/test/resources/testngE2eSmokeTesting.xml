@@ -7,6 +7,11 @@
             </class>
             <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
+<<<<<<< HEAD
+=======
+            <class name="e2e.tests.profile.EditUserDataProfileTestCopy">
+            </class>
+>>>>>>> origin/dev_Natalie
         </classes>
     </test>
 </suite>
