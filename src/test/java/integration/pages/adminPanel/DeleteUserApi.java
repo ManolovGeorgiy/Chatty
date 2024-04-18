@@ -1,10 +1,10 @@
 package integration.pages.adminPanel;
 
-import integration.ApiBase;
+
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-public class DeleteUserApi extends ApiBase {
+public class DeleteUserApi extends integration.ApiBase {
     Response response;
     public DeleteUserApi(String token){
         super(token);

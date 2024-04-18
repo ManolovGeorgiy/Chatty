@@ -26,6 +26,16 @@ public class UserCanAddData {
     @Severity(SeverityLevel.MINOR)
     @Test(description = "User can update profile")
     public void userCanUpdateProfile() throws JsonProcessingException {
+
+        String emailRegistration = "user.add.data@gmail.com";
+        String passwordRegistration = "Manowar33246";
+        String confirmPassword = "Manowar33246";
+        String role = "user";
+
+        userApi = new UserApi();
+        userApi.registration(emailRegistration, passwordRegistration, confirmPassword, role, 201);
+        userApi.login(emailRegistration, passwordRegistration, 200);
+
         String email = "user.add.data@gmail.com";
         String password = "GPower1234";
         String name = "Marta";
@@ -35,6 +45,7 @@ public class UserCanAddData {
         String gender = "FEMALE";
         String image = ("https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg");
         boolean blocked = false;
+
 
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
