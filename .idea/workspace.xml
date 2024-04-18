@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us">
-      <change afterPath="$PROJECT_DIR$/src/test/java/resources/delete" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/post/CreateAPostForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/admin/AdminCanCreateEditAndDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanCreateANewPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/360_F_417289346_hrs0D4Lo8dSv3aWDqkQpRB0U9PbtFX6n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848057_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848057_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848344_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848344_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848345_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848345_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848350_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848350_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848353_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848353_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848355_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848355_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848356_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848356_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848359_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848359_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848361_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848361_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848366_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848366_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848376_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848376_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848382_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848382_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848388_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848388_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/5204092180870848405_121.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/5204092180870848405_121.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/Best-AI-tools-for-Image-Processing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Best-AI-tools-for-Image-Processing.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/depositphotos_32011021-stock-photo-information-technology-it.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/depositphotos_32011021-stock-photo-information-technology-it.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/path/tree-736885_1280.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/tree-736885_1280.jpg" afterDir="false" />
-    </list>
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Registration,Login,Post,Contact Us" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="dev_Project" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -202,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
-        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
         <item itemvalue="TestNG.UserApiTest.testNewUserRegistration" />
-        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.UserCanRegistration" />
         <item itemvalue="TestNG.EditUserDataProfileTest2.userCanEditProfile" />
+        <item itemvalue="TestNG.EditUserDataProfileTest.userCanEditProfile" />
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
       </list>
     </recent_temporary>
   </component>
@@ -539,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712679776917</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Registration,Login,Post,Contact Us">
+      <option name="closed" value="true" />
+      <created>1713457115984</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1713457115984</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -866,7 +849,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/RegistrationAndAuthorisationUserTest.java</url>
           <line>26</line>
-          <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
+          <properties class="e2e.tests.user.RegistrationAndAuthorisationUserTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -884,7 +867,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/LoginAdminTest.java</url>
           <line>32</line>
-          <properties class="e2e.tests.admin.LoginAdminTest" method="adminCanNotLoginWithInvalidEmail">
+          <properties class="e2e.tests.admin.LoginAdminTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -893,7 +876,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanNotCreateAPost.java</url>
           <line>38</line>
-          <properties class="e2e.tests.user.UserCanNotCreateAPost" method="userCanNotCreateAPost">
+          <properties class="e2e.tests.user.UserCanNotCreateAPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -902,7 +885,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/DraftPostTest.java</url>
           <line>24</line>
-          <properties class="e2e.tests.admin.DraftPostTest" method="editDraftPost">
+          <properties class="e2e.tests.admin.DraftPostTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -911,7 +894,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/user/EditUserDataProfileTest.java</url>
           <line>45</line>
-          <properties class="e2e.tests.user.EditUserDataProfileTest" method="userCanEditProfile">
+          <properties class="e2e.tests.user.EditUserDataProfileTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
