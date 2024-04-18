@@ -3,6 +3,7 @@ package integration.tests.adminApi;
 import com.github.javafaker.Faker;
 import config.Config;
 
+import integration.pages.adminPanel.DeleteUserApi;
 import integration.pages.user.GetUserApi;
 import integration.pages.user.UserApi;
 
@@ -25,6 +26,7 @@ public class AdminEditDeleteUser  {
     UserApi userApi;
     GetUserApi getUserApi;
     UserResForAdmin userResForAdmin;
+    DeleteUserApi deleteUserApi;
 
     @Feature(value = "Edit User")
     @Story(value = "Admin can edit User")
@@ -39,8 +41,8 @@ public class AdminEditDeleteUser  {
         String role = "user";
 
 
-        String emailAdminLogin = "Boba1234@mail.ru";
-        String passwordAdminLogin = "Boba1234";
+        String emailAdminLogin = "g.power@gmail.com";
+        String passwordAdminLogin = "GPower3333";
 
 
         userApi = new UserApi();
@@ -60,6 +62,12 @@ public class AdminEditDeleteUser  {
         userResForAdmin.setGender("MALE");
         userResForAdmin.setAvatarUrl("https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
         userResForAdmin.setBlocked(false);
+
+        String tokenAdmin = userApi.login(emailAdminLogin, passwordAdminLogin, 200);
+        getUserApi = new GetUserApi(tokenAdmin);
+
+        deleteUserApi = new DeleteUserApi(tokenAdmin);
+        deleteUserApi.deleteUser(userId, 204);
 
 
 
