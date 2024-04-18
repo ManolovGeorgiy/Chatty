@@ -4,32 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Feature and Description.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/adminapi/AdminEditDeleteUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/adminapi/DeleteUserViaAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/adminapi/EditUserViaAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/util/UserInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_04_2024_20_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_04_2024_20_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_04_2024_20_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_04_2024_20_55__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_04_2024_20_55__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13_04_2024_20_55__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_12_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_12_38__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_12_38__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_12_38__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_12_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_12_43__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_13__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_15__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_15__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_15__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_15__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_18_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_19_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_19_39__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_21_24__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_21_24__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_21_24__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_14_04_2024_21_24__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_04_2024_20_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_04_2024_20_30__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2024_20_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_04_2024_20_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_12_39__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_12_39__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_19_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_19_34__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_19_40__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_19_40__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_21_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2024_21_16__Changes_.xml" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="AdminPanel test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/ApiBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/adminApi/AdminEditDeleteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/adminApi/AdminEditDeleteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanAddData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanAddData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,23 +27,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -104,20 +66,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Chatty&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/PC/Desktop/ChattyApi-master",
+    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
@@ -134,7 +96,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminEditDeleteUser">
+  <component name="RunManager" selected="TestNG.AdminEditDeleteUser.adminCanLoginEditUser">
     <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -161,12 +123,12 @@
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="PATTERN" value="integration.tests.adminApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminApi.AdminEditDeleteUser" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -178,12 +140,12 @@
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="PATTERN" value="integration.tests.adminApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminApi.AdminEditDeleteUser" />
       <option name="METHOD_NAME" value="adminCanLoginEditUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -192,16 +154,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminEditDeleteUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginUserTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="PATTERN" value="e2e.tests.login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.edituser" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
+      <option name="PACKAGE_NAME" value="e2e.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.login.LoginUserTest" />
       <option name="METHOD_NAME" value="userCanLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -210,18 +172,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteUserViaAdmin.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanAddData.userCanUpdateProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.deleteuser.*" />
+          <option name="PATTERN" value="integration.tests.profile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.deleteuser" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.deleteuser.DeleteUserViaAdmin" />
-      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="integration.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanAddData" />
+      <option name="METHOD_NAME" value="userCanUpdateProfile" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -230,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminEditDeleteUser" />
-        <item itemvalue="Gradle.Chatty [ApiTest]" />
         <item itemvalue="TestNG.AdminEditDeleteUser.adminCanLoginEditUser" />
-        <item itemvalue="TestNG.DeleteUserViaAdmin.userCanLogin" />
-        <item itemvalue="TestNG.AdminEditDeleteUser.userCanLogin" />
+        <item itemvalue="TestNG.UserCanAddData.userCanUpdateProfile" />
+        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
+        <item itemvalue="Gradle.Chatty [ApiTest]" />
+        <item itemvalue="TestNG.AdminEditDeleteUser" />
       </list>
     </recent_temporary>
   </component>
@@ -246,54 +238,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712486335209</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1712486335209</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712486510758</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1712486510758</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712503317452</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1712503317453</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712503708401</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1712503708401</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712511425023</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1712511425023</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712511475487</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1712511475487</updated>
     </task>
     <task id="LOCAL-00020" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -627,7 +571,55 @@
       <option name="project" value="LOCAL" />
       <updated>1713178476251</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713285452122</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1713285452122</updated>
+    </task>
+    <task id="LOCAL-00064" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713285879851</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1713285879851</updated>
+    </task>
+    <task id="LOCAL-00065" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713285901556</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1713285901556</updated>
+    </task>
+    <task id="LOCAL-00066" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713286106797</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1713286106797</updated>
+    </task>
+    <task id="LOCAL-00067" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713286639374</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1713286639374</updated>
+    </task>
+    <task id="LOCAL-00068" summary="AdminPanel test">
+      <option name="closed" value="true" />
+      <created>1713293376292</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1713293376292</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -649,7 +641,8 @@
     <MESSAGE value="new rename Test" />
     <MESSAGE value="more method in ApiBase" />
     <MESSAGE value="Feature and Description." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature and Description." />
+    <MESSAGE value="AdminPanel test" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminPanel test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
