@@ -2,7 +2,7 @@ package integration.tests.adminApi;
 
 import com.github.javafaker.Faker;
 import config.Config;
-import integration.ApiBase;
+
 import integration.pages.user.GetUserApi;
 import integration.pages.user.UserApi;
 

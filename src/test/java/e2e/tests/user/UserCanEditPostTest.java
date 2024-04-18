@@ -61,8 +61,8 @@ public class UserCanEditPostTest extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
-        editAPostForm.imageLoading(imagePath);
-        editAPostForm.editPost(editTitle,editDescription,editContent);
+        editAPostForm.uploadImageLoading(imagePath);
+        editAPostForm.fillEditPostForm(editTitle,editDescription,editContent);
         checkEditPostData(editAPostForm,editTitle,editDescription,editContent);
         editAPostForm.clickEditSubmitButton();
 
