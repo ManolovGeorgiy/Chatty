@@ -3,29 +3,17 @@
 <suite name="testE2eSmoke" verbose="1">
     <test name="SmokeTestE2e">
         <classes>
-<!--            <class name="e2e.tests.registration.RegistrationAndAuthorisationAdminTest">-->
-<!--            </class>-->
-<!--            <class name="e2e.tests.login.LoginAdminTest">-->
-<!--            </class>-->
-            <class name="e2e.tests.post.AdminCanCreateEditAndDeletePostTest">
-            </class>
-            <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
-            </class>
-            <class name="e2e.tests.profile.AddUserDataProfileTest">
-            </class>
-            <class name="e2e.tests.profile.EditUserDataProfileTest">
+            <class name="e2e.tests.login.LoginAdminTest">
             </class>
             <class name="e2e.tests.contactUs.ContactUsPositiveTest">
             </class>
             <class name="e2e.tests.about.AboutPageTest">
             </class>
-            <class name="e2e.tests.post.UserCanCreateANewPost">
+            <class name="e2e.tests.contactUs.ContactUsNegativeTest">
             </class>
-            <class name="e2e.tests.post.UserCanEditPostTest">
+            <class name="e2e.tests.profile.AddUserDataProfileTest">
             </class>
-            <class name="e2e.tests.post.UserCanDeletePostTest">
-            </class>
-            <class name="e2e.tests.adminPanel.AdminDeleteUserTest">
+            <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
         </classes>
     </test>

@@ -1,6 +1,5 @@
 package e2e.tests.login;
 
-import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.login.LoginPage;
 import e2e.utils.DataProviders;
@@ -11,15 +10,14 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class LoginUserTest extends TestBase {
 
-    Faker faker = new Faker();
     LoginPage loginPage;
 
     @Feature(value = "User has been logged in")
     @Description(value = "User can login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "CHATTY-3")
+    @Test(description = "User can login")
     public void userCanLogin() {
-        String email = faker.internet().emailAddress();
+        String email = "tatar@abv.bg";
         String password = "Manowar333246";
 
         loginPage = new LoginPage(app.driver);
@@ -28,7 +26,7 @@ public class LoginUserTest extends TestBase {
     @Feature(value = "User is not logged in")
     @Description(value = "User can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "CHATTY-5")
+    @Test(description = "User can not login with invalid email")
     public void userCanNotLoginWithInvalidEmail() {
         String email = "tatara@abv.bg";
         String password = "Manowar33246";
@@ -40,7 +38,7 @@ public class LoginUserTest extends TestBase {
     @Feature(value = "User is not logged in")
     @Description(value = "User can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "CHATTY-6")
+    @Test(description = "user can not login with invalid password")
     public void userCanNotLoginWithInvalidPassword() {
         String email = "tatar@abv.bg";
         String password = "Mannn32";

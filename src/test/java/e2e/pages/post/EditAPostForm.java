@@ -3,7 +3,7 @@ package e2e.pages.post;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +13,7 @@ public class EditAPostForm extends BasePage {
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(xpath = "//*[@data-test='title-input']")
     WebElement titleInput;
 
@@ -47,14 +48,15 @@ public class EditAPostForm extends BasePage {
             getWait().forVisibility(descriptionInput);
             getWait().forVisibility(contentInput);
             getWait().forVisibility(submitEditButton);
-            //getWait().forVisibility(tumblerSwitch);
             getWait().forVisibility(closeButton);
         } catch (Exception e) {
             Assert.fail("Failed to load Create a post form: " + e.getMessage());
             e.printStackTrace();
         }
     }
-    public void editPost(String editTitle, String editDescription, String editContent) {
+
+    @Step("fill edit post form {editTitle},{editDescription},{editContent}")
+    public void fillEditPostForm(String editTitle, String editDescription, String editContent) {
         titleInput.clear();
         titleInput.sendKeys(editTitle);
         descriptionInput.clear();
@@ -62,8 +64,8 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-    @Step("Upload image: {imagePath}")
-    public void imageLoading(String relativeImagePath) {
+    @Step("upload image {relativeImagePath}")
+    public void uploadImageLoading(String relativeImagePath) {
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -72,10 +74,18 @@ public class EditAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
-    public void draftTumblerSwitch() {
-        //tumblerSwitch.click();
-    }
+    @Step("click button")
     public void clickEditSubmitButton() {
         submitEditButton.click();
+    }
+    public boolean editIsPostDisplayed(String postTitle) {
+        try {
+
+            WebElement postElement = driver.findElement(By.xpath("//*[@class='post-content__top' and .//h3[text()='" + postTitle + "']]"));
+            ;
+            return postElement.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 }

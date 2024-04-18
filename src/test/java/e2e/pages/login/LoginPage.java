@@ -77,4 +77,8 @@ public class LoginPage extends BasePage {
             return false;
         }
     }
+
+    public String getToken() {
+        return getToken();
+    }
 }

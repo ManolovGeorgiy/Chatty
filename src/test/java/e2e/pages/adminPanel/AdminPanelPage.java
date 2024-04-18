@@ -43,7 +43,7 @@ public class AdminPanelPage extends BasePage {
     public void clickEditAccount(){
         editAccount.click();
     }
-    @Step("click deleterrr account button")
+    @Step("click delete account button")
     public void clickDeleteAccount(){
         deleteAccount.click();
     }

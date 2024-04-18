@@ -15,9 +15,11 @@ public class Config {
             throw new RuntimeException("Failed to read config.properties", e);
         }
     }
+
     public String getProjectUrl() {
         return properties.getProperty("project.url");
     }
+
     public String getProjectApiUrl() {
         return properties.getProperty("project.api.url");
     }
@@ -30,11 +32,25 @@ public class Config {
         return Boolean.parseBoolean(properties.getProperty("selenoid.state"));
     }
 
-    public Integer getWindowWight() {
+    public Boolean getHeadless() {
+        return Boolean.parseBoolean(properties.getProperty("headless.state"));
+    }
+
+    public Integer getWindowWidth() {
         return Integer.parseInt(properties.getProperty("window.width"));
     }
 
     public Integer getWindowHeight() {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
+
+
+    public boolean getUseFirefox() {
+        return Boolean.parseBoolean(properties.getProperty("use.firefox"));
+    }
+
+    public boolean getUseEdge() {
+        return Boolean.parseBoolean(properties.getProperty("use.edge"));
+    }
 }
+

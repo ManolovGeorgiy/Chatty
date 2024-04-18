@@ -28,7 +28,7 @@ dependencies {
     implementation group: 'org.testng', name: 'testng', version: '7.8.0'
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
     implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
-
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 }
 
 
@@ -42,6 +42,33 @@ task SmokeTestE2e(type: Test) {
             exceptionFormat "full"
         }
         suites 'src/test/resources/testngE2eSmoke.xml'
+    }
+    systemProperty 'allure.results.directory', 'build/allure-results'
+}
+
+test {
+    useTestNG()
+}
+task ApiTest(type: Test) {
+    useTestNG() {
+        testLogging {
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+            exceptionFormat "full"
+        }
+        suites 'src/test/resources/testngApi.xml'
+    }
+    systemProperty 'allure.results.directory', 'build/allure-results'
+}
+test {
+    useTestNG()
+}
+task ProbeTest(type: Test) {
+    useTestNG() {
+        testLogging {
+            events "passed", "skipped", "failed", "standardOut", "standardError"
+            exceptionFormat "full"
+        }
+        suites 'src/test/resources/testngE2eSmokeTesting.xml'
     }
     systemProperty 'allure.results.directory', 'build/allure-results'
 }

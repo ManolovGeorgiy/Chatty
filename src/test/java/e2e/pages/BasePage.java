@@ -28,6 +28,21 @@ public class BasePage {
         return new Wait(driver);
     }
 
+    public Select getSelect(WebElement element){
+        return new Select(element);
+    }
+    protected boolean isElementDisplayed(WebElement element) {
+        try {
+            return element.isDisplayed();
+        }catch (NoSuchElementException e){
+            return false;
+        }
+    }
+    protected void setInput(WebElement input,String value){
+        input.click();
+        input.clear();
+        input.sendKeys(value);
+    }
     private File takeScreenshot(WebElement element){
         File tmp;
         if (element == null){
@@ -73,8 +88,8 @@ public class BasePage {
 
     @Step("Take and compare screenshot name: {actualScreenshotName}")
     protected void takeAndCompareScreenshot(String actualScreenshotName, WebElement element){
-        String referenceImageFilePath = "reference/" + actualScreenshotName + ".png";
-        String tmpFilePath = "reference/tmp_" + actualScreenshotName + ".png";
+        String referenceImageFilePath = "compareScreenshotReferences/" + actualScreenshotName + ".png";
+        String tmpFilePath = "compareScreenshotReferences/tmp_" + actualScreenshotName + ".png";
         File tmp = takeScreenshot(element);
         try {
             saveScreenshot(Files.readAllBytes(tmp.toPath()));

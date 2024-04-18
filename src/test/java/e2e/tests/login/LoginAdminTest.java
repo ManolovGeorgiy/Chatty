@@ -3,7 +3,10 @@ package e2e.tests.login;
 import e2e.TestBase;
 import e2e.pages.login.LoginPage;
 import e2e.utils.DataProviders;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertTrue;
@@ -11,12 +14,10 @@ import static org.testng.AssertJUnit.assertTrue;
 public class LoginAdminTest extends TestBase {
 
     LoginPage loginPage;
-    @Epic(value = "adminPanel can login with valid Email and Password")
-    @Feature(value = "admin has been logged in")
+
     @Description(value = "admin can login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("2")
-    @Test(description = "CHATTY-47")
+    @Test(description = "Admin can login")
     public void adminCanLogin() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
@@ -24,12 +25,11 @@ public class LoginAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
-    @Epic(value = "adminPanel can't login with invalid email")
+
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("3")
-    @Test(description = "CHATTY-15")
+    @Test(description = "Admin can not login with invalid email")
     public void adminCanNotLoginWithInvalidEmail() {
         String email = "gpower@gmail.com";
         String password = "GPower3333";
@@ -38,12 +38,11 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());
     }
-    @Epic(value = "adminPanel can't login with invalid password")
+
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("4")
-    @Test(description = "CHATTY-14")
+    @Test(description = "Admin can not login with invalid password")
     public void adminCanNotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
         String password = "GPower3334";
@@ -51,12 +50,11 @@ public class LoginAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
-    @Epic(value = "adminPanel can't login without a email and password")
+
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("5")
-    @Test(description = "CHATTY-14")
+    @Test(description = "Admin can not login without email and password")
     public void adminCanNotLoginWithoutAEmailAndPassword() {
         String email = "";
         String password = "";
@@ -65,12 +63,11 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         loginPage.takeLoginPageScreenshot("adminCanNotLoginWithoutAEmailAndPassword");
     }
-    @Epic(value = "adminPanel can't login with invalid email and password")
+
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("6")
-    @Test(description = "CHATTY-49")
+    @Test(description = "Admin can not login wit invalid email and password")
     public void adminCanNotLoginWiInvalidEmailAndPassword() {
         String email = "gpower@gmail.com";
         String password = "GPower3334";
@@ -79,13 +76,12 @@ public class LoginAdminTest extends TestBase {
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());
     }
-    @Epic(value = "adminPanel can' login with invalid data")
+
     @Feature(value = "adminPanel is not logged in")
     @Description(value = "adminPanel can't login")
     @Severity(SeverityLevel.BLOCKER)
-    @AllureId("7")
-    @Test(description = "All negative Test",dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
-    public void adminCanNotLoginWithInvalidData(String email, String password,String caseName) {
+    @Test(description = "All negative Test", dataProvider = "adminCanNotLoginTest", dataProviderClass = DataProviders.class)
+    public void adminCanNotLoginWithInvalidData(String email, String password, String caseName) {
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
         loginPage.waitForLoading();

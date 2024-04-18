@@ -3,7 +3,7 @@ package e2e.tests.adminPanel;
 import e2e.TestBase;
 import e2e.enums.GenderInfo;
 import e2e.enums.SideBarInfo;
-import e2e.pages.*;
+import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
@@ -23,7 +23,7 @@ public class AdminPanelTest extends TestBase {
     EditPasswordForm editPasswordForm;
 
     @Test
-    public void deleteAccount(){
+    public void deleteAccount() {
 
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
@@ -49,7 +49,7 @@ public class AdminPanelTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -59,7 +59,7 @@ public class AdminPanelTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
@@ -72,15 +72,15 @@ public class AdminPanelTest extends TestBase {
 
 
         editUserForm.clickEditUserForm();
-        editUserForm.setProfileForm(name, surname, GenderInfo.MALE, date, phone);
+        editUserForm.setEditProfileForm(name, surname, GenderInfo.MALE, date, phone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
 
         // bug
         //editPasswordForm = new EditPasswordForm(app.driver);
-        //editPasswordForm.changePassword(oldPassword,newPassword,confirmNewPassword);
-        //editPasswordForm.saveChangePasswordButton();
+        //editPasswordForm.fillChangePasswordForm(oldPassword,newPassword,confirmNewPassword);
+        //editPasswordForm.clickSaveChangePasswordButton();
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.USERS);
