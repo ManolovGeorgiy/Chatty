@@ -62,7 +62,7 @@ public class AdminDeleteUser {
         userRes.setAvatarUrl("https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
 
         addDataUser = new AddDataUser(token);
-        addDataUser.updateUserProfile(userId,userRes,200);
+        addDataUser.addUserProfile(userId,userRes,200);
 
         userUpdateReq = new UserUpdateReq();
         userUpdateReq.setName("Marta");

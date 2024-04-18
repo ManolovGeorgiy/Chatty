@@ -16,7 +16,7 @@ public class AddDataUser extends ApiBase {
         super(token);
     }
     @Step("Update user with {id}")
-    public String updateUserProfile(String userId, UserRes userRes, int code) throws JsonProcessingException {
+    public String addUserProfile(String userId, UserRes userRes, int code) throws JsonProcessingException {
         String endpoint = "/api/users/{id}";
         ObjectMapper objectMapper = new ObjectMapper();
         String jsonRequest = objectMapper.writeValueAsString(userRes);
