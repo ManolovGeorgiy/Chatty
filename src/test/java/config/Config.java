@@ -44,7 +44,6 @@ public class Config {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
 
-    public String getBrowser(){return properties.getProperty("browser");}
 
     public boolean getUseFirefox() {
         return Boolean.parseBoolean(properties.getProperty("use.firefox"));

@@ -25,26 +25,16 @@ public class PostApi extends ApiBase {
         super(token);
     }
 
-<<<<<<< HEAD
-    public PostCreateReq rndDataForCreatePost (){
-=======
     public PostCreateReq rndDataForCreatePost() {
->>>>>>> origin/dev_Natalie
         postCreateReq = new PostCreateReq();
         postCreateReq.setTitle(title);
         postCreateReq.setDescription(description);
         postCreateReq.setBody(body);
         postCreateReq.setPublishDate(publishDate);
         postCreateReq.setImageUrl(imageUrl);
-<<<<<<< HEAD
-
-        return this.postCreateReq;
-    }
-=======
         return this.postCreateReq;
     }
 
->>>>>>> origin/dev_Natalie
     public Response createAPostRoleUser(int code) {
         String endpoint = "/api/posts";
         Object body = rndDataForCreatePost();
@@ -52,18 +42,6 @@ public class PostApi extends ApiBase {
         return response;
     }
 
-<<<<<<< HEAD
-
-    @Step("Create post")
-    public String createPost(int code,PostCreateReq postCreateReg) throws JsonProcessingException {
-        String endpoint = "/api/posts";
-        ObjectMapper objectMapper = new ObjectMapper();
-        String jsonRequestBody = objectMapper.writeValueAsString(postCreateReg);
-        response = postRequest(endpoint,code,jsonRequestBody);
-        switch (response.getStatusCode()) {
-            case 201:
-                return  response.asString();
-=======
     @Step("Create post")
     public String createPost(int code, PostCreateReq postCreateReg) throws JsonProcessingException {
         String endpoint = "/api/posts";
@@ -96,9 +74,10 @@ public class PostApi extends ApiBase {
 
     private String handleResponse(Response response) {
         switch (response.getStatusCode()) {
-            case 200, 201, 204:
+            case 200:
+            case 201:
+            case 204:
                 return response.asString();
->>>>>>> origin/dev_Natalie
             case 400:
                 return "Bad Request: " + response.jsonPath().getString("message");
             case 401:
@@ -109,54 +88,4 @@ public class PostApi extends ApiBase {
                 return "Unexpected status code: " + response.getStatusCode() + ". Response: " + response.asString();
         }
     }
-<<<<<<< HEAD
-    @Step("Update post {id}")
-    public String updateUserPost(String postId, PostUpdateReq postUpdateReq, int code) throws JsonProcessingException {
-        String endpoint = "/api/posts/{id}";
-        ObjectMapper objectMapper = new ObjectMapper();
-        String jsonRequestBody = objectMapper.writeValueAsString(postUpdateReq);
-        response = putRequest(endpoint, code, jsonRequestBody,"id",postId);
-        switch (response.getStatusCode()) {
-            case 200:
-                return response.asString();
-            case 400:
-                return "Bad Request: " + response.jsonPath().getString("message");
-            case 401:
-                return "Unauthorized: " + response.jsonPath().getString("message");
-            default:
-                return "Unexpected status code: " + response.getStatusCode() + " - " + response.asString();
-        }
-    }
-    public String deleteUserPost(String postId, int code) {
-        String endpoint = "/api/posts/{id}";
-        response = deleteRequest(endpoint, code,postId);
-        switch (response.getStatusCode()) {
-            case 200:
-                return response.asString();
-            case 400:
-                return "Bad Request: " + response.jsonPath().getString("message");
-            case 401:
-                return "Unauthorized: " + response.jsonPath().getString("message");
-            default:
-                return "Unexpected status code: " + response.getStatusCode() + " - " + response.asString();
-        }
-    }
-    public String getPostId(String postId,int code){
-        String endPoint = "/api/posts/{id}";
-        response = getRequestWhitParam(endPoint,code,"id",postId);
-        switch (response.getStatusCode()) {
-            case 200:
-                return response.asString();
-            case 400:
-                return "Bad Request: " + response.jsonPath().getString("message");
-            case 401:
-                return "Unauthorized: " + response.jsonPath().getString("message");
-            default:
-                return "Unexpected status code: " + response.getStatusCode() + " - " + response.asString();
-        }
-    }
-
 }
-=======
-}
->>>>>>> origin/dev_Natalie

@@ -1,36 +1,26 @@
 package e2e.tests.post;
 
-<<<<<<< HEAD
-=======
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.javafaker.Faker;
->>>>>>> origin/dev_Natalie
 import e2e.TestBase;
 import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.EditPostPage;
-<<<<<<< HEAD
-import io.qameta.allure.*;
-=======
 import integration.pages.post.PostApi;
 import integration.pages.user.UserApi;
 import integration.schemas.PostCreateReq;
 import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
->>>>>>> origin/dev_Natalie
 import org.testng.annotations.Test;
 
 public class UserCanDeletePostTest extends TestBase {
 
-<<<<<<< HEAD
-=======
     Faker faker = new Faker();
     UserApi userApi;
     PostApi postApi;
     PostCreateReq postCreateReq;
->>>>>>> origin/dev_Natalie
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
@@ -41,13 +31,6 @@ public class UserCanDeletePostTest extends TestBase {
     @Description(value = "User can delete post")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "CHATTY-8")
-<<<<<<< HEAD
-    public void userCanDeletePost() {
-        // TODO: Need to add , creating post via api
-        String email = "userdeletepost@abv.bg";
-        String password = "Manowar33246";
-        // TODO: Need to add , creating post via api
-=======
     public void userCanDeletePost() throws JsonProcessingException {
 
         String email = "tatar1@abv.bg";
@@ -79,7 +62,6 @@ public class UserCanDeletePostTest extends TestBase {
         Assert.assertEquals("New World", postCreateReq.getBody());
         Assert.assertEquals("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg", postCreateReq.getImageUrl());
 
->>>>>>> origin/dev_Natalie
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
@@ -98,9 +80,6 @@ public class UserCanDeletePostTest extends TestBase {
         editPostPage.deletePostButtonClick();
 
         homeBlogPage = new HomeBlogPage(app.driver);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/dev_Natalie
     }
 }

@@ -1,74 +1,82 @@
-//package integration.tests.adminApi;
-//
-//import config.Config;
-//import integration.ApiBase;
-//import integration.pages.user.UserApi;
-//
-////import util.UserInfoDto;
-//import io.qameta.allure.*;
-//import io.restassured.RestAssured;
-//import io.restassured.builder.RequestSpecBuilder;
-//import io.restassured.http.ContentType;
-//import io.restassured.specification.RequestSpecification;
-//import org.testng.annotations.Test;
-//
-//import static org.testng.Assert.assertEquals;
-//import static org.testng.AssertJUnit.assertNotNull;
-//public class AdminEditDeleteUser extends ApiBase {
-//
-//    private final Config config = new Config();
-//    protected final String BASE_URL = config.getProjectApiUrl();
-//    protected final RequestSpecification spec = new RequestSpecBuilder()
-//            .setBaseUri(BASE_URL)
-//            .setContentType(ContentType.JSON)
-//            .build();
-//    UserApi userApi;
-//
-//    @Feature(value = "Edit User")
-//    @Story(value = "Admin can edit User")
-//    @Description(value = "Admin can edit User")
-//    @Severity(SeverityLevel.BLOCKER)
-//    @Test(description = "Admin can Edit new User")
-//    public void adminCanLoginEditUser() {
-//
-//        String email = generateRandomEmail();
-//        String password = "Boba9876";
-//        String confirmPassword = "Boba9876";
-//        String role = "user";
-//
-//        userApi = new UserApi();
-//        userApi.registration(email, password, confirmPassword, role, 201);
-//
-//        String emailLogin = "Boba1234@mail.ru";
-//        String passwordLogin = "Boba1234";
-//        String editUserEndpoint = "/api/users";
-//
-//        userApi = new UserApi();
-//        String token = userApi.login(emailLogin, passwordLogin, 200);
-//
-//
-//        UserInfoDto userInfo = getUserByEmail(token,email,200).get(0);
-//        userInfo.setName("testName");
-//        userInfo.setSurname("testSurname");
-//        userInfo.setPhone("+1234567890");
-//        userInfo.setGender("MALE");
-//
-//        UserInfoDto userInfoResponse = RestAssured.given()
-//                .spec(spec)
-//                .header("Authorization", "Bearer " + token)
-//                .when()
-//                .body(userInfo)
-//                .log().all()
-//                .put(editUserEndpoint + "/" + userInfo.getId())
-//                .then().log().all()
-//                .extract().as(UserInfoDto.class);
-//
-//        assertNotNull(userInfoResponse);
-//        assertEquals("testName", userInfo.getName());
-//        assertEquals("testSurname", userInfo.getSurname());
-//        assertEquals("+1234567890", userInfo.getPhone());
-//        assertEquals("MALE", userInfo.getGender());
-//    }
+package integration.tests.adminApi;
+
+import com.github.javafaker.Faker;
+import config.Config;
+
+import integration.pages.adminPanel.DeleteUserApi;
+import integration.pages.user.GetUserApi;
+import integration.pages.user.UserApi;
+
+
+import integration.schemas.UserRes;
+import integration.schemas.UserResForAdmin;
+import io.qameta.allure.*;
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.specification.RequestSpecification;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertNotNull;
+
+public class AdminEditDeleteUser {
+
+    Faker faker = new Faker();
+    UserApi userApi;
+    GetUserApi getUserApi;
+    UserResForAdmin userResForAdmin;
+    DeleteUserApi deleteUserApi;
+
+    @Feature(value = "Edit User")
+    @Story(value = "Admin can edit User")
+    @Description(value = "Admin can edit User")
+    @Severity(SeverityLevel.BLOCKER)
+    @Test(description = "Admin can Edit new User")
+    public void adminCanLoginEditUser() {
+
+        String email = "bobo@gmail.com";
+        String password = "Boba9876";
+        String confirmPassword = "Boba9876";
+        String role = "user";
+
+
+        String emailAdminLogin = "g.power@gmail.com";
+        String passwordAdminLogin = "GPower3333";
+
+
+        userApi = new UserApi();
+        userApi.registration(email, password, confirmPassword, role, 201);
+        String token = userApi.login(email, password, 200);
+        getUserApi = new GetUserApi(token);
+        String userJson = getUserApi.getUserInfo(200);
+        JsonPath object = new JsonPath(userJson);
+        String userId = object.getString("id");
+
+
+        userResForAdmin = new UserResForAdmin();
+        userResForAdmin.setName("Bobo");
+        userResForAdmin.setSurname("Bobo");
+        userResForAdmin.setBirthDate("");
+        userResForAdmin.setPhone("+1234567890");
+        userResForAdmin.setGender("MALE");
+        userResForAdmin.setAvatarUrl("https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
+        userResForAdmin.setBlocked(false);
+
+        String tokenAdmin = userApi.login(emailAdminLogin, passwordAdminLogin, 200);
+        getUserApi = new GetUserApi(tokenAdmin);
+
+        deleteUserApi = new DeleteUserApi(tokenAdmin);
+        deleteUserApi.deleteUser(204, userId);
+
+
+        // assertNotNull(userInfoResponse);
+        // assertEquals("testName", userInfo.getName());
+        //assertEquals("testSurname", userInfo.getSurname());
+        //assertEquals("+1234567890", userInfo.getPhone());
+        // assertEquals("MALE", userInfo.getGender());
+        // }
 //    @Feature(value = "Delete User")
 //    @Story(value = "Admin can Delete User")
 //    @Description(value = "Admin can Delete User")
@@ -106,5 +114,6 @@
 //        checkUserDelete(token, email, 404);
 //
 //    }
-//
-//}
+    }
+
+}

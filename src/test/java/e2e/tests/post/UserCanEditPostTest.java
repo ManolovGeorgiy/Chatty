@@ -1,9 +1,6 @@
 package e2e.tests.post;
 
-<<<<<<< HEAD
-=======
 import com.fasterxml.jackson.core.JsonProcessingException;
->>>>>>> origin/dev_Natalie
 import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.pages.Header;
@@ -11,15 +8,6 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
-<<<<<<< HEAD
-import io.qameta.allure.*;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-public class UserCanEditPostTest extends TestBase {
-
-    Faker faker = new Faker();
-=======
 import integration.pages.post.PostApi;
 import integration.pages.user.UserApi;
 import integration.schemas.PostCreateReq;
@@ -37,15 +25,12 @@ public class UserCanEditPostTest extends TestBase {
     UserApi userApi;
     PostCreateReq postCreateReq;
     PostApi postApi;
->>>>>>> origin/dev_Natalie
     LoginPage loginPage;
     HomeBlogPage homeBlogPage;
     Header header;
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
 
-<<<<<<< HEAD
-=======
     private void checkPostData(String postId, PostCreateReq postCreateReq){
 
         JsonPath actualObjects = JsonPath.given(postApi.getPostId(postId,200));
@@ -61,7 +46,6 @@ public class UserCanEditPostTest extends TestBase {
         }
     }
 
->>>>>>> origin/dev_Natalie
     private void checkEditPostData(EditAPostForm page, String editTitle, String editDescription, String editContent) {
         String actualTitle = page.getEditTitle();
         String actualDescription = page.getEditDescriptionText();
@@ -76,17 +60,11 @@ public class UserCanEditPostTest extends TestBase {
     @Description(value = "User can edit post")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "User can edit existing post")
-<<<<<<< HEAD
-    public void userCanEditAPost() {
-=======
     public void userCanEditAPost() throws JsonProcessingException {
->>>>>>> origin/dev_Natalie
 
         String email = "user.can.edit.post@abv.bg";
         String password = "RedBull1234";
 
-<<<<<<< HEAD
-=======
         String title = "Chatty";
         String description = "GPower";
         String body = faker.lorem().sentence(10);
@@ -108,7 +86,6 @@ public class UserCanEditPostTest extends TestBase {
         postApi.getPostId(postId,200);
         checkPostData(postId,postCreateReq);
 
->>>>>>> origin/dev_Natalie
         String editTitle = "IT";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
@@ -133,11 +110,7 @@ public class UserCanEditPostTest extends TestBase {
 
         editAPostForm = new EditAPostForm(app.driver);
         editAPostForm.waitForLoading();
-<<<<<<< HEAD
-        editAPostForm.imageLoading(imagePath);
-=======
         editAPostForm.uploadImageLoading(imagePath);
->>>>>>> origin/dev_Natalie
         editAPostForm.fillEditPostForm(editTitle, editDescription, editContent);
         checkEditPostData(editAPostForm, editTitle, editDescription, editContent);
         editAPostForm.clickEditSubmitButton();

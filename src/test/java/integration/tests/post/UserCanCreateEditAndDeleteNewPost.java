@@ -63,20 +63,12 @@ public class UserCanCreateEditAndDeleteNewPost {
 
         String title = "Chatty";
         String description = "GPower";
-<<<<<<< HEAD
-        String body = "My first post";
-=======
         String body = faker.lorem().sentence(10);
->>>>>>> origin/dev_Natalie
         String imageURL = ("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg");
 
         String editTitle = "GPower";
         String editDescription = "Beautiful";
-<<<<<<< HEAD
-        String editBody = "My edit and delete post";
-=======
         String editBody = faker.lorem().sentence(20);
->>>>>>> origin/dev_Natalie
         String editImageURL = ("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
 
         userApi = new UserApi();

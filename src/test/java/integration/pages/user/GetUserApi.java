@@ -1,10 +1,7 @@
 package integration.pages.user;
 
 import integration.ApiBase;
-<<<<<<< HEAD
-=======
 import io.qameta.allure.Step;
->>>>>>> origin/dev_Natalie
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -14,11 +11,7 @@ public class GetUserApi extends ApiBase {
         super(token);
     }
     Response response;
-<<<<<<< HEAD
-    public String getUser(){
-=======
     public String getUser(int code){
->>>>>>> origin/dev_Natalie
         String endpoint = "/api/me";
         response = getRequest(endpoint, 200);
         switch (response.getStatusCode()) {
@@ -48,9 +41,6 @@ public class GetUserApi extends ApiBase {
         }
         return response.asString();
     }
-<<<<<<< HEAD
-}
-=======
 
     @Step("Get user")
     public String getUserInfo(int code) {
@@ -77,4 +67,3 @@ public class GetUserApi extends ApiBase {
     }
 }
 
->>>>>>> origin/dev_Natalie

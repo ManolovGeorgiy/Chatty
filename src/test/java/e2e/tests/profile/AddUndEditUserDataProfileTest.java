@@ -89,11 +89,7 @@ public class AddUndEditUserDataProfileTest extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.fillProfileFormLocal(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
-<<<<<<< HEAD
-        addUserDialog.saveButtonClick();
-=======
         addUserDialog.clickSaveButton();
->>>>>>> origin/dev_Natalie
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog, name, surname, date, phone);
 

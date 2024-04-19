@@ -64,14 +64,8 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
-<<<<<<< HEAD
-
-    @Step("upload image {relativeImagePath}")
-    public void imageLoading(String relativeImagePath) {
-=======
     @Step("upload image {relativeImagePath}")
     public void uploadImageLoading(String relativeImagePath) {
->>>>>>> origin/dev_Natalie
         try {
             String absoluteImagePath = System.getProperty("user.dir") + "/" + relativeImagePath;
             WebElement fileInput = driver.findElement(By.xpath("//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']"));
@@ -80,18 +74,10 @@ public class EditAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev_Natalie
     @Step("click button")
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev_Natalie
     public boolean editIsPostDisplayed(String postTitle) {
         try {
 

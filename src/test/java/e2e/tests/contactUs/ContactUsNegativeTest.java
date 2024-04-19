@@ -10,10 +10,6 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.Description;
-<<<<<<< HEAD
-import io.qameta.allure.Feature;
-=======
->>>>>>> origin/dev_Natalie
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
@@ -43,16 +39,9 @@ public class ContactUsNegativeTest extends TestBase {
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
 
-<<<<<<< HEAD
-    @Description(value = "User can not send feedback")
-    @Feature(value = "User can not sent a message")
-    @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "CHATTY-23")
-=======
     @Description(value = "User can not send setFeedbackForm")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User can not send message")
->>>>>>> origin/dev_Natalie
     public void userCanNotSendMessage() {
 
         String email = "user.can.feedBack@gmail.com";
@@ -86,19 +75,11 @@ public class ContactUsNegativeTest extends TestBase {
 
         contactUsPage = new ContactUsPage(app.driver);
         contactUsPage.waitForLoading();
-<<<<<<< HEAD
-        contactUsPage.feedback(name, emailContact, text);
-        checkFeedbackData(contactUsPage, name, emailContact, text);
-        contactUsPage.sendMessageButtonClick();
-        contactUsPage.waitForLoading();
-        assertTrue("Invalid email format", contactUsPage.isErrorDisplayed());
-=======
         contactUsPage.setFeedbackForm(name, emailContact, text);
         checkFeedbackData(contactUsPage, name, emailContact, text);
         contactUsPage.sendMessageButtonClick();
         contactUsPage.waitForLoading();
         assertTrue("Invalid email format", contactUsPage.istErrorDisplayed());
->>>>>>> origin/dev_Natalie
         contactUsPage.takeFeedbackFormPageScreenshot("User_cannot_feedback");
 
         header = new Header(app.driver);

@@ -45,11 +45,7 @@ public class ContactUsPositiveTest extends TestBase {
 
         String email = "user.can.feedBack@gmail.com";
         String password = "RedBul1234";
-<<<<<<< HEAD
-        String confirmPassword = "RedBul1234";;
-=======
         String confirmPassword = "RedBul1234";
->>>>>>> origin/dev_Natalie
 
         String userName = faker.name().fullName();
         String emailContact = faker.internet().emailAddress();

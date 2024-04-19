@@ -58,6 +58,7 @@ public class ApplicationManager {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions options = new EdgeOptions();
                 if (config.getHeadless()) {
+                    options.addArguments("--headless");
                 }
                 driver = new EdgeDriver(options);
             } else {
@@ -82,4 +83,3 @@ public class ApplicationManager {
         driver.quit();
     }
 }
-

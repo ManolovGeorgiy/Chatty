@@ -1,10 +1,6 @@
 package e2e;
 
 import org.testng.ITestResult;
-<<<<<<< HEAD
-import config.Config;
-=======
->>>>>>> origin/dev_Natalie
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 

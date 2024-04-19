@@ -7,20 +7,8 @@ import integration.pages.contactUs.ContactUsApi;
 import integration.pages.user.UserApi;
 import integration.schemas.FeedbackReq;
 import io.qameta.allure.*;
-<<<<<<< HEAD
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import util.UserInfoDto;
-
-import static io.restassured.RestAssured.baseURI;
-import static org.testng.AssertJUnit.assertNotNull;
-=======
-import org.testng.Assert;
-import org.testng.annotations.Test;
->>>>>>> origin/dev_Natalie
 
 public class ContactUsApiTest extends ApiBase {
     UserApi userApi;
@@ -31,11 +19,7 @@ public class ContactUsApiTest extends ApiBase {
     @Story(value = "User can send feedback with valid values")
     @Description(value = "User can send feedback with valid values")
     @Severity(SeverityLevel.BLOCKER)
-<<<<<<< HEAD
-    @Test(dependsOnMethods = "User can send feedback")
-=======
     @Test(description = "User can send feedback")
->>>>>>> origin/dev_Natalie
     public void userCanSendMessageFeedbackViaApi() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324@gmail.com";
         String password = "Manowar33246";
@@ -64,15 +48,6 @@ public class ContactUsApiTest extends ApiBase {
     @Story(value = "User can not send feedback with invalid email")
     @Description(value = "User can not send feedback with invalid email")
     @Severity(SeverityLevel.BLOCKER)
-<<<<<<< HEAD
-    @Test(dependsOnMethods = "User can not send feedback with invalid email")
-    public void userCanNotSendFeedbackWithInvalidEmail() throws JsonProcessingException {
-        String newUserEmail = "wWw1s1trieng12324gmail.com";
-        String password = "Manowar33246";
-
-        String name = "Nata";
-        String email = "wWw1s1trieng12324@gmail.com";
-=======
     @Test(description = "User can not send feedback with invalid email")
     public void userCanNotSendFeedbackWithInvalidEmail() throws JsonProcessingException {
         String newUserEmail = "wWw1s1trieng12324@gmail.com";
@@ -80,7 +55,6 @@ public class ContactUsApiTest extends ApiBase {
 
         String name = "Nata";
         String email = "wWw1s1trieng12324gmail.com";
->>>>>>> origin/dev_Natalie
         String content = "Sdsdf sdfg dfgh dfgh f sdfgh";
 
         userApi = new UserApi();
@@ -169,47 +143,6 @@ public class ContactUsApiTest extends ApiBase {
         contactUsApi = new ContactUsApi(token);
         contactUsApi.setDataToTheFeedback(feedbackReq, 400);
     }
-<<<<<<< HEAD
-/*
-    @Feature(value = "Delete User")
-    @Story(value = "Admin can Delete User")
-    @Description(value = "Admin can Delete User")
-    @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "Admin can Delete new User")
-    public void adminCanLoginAndDeleteUser() {
-        String email = "g.power@gmail.com";
-        String password = "GPower3333";
-
-        userApi = new UserApi();
-        userApi.login(email, password, 201);
-
-        String emailLogin = "wWw1s1trieng12324@gmail.com";
-        String passwordLogin = "Manowar33246";
-        String deleteUserEndpoint = "/api/users";
-
-        userApi = new UserApi();
-        String token = userApi.login(emailLogin, passwordLogin, 200);
-
-        Response userInfo;
-        userInfo = getRequest(email, 200);
-        assertNotNull(userInfo);
-
-        RestAssured.given()
-                .spec(spec)
-                .header("Authorization", "Bearer " + token)
-                .when()
-                .body(userInfo)
-                .log().all()
-                .delete(deleteUserEndpoint + "/" + userInfo.getClass())
-                .then().log().all()
-                .extract().response();
-
-        getRequest(token, 204);
-    }*/
-}
-
-=======
 }
 
 
->>>>>>> origin/dev_Natalie

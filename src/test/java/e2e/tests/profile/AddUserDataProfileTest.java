@@ -10,10 +10,6 @@ import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.profile.AddUserDialog;
 import e2e.pages.registration.RegistrationPage;
-<<<<<<< HEAD
-import io.qameta.allure.*;
-=======
->>>>>>> origin/dev_Natalie
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -96,11 +92,7 @@ public class AddUserDataProfileTest extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.fillProfileForm(name, surname, GenderInfo.MALE, date, phone);
         addUserDialog.waitForLoading();
-<<<<<<< HEAD
-        addUserDialog.saveButtonClick();
-=======
         addUserDialog.clickSaveButton();
->>>>>>> origin/dev_Natalie
         addUserDialog.waitForLoading();
         checkUserData(addUserDialog, name, surname, date, phone);
 
