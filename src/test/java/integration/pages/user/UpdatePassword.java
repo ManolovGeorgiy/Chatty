@@ -11,12 +11,14 @@ public class UpdatePassword extends ApiBase {
     public UpdatePassword(String token) {
         super(token);
     }
+
+    Response response;
     @Step("Change user password :{id}")
-    public String changePassword(String userId, PasswordUpdateReq passwordReq, int code) throws JsonProcessingException {
+    public String changePassword(String userId, PasswordUpdateReq passwordUpdateReq, int code) throws JsonProcessingException {
         String endpoint = "/api/user/password/update";
         ObjectMapper objectMapper = new ObjectMapper();
-        String jsonRequest = objectMapper.writeValueAsString(passwordReq);
-        Response response = putRequest(endpoint, code, jsonRequest,"id",userId);
+        String jsonRequest = objectMapper.writeValueAsString(passwordUpdateReq);
+        response = putRequest(endpoint, code, jsonRequest,"id",userId);
         switch (response.getStatusCode()) {
             case 200:
                 return response.asString();
