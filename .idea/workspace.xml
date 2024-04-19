@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest">
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanCreateANewPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserCanCreateANewPost.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserFullTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +63,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/AssertJUnit.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.jdks/graalvm-jdk-17.0.10/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/AssertJUnit.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../.jdks/graalvm-jdk-17.0.10/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -106,7 +106,29 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsApiTest">
+  <component name="RunManager" selected="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost">
+    <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="ApiTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Chatty [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -126,7 +148,26 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
+    </configuration>
+    <configuration name="AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.AdminCanCreateEditAndDeletePostTest" />
+      <option name="METHOD_NAME" value="adminCanCreateAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ContactUsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
@@ -138,23 +179,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.contactUs" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.contactUs.ContactUsApiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanAddData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanAddData" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -179,30 +203,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserFullTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.user" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.user.UserFullTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdminCanCreateEditAndDeletePostTest.adminCanCreateAPost" />
+        <item itemvalue="Gradle.Chatty [ApiTest]" />
         <item itemvalue="TestNG.ContactUsApiTest" />
         <item itemvalue="TestNG.UserCanCreateANewPost" />
         <item itemvalue="Gradle.Chatty [test]" />
-        <item itemvalue="TestNG.UserFullTest" />
-        <item itemvalue="TestNG.UserCanAddData" />
       </list>
     </recent_temporary>
   </component>
@@ -555,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713465575696</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1713532139025</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1713532139025</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -572,7 +587,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Registration,Login,Post,Contact Us" />
     <MESSAGE value="Added ContactUsApiTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ContactUsApiTest" />
+    <MESSAGE value="Added ContactUsApiTest new" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ContactUsApiTest new" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,11 +873,6 @@
           <line>47</line>
           <option name="timeStamp" value="219" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="222" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/Georgiy/UserCanCreateAPostTest.java</url>
           <line>19</line>
@@ -888,15 +899,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="198" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/integration/UserApiTest.java</url>
-          <line>13</line>
-          <properties class="integration.tests.UserRegistrationApiTest">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/admin/LoginAdminTest.java</url>
