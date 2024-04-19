@@ -81,11 +81,5 @@ public class ApplicationManager {
         }
         driver.quit();
     }
-<<<<<<< HEAD
-
-    //public void init(String browser) {
-    //}
-
-=======
->>>>>>> origin/dev_Natalie
 }
+

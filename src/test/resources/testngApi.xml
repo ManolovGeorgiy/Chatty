@@ -7,17 +7,12 @@
             </class>
             <class name="integration.tests.login.LoginApiTest">
             </class>
-<<<<<<< HEAD
-=======
             <class name="integration.tests.post.UserCanCreateEditAndDeleteNewPost">
             </class>
-<!--            <class name="integration.tests.adminApi.AdminEditDeleteUser">-->
-<!--            </class>-->
             <class name="integration.tests.profile.UserCanAddData">
             </class>
             <class name="integration.tests.contactUs.ContactUsApiTest">
             </class>
->>>>>>> origin/dev_Natalie
         </classes>
     </test>
 </suite>

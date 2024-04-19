@@ -72,10 +72,7 @@ public class ContactUsPage extends BasePage {
     @Step("check after sending")
     public boolean isMessageSent() {
         Duration timeout = Duration.ofSeconds(1);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/dev_Natalie
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='success-message']")));
         try {
@@ -84,11 +81,8 @@ public class ContactUsPage extends BasePage {
             return false;
         }
     }
-<<<<<<< HEAD
     public boolean error() {
-=======
     public boolean istErrorDisplayed() {
->>>>>>> origin/dev_Natalie
         Duration timeout = Duration.ofSeconds(5);
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='error']")));
