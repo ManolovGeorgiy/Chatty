@@ -119,25 +119,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RegistrationApiTest.UserCanRegistration">
-    <configuration name="AdminDeleteUser.adminCanDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.adminApi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.adminApi" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminApi.AdminDeleteUser" />
-      <option name="METHOD_NAME" value="adminCanDeleteUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.RegistrationApiTest">
     <configuration name="LoginApiTest.adminCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -150,6 +132,23 @@
       <option name="MAIN_CLASS_NAME" value="integration.tests.login.LoginApiTest" />
       <option name="METHOD_NAME" value="adminCanLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.registration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.registration" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.registration.RegistrationApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -211,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegistrationApiTest" />
         <item itemvalue="TestNG.RegistrationApiTest.UserCanRegistration" />
-        <item itemvalue="TestNG.LoginApiTest.adminCanLogin" />
-        <item itemvalue="TestNG.UserCanAddAndUpdateData" />
         <item itemvalue="TestNG.UserCanAddAndUpdateData.userCanUpdateProfile" />
-        <item itemvalue="TestNG.AdminDeleteUser.adminCanDeleteUser" />
+        <item itemvalue="TestNG.UserCanAddAndUpdateData" />
+        <item itemvalue="TestNG.LoginApiTest.adminCanLogin" />
       </list>
     </recent_temporary>
   </component>
