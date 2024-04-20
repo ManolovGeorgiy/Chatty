@@ -4,6 +4,7 @@ import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -98,7 +99,10 @@ public class EditUserForm extends BasePage {
             String[] dateParts = date.split("-");
             birthDateForm.sendKeys(Keys.CONTROL, "a");
             birthDateForm.sendKeys(Keys.DELETE);
+            birthDateForm.isDisplayed();
             birthDateForm.sendKeys(date);
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.TAB).perform();
             birthDateForm.sendKeys(dateParts[0]); //day
             birthDateForm.sendKeys(dateParts[2]); //month
             birthDateForm.sendKeys(dateParts[1]); //year
