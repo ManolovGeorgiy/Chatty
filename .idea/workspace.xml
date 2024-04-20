@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Chatty [SmokeTestE2e]">
+  <component name="RunManager" selected="TestNG.LoginUserTest.userCanLogin">
     <configuration name="Chatty [SmokeTestE2e]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
+        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
+        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
         <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
-        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
-        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
       </list>
     </recent_temporary>
   </component>
