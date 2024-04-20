@@ -4,16 +4,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import integration.pages.adminPanel.DeleteUserApi;
 import integration.pages.profile.AddDataUser;
 import integration.pages.user.GetUserApi;
-import integration.pages.user.UpdatePassword;
 import integration.pages.user.UpdateUser;
 import integration.pages.user.UserApi;
-import integration.schemas.PasswordUpdateReq;
 import integration.schemas.UserRes;
 import integration.schemas.UserUpdateReq;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
 
 public class UserCanAddAndUpdateData {
 
@@ -24,10 +25,7 @@ public class UserCanAddAndUpdateData {
     UserUpdateReq userUpdateReq;
     UpdateUser updateUser;
     DeleteUserApi deleteUserApi;
-    PasswordUpdateReq passwordUpdateReq;
-    UpdatePassword updatePassword;
-
-    @Feature(value= "Profile data adding and updating")
+    @Feature(value = "Profile data adding and updating")
     @Description(value = "User can add and update data to profile")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User can add and update data to profile")
@@ -58,10 +56,6 @@ public class UserCanAddAndUpdateData {
         String editGender = "FEMALE";
         String editAvatar = ("https://rare-gallery.com/thumbs/5408546-woman-female-girl-photographer-camera-beanie-pine-holding-hand-jean-jacket-red-film-caucasian-blonde-photography-nature-exterior-hat-vintage-contax-creative-commons-images.jpg");
 
-        String currentPassword = "Manowar33246";
-        String newPassword = "RedBull1234";
-        String confirmNewPassword = "RedBull1234";
-
         String emailAdminLogin = "g.power@gmail.com";
         String passwordAdminLogin = "GPower3333";
 
@@ -82,7 +76,15 @@ public class UserCanAddAndUpdateData {
         userRes.setAvatarUrl(imageAvatar);
 
         addDataUser = new AddDataUser(token);
-        addDataUser.addUserProfile(userId,userRes,200);
+        addDataUser.addUserProfile(userId, userRes, 200);
+
+        String addedUserData = getUserApi.getUserInfo(200);
+        Assert.assertTrue(addedUserData.contains(name));
+        Assert.assertTrue(addedUserData.contains(surname));
+        Assert.assertTrue(addedUserData.contains(birthDate));
+        Assert.assertTrue(addedUserData.contains(phone));
+        Assert.assertTrue(addedUserData.contains(gender));
+        Assert.assertTrue(addedUserData.contains(imageAvatar));
 
         userUpdateReq = new UserUpdateReq();
         userUpdateReq.setName(editName);
@@ -98,10 +100,18 @@ public class UserCanAddAndUpdateData {
         JsonPath updatedUser = new JsonPath(updatedUserJson);
         String editUserId = updatedUser.getString("id");
 
+        String updatedUserData = getUserApi.getUserInfo(200);
+        Assert.assertTrue(updatedUserData.contains(editName));
+        Assert.assertTrue(updatedUserData.contains(editSurname));
+        Assert.assertTrue(updatedUserData.contains(editBirthDate));
+        Assert.assertTrue(updatedUserData.contains(editPhone));
+        Assert.assertTrue(updatedUserData.contains(editGender));
+        Assert.assertTrue(updatedUserData.contains(editAvatar));
+
         String tokenAdmin = userApi.login(emailAdminLogin, passwordAdminLogin, 200);
         getUserApi = new GetUserApi(tokenAdmin);
 
         deleteUserApi = new DeleteUserApi(tokenAdmin);
-        deleteUserApi.deleteUser(204,editUserId);
+        deleteUserApi.deleteUser(204, editUserId);
     }
 }

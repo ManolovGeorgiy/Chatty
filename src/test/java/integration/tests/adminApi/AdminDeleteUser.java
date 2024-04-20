@@ -1,15 +1,11 @@
 package integration.tests.adminApi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.github.javafaker.Faker;
-
 import integration.pages.adminPanel.DeleteUserApi;
 import integration.pages.profile.AddDataUser;
 import integration.pages.user.GetUserApi;
 import integration.pages.user.UpdateUser;
 import integration.pages.user.UserApi;
-
-
 import integration.schemas.UserRes;
 import integration.schemas.UserUpdateReq;
 import io.qameta.allure.*;
@@ -17,11 +13,8 @@ import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
 public class AdminDeleteUser {
 
-    Faker faker = new Faker();
     UserApi userApi;
     GetUserApi getUserApi;
     UserRes userRes;
@@ -29,6 +22,24 @@ public class AdminDeleteUser {
     UpdateUser updateUser;
     UserUpdateReq userUpdateReq;
     DeleteUserApi deleteUserApi;
+
+    private void checkUserData(UserRes user, String name, String surname, String birthDate, String phone, String gender, String avatarUrl) {
+        Assert.assertEquals(user.getName(), name);
+        Assert.assertEquals(user.getSurname(), surname);
+        Assert.assertEquals(user.getBirthDate(), birthDate);
+        Assert.assertEquals(user.getPhone(), phone);
+        Assert.assertEquals(user.getGender(), gender);
+        Assert.assertEquals(user.getAvatarUrl(), avatarUrl);
+    }
+
+    private void checkEditUserData(UserUpdateReq user, String name, String surname, String birthDate, String phone, String gender, String avatarUrl) {
+        Assert.assertEquals(user.getName(), name);
+        Assert.assertEquals(user.getSurname(), surname);
+        Assert.assertEquals(user.getBirthDate(), birthDate);
+        Assert.assertEquals(user.getPhone(), phone);
+        Assert.assertEquals(user.getGender(), gender);
+        Assert.assertEquals(user.getAvatarUrl(), avatarUrl);
+    }
 
     @Feature(value = "Deleted User")
     @Story(value = "Admin can delete User")
@@ -62,7 +73,9 @@ public class AdminDeleteUser {
         userRes.setAvatarUrl("https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
 
         addDataUser = new AddDataUser(token);
-        addDataUser.addUserProfile(userId,userRes,200);
+        addDataUser.addUserProfile(userId, userRes, 200);
+
+        checkUserData(userRes, "Bobo", "Bobo", "1995-06-27T00:00:00.000Z", "+1234567890", "FEMALE", "https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
 
         userUpdateReq = new UserUpdateReq();
         userUpdateReq.setName("Marta");
@@ -74,29 +87,13 @@ public class AdminDeleteUser {
 
         updateUser = new UpdateUser(token);
         updateUser.updateUserProfile(userId, userUpdateReq, 200);
-
-        Assert.assertEquals("Bobo",userRes.getName());
-        Assert.assertEquals("Bobo",userRes.getSurname());
-        Assert.assertEquals("1995-06-27T00:00:00.000Z",userRes.getBirthDate());
-        Assert.assertEquals("+1234567890",userRes.getPhone());
-        Assert.assertEquals("FEMALE",userRes.getGender());
-        Assert.assertEquals("https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg",userRes.getAvatarUrl());
-
-        Assert.assertEquals("Marta",userUpdateReq.getName());
-        Assert.assertEquals("Bobovna",userUpdateReq.getSurname());
-        Assert.assertEquals("1983-06-12T00:00:00.000Z",userUpdateReq.getBirthDate());
-        Assert.assertEquals("+2222567890",userUpdateReq.getPhone());
-        Assert.assertEquals("FEMALE",userUpdateReq.getGender());
-        Assert.assertEquals("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",userUpdateReq.getAvatarUrl());
+        checkEditUserData(userUpdateReq, "Marta", "Bobovna", "1983-06-12T00:00:00.000Z", "+2222567890", "FEMALE", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
 
 
         String tokenAdmin = userApi.login(emailAdminLogin, passwordAdminLogin, 200);
         getUserApi = new GetUserApi(tokenAdmin);
 
         deleteUserApi = new DeleteUserApi(tokenAdmin);
-        deleteUserApi.deleteUser(204,userId);
-
-
+        deleteUserApi.deleteUser(204, userId);
     }
-
 }

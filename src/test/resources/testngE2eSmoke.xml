@@ -3,6 +3,8 @@
 <suite name="testE2eSmoke" verbose="1">
     <test name="SmokeTestE2e">
         <classes>
+            <class name="e2e.tests.registration.RegistrationAndAuthorisationUserTest">
+            </class>
             <class name="e2e.tests.login.LoginAdminTest">
             </class>
             <class name="e2e.tests.contactUs.ContactUsPositiveTest">
@@ -12,6 +14,8 @@
             <class name="e2e.tests.contactUs.ContactUsNegativeTest">
             </class>
             <class name="e2e.tests.profile.AddUserDataProfileTest">
+            </class>
+            <class name="e2e.tests.profile.EditUserDataProfileTest">
             </class>
             <class name="e2e.tests.post.UserCanCreateEditAndDeletePost">
             </class>
