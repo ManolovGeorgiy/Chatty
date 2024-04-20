@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Pislaru" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -162,9 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
         <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
+        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
+        <item itemvalue="Gradle.Chatty [SmokeTestE2e]" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeletePost.userCanCreateAPost" />
       </list>
     </recent_temporary>
@@ -177,14 +180,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712479153697</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1712479153697</updated>
     </task>
     <task id="LOCAL-00011" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -570,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713632507780</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1713633177384</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1713633177384</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
