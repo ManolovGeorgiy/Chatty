@@ -54,7 +54,7 @@ public class EditUserDataProfileTest extends TestBase {
     @Feature(value = "User edited data to the profile")
     @Description(value = "User can edit data")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "CHATTY-30")
+    @Test(description = "User can edit data to the profile")
     public void userCanEditProfile() {
 
         String email = "edit.user.dataprofile@gmail.com";
