@@ -8,6 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class AddUserDialog extends BasePage {
     public AddUserDialog(WebDriver driver) {
         super(driver);
@@ -116,6 +119,13 @@ public class AddUserDialog extends BasePage {
             e.printStackTrace();
         }
         phoneInput.sendKeys(phone);
+    }
+
+    @Step("Set birth date")
+    public void setBirthDate(LocalDate date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = date.format(formatter);
+        birthDateForm.sendKeys(formattedDate);
     }
 
     @Step("Fill profile form {name},{surname},{date},{phone}")
