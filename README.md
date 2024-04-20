@@ -1,4 +1,4 @@
-## Selenide java framework
+## Selenium java framework
 
 ### Installation
 
