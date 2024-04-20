@@ -27,12 +27,8 @@ public class ApplicationManager {
     private final Config config = new Config();
     public WebDriver driver;
 
-<<<<<<< HEAD
 
     protected void init() {
-=======
-    protected void init(String browser) {
->>>>>>> 6962117 (Added ContactUsApiTest)
         if (config.getSelenoidState()) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setBrowserName("chrome");
