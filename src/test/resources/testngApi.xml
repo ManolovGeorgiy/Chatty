@@ -17,6 +17,10 @@
             </class>
             <class name="integration.tests.contactUs.UserCanSendMessageTest">
             </class>
+            <class name="integration.tests.adminApi.AdminDeleteUser">
+            </class>
+            <class name="integration.tests.profile.UserCanAddAndUpdateData">
+            </class>
         </classes>
     </test>
 </suite>

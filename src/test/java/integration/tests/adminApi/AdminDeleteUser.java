@@ -1,15 +1,11 @@
 package integration.tests.adminApi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.github.javafaker.Faker;
-
 import integration.pages.adminPanel.DeleteUserApi;
 import integration.pages.profile.AddDataUser;
 import integration.pages.user.GetUserApi;
 import integration.pages.user.UpdateUser;
 import integration.pages.user.UserApi;
-
-
 import integration.schemas.UserRes;
 import integration.schemas.UserUpdateReq;
 import io.qameta.allure.*;
@@ -17,11 +13,8 @@ import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
 public class AdminDeleteUser {
 
-    Faker faker = new Faker();
     UserApi userApi;
     GetUserApi getUserApi;
     UserRes userRes;
@@ -37,7 +30,9 @@ public class AdminDeleteUser {
         Assert.assertEquals(user.getPhone(), phone);
         Assert.assertEquals(user.getGender(), gender);
         Assert.assertEquals(user.getAvatarUrl(), avatarUrl);
-    }private void checkEditUserData(UserUpdateReq user, String name, String surname, String birthDate, String phone, String gender, String avatarUrl) {
+    }
+
+    private void checkEditUserData(UserUpdateReq user, String name, String surname, String birthDate, String phone, String gender, String avatarUrl) {
         Assert.assertEquals(user.getName(), name);
         Assert.assertEquals(user.getSurname(), surname);
         Assert.assertEquals(user.getBirthDate(), birthDate);
@@ -45,6 +40,7 @@ public class AdminDeleteUser {
         Assert.assertEquals(user.getGender(), gender);
         Assert.assertEquals(user.getAvatarUrl(), avatarUrl);
     }
+
     @Feature(value = "Deleted User")
     @Story(value = "Admin can delete User")
     @Description(value = "Admin can delete User")
@@ -77,7 +73,7 @@ public class AdminDeleteUser {
         userRes.setAvatarUrl("https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
 
         addDataUser = new AddDataUser(token);
-        addDataUser.addUserProfile(userId,userRes,200);
+        addDataUser.addUserProfile(userId, userRes, 200);
 
         checkUserData(userRes, "Bobo", "Bobo", "1995-06-27T00:00:00.000Z", "+1234567890", "FEMALE", "https://imgv3.fotor.com/images/slider-image/Female-portrait-picture-enhanced-with-better-clarity-and-higher-quality-using-Fotors-free-online-AI-photo-enhancer.jpg");
 
@@ -98,6 +94,6 @@ public class AdminDeleteUser {
         getUserApi = new GetUserApi(tokenAdmin);
 
         deleteUserApi = new DeleteUserApi(tokenAdmin);
-        deleteUserApi.deleteUser(204,userId);
+        deleteUserApi.deleteUser(204, userId);
     }
 }
