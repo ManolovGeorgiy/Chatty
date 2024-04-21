@@ -16,7 +16,7 @@ import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class EditUserDataProfileTest extends TestBase {
+public class EditUserDataProfileTestLocale extends TestBase {
 
     Faker faker = new Faker();
     RegistrationPage registrationPage;
@@ -70,7 +70,7 @@ public class EditUserDataProfileTest extends TestBase {
 
         String editName = "Georgiy";
         String editSurname = "Manolov";
-        String editFormattedDate = "03-01-1985";
+        String editFormattedDate = "1985-01-03";
         String editPhone = "+49157310789";
         String editImageAvatar = "uploadReferences/userCanAddEditDate_Avatar.jpg";
 
@@ -133,7 +133,7 @@ public class EditUserDataProfileTest extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
-        //checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
+        checkEditUserData(editUserForm, editName, editSurname, editFormattedDate, editPhone);
 
         editPasswordForm = new EditPasswordForm(app.driver);
         editPasswordForm.fillChangePasswordForm(oldPassword, newPassword, confirmNewPassword);
