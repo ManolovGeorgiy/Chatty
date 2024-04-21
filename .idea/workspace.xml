@@ -101,7 +101,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.AdminDeleteUser">
     <configuration name="AdminDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
