@@ -82,12 +82,12 @@ public class AdminDeleteUser {
         userUpdateReq.setSurname("Bobovna");
         userUpdateReq.setBirthDate("1983-06-12T00:00:00.000Z");
         userUpdateReq.setPhone("+2222567890");
-        userUpdateReq.setGender("FEMALE");
+        userUpdateReq.setGender("MALE");
         userUpdateReq.setAvatarUrl("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
 
         updateUser = new UpdateUser(token);
         updateUser.updateUserProfile(userId, userUpdateReq, 200);
-        checkEditUserData(userUpdateReq, "Marta", "Bobovna", "1983-06-12T00:00:00.000Z", "+2222567890", "FEMALE", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+        checkEditUserData(userUpdateReq, "Marta", "Bobovna", "1983-06-12T00:00:00.000Z", "+2222567890", "MALE", "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
 
 
         String tokenAdmin = userApi.login(emailAdminLogin, passwordAdminLogin, 200);
