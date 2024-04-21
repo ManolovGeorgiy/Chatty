@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +104,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginUserTest.userCanNotLoginWithInvalidEmail">
+  <component name="RunManager" selected="TestNG.LoginUserTest.userCanLogin">
     <configuration name="LoginAdminTest.adminCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -199,9 +196,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
         <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidEmail" />
         <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
         <item itemvalue="TestNG.LoginUserTest" />
         <item itemvalue="TestNG.LoginAdminTest.adminCanLogin" />
       </list>
@@ -215,14 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712593693397</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1712593693397</updated>
     </task>
     <task id="LOCAL-00028" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -608,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713704913369</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1713714624680</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1713714624680</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
