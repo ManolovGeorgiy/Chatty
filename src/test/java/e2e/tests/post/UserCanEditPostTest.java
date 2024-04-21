@@ -58,7 +58,7 @@ public class UserCanEditPostTest extends TestBase {
     @Epic(value = "User can edit post")
     @Feature(value = "User edited post")
     @Description(value = "User can edit post")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User can edit existing post")
     public void userCanEditAPost() throws JsonProcessingException {
 
