@@ -5,6 +5,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import integration.pages.contactUs.ContactUsApi;
 import integration.pages.user.UserApi;
 import integration.schemas.FeedbackReq;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,6 +24,8 @@ public class UserCanSendMessageTest {
     ContactUsApi contactUsApi;
     FeedbackReq feedbackReq;
 
+    @Description(value = "Can send message to ContactUs")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User can send message")
     public void userCanSendMessageToTheContactUs() throws JsonProcessingException {
         String emailUser = "feedback@gmail.com";
@@ -45,6 +51,9 @@ public class UserCanSendMessageTest {
 
 
     }
+
+    @Description(value = "Not send message with invalid email")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "user can not send message with invalid email")
     public void userCanNotSendMessageWithInvalidEmail() throws JsonProcessingException {
         String email = "feedback@gmail.com";
