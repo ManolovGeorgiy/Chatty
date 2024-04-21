@@ -11,6 +11,9 @@ import e2e.pages.post.CreateAPostForm;
 import e2e.pages.post.EditAPostForm;
 import e2e.pages.post.EditPostPage;
 import e2e.pages.registration.RegistrationPage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -47,8 +50,10 @@ public class UserCanCreateEditAndDeletePost extends TestBase {
         Assert.assertEquals(actualContent, editContent, actualContent + " is not equal " + editContent);
     }
 
-    @Test(description = "User can create a post")
-    public void userCanCreateAPost() throws InterruptedException {
+    @Description(value = "Create a post,edit and delete")
+    @Severity(SeverityLevel.CRITICAL)
+    @Test(description = "User can create,edit and delete a post")
+    public void userCanCreateEditAndDeleteAPost() throws InterruptedException {
         String email = "user.create.post@gmail.com";
         String password = "RedBul1234";
         String confirmPassword = "RedBul1234";
