@@ -106,18 +106,18 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginUserTest.userCanLogin">
-    <configuration name="LoginAdminTest.adminCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.EditUserDataProfileTestLocale.userCanEditProfile">
+    <configuration name="AddUserDataProfileTestLocale.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.login.*" />
+          <option name="PATTERN" value="e2e.tests.profile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.login.LoginAdminTest" />
-      <option name="METHOD_NAME" value="adminCanLogin" />
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTestLocale" />
+      <option name="METHOD_NAME" value="userCanAddDataProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -125,17 +125,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EditUserDataProfileTestLocale.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="e2e.tests.login.*" />
+          <option name="PATTERN" value="e2e.tests.profile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.login" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.login.LoginUserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTestLocale" />
+      <option name="METHOD_NAME" value="userCanEditProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -198,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.EditUserDataProfileTestLocale.userCanEditProfile" />
+        <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
         <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
         <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidEmail" />
         <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidPassword" />
-        <item itemvalue="TestNG.LoginUserTest" />
-        <item itemvalue="TestNG.LoginAdminTest.adminCanLogin" />
       </list>
     </recent_temporary>
   </component>
