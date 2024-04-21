@@ -60,6 +60,7 @@ public class ApplicationManager {
                 if (config.getHeadless()) {
                     options.addArguments("--headless");
                 }
+
                 driver = new EdgeDriver(options);
             } else {
                 WebDriverManager.chromedriver().clearResolutionCache().setup();
@@ -67,7 +68,9 @@ public class ApplicationManager {
                 if (config.getHeadless()) {
                     options.addArguments("--headless");
                 }
+
                 options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+
                 driver = new ChromeDriver(options);
             }
         }
