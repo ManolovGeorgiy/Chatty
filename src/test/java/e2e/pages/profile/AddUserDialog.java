@@ -12,34 +12,26 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class AddUserDialog extends BasePage {
+    @FindBy(xpath = "//*[@data-test='post-header__plus']")
+    WebElement editButton;
+    @FindBy(xpath = "//*[@data-test='profileName']")
+    WebElement nameInput;
+    @FindBy(xpath = "//*[@name='surname']")
+    WebElement surnameInput;
+    @FindBy(xpath = "//select[@id='gender']")
+    WebElement gender;
+    @FindBy(xpath = "//*[@id='birthDate']")
+    WebElement birthDateForm;
+    @FindBy(xpath = "//*[@name='phone']")
+    WebElement phoneInput;
+    @FindBy(xpath = "//*[@data-test='profileSaveButton']")
+    WebElement saveButton;
+    @FindBy(xpath = "//*[@class='header']")
+    WebElement headerElement;
+
     public AddUserDialog(WebDriver driver) {
         super(driver);
     }
-
-
-    @FindBy(xpath = "//*[@data-test='post-header__plus']")
-    WebElement editButton;
-
-    @FindBy(xpath = "//*[@data-test='profileName']")
-    WebElement nameInput;
-
-    @FindBy(xpath = "//*[@name='surname']")
-    WebElement surnameInput;
-
-    @FindBy(xpath = "//select[@id='gender']")
-    WebElement gender;
-
-    @FindBy(xpath = "//*[@id='birthDate']")
-    WebElement birthDateForm;
-
-    @FindBy(xpath = "//*[@name='phone']")
-    WebElement phoneInput;
-
-    @FindBy(xpath = "//*[@data-test='profileSaveButton']")
-    WebElement saveButton;
-
-    @FindBy(xpath = "//*[@class='header']")
-    WebElement headerElement;
 
     @Step("Wait for loading Edit profile page")
     public void waitForLoading() {
@@ -144,7 +136,6 @@ public class AddUserDialog extends BasePage {
         option.click();
         try {
             String[] dateParts = date.split("-");
-            //birthDateForm.click();
             birthDateForm.sendKeys(Keys.CONTROL, "a");
             birthDateForm.isDisplayed();
             birthDateForm.sendKeys(date);

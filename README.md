@@ -47,6 +47,14 @@
 
 - Run tests using task `./gradlew clean nameOfTask` (task name can be found in `gradlew build` file)
 
+### Config file
+
+- Config file is located in `src/main/resources/config.properties`
+- Need to add project url
+- selenoid.state - false = `local run`, `true = remote run`
+- selenoid.url - `url to selenoid`
+
+
 ### Allure reports
 
 - After running tests, you can find reports in `build/reports/allure-report` folder

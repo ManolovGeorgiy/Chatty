@@ -31,18 +31,18 @@ public class UserCanEditPostTest extends TestBase {
     EditPostPage editPostPage;
     EditAPostForm editAPostForm;
 
-    private void checkPostData(String postId, PostCreateReq postCreateReq){
+    private void checkPostData(String postId, PostCreateReq postCreateReq) {
 
-        JsonPath actualObjects = JsonPath.given(postApi.getPostId(postId,200));
-        LinkedHashMap<String,String> postObjects = new LinkedHashMap<>();
-        postObjects.put(actualObjects.getString("title"),postCreateReq.getTitle());
-        postObjects.put(actualObjects.getString("description"),postCreateReq.getDescription());
-        postObjects.put(actualObjects.getString("body"),postCreateReq.getBody());
+        JsonPath actualObjects = JsonPath.given(postApi.getPostId(postId, 200));
+        LinkedHashMap<String, String> postObjects = new LinkedHashMap<>();
+        postObjects.put(actualObjects.getString("title"), postCreateReq.getTitle());
+        postObjects.put(actualObjects.getString("description"), postCreateReq.getDescription());
+        postObjects.put(actualObjects.getString("body"), postCreateReq.getBody());
 
-        for (Map.Entry<String,String> postObject:postObjects.entrySet()){
+        for (Map.Entry<String, String> postObject : postObjects.entrySet()) {
             String actualResult = postObject.getKey();
-            String expectedResult =postObject.getValue();
-            Assert.assertEquals(actualResult,expectedResult, actualResult + " is not equals " + expectedResult);
+            String expectedResult = postObject.getValue();
+            Assert.assertEquals(actualResult, expectedResult, actualResult + " is not equals " + expectedResult);
         }
     }
 
@@ -83,8 +83,8 @@ public class UserCanEditPostTest extends TestBase {
         String response = postApi.createPost(201, postCreateReq);
         JsonPath jsonPath = new JsonPath(response);
         String postId = jsonPath.getString("id");
-        postApi.getPostId(postId,200);
-        checkPostData(postId,postCreateReq);
+        postApi.getPostId(postId, 200);
+        checkPostData(postId, postCreateReq);
 
         String editTitle = "IT";
         String editDescription = "QA Engineer";
@@ -117,5 +117,12 @@ public class UserCanEditPostTest extends TestBase {
 
         editPostPage = new EditPostPage(app.driver);
         editPostPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.clickHome();
+        header.myPostClick();
+
+        Assert.assertTrue(editAPostForm.editIsPostDisplayed(editTitle), "Post with title: " + editTitle + " is not displayed.");
+
     }
 }

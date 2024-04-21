@@ -62,7 +62,6 @@ public class UserCanDeletePostTest extends TestBase {
         Assert.assertEquals("New World", postCreateReq.getBody());
         Assert.assertEquals("https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg", postCreateReq.getImageUrl());
 
-
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email, password);

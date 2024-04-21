@@ -16,10 +16,7 @@ import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-public class AddUserDataProfileTest extends TestBase {
+public class AddUserDataProfileTestRemote extends TestBase {
 
     RegistrationPage registrationPage;
     LoginPage loginPage;
