@@ -112,6 +112,38 @@ public class EditUserForm extends BasePage {
         phoneInput.clear();
         phoneInput.sendKeys(phone);
     }
+
+    @Step("fill profile form")
+    public void setEditProfileFormRemote(String name, String surname, GenderInfo tab, String date, String phone) {
+        try {
+            nameInput.clear();
+            nameInput.sendKeys(name);
+        } catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
+        surnameInput.clear();
+        surnameInput.sendKeys(surname);
+        WebElement option = driver.findElement(By.xpath("//*[@value='" + tab.value + "']"));
+        gender.click();
+        getWait().forVisibility(option);
+        option.click();
+        try {
+            String[] dateParts = date.split("-");
+            birthDateForm.sendKeys(Keys.CONTROL, "a");
+            birthDateForm.sendKeys(Keys.DELETE);
+            birthDateForm.isDisplayed();
+            birthDateForm.sendKeys(date);
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.TAB).perform();
+            birthDateForm.sendKeys(dateParts[1]); //day
+            birthDateForm.sendKeys(dateParts[2]); //month
+            birthDateForm.sendKeys(dateParts[0]); //year
+        } catch (StaleElementReferenceException e) {
+            e.printStackTrace();
+        }
+        phoneInput.clear();
+        phoneInput.sendKeys(phone);
+    }
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();

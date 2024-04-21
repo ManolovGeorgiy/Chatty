@@ -129,7 +129,7 @@ public class EditUserDataProfileTestRemote extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
-        editUserForm.setEditProfileForm(editName, editSurname, GenderInfo.MALE, editFormattedDate, editPhone);
+        editUserForm.setEditProfileFormRemote(editName, editSurname, GenderInfo.MALE, editFormattedDate, editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
