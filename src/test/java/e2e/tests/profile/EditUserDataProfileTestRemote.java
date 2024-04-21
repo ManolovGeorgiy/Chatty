@@ -50,11 +50,11 @@ public class EditUserDataProfileTestRemote extends TestBase {
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
 
-
+    @Epic(value = "User can edit data to the profile")
     @Feature(value = "User edited data to the profile")
     @Description(value = "User can edit data")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "User can add and edit data to the profile")
+    @Test(description = "User can edit data to the profile")
     public void userCanEditProfile() {
 
         String email = "edit.user.dataprofile@gmail.com";
@@ -63,7 +63,7 @@ public class EditUserDataProfileTestRemote extends TestBase {
 
         String name = "Georg";
         String surname = "Man";
-        String date = "08-01-1984";
+        String date = "1984-08-01";
         String phone = "+4915777777";
         String imageAvatar = "uploadReferences/userCanAddDate_Avatra.jpg";
 
@@ -117,8 +117,11 @@ public class EditUserDataProfileTestRemote extends TestBase {
         addUserDialog.waitForLoading();
         addUserDialog.clickSaveButton();
         addUserDialog.waitForLoading();
-        addUserDialog.clickAddUserFormButton();
-        checkUserData(addUserDialog, name, surname,date, phone);
+        checkUserData(addUserDialog, name, surname, date, phone);
+
+        header = new Header(app.driver);
+        header.clickHome();
+        header.tabDropdownMenu(SideBarInfo.USERPROFILE);
 
         editUserForm = new EditUserForm(app.driver);
         editUserForm.waitForLoading();
@@ -126,8 +129,7 @@ public class EditUserDataProfileTestRemote extends TestBase {
         editUserForm.waitForLoading();
         editUserForm.clickEditUserForm();
         editUserForm.waitForLoading();
-
-        editUserForm.setEditProfileForm(editName, editSurname, GenderInfo.MALE,editFormattedDate, editPhone);
+        editUserForm.setEditProfileForm(editName, editSurname, GenderInfo.MALE, editFormattedDate, editPhone);
         editUserForm.waitForLoading();
         editUserForm.saveButtonClick();
         editUserForm.waitForLoading();
