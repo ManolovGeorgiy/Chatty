@@ -21,8 +21,10 @@ public class UserUpdateReq {
     private boolean blocked;
 
 
-    public UserUpdateReq(String name, String surname, String birthDate, String phone, String gender, String  backgroundUrl) {
+    public UserUpdateReq() {
     }
+
+
 
     public String getAvatarUrl() {
         return avatarUrl;

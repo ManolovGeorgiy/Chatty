@@ -23,6 +23,7 @@ public class UserCanUpdateProfileApiTest {
     ProfileApi profileApi ;
     UserUpdateReq userUpdateReq;
     UserRes userRes;
+   // GetString getString;
 
     private void checkProfileData(String profileId, UserUpdateReq userUpdateReq){
 
@@ -85,7 +86,7 @@ public class UserCanUpdateProfileApiTest {
         userApi = new UserApi();
         String token = userApi.login(email, password, 200);
 
-        UserUpdateReq userUpdateReq = new UserUpdateReq(name, surname, birthDate, phone, gender, backgroundUrl);
+        UserUpdateReq userUpdateReq = new UserUpdateReq();
         userUpdateReq.setName(name);
         userUpdateReq.setSurname(surname);
         userUpdateReq.setBirthDate(birthDate);
@@ -105,7 +106,7 @@ public class UserCanUpdateProfileApiTest {
         String response = profileApi.createProfile(201, userUpdateReq);
         JsonPath jsonPath = new JsonPath(response);
         String profileId;
-        profileId = String.valueOf(jsonPath.getUUID("id"));
+        profileId = String.valueOf(jsonPath.getString("id"));
         //System.out.println("Profile ID: " + profileId);
         profileApi.getpofileId(profileId,200);
         checkProfileData(profileId,userUpdateReq);

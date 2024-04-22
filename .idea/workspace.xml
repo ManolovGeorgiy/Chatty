@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added OksanaTest UserCanRegistrationTest, AdminCanRegistrationTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/GetUserApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UpdateUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanAddDataTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanUpdateProfileApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanUpdateProfileApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +84,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="integration.tests.profile" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
     </key>
@@ -97,7 +105,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminCanRegistrationTest.AdminCanRegistration">
+  <component name="RunManager" selected="TestNG.UserCanAddDataTest">
     <configuration name="AdminCanRegistrationTest.AdminCanNotRegistrationWithValidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -136,26 +144,7 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="UserCanRegistrationTest.UserCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.Oksana.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.Oksana" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.Oksana.UserCanRegistrationTest" />
-      <option name="METHOD_NAME" value="UserCanRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration name="UserCanUpdateAndEditProfileApiTest.userCanCreateYourProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanAddDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -164,8 +153,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanUpdateAndEditProfileApiTest" />
-      <option name="METHOD_NAME" value="userCanCreateYourProfile" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanAddDataTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration name="UserCanAddDataTest.userCanUpdateProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.profile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanAddDataTest" />
+      <option name="METHOD_NAME" value="userCanUpdateProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -174,7 +181,7 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration name="UserCanUpdateProfileApiTest.userCanCreateYourProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserCanUpdateProfileApiTest.userCanUpdateYourProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -184,7 +191,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.profile" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.profile.UserCanUpdateProfileApiTest" />
-      <option name="METHOD_NAME" value="userCanCreateYourProfile" />
+      <option name="METHOD_NAME" value="userCanUpdateYourProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -195,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserCanAddDataTest" />
+        <item itemvalue="TestNG.UserCanAddDataTest.userCanUpdateProfile" />
+        <item itemvalue="TestNG.UserCanUpdateProfileApiTest.userCanUpdateYourProfile" />
         <item itemvalue="TestNG.AdminCanRegistrationTest.AdminCanRegistration" />
         <item itemvalue="TestNG.AdminCanRegistrationTest.AdminCanNotRegistrationWithValidEmail" />
-        <item itemvalue="TestNG.UserCanRegistrationTest.UserCanRegistration" />
-        <item itemvalue="TestNG.UserCanUpdateProfileApiTest.userCanCreateYourProfile" />
-        <item itemvalue="TestNG.UserCanUpdateAndEditProfileApiTest.userCanCreateYourProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -211,14 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712511425023</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1712511425023</updated>
     </task>
     <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -595,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713748369443</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Added OksanaTest UserCanRegistrationTest, AdminCanRegistrationTest">
+      <created>1713749673238</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1713749673238</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
