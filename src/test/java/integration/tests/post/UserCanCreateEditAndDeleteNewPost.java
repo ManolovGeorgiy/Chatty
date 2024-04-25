@@ -55,7 +55,7 @@ public class UserCanCreateEditAndDeleteNewPost {
         }
     }@Feature(value = "Creating,editing and deleting post")
     @Description(value = "New post")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "User Can create,edit and delete post")
     public void userCanCreatePost() throws JsonProcessingException {
         String email = "user.can.create.a.post@gmail.com";

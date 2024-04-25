@@ -44,7 +44,7 @@ public class AdminDeleteUser {
     @Feature(value = "Deleted User")
     @Story(value = "Admin can delete User")
     @Description(value = "Admin can delete User")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "Admin can delete new User")
     public void adminCanDeleteUser() throws JsonProcessingException {
 
