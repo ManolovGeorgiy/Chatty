@@ -29,7 +29,7 @@ public class UserCanDeletePostTest extends TestBase {
     @Epic(value = "User can delete post")
     @Feature(value = "User deleted post")
     @Description(value = "User can delete post")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "CHATTY-8")
     public void userCanDeletePost() throws JsonProcessingException {
 
