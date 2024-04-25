@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added OksanaTest UserCanRegistrationTest, AdminCanRegistrationTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/GetUserApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UpdateUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanAddDataTest.java" afterDir="false" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/schemas/UserUpdateReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanUpdateProfileApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/tests/profile/UserCanUpdateProfileApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/Oksana/AdminCanRegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/Oksana/AdminCanRegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,14 +214,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712511475487</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1712511475487</updated>
     </task>
     <task id="LOCAL-00020" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -601,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713749673238</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Added">
+      <created>1713750562317</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1713750562317</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -622,7 +617,8 @@
     <MESSAGE value="AdminPanel" />
     <MESSAGE value="AdminPanel test" />
     <MESSAGE value="Added OksanaTest UserCanRegistrationTest, AdminCanRegistrationTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OksanaTest UserCanRegistrationTest, AdminCanRegistrationTest" />
+    <MESSAGE value="Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

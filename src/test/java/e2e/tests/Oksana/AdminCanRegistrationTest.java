@@ -39,7 +39,7 @@ public class AdminCanRegistrationTest extends TestBase {
         registrationPage.waitForLoading();
         registrationPage.optionAdmin();
         registrationPage.registration(email,password,confirmPassword);
-        //registrationPage.waitForLoading();
+        registrationPage.waitForLoading();
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -50,7 +50,7 @@ public class AdminCanRegistrationTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email,password);
-        //loginPage.waitForLoading();
+        loginPage.waitForLoading();
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
