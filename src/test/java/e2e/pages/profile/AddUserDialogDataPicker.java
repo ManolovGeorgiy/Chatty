@@ -1,11 +1,12 @@
-
 package e2e.pages.profile;
 
 import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;
 import io.qameta.allure.Step;
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
@@ -102,6 +103,7 @@ public class AddUserDialogDataPicker extends BasePage {
         option.click();
         phoneInput.sendKeys(phone);
     }
+
     @Step("click save button")
     public void clickDatePickerButton() {
         birthDateClick.click();

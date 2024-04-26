@@ -10,24 +10,20 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class EditAPostForm extends BasePage {
+    @FindBy(xpath = "//*[@data-test='title-input']")
+    WebElement titleInput;
+    @FindBy(xpath = "//*[@data-test='description-input']")
+    WebElement descriptionInput;
+    @FindBy(xpath = "//*[@data-test='textarea']")
+    WebElement contentInput;
+    @FindBy(xpath = "//*[@type='submit']")
+    WebElement submitEditButton;
+    @FindBy(xpath = "//*[@class='close']")
+    WebElement closeButton;
+
     public EditAPostForm(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(xpath = "//*[@data-test='title-input']")
-    WebElement titleInput;
-
-    @FindBy(xpath = "//*[@data-test='description-input']")
-    WebElement descriptionInput;
-
-    @FindBy(xpath = "//*[@data-test='textarea']")
-    WebElement contentInput;
-
-    @FindBy(xpath = "//*[@type='submit']")
-    WebElement submitEditButton;
-
-    @FindBy(xpath = "//*[@class='close']")
-    WebElement closeButton;
 
     public String getEditTitle() {
         return titleInput.getAttribute("value");
@@ -64,6 +60,7 @@ public class EditAPostForm extends BasePage {
         contentInput.clear();
         contentInput.sendKeys(editContent);
     }
+
     @Step("upload image {relativeImagePath}")
     public void uploadImageLoading(String relativeImagePath) {
         try {
@@ -74,10 +71,12 @@ public class EditAPostForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+
     @Step("click button")
     public void clickEditSubmitButton() {
         submitEditButton.click();
     }
+
     public boolean editIsPostDisplayed(String postTitle) {
         try {
 

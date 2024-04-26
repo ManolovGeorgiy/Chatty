@@ -45,7 +45,6 @@ public class UserCanSendMessageTest {
         Assert.assertEquals("Georgiy", feedbackReq.getName());
         Assert.assertEquals("feedback@gmail.com", feedbackReq.getEmail());
         Assert.assertEquals("Hallo Chatty", feedbackReq.getContent());
-
     }
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "user can not send message with invalid email")

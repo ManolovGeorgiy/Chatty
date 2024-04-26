@@ -9,33 +9,26 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class EditUserForm extends BasePage {
+    @FindBy(xpath = "//*[@data-test='post-header__plus']")
+    WebElement editButton;
+    @FindBy(xpath = "//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']")
+    WebElement avatarImage;
+    @FindBy(xpath = "//*[@name='name']")
+    WebElement nameInput;
+    @FindBy(xpath = "//*[@name='surname']")
+    WebElement surnameInput;
+    @FindBy(xpath = "//select[@id='gender']")
+    WebElement gender;
+    @FindBy(xpath = "//*[@id='birthDate']")
+    WebElement birthDateForm;
+    @FindBy(xpath = "//*[@name='phone']")
+    WebElement phoneInput;
+    @FindBy(xpath = "//*[@data-test='profileSaveButton']")
+    WebElement saveButton;
+
     public EditUserForm(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(xpath = "//*[@data-test='post-header__plus']")
-    WebElement editButton;
-
-    @FindBy(xpath = "//*[@accept='image/png,.png,image/jpg,.jpg,image/jpeg,.jpeg']")
-    WebElement avatarImage;
-
-    @FindBy(xpath = "//*[@name='name']")
-    WebElement nameInput;
-
-    @FindBy(xpath = "//*[@name='surname']")
-    WebElement surnameInput;
-
-    @FindBy(xpath = "//select[@id='gender']")
-    WebElement gender;
-
-    @FindBy(xpath = "//*[@id='birthDate']")
-    WebElement birthDateForm;
-
-    @FindBy(xpath = "//*[@name='phone']")
-    WebElement phoneInput;
-
-    @FindBy(xpath = "//*[@data-test='profileSaveButton']")
-    WebElement saveButton;
 
     @Step("Wait for loading Edit profile page")
     public void waitForLoading() {
@@ -54,19 +47,24 @@ public class EditUserForm extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     @Step("click edit button")
     public void clickEditUserForm() {
         editButton.click();
     }
+
     public String getName() {
         return nameInput.getAttribute("value");
     }
+
     public String getSurname() {
         return surnameInput.getAttribute("value");
     }
+
     public String getDate() {
         return birthDateForm.getAttribute("value");
     }
+
     public String getPhone() {
         return phoneInput.getAttribute("value");
     }
@@ -81,12 +79,13 @@ public class EditUserForm extends BasePage {
             Assert.fail("Failed to upload image: " + e.getMessage());
         }
     }
+
     @Step("fill profile form")
     public void setEditProfileForm(String name, String surname, GenderInfo tab, String date, String phone) {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -118,7 +117,7 @@ public class EditUserForm extends BasePage {
         try {
             nameInput.clear();
             nameInput.sendKeys(name);
-        } catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
         surnameInput.clear();
@@ -144,6 +143,7 @@ public class EditUserForm extends BasePage {
         phoneInput.clear();
         phoneInput.sendKeys(phone);
     }
+
     @Step("click save button")
     public void saveButtonClick() {
         saveButton.click();

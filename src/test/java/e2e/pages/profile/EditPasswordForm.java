@@ -9,24 +9,20 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 public class EditPasswordForm extends BasePage {
+    @FindBy(xpath = "//*[@data-test='profileChangePasswordButton']")
+    WebElement changePasswordButton;
+    @FindBy(xpath = "//*[@placeholder='Old password']")
+    WebElement oldPasswordInput;
+    @FindBy(xpath = "//*[@placeholder='New password']")
+    WebElement newPasswordInput;
+    @FindBy(xpath = "//*[@placeholder='Confirm new password']")
+    WebElement confirmNewPasswordInput;
+    @FindBy(xpath = "//*[@class='PasswordModal_pass_btn__eGL9h']")
+    WebElement saveChangeButton;
+
     public EditPasswordForm(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(xpath = "//*[@data-test='profileChangePasswordButton']")
-    WebElement changePasswordButton;
-
-    @FindBy(xpath = "//*[@placeholder='Old password']")
-    WebElement oldPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='New password']")
-    WebElement newPasswordInput;
-
-    @FindBy(xpath = "//*[@placeholder='Confirm new password']")
-    WebElement confirmNewPasswordInput;
-
-    @FindBy(xpath = "//*[@class='PasswordModal_pass_btn__eGL9h']")
-    WebElement saveChangeButton;
 
     @Step("Wait for loading change password")
     public void waitForLoading() {

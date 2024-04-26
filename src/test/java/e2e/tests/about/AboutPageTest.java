@@ -2,8 +2,8 @@ package e2e.tests.about;
 
 import e2e.TestBase;
 import e2e.enums.SideBarInfo;
-import e2e.pages.about.AboutPage;
 import e2e.pages.Header;
+import e2e.pages.about.AboutPage;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
@@ -18,6 +18,7 @@ public class AboutPageTest extends TestBase {
     Header header;
     AboutPage aboutPage;
     AdminPanelPage adminPanelPage;
+
     @Test
     public void testAboutBoxText() {
 
@@ -39,7 +40,7 @@ public class AboutPageTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
 
@@ -63,7 +64,7 @@ public class AboutPageTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();

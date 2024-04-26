@@ -8,12 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AboutPage extends BasePage {
+    @FindBy(xpath = "//div[@class='about-box']")
+    WebElement aboutBox;
+
     public AboutPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[@class='about-box']")
-    WebElement aboutBox;
     @Step("Wait for loading open About")
     public void waitForLoading() {
         try {
@@ -21,6 +22,7 @@ public class AboutPage extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
+
     public String getAboutText() {
         return aboutBox.getText();
     }

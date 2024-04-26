@@ -12,23 +12,21 @@ import java.time.Duration;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
     @FindBy(xpath = "//p[@class='link']/a[text()='Sign up']")
     WebElement signUpLink;
-
     @FindBy(xpath = "//*[@name='email']")
     WebElement emailInput;
-
     @FindBy(xpath = "//*[@class='input-password']")
     WebElement passwordInput;
-
     @FindBy(xpath = "//*[@class='registration-btn']")
     WebElement loginButton;
 
+    public LoginPage(WebDriver driver) {
+        super(driver);
+    }
+
     @Step("Login page")
-    public void waitForLoading(){
+    public void waitForLoading() {
         try {
             getWait().forVisibility(signUpLink);
             getWait().forVisibility(emailInput);
@@ -41,8 +39,9 @@ public class LoginPage extends BasePage {
 
         }
     }
+
     @Step("Screenshot {actualScreenshotName}")
-    public void takeLoginPageScreenshot(String actualScreenshotName){
+    public void takeLoginPageScreenshot(String actualScreenshotName) {
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);
@@ -50,6 +49,7 @@ public class LoginPage extends BasePage {
             e.printStackTrace();
         }
     }
+
     @Step("Login as user: {email}, {password}")
     public void login(String email, String password) {
         emailInput.sendKeys(email);
@@ -57,8 +57,9 @@ public class LoginPage extends BasePage {
         loginButton.click();
 
     }
+
     @Step("Open Registration page {}")
-    public void signUp(){
+    public void signUp() {
         try {
             signUpLink.click();
         } catch (StaleElementReferenceException e) {
@@ -66,6 +67,7 @@ public class LoginPage extends BasePage {
             signUp();
         }
     }
+
     @Step("check error message")
     public boolean textError() {
         Duration timeout = Duration.ofSeconds(5);
@@ -76,9 +78,5 @@ public class LoginPage extends BasePage {
         } catch (NoSuchElementException e) {
             return false;
         }
-    }
-
-    public String getToken() {
-        return getToken();
     }
 }

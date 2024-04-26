@@ -10,33 +10,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class RegistrationPage extends BasePage {
+    @FindBy(xpath = "//select/option[@value='user']")
+    WebElement userOption;
+    @FindBy(xpath = "//select/option[@value='admin']")
+    WebElement adminOption;
+    @FindBy(xpath = "//*[@name='email']")
+    WebElement emailInput;
+    @FindBy(xpath = "//*[@class='input-password']")
+    WebElement passwordInput;
+    @FindBy(xpath = "//*[@class='password-eye']")
+    WebElement eyeTab;
+    @FindBy(xpath = "//*[@name='confirmPassword']")
+    WebElement confirmPasswordInput;
+    @FindBy(xpath = "//*[@class='registration-btn']")
+    WebElement registrationButton;
+
     public RegistrationPage(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(xpath = "//select/option[@value='user']")
-    WebElement userOption;
-
-    @FindBy(xpath = "//select/option[@value='admin']")
-    WebElement adminOption;
-
-    @FindBy(xpath = "//*[@name='email']")
-    WebElement emailInput;
-
-    @FindBy(xpath = "//*[@class='input-password']")
-    WebElement passwordInput;
-
-    @FindBy(xpath = "//*[@class='password-eye']")
-    WebElement eyeTab;
-
-    @FindBy(xpath = "//*[@name='confirmPassword']")
-    WebElement confirmPasswordInput;
-
-    @FindBy(xpath = "//*[@class='registration-btn']")
-    WebElement registrationButton;
-
     @Step("Wait for loading Login page")
-    public void waitForLoading(){
+    public void waitForLoading() {
         try {
             getWait().forVisibility(userOption);
             getWait().forVisibility(adminOption);
@@ -45,16 +39,19 @@ public class RegistrationPage extends BasePage {
             getWait().forClickable(eyeTab);
             getWait().forVisibility(confirmPasswordInput);
             getWait().forVisibility(registrationButton);
-        }catch (StaleElementReferenceException e){
+        } catch (StaleElementReferenceException e) {
             e.printStackTrace();
         }
     }
-    public void optionUser(){
+
+    public void optionUser() {
         userOption.click();
     }
-    public void optionAdmin(){
+
+    public void optionAdmin() {
         adminOption.click();
     }
+
     @Step("Registration as user: {email}, {password}, {confirmPassword}")
     public void registration(String email, String password, String confirmPassword) {
         emailInput.sendKeys(email);
@@ -64,6 +61,7 @@ public class RegistrationPage extends BasePage {
         eyeTab.click();
         registrationButton.click();
     }
+
     @Step("check error message")
     public boolean textError() {
         Duration timeout = Duration.ofSeconds(5);
@@ -75,8 +73,9 @@ public class RegistrationPage extends BasePage {
             return false;
         }
     }
+
     @Step("Screenshot {actualScreenshotName}")
-    public void takeLoginPageScreenshot(String actualScreenshotName){
+    public void takeLoginPageScreenshot(String actualScreenshotName) {
         try {
             waitForLoading();
             takeAndCompareScreenshot(actualScreenshotName, null);

@@ -43,6 +43,7 @@ public class Config {
     public Integer getWindowHeight() {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
+
     public Integer getMobileWidth() {
         return Integer.parseInt(properties.getProperty("mobile.width"));
     }
