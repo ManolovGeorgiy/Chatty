@@ -3,19 +3,21 @@ package e2e.tests.contactUs;
 import com.github.javafaker.Faker;
 import e2e.TestBase;
 import e2e.enums.SideBarInfo;
+import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.contactUs.ContactUsPage;
-import e2e.pages.Header;
 import e2e.pages.homeBlog.HomeBlogPage;
 import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
-import io.qameta.allure.*;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Locale;
 
-import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class ContactUsPositiveTest extends TestBase {
@@ -37,10 +39,11 @@ public class ContactUsPositiveTest extends TestBase {
         Assert.assertEquals(actualUserEmail, userEmail, actualUserEmail + " is not equal " + userEmail);
         Assert.assertEquals(actualUserContent, userContent, actualUserContent + " is not equal " + userContent);
     }
+
     @Feature(value = "User can sent a message")
     @Description(value = "User can send setFeedbackForm")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "CHATTY-23")
+    @Test(description = "User can sent a message")
     public void userCanSendMessage() {
 
         String email = "user.can.feedBack@gmail.com";
@@ -63,7 +66,7 @@ public class ContactUsPositiveTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -75,7 +78,7 @@ public class ContactUsPositiveTest extends TestBase {
         contactUsPage.waitForLoading();
         contactUsPage.setFeedbackForm(userName, emailContact, text);
         contactUsPage.waitForLoading();
-        checkFeedbackData(contactUsPage,userName,emailContact,text);
+        checkFeedbackData(contactUsPage, userName, emailContact, text);
         contactUsPage.sendMessageButtonClick();
         assertTrue("Feedback submitted successfully!", contactUsPage.isMessageSent());
         //contactUsPage.waitForLoading();
@@ -86,7 +89,7 @@ public class ContactUsPositiveTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();

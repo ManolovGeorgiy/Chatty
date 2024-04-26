@@ -26,7 +26,6 @@ public class UpdateUser extends ApiBase {
         validateResponse(response);
         return handleResponse(response);
     }
-
     private void validateResponse(Response response) {
         if (response.getStatusCode() == 200) {
             JsonPath jsonPath = response.jsonPath();

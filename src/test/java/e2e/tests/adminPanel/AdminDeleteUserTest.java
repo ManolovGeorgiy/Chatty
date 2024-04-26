@@ -1,7 +1,6 @@
 package e2e.tests.adminPanel;
 
 import e2e.TestBase;
-
 import e2e.pages.adminPanel.AdminPanelPage;
 import e2e.pages.login.LoginPage;
 import org.testng.annotations.Test;
@@ -10,8 +9,9 @@ public class AdminDeleteUserTest extends TestBase {
 
     LoginPage loginPage;
     AdminPanelPage adminPanelPage;
+
     @Test
-    public void deleteAccount(){
+    public void deleteAccount() {
         String emailLogin = "g.power@gmail.com";
         String passwordLogin = "GPower3333";
 
@@ -19,7 +19,7 @@ public class AdminDeleteUserTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();

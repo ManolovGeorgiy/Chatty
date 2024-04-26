@@ -65,6 +65,4 @@ public class PostGetRes {
     private  String imageUrl;
     @JsonProperty ("draft")
     private  boolean draft;
-   //@JsonProperty ("user")
-    //private String user;
 }

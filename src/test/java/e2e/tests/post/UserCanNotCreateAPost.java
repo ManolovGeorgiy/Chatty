@@ -12,9 +12,10 @@ import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.util.Locale;
 
-import static org.testng.AssertJUnit.*;
+import static org.testng.AssertJUnit.assertTrue;
 
 
 public class UserCanNotCreateAPost extends TestBase {
@@ -27,6 +28,7 @@ public class UserCanNotCreateAPost extends TestBase {
     CreateAPostForm createAPostForm;
     Header header;
     AdminPanelPage adminPanelPage;
+
     private void checkPostData(CreateAPostForm page, String title, String description, String content) {
         String actualTitle = page.getTitle();
         String actualDescription = page.getDescriptionText();
@@ -35,6 +37,7 @@ public class UserCanNotCreateAPost extends TestBase {
         Assert.assertEquals(actualDescription, description, actualDescription + " is not equal " + description);
         Assert.assertEquals(actualContent, content, actualContent + " is not equal " + content);
     }
+
     @Epic(value = "User can not create a post")
     @Feature(value = "User not created post")
     @Description(value = "User can not create a post")
@@ -61,7 +64,7 @@ public class UserCanNotCreateAPost extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionUser();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
 
         homeBlogPage = new HomeBlogPage(app.driver);
         homeBlogPage.waitForLoading();
@@ -71,13 +74,12 @@ public class UserCanNotCreateAPost extends TestBase {
         header.waitForLoading();
 
         createAPostForm = new CreateAPostForm(app.driver);
-        createAPostForm.setPostForm(title, description, content,imagePath);
+        createAPostForm.setPostForm(title, description, content, imagePath);
         createAPostForm.uploadImage(imagePath);
         createAPostForm.waitForLoading();
         createAPostForm.clickSubmitButton();
 
         checkPostData(createAPostForm, title, description, content);
-        //Thread.sleep(3000);
 
         homeBlogPage = new HomeBlogPage(app.driver);
 
@@ -89,7 +91,7 @@ public class UserCanNotCreateAPost extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(emailLogin,passwordLogin);
+        loginPage.login(emailLogin, passwordLogin);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();

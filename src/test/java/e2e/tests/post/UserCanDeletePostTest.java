@@ -12,12 +12,12 @@ import integration.pages.user.UserApi;
 import integration.schemas.PostCreateReq;
 import io.qameta.allure.*;
 import io.restassured.path.json.JsonPath;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UserCanDeletePostTest extends TestBase {
 
-    Faker faker = new Faker();
     UserApi userApi;
     PostApi postApi;
     PostCreateReq postCreateReq;

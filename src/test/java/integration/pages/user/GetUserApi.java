@@ -46,7 +46,6 @@ public class GetUserApi extends ApiBase {
     public String getUserInfo(int code) {
         String endPoint = "/api/me";
         Response response = getRequest(endPoint,200);
-
         switch (response.getStatusCode()) {
             case 200:
                 JsonPath jsonPath = response.jsonPath();

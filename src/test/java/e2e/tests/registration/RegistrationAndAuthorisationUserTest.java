@@ -31,7 +31,6 @@ Header header;
         String password = "Manowar333246";
         String confirmPassword = "Manowar333246";
 
-
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();

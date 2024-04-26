@@ -86,7 +86,7 @@ public class UserCanEditPostTest extends TestBase {
         postApi.getPostId(postId, 200);
         checkPostData(postId, postCreateReq);
 
-        String editTitle = "IT";
+        String editTitle = "Start";
         String editDescription = "QA Engineer";
         String editContent = "HALLO WORLD";
         String imagePath = "uploadReferences/5204092180870848366_121.jpg";

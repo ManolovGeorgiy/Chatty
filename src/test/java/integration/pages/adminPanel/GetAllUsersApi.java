@@ -7,11 +7,13 @@ import io.restassured.response.Response;
 public class GetAllUsersApi extends ApiBase {
 
     Response response;
+
     public GetAllUsersApi(String token) {
         super(token);
     }
+
     @Step("Get all users")
-    public String getAllUsersList (int expectedStatusCode ,int skip,int limit) {
+    public String getAllUsersList(int expectedStatusCode, int skip, int limit) {
         String endpoint = "/api/users";
         response = getAllPosts(skip, limit, expectedStatusCode, endpoint);
         switch (response.getStatusCode()) {

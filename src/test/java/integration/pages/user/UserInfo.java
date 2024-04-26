@@ -3,14 +3,16 @@ package integration.pages.user;
 import integration.ApiBase;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+
 public class UserInfo extends ApiBase {
+
+    Response response;
 
     public UserInfo(String token) {
         super(token);
     }
 
-    Response response;
-    public String getUser(){
+    public String getUser() {
         String endpoint = "/api/me";
         response = getRequest(endpoint, 200);
         switch (response.getStatusCode()) {

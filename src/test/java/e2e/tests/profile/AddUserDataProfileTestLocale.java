@@ -36,7 +36,6 @@ public class AddUserDataProfileTestLocale extends TestBase {
         Assert.assertEquals(actualPhone, phone, actualPhone + " is not equal " + phone);
     }
 
-
     @Description(value = "User can add data")
     @Severity(SeverityLevel.CRITICAL)
     @Test(description = "user can add data to profile")

@@ -12,9 +12,10 @@ import static org.testng.AssertJUnit.assertNotNull;
 
 public class AddDataUser extends ApiBase {
 
-    public AddDataUser(String token){
+    public AddDataUser(String token) {
         super(token);
     }
+
     @Step("Update user with {id}")
     public String addUserProfile(String userId, UserRes userRes, int code) throws JsonProcessingException {
         String endpoint = "/api/users/{id}";
@@ -38,6 +39,7 @@ public class AddDataUser extends ApiBase {
             assertNotNull("AvatarUrl is missing", jsonPath.get("avatarUrl"));
         }
     }
+
     private String handleResponse(Response response) {
         switch (response.getStatusCode()) {
             case 200:

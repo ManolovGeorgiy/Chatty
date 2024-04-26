@@ -21,7 +21,6 @@ public class LoginAdminTest extends TestBase {
     public void adminCanLogin() {
         String email = "g.power@gmail.com";
         String password = "GPower3333";
-
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
@@ -33,7 +32,6 @@ public class LoginAdminTest extends TestBase {
     public void adminCanNotLoginWithInvalidEmail() {
         String email = "gpower@gmail.com";
         String password = "GPower3333";
-
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());
@@ -46,7 +44,6 @@ public class LoginAdminTest extends TestBase {
     public void adminCanNotLoginWithInvalidPassword() {
         String email = "g.power@gmail.com";
         String password = "GPower3334";
-
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
     }
@@ -71,7 +68,6 @@ public class LoginAdminTest extends TestBase {
     public void adminCanNotLoginWiInvalidEmailAndPassword() {
         String email = "gpower@gmail.com";
         String password = "GPower3334";
-
         loginPage = new LoginPage(app.driver);
         loginPage.login(email, password);
         assertTrue("User not found. Please register.", loginPage.textError());

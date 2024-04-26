@@ -3,12 +3,14 @@ package integration.pages.user;
 import integration.ApiBase;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+
 import java.util.LinkedHashMap;
 
 public class UserApi extends ApiBase {
 
 
     Response response;
+
     @Step("Registration user : {email}, {password}, {confirmPassword}, {role}")
     public String registration(String email, String password, String confirmPassword, String role, int code) {
         String endPoint = "/api/auth/register";
@@ -28,6 +30,7 @@ public class UserApi extends ApiBase {
             return "Failed to register user: " + errorMessage;
         }
     }
+
     @Step("Login by Email and Password : {email},{password}")
     public String login(String email, String password, int code) {
         String endPoint = "/api/auth/login";
