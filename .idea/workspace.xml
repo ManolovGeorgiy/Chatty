@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_User_can_not_create_a_post.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_User_can_not_create_a_post.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/adminPanel/AdminDeleteUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/contactUs/ContactUsPositiveTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/login/LoginUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanNotCreateAPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTestLocale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUserDataProfileTestLocale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/user/UserFullTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/utils/DataProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/utils/DataProviders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/DeleteUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/DeleteUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/GetAllUsersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/adminPanel/GetAllUsersApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/contactUs/ContactUsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/profile/AddDataUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/profile/AddDataUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/GetUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/GetUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UpdateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/pages/user/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-    </list>
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,14 +212,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712600432737</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1712600432737</updated>
     </task>
     <task id="LOCAL-00035" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -629,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714147562733</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714151820721</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1714151820721</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
