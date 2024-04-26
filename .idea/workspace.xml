@@ -195,9 +195,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.UserCanCreateEditAndDeletePost" />
-        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
-        <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidEmail" />
         <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidPassword" />
+        <item itemvalue="TestNG.LoginUserTest.userCanNotLoginWithInvalidEmail" />
+        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
         <item itemvalue="TestNG.LoginUserTest" />
       </list>
     </recent_temporary>
@@ -210,14 +210,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712599303030</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1712599303030</updated>
     </task>
     <task id="LOCAL-00032" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -603,7 +595,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713722836088</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714071050127</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1714071050128</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
