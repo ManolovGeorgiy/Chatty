@@ -124,5 +124,6 @@ public class UserCanEditPostTest extends TestBase {
 
         Assert.assertTrue(editAPostForm.editIsPostDisplayed(editTitle), "Post with title: " + editTitle + " is not displayed.");
 
+
     }
 }

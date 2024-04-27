@@ -26,11 +26,10 @@ public class UserCanDeletePostTest extends TestBase {
     Header header;
     EditPostPage editPostPage;
 
-    @Epic(value = "User can delete post")
     @Feature(value = "User deleted post")
     @Description(value = "User can delete post")
     @Severity(SeverityLevel.CRITICAL)
-    @Test(description = "CHATTY-8")
+    @Test(description = "User can delete post")
     public void userCanDeletePost() throws JsonProcessingException {
 
         String email = "tatar1@abv.bg";

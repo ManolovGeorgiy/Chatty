@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new" />
+    <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanDeletePostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,19 +75,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/Selenide-300523-e-qa&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/PC/Chatty/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/PC/Chatty",
+    "onboarding.tips.debug.path": "C:/Users/PC/Chatty/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Chatty\src\test\resources" />
@@ -103,7 +106,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RegistrationApiTest.UserCanRegistration">
+  <component name="RunManager" selected="TestNG.UserCanEditPostTest.userCanEditAPost">
     <configuration name="AddUserDataProfileTestLocale.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
@@ -115,24 +118,6 @@
       <option name="PACKAGE_NAME" value="e2e.tests.profile" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTestLocale" />
       <option name="METHOD_NAME" value="userCanAddDataProfile" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EditUserDataProfileTestLocale.userCanEditProfile" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.profile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.EditUserDataProfileTestLocale" />
-      <option name="METHOD_NAME" value="userCanEditProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -194,13 +179,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserCanEditPostTest.userCanEditAPost" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.post" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.post.UserCanEditPostTest" />
+      <option name="METHOD_NAME" value="userCanEditAPost" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
         <item itemvalue="TestNG.RegistrationApiTest.UserCanRegistration" />
         <item itemvalue="TestNG.RegistrationApiTest.userCanNotRegistrationWithoutData" />
         <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
         <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
-        <item itemvalue="TestNG.EditUserDataProfileTestLocale.userCanEditProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -212,14 +215,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712606745047</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1712606745047</updated>
     </task>
     <task id="LOCAL-00037" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -605,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714152513944</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714214773898</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1714214773898</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
