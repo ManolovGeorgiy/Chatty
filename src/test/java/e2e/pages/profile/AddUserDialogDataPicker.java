@@ -128,7 +128,7 @@ public class AddUserDialogDataPicker extends BasePage {
         }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd", Locale.ENGLISH);
         String formattedDate = date.format(formatter);
-        WebElement dayCell = driver.findElement(By.xpath("//*[contains(@aria-label, '" + formattedDate + "')]"));
+        WebElement dayCell = driver.findElement(By.xpath("//*[input(@aria-label, '" + formattedDate + "')]"));
         currentDate.getText().equals(date.getMonth().name() + " " + date.getYear());
         dayCell.click();
         body.isDisplayed();
