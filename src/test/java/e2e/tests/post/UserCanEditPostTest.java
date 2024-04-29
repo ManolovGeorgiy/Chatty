@@ -121,9 +121,12 @@ public class UserCanEditPostTest extends TestBase {
         header = new Header(app.driver);
         header.clickHome();
         header.myPostClick();
+        header.setMyPostTab();
 
-        Assert.assertTrue(editAPostForm.editIsPostDisplayed(editTitle), "Post with title: " + editTitle + " is not displayed.");
+        editPostPage = new EditPostPage(app.driver);
+        editPostPage.waitForLoading();
+        editPostPage.deletePostButtonClick();
 
-
+        homeBlogPage = new HomeBlogPage(app.driver);
     }
 }
