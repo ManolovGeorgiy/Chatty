@@ -123,7 +123,6 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationAndAuthorisationAdminTest.AdminCanNotRegistrationWithValidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
