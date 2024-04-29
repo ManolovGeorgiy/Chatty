@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testngApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testngApi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_Admin_can't_registration.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_Admin_can't_registration.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_User_cannot_feedback.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_User_cannot_feedback.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_adminCanNotLoginWithoutAEmailAndPassword.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_adminCanNotLoginWithoutAEmailAndPassword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_email_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_email_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_password_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_password_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_no_fields_filled_in_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_no_fields_filled_in_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_with_invalid_data_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_with_invalid_data_negative_login_case.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +112,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Chatty [ApiTest]">
+  <component name="RunManager" selected="TestNG.RegistrationAndAuthorisationAdminTest.adminCanRegistration">
     <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,7 +135,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationAndAuthorisationAdminTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationAndAuthorisationAdminTest.AdminCanNotRegistrationWithValidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +145,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.registration" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.registration.RegistrationAndAuthorisationAdminTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="AdminCanNotRegistrationWithValidEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationAndAuthorisationAdminTest.adminCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.registration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.registration" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.registration.RegistrationAndAuthorisationAdminTest" />
+      <option name="METHOD_NAME" value="adminCanRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -157,24 +182,6 @@
       <option name="PACKAGE_NAME" value="e2e.tests.registration" />
       <option name="MAIN_CLASS_NAME" value="e2e.tests.registration.RegistrationAndAuthorisationUserTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationAndAuthorisationUserTest.userCanRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e2e.tests.registration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="e2e.tests.registration" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.registration.RegistrationAndAuthorisationUserTest" />
-      <option name="METHOD_NAME" value="userCanRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -201,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegistrationAndAuthorisationAdminTest.adminCanRegistration" />
+        <item itemvalue="TestNG.RegistrationAndAuthorisationAdminTest.AdminCanNotRegistrationWithValidEmail" />
         <item itemvalue="Gradle.Chatty [ApiTest]" />
         <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
         <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest" />
-        <item itemvalue="TestNG.RegistrationAndAuthorisationAdminTest" />
-        <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.userCanRegistration" />
       </list>
     </recent_temporary>
   </component>
@@ -217,14 +224,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Added ContactUsApiTest new">
-      <option name="closed" value="true" />
-      <created>1713597164792</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1713597164793</updated>
     </task>
     <task id="LOCAL-00048" summary="Added ContactUsApiTest new">
       <option name="closed" value="true" />
@@ -610,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714394789315</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714398504702</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1714398504702</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
