@@ -1,4 +1,4 @@
-package e2e.pages.profile;
+package e2e.pages.datePicker;
 
 import e2e.enums.GenderInfo;
 import e2e.pages.BasePage;

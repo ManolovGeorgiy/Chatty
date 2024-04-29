@@ -44,14 +44,6 @@ public class Config {
         return Integer.parseInt(properties.getProperty("window.height"));
     }
 
-    public Integer getMobileWidth() {
-        return Integer.parseInt(properties.getProperty("mobile.width"));
-    }
-
-    public Integer getMobileHeight() {
-        return Integer.parseInt(properties.getProperty("mobile.height"));
-    }
-
     public boolean getUseFirefox() {
         return Boolean.parseBoolean(properties.getProperty("use.firefox"));
     }

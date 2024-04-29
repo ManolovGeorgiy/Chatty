@@ -30,6 +30,11 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
         String password = "Admin3333";
         String confirmPassword = "Admin3333";
 
+        String emailLogin = "g.power@gmail.com";
+        String passwordLogin = "GPower3333";
+
+        String emailAccount = "RegistrationAdmin@gmail.com";
+
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.signUp();
@@ -49,10 +54,23 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
         loginPage.login(email,password);
-        loginPage.waitForLoading();
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
+
+        header = new Header(app.driver);
+        header.tabDropdownMenu(SideBarInfo.LOGIN);
+
+        loginPage = new LoginPage(app.driver);
+        loginPage.waitForLoading();
+        loginPage.login(emailLogin, passwordLogin);
+
+        adminPanelPage = new AdminPanelPage(app.driver);
+        adminPanelPage.waitForLoading();
+        adminPanelPage.searchAccount(emailAccount);
+        adminPanelPage.waitForLoading();
+        adminPanelPage.clickDeleteAccount();
+        adminPanelPage.searchAccount(emailAccount);
 
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
@@ -61,7 +79,7 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     @Feature(value = "The administrator has not registered")
     @Description(value = "adminPanel can not registration ")
     @Severity(SeverityLevel.BLOCKER)
-    @Test(description = "CHATTY-50")
+    @Test(description = "Admin can not registration")
     public void AdminCanNotRegistrationWithValidEmail() {
 
         String email = "g.power@gmail.com";
