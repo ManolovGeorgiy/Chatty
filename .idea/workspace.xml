@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/tests/post/UserCanEditPostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanEditPostTest.userCanEditAPost">
+  <component name="RunManager" selected="Gradle.Chatty [ApiTest]">
     <configuration name="Chatty [ApiTest]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -201,8 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
         <item itemvalue="Gradle.Chatty [ApiTest]" />
+        <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
         <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest" />
         <item itemvalue="TestNG.RegistrationAndAuthorisationAdminTest" />
         <item itemvalue="TestNG.RegistrationAndAuthorisationUserTest.userCanRegistration" />
@@ -217,14 +216,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Added ContactUsApiTest new">
-      <option name="closed" value="true" />
-      <created>1713596653039</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1713596653039</updated>
     </task>
     <task id="LOCAL-00047" summary="Added ContactUsApiTest new">
       <option name="closed" value="true" />
@@ -610,7 +601,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714393151523</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714394789315</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1714394789315</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
