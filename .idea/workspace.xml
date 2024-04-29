@@ -25,23 +25,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Chatty" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -59,14 +43,14 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev_Manolov" />
+        <entry key="$PROJECT_DIR$" value="dev_Project" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/AssertJUnit.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$USER_HOME$/.jdks/graalvm-jdk-17.0.10/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/AssertJUnit.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../.jdks/graalvm-jdk-17.0.10/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,35 +93,18 @@
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdminEditDeleteUser">
-    <configuration name="AdminEditDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginUserTest.userCanLogin">
+    <configuration name="AdminPostTest.testEditPost" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="PATTERN" value="integration.pages.adminPanel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminEditDeleteUser.adminCanLoginAndDeleteUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
-      <option name="METHOD_NAME" value="adminCanLoginAndDeleteUser" />
+      <option name="PACKAGE_NAME" value="integration.pages.adminPanel" />
+      <option name="MAIN_CLASS_NAME" value="integration.pages.adminPanel.AdminPostTest" />
+      <option name="METHOD_NAME" value="testEditPost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -145,35 +112,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminEditDeleteUser.adminCanLoginEditUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AdminProfileTest.testGetAdminProfile" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="PATTERN" value="integration.pages.adminPanel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
-      <option name="METHOD_NAME" value="adminCanLoginEditUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdminEditDeleteUser.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.adminapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.edituser" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.AdminEditDeleteUser" />
-      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="PACKAGE_NAME" value="integration.pages.adminPanel" />
+      <option name="MAIN_CLASS_NAME" value="integration.pages.adminPanel.AdminProfileTest" />
+      <option name="METHOD_NAME" value="testGetAdminProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -185,12 +134,48 @@
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="integration.tests.deleteuser.*" />
+          <option name="PATTERN" value="integration.tests.adminapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="integration.tests.deleteuser" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.deleteuser.DeleteUserViaAdmin" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.DeleteUserViaAdmin" />
+      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EditUserViaAdmin.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.tests.adminapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration.tests.adminapi" />
+      <option name="MAIN_CLASS_NAME" value="integration.tests.adminapi.EditUserViaAdmin" />
+      <option name="METHOD_NAME" value="userCanLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginUserTest.userCanLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.login" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.login.LoginUserTest" />
       <option name="METHOD_NAME" value="userCanLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -201,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminEditDeleteUser" />
-        <item itemvalue="TestNG.AdminEditDeleteUser.adminCanLoginAndDeleteUser" />
-        <item itemvalue="TestNG.AdminEditDeleteUser.adminCanLoginEditUser" />
-        <item itemvalue="TestNG.AdminEditDeleteUser.userCanLogin" />
+        <item itemvalue="TestNG.LoginUserTest.userCanLogin" />
+        <item itemvalue="TestNG.EditUserViaAdmin.userCanLogin" />
         <item itemvalue="TestNG.DeleteUserViaAdmin.userCanLogin" />
+        <item itemvalue="TestNG.AdminProfileTest.testGetAdminProfile" />
+        <item itemvalue="TestNG.AdminPostTest.testEditPost" />
       </list>
     </recent_temporary>
   </component>
@@ -940,7 +925,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/registration/RegistrationAndAuthorisationUserTest.java</url>
           <line>26</line>
-          <properties class="e2e.tests.registration.RegistrationAndAuthorisationUserTest" method="userCanRegistration">
+          <properties class="e2e.tests.registration.RegistrationAndAuthorisationUserTest" method="UserCanRegistration">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -967,7 +952,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/e2e/tests/post/DraftPostTest.java</url>
           <line>24</line>
-          <properties class="e2e.tests.post.DraftPostTest" method="editDraftPost">
+          <properties class="e2e.tests.post.DraftPostTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
