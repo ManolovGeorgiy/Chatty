@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_04_2024_18_18_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_04_2024_18_18__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_04_2024_19_30_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_04_2024_19_30__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialogDataPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/e2e/pages/profile/AddUserDialogDataPicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUndEditUserDataProfileTestDataPicker.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +104,14 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="e2e.pages.profile" />
       <recent name="e2e.tests.profile" />
+      <recent name="e2e.pages.profile" />
       <recent name="e2e.tests" />
       <recent name="e2e.tests.user" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserCanEditPostTest.userCanEditAPost">
-    <configuration name="AddUserDataProfileTestLocale.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddUndEditUserDataProfileTestDataPicker.userCanAddDataProfile">
+    <configuration name="AddUndEditUserDataProfileTestDataPicker" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Chatty.test" />
       <extension name="coverage">
         <pattern>
@@ -117,7 +120,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="e2e.tests.profile" />
-      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUserDataProfileTestLocale" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUndEditUserDataProfileTestDataPicker" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddUndEditUserDataProfileTestDataPickerAdd.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUndEditUserDataProfileTestDataPickerAdd" />
+      <option name="METHOD_NAME" value="userCanAddDataProfile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddUndEditUserDataProfileTestDataPicker.userCanAddDataProfile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chatty.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="e2e.tests.profile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="e2e.tests.profile" />
+      <option name="MAIN_CLASS_NAME" value="e2e.tests.profile.AddUndEditUserDataProfileTestDataPicker" />
       <option name="METHOD_NAME" value="userCanAddDataProfile" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -137,42 +175,6 @@
       <option name="PACKAGE_NAME" value="integration.tests.registration" />
       <option name="MAIN_CLASS_NAME" value="integration.tests.registration.RegistrationApiTest" />
       <option name="METHOD_NAME" value="UserCanRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationApiTest.userCanNotRegistrationWithoutData" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.registration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.registration" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.registration.RegistrationApiTest" />
-      <option name="METHOD_NAME" value="userCanNotRegistrationWithoutData" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserCanCreateEditAndDeleteNewPost.userCanCreatePost" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Chatty.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="integration.tests.post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="integration.tests.post" />
-      <option name="MAIN_CLASS_NAME" value="integration.tests.post.UserCanCreateEditAndDeleteNewPost" />
-      <option name="METHOD_NAME" value="userCanCreatePost" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -200,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddUndEditUserDataProfileTestDataPicker.userCanAddDataProfile" />
+        <item itemvalue="TestNG.AddUndEditUserDataProfileTestDataPicker" />
+        <item itemvalue="TestNG.AddUndEditUserDataProfileTestDataPickerAdd.userCanAddDataProfile" />
         <item itemvalue="TestNG.UserCanEditPostTest.userCanEditAPost" />
         <item itemvalue="TestNG.RegistrationApiTest.UserCanRegistration" />
-        <item itemvalue="TestNG.RegistrationApiTest.userCanNotRegistrationWithoutData" />
-        <item itemvalue="TestNG.UserCanCreateEditAndDeleteNewPost.userCanCreatePost" />
-        <item itemvalue="TestNG.AddUserDataProfileTestLocale.userCanAddDataProfile" />
       </list>
     </recent_temporary>
   </component>
@@ -216,14 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712609589154</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1712609589154</updated>
     </task>
     <task id="LOCAL-00039" summary="Registration,Login,Post,Contact Us">
       <option name="closed" value="true" />
@@ -609,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714215387272</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714216124313</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1714216124313</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
