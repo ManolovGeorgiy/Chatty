@@ -1,8 +1,6 @@
 package e2e.tests.registration;
 
-import com.github.javafaker.Faker;
 import e2e.TestBase;
-
 import e2e.enums.SideBarInfo;
 import e2e.pages.Header;
 import e2e.pages.adminPanel.AdminPanelPage;
@@ -11,7 +9,6 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
-
 import static org.testng.AssertJUnit.assertTrue;
 
 public class RegistrationAndAuthorisationUserTest extends TestBase {

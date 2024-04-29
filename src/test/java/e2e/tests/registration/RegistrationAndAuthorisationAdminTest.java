@@ -9,7 +9,6 @@ import e2e.pages.login.LoginPage;
 import e2e.pages.registration.RegistrationPage;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
-
 import static org.testng.AssertJUnit.assertTrue;
 
 public class RegistrationAndAuthorisationAdminTest extends TestBase {
@@ -19,12 +18,13 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
     HomeBlogPage homeBlogPage;
     Header header;
     AdminPanelPage adminPanelPage;
+
     @Epic(value = "adminPanel can registration and authorisation")
     @Feature(value = "The administrator has registered and logged in")
     @Description(value = "adminPanel can registration and authorisation")
     @Severity(SeverityLevel.BLOCKER)
     @Test(description = "admin can registration")
-    public void adminCanRegistration(){
+    public void adminCanRegistration() {
 
         String email = "RegistrationAdmin@gmail.com";
         String password = "Admin3333";
@@ -42,7 +42,7 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
         registrationPage = new RegistrationPage(app.driver);
         registrationPage.waitForLoading();
         registrationPage.optionAdmin();
-        registrationPage.registration(email,password,confirmPassword);
+        registrationPage.registration(email, password, confirmPassword);
         registrationPage.waitForLoading();
 
         homeBlogPage = new HomeBlogPage(app.driver);
@@ -53,7 +53,7 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
 
         loginPage = new LoginPage(app.driver);
         loginPage.waitForLoading();
-        loginPage.login(email,password);
+        loginPage.login(email, password);
 
         adminPanelPage = new AdminPanelPage(app.driver);
         adminPanelPage.waitForLoading();
@@ -75,6 +75,7 @@ public class RegistrationAndAuthorisationAdminTest extends TestBase {
         header = new Header(app.driver);
         header.tabDropdownMenu(SideBarInfo.LOGIN);
     }
+
     @Epic(value = "adminPanel can not registration with valid Email")
     @Feature(value = "The administrator has not registered")
     @Description(value = "adminPanel can not registration ")
