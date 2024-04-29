@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5cc04c9-2e2d-445e-8122-810ff6848930" name="Changes" comment="Added ContactUsApiTest new">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_04_2024_18_18_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_04_2024_18_18__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_04_2024_19_30_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_04_2024_19_30__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/e2e/tests/profile/AddUndEditUserDataProfileTestDataPicker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_User_cannot_feedback.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_User_cannot_feedback.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_adminCanNotLoginWithoutAEmailAndPassword.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_adminCanNotLoginWithoutAEmailAndPassword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_email_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_email_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_password_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_invalid_password_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_no_fields_filled_in_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_no_fields_filled_in_negative_login_case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compareScreenshotReferences/tmp_with_invalid_data_negative_login_case.png" beforeDir="false" afterPath="$PROJECT_DIR$/compareScreenshotReferences/tmp_with_invalid_data_negative_login_case.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,14 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710274744017</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Registration,Login,Post,Contact Us">
-      <option name="closed" value="true" />
-      <created>1712679174835</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1712679174835</updated>
     </task>
     <task id="LOCAL-00040" summary="Api test">
       <option name="closed" value="true" />
@@ -611,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714216124313</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Added ContactUsApiTest new">
+      <option name="closed" value="true" />
+      <created>1714370453099</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1714370453099</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
